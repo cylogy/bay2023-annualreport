@@ -9,7 +9,7 @@ type Props = {
   imageTablet: string;
   background: string;
   imageLast?: boolean;
-  finalReverse?: boolean
+  finalReverse?: boolean;
 };
 
 const Hero = ({
@@ -19,11 +19,11 @@ const Hero = ({
   imageTablet,
   background,
   imageLast,
-  finalReverse
+  finalReverse,
 }: Props) => {
   return (
     <article
-      className={`${finalReverse ? " desktop:flex-row-reverse " : " desktop:flex-row "} desktop:h-120 flex flex-col ${background} w-full ${imageLast ? 'justify-between' : ''}`}
+      className={`${finalReverse ? ' desktop:flex-row-reverse ' : ' desktop:flex-row '} desktop:h-120 flex flex-col ${background} w-full ${imageLast ? 'justify-between' : ''}`}
     >
       <div
         className={`tablet-portrait:hidden desktop:w-120 desktop:h-full desktop:flex relative flex h-[350px] w-full ${imageLast ? 'desktop:order-2' : ''}`}
@@ -38,7 +38,7 @@ const Hero = ({
           className="object-cover object-top"
         />
       </div>
-      <div className="flex flex-col items-start justify-center p-20 w-full">
+      <div className="desktop:p-20 flex flex-col items-start justify-center px-6 py-9">
         <Typography as="h1" className="uppercase">
           {title}
         </Typography>

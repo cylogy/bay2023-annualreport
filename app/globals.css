@@ -248,3 +248,31 @@
   --pull-quote-tablet-letter-spacing: 0.92px;
   --pull-quote-tablet-line-height: 150%;
 }
+
+.menu-viewer {
+  padding: 0;
+  width: 100px;
+  height: 60px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.menu-viewer:hover .square-block {
+  background-color: var(--dark-blue);
+}
+
+.grid-group {
+  padding: 7px;
+  height: 50px;
+  width: 50px;
+  display: grid;
+  grid-template: repeat(3, 1fr) / repeat(3, 1fr);
+  gap: 3px;
+  transition: all .2s ease-in-out;
+}
+
+.square-block {
+  transition: all .2s ease-in-out;
+  background-color: var(--white);
+}
