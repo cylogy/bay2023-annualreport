@@ -8,7 +8,7 @@ type TypographyProps = {
 };
 
 const variantSizes = {
-  h1: 'text-h1-mobile md:text-h1-tablet 2xl:text-h1-desktop font-h1',
+  h1: 'text-h1-mobile md:text-h1-tablet  font-h1',
   h2: 'text-h2-mobile md:text-h2-tablet 2xl:text-h2-desktop font-h2',
   h3: 'text-h3-mobile md:text-h3-tablet 2xl:text-h3-desktop font-h3',
   h4: 'text-h4-mobile md:text-h4-tablet 2xl:text-h4-desktop font-h4',

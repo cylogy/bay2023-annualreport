@@ -33,6 +33,7 @@ const Navbar = (props: Props) => {
           size="large"
           text="DOWNLOAD PDF"
           type="filled"
+          downloadPdfClassName="download-pdf"
         />
       </div>
       <div className="hamburger-menu-wrapper"></div>

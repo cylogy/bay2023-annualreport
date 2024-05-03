@@ -1,5 +1,6 @@
 import React from 'react';
 import './style.css';
+import Image from 'next/image';
 
 type ButtonProps = {
   icon?: boolean;
@@ -26,11 +27,13 @@ export const Button: React.FC<ButtonProps> = ({
 }) => {
   return (
     <button
-      className={`button ${type} size-${size} color-1-${color} icon-${icon ? 'true' : 'false'} ${className}`}
+      className={` button w-max ${type} size-${size} color-1-${color} icon-${icon ? 'true' : 'false'} ${className}`}
     >
-      <div className={`download-pdf ${downloadPdfClassName}`}>{text}</div>
+      <div className={`${downloadPdfClassName}`}>{text}</div>
       {icon && (
-        <img
+        <Image
+          width={12}
+          height={12}
           className={`group-20 ${groupClassName}`}
           alt="Group"
           src={type === 'outlined' ? group : '/img/group-3.png'}

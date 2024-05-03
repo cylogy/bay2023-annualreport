@@ -1,0 +1,116 @@
+.footer {
+    align-items: center;
+    background-color: var(--white);
+    color: var(--dark-blue);
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    padding: 0px 50px;
+    height: 200px;
+    width: 100%;
+    margin: 0 auto;
+}
+
+.font-sizes {
+    font-family: var(--caption-tablet-font-family);
+    font-size: var(--caption-tablet-font-size);
+    font-style: var(--caption-tablet-font-style);
+    font-weight: var(--caption-tablet-font-weight);
+    letter-spacing: var(--caption-tablet-letter-spacing);
+    line-height: var(--caption-tablet-line-height);
+}
+
+.address-section {
+    display: flex;
+    flex-direction: column;
+    width: fit-content;
+    text-align: left;
+}
+
+.footer-contact-info {
+    text-align: center;
+    width: fit-content;
+}
+
+.footer-contact-info-wrapper {
+    display: flex;
+    flex-direction: column;
+}
+
+.contact-phone-numbers,
+.footer-links {
+    display: flex;
+    flex-direction: row;
+}
+
+.contact-phone-numbers .contact-phone-wrapper:last-child .bar,
+.footer-links .footer-link-wrapper:last-child .dot {
+    display: none;
+}
+
+.phone-number,
+.footer-link {
+    color: var(--dark-blue);
+    text-decoration: none;
+}
+
+.bar,
+.dot {
+    margin: 0 5px;
+}
+
+.footer-logo {
+    object-fit: cover;
+    height: 55px;
+    width: 320px;
+}
+
+/* Media Queries for Footer*/
+@media (max-width: 1080px) {
+    .footer {
+        height: auto;
+        gap: 20px;
+        flex-direction: column;
+        padding: 36px 0px;
+    }
+
+    .footer-contact-info-wrapper {
+        gap: 20px;
+    }
+
+    .contact-phone-numbers,
+    .footer-links {
+        justify-content: center;
+        flex-direction: column;
+    }
+
+    .bar,
+    .dot {
+        display: none;
+    }
+
+    .footer-logo {
+        height: 50px;
+        width: 285px;
+    }
+}
+
+@media (max-width: 640px) {
+    .footer {
+        padding: 36px 0px;
+        justify-content: center;
+    }
+
+    .address-section {
+        text-align: center;
+    }
+
+    .font-sizes {
+        font-family: var(--caption-mobile-font-family);
+        font-size: var(--caption-mobile-font-size);
+        font-style: var(--caption-mobile-font-style);
+        font-weight: var(--caption-mobile-font-weight);
+        letter-spacing: var(--caption-mobile-letter-spacing);
+        line-height: var(--caption-mobile-line-height);
+    }
+}

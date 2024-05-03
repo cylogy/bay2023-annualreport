@@ -4,6 +4,12 @@ const config: Config = {
   content: ['./app/**/*.{js,ts,jsx,tsx,mdx}'],
   theme: {
     extend: {
+      screens: {
+        mobile: '480px',
+        'tablet-portrait': '1024px',
+        'tablet-landscape': '1024px',
+        desktop: '1441px',
+      },
       colors: {
         black: 'rgba(0, 0, 0, 1)',
         blue: 'rgba(29, 103, 199, 1)',
