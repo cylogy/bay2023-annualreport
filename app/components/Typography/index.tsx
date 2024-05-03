@@ -8,12 +8,12 @@ type TypographyProps = {
 };
 
 const variantSizes = {
-  h1: 'text-h1-mobile md:text-h1-tablet  font-h1',
-  h2: 'text-h2-mobile md:text-h2-tablet 2xl:text-h2-desktop font-h2',
-  h3: 'text-h3-mobile md:text-h3-tablet 2xl:text-h3-desktop font-h3',
-  h4: 'text-h4-mobile md:text-h4-tablet 2xl:text-h4-desktop font-h4',
-  h5: 'text-h5-mobile md:text-h5-tablet 2xl:text-h5-desktop font-h5-all-caps',
-  h6: 'text-h6-mobile md:text-h6-tablet 2xl:text-h6-desktop font-h6',
+  h1: 'text-h1-mobile tablet-portrait:text-h1-tablet desktop:text-h1-desktop font-h1 tracking-h1-mobile tablet-portrait:tracking-h1-tablet desktop:tracking-h1-desktop',
+  h2: 'text-h2-mobile tablet-portrait:text-h2-tablet desktop:text-h2-desktop font-h2 tracking-h2-mobile tablet-portrait:tracking-h2-tablet desktop:tracking-h2-desktop',
+  h3: 'text-h3-mobile tablet-portrait:text-h3-tablet desktop:text-h3-desktop font-h3 tracking-h3-mobile tablet-portrait:tracking-h3-tablet desktop:tracking-h3-desktop',
+  h4: 'text-h4-mobile tablet-portrait:text-h4-tablet desktop:text-h4-desktop font-h4 tracking-h4-mobile tablet-portrait:tracking-h4-tablet desktop:tracking-h4-desktop',
+  h5: 'text-h5-mobile tablet-portrait:text-h5-tablet desktop:text-h5-desktop font-h5 tracking-h5-mobile tablet-portrait:tracking-h5-tablet desktop:tracking-h5-desktop',
+  h6: 'text-h6-mobile tablet-portrait:text-h6-tablet desktop:text-h6-desktop font-h6 tracking-h6-mobile tablet-portrait:tracking-h6-tablet desktop:tracking-h6-desktop',
   p: 'text-body font-body-text',
   span: 'text-body font-body-text',
   div: 'text-body font-body-text', // Add div variant size

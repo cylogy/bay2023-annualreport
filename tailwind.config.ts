@@ -47,6 +47,12 @@ const config: Config = {
       padding: {
         15: '60px',
       },
+      height: {
+        120: '480px',
+      },
+      width: {
+        120: '480px',
+      },
       fontSize: {
         'body-text-desktop-bold': [
           '21px',
