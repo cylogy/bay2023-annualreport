@@ -5,10 +5,10 @@ const page: FC = () => {
   return (
     <div className='h-screen flex flex-col'>
       <Hero
-        title='Incentives'
-        description="How Do We Reduce Emissions and Protect Communities and the Climate?"
-        image="/img/frame-19722.png"
-        imageTablet="/img/frame-19722-3.png"
+        title='About us'
+        description="Who Are We?"
+        image="/img/about-us-mobile-tablet.png"
+        imageTablet="/img/about-us-mobile-tablet.png"
         background="bg-green text-white"
         finalReverse
       />

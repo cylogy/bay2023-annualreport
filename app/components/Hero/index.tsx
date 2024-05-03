@@ -38,7 +38,7 @@ const Hero = ({
           className="object-cover object-top"
         />
       </div>
-      <div className="flex flex-col items-start justify-center p-20">
+      <div className="flex flex-col items-start justify-center p-20 w-full">
         <Typography as="h1" className="uppercase">
           {title}
         </Typography>
