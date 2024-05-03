@@ -8,6 +8,7 @@ type Props = {
   image: string;
   imageTablet: string;
   background: string;
+  imageLast?: boolean;
 };
 
 const Hero = ({
@@ -16,12 +17,15 @@ const Hero = ({
   image,
   imageTablet,
   background,
+  imageLast,
 }: Props) => {
   return (
     <article
-      className={`desktop:flex-row desktop:h-120 flex flex-col ${background} w-full`}
+      className={`desktop:flex-row desktop:h-120 flex flex-col ${background} w-full ${imageLast ? 'justify-between' : ''}`}
     >
-      <div className="tablet-portrait:hidden desktop:w-120 desktop:h-full desktop:flex relative flex h-[350px] w-full">
+      <div
+        className={`tablet-portrait:hidden desktop:w-120 desktop:h-full desktop:flex relative flex h-[350px] w-full ${imageLast ? 'desktop:order-2' : ''}`}
+      >
         <Image src={image} fill alt="" className="object-cover" />
       </div>
       <div className="tablet-portrait:flex desktop:hidden relative hidden h-[350px] w-full">
