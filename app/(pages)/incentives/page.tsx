@@ -5,7 +5,7 @@ import Typography from '@/app/components/Typography'
 
 const page: FC = () => {
   return (
-    <div className='h-screen flex flex-col'>
+    <div className='flex flex-col min-h-screen'>
       <Hero
         title='Incentives'
         description="How Do We Reduce Emissions and Protect Communities and the Climate?"
