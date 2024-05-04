@@ -8,6 +8,7 @@ type Props = {
   imageSrc: string;
   backgroundColor: string;
   imageFirst?: boolean;
+  alt: string;
 };
 
 const InfoCardImage = ({
@@ -16,6 +17,7 @@ const InfoCardImage = ({
   imageSrc,
   backgroundColor,
   imageFirst = false,
+  alt,
 }: Props) => {
   return (
     <article
@@ -30,7 +32,7 @@ const InfoCardImage = ({
       <div
         className={`desktop:w-[460px] relative min-h-[460px] w-full flex-shrink-0 overflow-hidden rounded-[20px] ${imageFirst ? 'desktop:order-1 desktop:rounded-r-none desktop:rounded-l-[20px] order-1' : ' desktop:order-2 desktop:rounded-l-none desktop:rounded-r-[20px] order-1'}`}
       >
-        <Image src={imageSrc} fill className="object-cover" alt={title} />
+        <Image src={imageSrc} fill className="object-cover" alt={alt} />
       </div>
     </article>
   );

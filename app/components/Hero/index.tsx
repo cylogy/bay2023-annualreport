@@ -8,6 +8,7 @@ type Props = {
   image: string;
   imageTablet: string;
   background: string;
+  alt: string;
   imageLast?: boolean;
   finalReverse?: boolean;
 };
@@ -20,6 +21,7 @@ const Hero = ({
   background,
   imageLast,
   finalReverse,
+  alt,
 }: Props) => {
   return (
     <article
@@ -28,7 +30,7 @@ const Hero = ({
       <div
         className={`tablet-portrait:hidden desktop:w-120 desktop:h-full desktop:flex relative flex h-[350px] w-full ${imageLast ? 'desktop:order-2' : ''}`}
       >
-        <Image src={image} fill alt="" className="object-cover" />
+        <Image src={image} fill alt={alt} className="object-cover" />
       </div>
       <div className="tablet-portrait:flex desktop:hidden relative hidden h-[350px] w-full">
         <Image
