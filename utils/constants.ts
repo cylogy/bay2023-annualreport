@@ -480,3 +480,86 @@ export const sourceTestStats = [
     },
   },
 ];
+
+export const greenhouseEmissions = [
+  { name: 'Transportation', value: 0.391, color: '#1D67C7' },
+  { name: 'Industrial - Oil Refineries', value: 0.189, color: '#FFFFFF' },
+  { name: 'Electricity/Co-Generation', value: 0.131, color: '#94B3EF' },
+  {
+    name: 'Residential/Commercial Fuel Usage',
+    value: 0.117,
+    color: '#4B4848',
+  },
+  { name: 'Industrial - Others', value: 0.08, color: '#0A215B' },
+  {
+    name: 'High Global Warming Potential Gases',
+    value: 0.05,
+    color: '#006E6E',
+  },
+  { name: 'Recycling and Waste', value: 0.027, color: '#ADFBE8' },
+  { name: 'Agriculture/Farming', value: 0.015, color: '#7F7A7F' },
+];
+
+export const particulatePollution = [
+  { name: 'Residential Wood Burning', value: 0.181, color: '#1D67C7' },
+  {
+    name: 'Stationary Non-Combustion Sources',
+    value: 0.158,
+    color: '#FFFFFF',
+  },
+  { name: 'Stationary Combustion Sources', value: 0.141, color: '#94B3EF' },
+  {
+    name: 'Road Dust',
+    value: 0.137,
+    color: '#4B4848',
+  },
+  { name: 'Mobile On-Road Sources', value: 0.136, color: '#0A215B' },
+  {
+    name: 'Mobile Off-Road Sources',
+    value: 0.098,
+    color: '#006E6E',
+  },
+  { name: 'Other Dust e', value: 0.072, color: '#ADFBE8' },
+  { name: 'Commercial Cooking', value: 0.056, color: '#7F7A7F' },
+  { name: 'Accidental & Planned Fires', value: 0.021, color: '#E87551' },
+];
+
+export const nitrogenOxidePollution = [
+  { name: 'Mobile Off-Road Sources - Ships', value: 0.33, color: '#1D67C7' },
+  {
+    name: 'Mobile On-Road Sources - Trucks',
+    value: 0.211,
+    color: '#FFFFFF',
+  },
+  { name: 'Stationary Combustion Sources', value: 0.101, color: '#94B3EF' },
+  {
+    name: 'Mobile Off-Road Sources - Aircraft',
+    value: 0.096,
+    color: '#4B4848',
+  },
+  {
+    name: 'Mobile Off-Road Sources - Equipment f',
+    value: 0.086,
+    color: '#0A215B',
+  },
+  {
+    name: 'Mobile Off-Road Sources - Other g',
+    value: 0.06,
+    color: '#006E6E',
+  },
+  {
+    name: 'Mobile On-Road Sources - Other Vehicles h',
+    value: 0.055,
+    color: '#ADFBE8',
+  },
+  {
+    name: 'Residential Natural Gas Combustion',
+    value: 0.048,
+    color: '#7F7A7F',
+  },
+  {
+    name: 'Stationary Non-Combustion Sources',
+    value: 0.013,
+    color: '#E87551',
+  },
+];

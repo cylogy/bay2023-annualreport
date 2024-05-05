@@ -6,8 +6,8 @@ const config: Config = {
     extend: {
       screens: {
         mobile: '480px',
-        'tablet-portrait': '1024px',
-        'tablet-landscape': '1024px',
+        'tablet-portrait': '481px',
+        'tablet-landscape': '1025px',
         desktop: '1441px',
       },
       colors: {

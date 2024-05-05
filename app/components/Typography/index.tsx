@@ -1,7 +1,18 @@
 import React from 'react';
 
 type TypographyProps = {
-  as?: 'p' | 'span' | 'h1' | 'h2' | 'h3' | 'h4' | 'h5' | 'h6' | 'label' | 'div';
+  as?:
+    | 'p'
+    | 'span'
+    | 'h1'
+    | 'h2'
+    | 'h3'
+    | 'h4'
+    | 'h5'
+    | 'h6'
+    | 'label'
+    | 'div'
+    | 'blockquote';
   className?: string;
   children: React.ReactNode;
   mixBlend?: boolean;
@@ -18,6 +29,8 @@ const variantSizes = {
   span: 'text-body font-body-text',
   div: 'text-body font-body-text', // Add div variant size
   label: 'text-caption font-caption',
+  blockquote:
+    'text-pull-quote-mobile tablet-portrait:text-pull-quote-tablet desktop:text-pull-quote-desktop font-pull-quote tracking-pull-quote-mobile tablet-portrait:tracking-pull-quote-tablet desktop:tracking-pull-quote-desktop',
 };
 
 const Typography: React.FC<TypographyProps> = ({

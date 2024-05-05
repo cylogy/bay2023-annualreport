@@ -6,14 +6,15 @@ import InfoCardImage from '@/app/components/InfoCardImage';
 import TextBlock from '@/app/components/TextBlock';
 import Typography from '@/app/components/Typography';
 import Image from 'next/image';
-import React, { useRef } from 'react';
-import { Swiper, SwiperSlide } from 'swiper/react';
-import 'swiper/css';
-import 'swiper/css/pagination';
-import { A11y, Navigation as SwiperNavigation } from 'swiper/modules';
-import { Swiper as SwiperType } from 'swiper';
+import React from 'react';
 import Navigation from '@/app/components/Navigation';
 import dynamic from 'next/dynamic';
+import Carousel from '@/app/components/Carousel';
+import {
+  greenhouseEmissions,
+  nitrogenOxidePollution,
+  particulatePollution,
+} from '@/utils/constants';
 
 const PieChartWithoutSSR = dynamic(
   () => import('@/app/components/PieChartWithoutSSR'),
@@ -23,89 +24,27 @@ const PieChartWithoutSSR = dynamic(
 type Props = {};
 
 const AirQuality = (props: Props) => {
-  const swiperRef = useRef<SwiperType>();
-
-  const greenhouseEmissions = [
-    { name: 'Transportation', value: 0.391, color: '#1D67C7' },
-    { name: 'Industrial - Oil Refineries', value: 0.189, color: '#FFFFFF' },
-    { name: 'Electricity/Co-Generation', value: 0.131, color: '#94B3EF' },
-    {
-      name: 'Residential/Commercial Fuel Usage',
-      value: 0.117,
-      color: '#4B4848',
-    },
-    { name: 'Industrial - Others', value: 0.08, color: '#0A215B' },
-    {
-      name: 'High Global Warming Potential Gases',
-      value: 0.05,
-      color: '#006E6E',
-    },
-    { name: 'Recycling and Waste', value: 0.027, color: '#ADFBE8' },
-    { name: 'Agriculture/Farming', value: 0.015, color: '#7F7A7F' },
-  ];
-
-  const particulatePollution = [
-    { name: 'Residential Wood Burning', value: 0.181, color: '#1D67C7' },
-    {
-      name: 'Stationary Non-Combustion Sources',
-      value: 0.158,
-      color: '#FFFFFF',
-    },
-    { name: 'Stationary Combustion Sources', value: 0.141, color: '#94B3EF' },
-    {
-      name: 'Road Dust',
-      value: 0.137,
-      color: '#4B4848',
-    },
-    { name: 'Mobile On-Road Sources', value: 0.136, color: '#0A215B' },
-    {
-      name: 'Mobile Off-Road Sources',
-      value: 0.098,
-      color: '#006E6E',
-    },
-    { name: 'Other Dust e', value: 0.072, color: '#ADFBE8' },
-    { name: 'Commercial Cooking', value: 0.056, color: '#7F7A7F' },
-    { name: 'Accidental & Planned Fires', value: 0.021, color: '#E87551' },
-  ];
-
-  const nitrogenOxidePollution = [
-    { name: 'Mobile Off-Road Sources - Ships', value: 0.33, color: '#1D67C7' },
-    {
-      name: 'Mobile On-Road Sources - Trucks',
-      value: 0.211,
-      color: '#FFFFFF',
-    },
-    { name: 'Stationary Combustion Sources', value: 0.101, color: '#94B3EF' },
-    {
-      name: 'Mobile Off-Road Sources - Aircraft',
-      value: 0.096,
-      color: '#4B4848',
-    },
-    {
-      name: 'Mobile Off-Road Sources - Equipment f',
-      value: 0.086,
-      color: '#0A215B',
-    },
-    {
-      name: 'Mobile Off-Road Sources - Other g',
-      value: 0.06,
-      color: '#006E6E',
-    },
-    {
-      name: 'Mobile On-Road Sources - Other Vehicles h',
-      value: 0.055,
-      color: '#ADFBE8',
-    },
-    {
-      name: 'Residential Natural Gas Combustion',
-      value: 0.048,
-      color: '#7F7A7F',
-    },
-    {
-      name: 'Stationary Non-Combustion Sources',
-      value: 0.013,
-      color: '#E87551',
-    },
+  const slides = [
+    () => (
+      <article className="tablet-portrait:h-[617.17px] desktop:h-[786px] relative flex h-[247px] w-full">
+        <Image
+          src="/img/rectangle-255-2.png"
+          fill
+          className="object-cover"
+          alt="Technicians analyzing machinery for air quality"
+        />
+      </article>
+    ),
+    () => (
+      <article className="tablet-portrait:h-[617.17px] desktop:h-[786px] relative flex h-[247px] w-full">
+        <Image
+          src="/img/rectangle-256.png"
+          fill
+          className="object-cover"
+          alt="Attendees participating in the Air Quality Foundation's workshop"
+        />
+      </article>
+    ),
   ];
 
   return (
@@ -272,64 +211,7 @@ const AirQuality = (props: Props) => {
         </div>
       </TextBlock>
       <section className="pl-15 desktop:pl-25 mb-40 mt-12 flex w-full">
-        <Swiper
-          modules={[SwiperNavigation, A11y]}
-          slidesPerView={1.6}
-          spaceBetween={80}
-          pagination={{
-            clickable: true,
-          }}
-          className="pl-25 flex h-[594px] w-full"
-          draggable
-          onBeforeInit={(swiper) => {
-            swiperRef.current = swiper;
-          }}
-        >
-          <SwiperSlide>
-            <article className="tablet-portrait:h-[617.17px] desktop:h-[786px] relative flex h-[247px] w-full">
-              <Image
-                src="/img/rectangle-255-2.png"
-                fill
-                className="object-cover"
-                alt="Technicians analyzing machinery for air quality"
-              />
-            </article>
-          </SwiperSlide>
-          <SwiperSlide>
-            <article className="tablet-portrait:h-[617.17px] desktop:h-[786px] relative flex h-[247px] w-full">
-              <Image
-                src="/img/rectangle-256.png"
-                fill
-                className="object-cover"
-                alt="Attendees participating in the Air Quality Foundation's workshop"
-              />
-            </article>
-          </SwiperSlide>
-          <div className="mt-15 flex w-full items-center justify-end px-6">
-            <button
-              title="previous"
-              onClick={() => swiperRef.current?.slidePrev()}
-            >
-              <Image
-                src={'/img/arrow-element-22.png'}
-                width={68}
-                height={48}
-                alt="previous slide"
-              />
-            </button>
-            <button
-              title="previous"
-              onClick={() => swiperRef.current?.slideNext()}
-            >
-              <Image
-                src={'/img/arrow-element-23.png'}
-                width={68}
-                height={48}
-                alt="next slide"
-              />
-            </button>
-          </div>
-        </Swiper>
+        <Carousel slideComponents={slides} />
       </section>
       <section className="desktop:h-[1281px] fill-blue relative flex w-full overflow-hidden">
         <div className="bg-light-blue/20 absolute bottom-0 left-0 right-0 top-0 -z-10 block">
@@ -563,7 +445,7 @@ const AirQuality = (props: Props) => {
           <br />
         </Typography>
       </section>
-      <Navigation nextLink="" prevLink="" />
+      <Navigation nextLink="/community" prevLink="/achievements" />
     </main>
   );
 };
