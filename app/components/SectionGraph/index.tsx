@@ -12,7 +12,6 @@ interface Props {
     options: GraphItem[];
     footerTitles?: string;
     background: string;
-    children?: React.ReactNode
 }
 
 const index = ({
@@ -20,21 +19,15 @@ const index = ({
     options,
     footerTitles,
     background,
-    children
 }:Props) => {
 
   return (
-    <div className='w-full flex flex-col px-6 mt-15 mb-20 desktop:flex-row desktop:px-25 desktop:space-x-9'>
+    <div className='w-full flex flex-col px-6 mt-15 mb-20 desktop:flex-row desktop:space-x-9 desktop:justify-between'>
         <Typography as="h2" className=" text-dark-blue uppercase pb-2 border-b-2 border-dark-blue h-fit">
             {title}
         </Typography>
 
-        <div className={`border-2 border-dark-blue rounded-[20px] ${background} bg-white p-6 my-9 desktop:my-0 desktop:px-20 desktop:py-15 w-full`}>
-
-          {children ?
-            <>{children}</>
-            :
-            <>
+        <div className={`border-2 border-dark-blue rounded-[20px] ${background} bg-white p-6 my-9 desktop:my-0 desktop:px-20 desktop:py-15 w-full max-w-[720px] desktop:min-w-[720px]`}>
                 <div className="space-y-9 flex flex-col">
                     {options.map((item, index) => (
                         <div
@@ -113,8 +106,6 @@ const index = ({
                 </Typography>
                 </div>
                 }
-            </>
-          }
          </div>
     </div>
   )

@@ -2,6 +2,7 @@ import React, { FC } from 'react'
 import Hero from '../../components/Hero'
 import TextBlock from '@/app/components/TextBlock'
 import Typography from '@/app/components/Typography'
+import Navigation from '@/app/components/Navigation'
 
 const page: FC = () => {
   return (
@@ -13,6 +14,7 @@ const page: FC = () => {
         imageTablet="/img/about-us-mobile-tablet.png"
         background="bg-green text-white"
         finalReverse
+        alt='About us'
       />
       <div className="inline-block">
         <TextBlock align="left">
@@ -40,6 +42,7 @@ const page: FC = () => {
           </div>
         </TextBlock>
       </div>
+      <Navigation nextLink="/about-us" prevLink="/advocacy" />
     </div>
   )
 }
