@@ -1,11 +1,68 @@
-import React, { FC } from 'react'
+'use client'
+import React, { FC, useEffect, useRef, useState } from 'react'
 import Hero from '../../components/Hero'
 import TextBlock from '@/app/components/TextBlock'
 import Typography from '@/app/components/Typography'
 import Navigation from '@/app/components/Navigation'
 import { InfoCard } from '@/app/components/InfoCard'
+import Carousel from '@/app/components/Carousel';
+import InfoCardImage from '@/app/components/InfoCardImage'
+
 
 const page: FC = () => {
+  const [load, setLoad] = useState(false);
+  const videoRef = useRef(null);
+
+  const slides = [
+    () => (
+      <InfoCardImage
+        backgroundColor="bg-blue text-white flex-1 h-full"
+        imageSrc="/img/image-square-7.png"
+        alt="Wildfire Smoke Response"
+        imageFirst
+        title="Wildfire Smoke Response"
+        body={() => (
+          <Typography as="p">
+            In response to the recent wildfires in Canada affecting much of the East Coast and Midwest, we worked with California legislators at the federal level to reintroduce several smoke-related bills to expand clean air centers, home air filtration, and monitoring. While previous attempts were not successful, the additional regions of the U.S. experiencing wildfire smoke impacts have heightened awareness of this issue beyond the West Coast, which may assist in eventual funding in the federal budget.  
+          </Typography>
+        )}
+      />
+    ),
+    () => (
+      <InfoCardImage
+        backgroundColor="bg-green text-white"
+        imageSrc="/img/image-square-12-3.png"
+        alt="Blue Skies Blue Whales Program"
+        imageFirst
+        title="Blue Skies Blue Whales Program"
+        body={() => (
+          <Typography as="p">
+            In addition to introducing a bill at the state level to expand voluntary vessel speed reduction programs, our staff have worked along with the Santa Barbara County Air Pollution Control District to inform legislators at the federal level of our existing local program, and to solicit greater federal support through a budget appropriation or a bill to provide greater agency support.
+          </Typography>
+        )}
+      />
+    )
+  ];
+
+  useEffect(() => {
+    const observer = new IntersectionObserver((entries) => {
+      if (entries[0].isIntersecting) {
+        setLoad(true);
+        observer.disconnect();
+      }
+    });
+
+    if (videoRef.current) {
+      observer.observe(videoRef.current);
+    }
+
+    return () => {
+      if (videoRef.current) {
+        observer.unobserve(videoRef.current);
+      }
+    };
+  }, []);
+
   return (
     <div className='flex flex-col min-h-screen'>
       <Hero
@@ -99,6 +156,23 @@ const page: FC = () => {
             allwidth
           />
         </div>
+      </section>
+      <section className="pl-15 desktop:pl-6 desktop:flex mb-40 mt-12 hidden w-full">
+        <Carousel
+          slideComponents={slides}
+          breakpoints={{
+            1441: {
+              // width: 768,
+              slidesPerView: 1.1,
+              spaceBetween: 0,
+            },
+          }}
+        />
+      </section>
+      <section className="desktop:hidden mt-12 flex w-full flex-col">
+        {slides.map((Component, index) => (
+          <Component key={`slides-${index}`} />
+        ))}
       </section>
       <Navigation nextLink="/about-us" prevLink="/by-the-numbers" />
     </div>
