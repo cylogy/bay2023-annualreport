@@ -46,6 +46,117 @@ const page: FC = () => {
     },
   ]
 
+  const executiveManagementData = [
+    {
+      name: "Philip M. Fine",
+      position: "Executive Officer/Air Pollution Control Officer"
+    },
+    {
+      name: "Alexander Crockett",
+      position: "General Counsel"
+    },
+    {
+      name: "Meredith Bauer",
+      position: "Deputy Executive Officer of Engineering and Compliance"
+    },
+    {
+      name: "Hyacinth Hinojosa",
+      position: "Deputy Executive Officer of Finance and Administration"
+    },
+    {
+      name: "GREGORY NUDD",
+      position: "Deputy Executive Officer of Science and Policy"
+    },
+    {
+      name: "Viet Tran",
+      position: "Deputy Executive Officer of Public Affairs"
+    },
+    {
+      name: "Arsenio Mataka",
+      position: "Deputy Executive Officer of Equity and Community Programs"
+    },
+    {
+      name: "JOHN CHILADAKIS",
+      position: "Chief Technology Officer"
+    },
+    {
+      name: "Vanessa Johnson",
+      position: "Manager, Executive Operations"
+    }
+  ];
+
+  const divisionDirectorsAndOfficersData = [
+    {
+      name: "ALAN ABBS",
+      position: "Legislative Officer"
+    },
+    {
+      name: "SONG BAI",
+      position: "Assessment, Inventory and Modeling"
+    },
+    {
+      name: "LISA BAKER",
+      position: "Human Resources"
+    },
+    {
+      name: "RANYEE CHIANG",
+      position: "Meteorology and Measurements"
+    },
+    {
+      name: "JUDITH CUTINO",
+      position: "Health Officer"
+    },
+    {
+      name: "LISA F. FASANO",
+      position: "External Affairs"
+    },
+    {
+      name: "ANTHONY FOURNIER",
+      position: "Technology Implementation"
+    },
+    {
+      name: "Wendy Goodfriend",
+      position: "Planning and Climate Protection"
+    },
+    {
+      name: "Jeffrey Gove",
+      position: "Compliance and Enforcement"
+    },
+    {
+      name: "PAMELA LEONG",
+      position: "Engineering"
+    },
+    {
+      name: "Maricela Martinez",
+      position: "Administrative Resources"
+    },
+    {
+      name: "Stephanie Osaze",
+      position: "Finance"
+    },
+    {
+      name: "Suma Peesapati",
+      position: "Environmental Justice and Community Engagement"
+    },
+    {
+      name: "Patricia Roman",
+      position: "My Air Online"
+    },
+    {
+      name: "Kristine Roselius",
+      position: "Communications"
+    },
+    {
+      name: "Karen Schkolnick",
+      position: "Strategic Incentives"
+    },
+    {
+      name: "POSITION CURRENTLY VACANT",
+      position: "Rules and Strategic Policy"
+    }
+  ];
+  
+
   return (
     <div className='flex flex-col min-h-screen'>
       <Hero
@@ -84,6 +195,29 @@ const page: FC = () => {
         </TextBlock>
       </div>
 
+      {/* <section className='
+      desktop:space-y-[100px] py-25 desktop:py-36 desktop:px-20 desktop:space-x-0
+      relative flex w-full flex-col justify-center space-y-9 px-6'>
+         <div className="w-full pb-1 border-b-2 border-dark-blue mb-6 desktop:mb-0">
+          <Typography as="h2" className=" text-dark-blue uppercase">
+            Demographics by gender
+          </Typography>
+        </div>
+
+        <SectionGraph
+          title="EXECUTIVE MANAGEMENT"
+          options={[]}
+          background="white"
+          headChildren={
+            <>
+            asdasdasdas
+            </>
+          }
+        >
+          hjadshjkasdkhjas
+        </SectionGraph>
+      </section> */}
+
       <section className='
       desktop:space-y-[100px] py-25 desktop:py-36 desktop:px-20 desktop:space-x-0
       relative flex w-full flex-col justify-center space-y-9 px-6'>
@@ -93,100 +227,24 @@ const page: FC = () => {
           </Typography>
         </div>
         <SectionGraph
-          title="EXECUTIVE MANAGEMENT "
+          title="EXECUTIVE MANAGEMENT"
           options={[]}
           background="white"
         >
-          <div
-            className='flex flex-col desktop:w-full desktop:justify-between mb-4'
-          >
-            <Typography as="h5" className="uppercase">
-            Philip M. Fine
-            </Typography>
-            <Typography as="span" className="capitalize desktop:text-[21px] desktop:mt-1 pb-4 border-b-2 border-dark-blue">
-              Executive Officer/Air Pollution Control Officer    
-            </Typography>   
-          </div>
-          <div
-            className='flex flex-col desktop:w-full desktop:justify-between mb-4'
-          >
-            <Typography as="h5" className="uppercase">
-              Alexander Crockett
-            </Typography>
-            <Typography as="span" className="capitalize desktop:text-[21px] desktop:mt-1 pb-4 border-b-2 border-dark-blue">
-              General Counsel
-            </Typography>   
-          </div>
-          <div
-            className='flex flex-col desktop:w-full desktop:justify-between mb-4'
-          >
-            <Typography as="h5" className="uppercase">
-              Meredith Bauer
-            </Typography>
-            <Typography as="span" className="capitalize desktop:text-[21px] desktop:mt-1 pb-4 border-b-2 border-dark-blue">
-              Deputy Executive Officer of Engineering and Compliance
-            </Typography>   
-          </div>
-          <div
-            className='flex flex-col desktop:w-full desktop:justify-between mb-4'
-          >
-            <Typography as="h5" className="uppercase">
-              Hyacinth Hinojosa
-            </Typography>
-            <Typography as="span" className="capitalize desktop:text-[21px] desktop:mt-1 pb-4 border-b-2 border-dark-blue">
-              Deputy Executive Officer of Finance and Administration
-            </Typography>   
-          </div>
-          <div
-            className='flex flex-col desktop:w-full desktop:justify-between mb-4'
-          >
-            <Typography as="h5" className="uppercase">
-              GREGORY NUDD
-            </Typography>
-            <Typography as="span" className="capitalize desktop:text-[21px] desktop:mt-1 pb-4 border-b-2 border-dark-blue">
-              Deputy Executive Officer of Science and Policy
-            </Typography>   
-          </div>
-          <div
-            className='flex flex-col desktop:w-full desktop:justify-between mb-4'
-          >
-            <Typography as="h5" className="uppercase">
-              Viet Tran
-            </Typography>
-            <Typography as="span" className="capitalize desktop:text-[21px] desktop:mt-1 pb-4 border-b-2 border-dark-blue">
-              Deputy Executive Officer of Public Affairs
-            </Typography>   
-          </div>
-          <div
-            className='flex flex-col desktop:w-full desktop:justify-between mb-4'
-          >
-            <Typography as="h5" className="uppercase">
-              Arsenio Mataka
-            </Typography>
-            <Typography as="span" className="capitalize desktop:text-[21px] desktop:mt-1 pb-4 border-b-2 border-dark-blue">
-              Deputy Executive Officer of Equity and Community Programs
-            </Typography>   
-          </div>
-          <div
-            className='flex flex-col desktop:w-full desktop:justify-between mb-4'
-          >
-            <Typography as="h5" className="uppercase">
-              JOHN CHILADAKIS
-            </Typography>
-            <Typography as="span" className="capitalize desktop:text-[21px] desktop:mt-1 pb-4 border-b-2 border-dark-blue">
-              Chief Technology Officer
-            </Typography>   
-          </div>
-          <div
-            className='flex flex-col desktop:w-full desktop:justify-between mb-4'
-          >
-            <Typography as="h5" className="uppercase">
-              Vanessa Johnson
-            </Typography>
-            <Typography as="span" className="capitalize desktop:text-[21px] desktop:mt-1 pb-4">
-              Manager, Executive Operations
-            </Typography>   
-          </div>
+          {executiveManagementData.map((person, index) => (
+            <div
+              key={index}
+              className='flex flex-col desktop:w-full desktop:justify-between mb-4'
+            >
+              <Typography as="h5" className="uppercase">
+                {person.name}
+              </Typography>
+              <Typography as="span" className={`capitalize desktop:text-[21px] desktop:mt-1 ${executiveManagementData?.length > index + 1 && "border-b-2 border-dark-blue pb-4" } `}>
+                {person.position}
+              </Typography>   
+            </div>
+          ))
+        }
         </SectionGraph>
 
         <SectionGraph
@@ -194,176 +252,19 @@ const page: FC = () => {
           options={[]}
           background="dark-blue"
         >
-          <div
-            className='flex flex-col desktop:w-full desktop:justify-between mb-4'
-          >
-            <Typography as="h5" className="uppercase">
-            ALAN ABBS
-            </Typography>
-            <Typography as="span" className="capitalize desktop:text-[21px] desktop:mt-1 pb-4 border-b-2 border-white">
-            Legislative Officer
-            </Typography>   
-          </div>
-          <div
-            className='flex flex-col desktop:w-full desktop:justify-between mb-4'
-          >
-            <Typography as="h5" className="uppercase">
-            SONG BAI
-            </Typography>
-            <Typography as="span" className="capitalize desktop:text-[21px] desktop:mt-1 pb-4 border-b-2 border-white">
-            Assessment, Inventory and Modeling
-            </Typography>   
-          </div>
-          <div
-            className='flex flex-col desktop:w-full desktop:justify-between mb-4'
-          >
-            <Typography as="h5" className="uppercase">
-            LISA BAKER
-            </Typography>
-            <Typography as="span" className="capitalize desktop:text-[21px] desktop:mt-1 pb-4 border-b-2 border-white">
-            Human Resources
-            </Typography>   
-          </div>
-          <div
-            className='flex flex-col desktop:w-full desktop:justify-between mb-4'
-          >
-            <Typography as="h5" className="uppercase">
-            RANYEE CHIANG
-            </Typography>
-            <Typography as="span" className="capitalize desktop:text-[21px] desktop:mt-1 pb-4 border-b-2 border-white">
-            Meteorology and Measurements 
-            </Typography>   
-          </div>
-          <div
-            className='flex flex-col desktop:w-full desktop:justify-between mb-4'
-          >
-            <Typography as="h5" className="uppercase">
-            JUDITH CUTINO
-            </Typography>
-            <Typography as="span" className="capitalize desktop:text-[21px] desktop:mt-1 pb-4 border-b-2 border-white">
-            Health Officer
-            </Typography>   
-          </div>
-          <div
-            className='flex flex-col desktop:w-full desktop:justify-between mb-4'
-          >
-            <Typography as="h5" className="uppercase">
-            LISA F. FASANO
-            </Typography>
-            <Typography as="span" className="capitalize desktop:text-[21px] desktop:mt-1 pb-4 border-b-2 border-white">
-              External Affairs
-            </Typography>   
-          </div>
-          <div
-            className='flex flex-col desktop:w-full desktop:justify-between mb-4'
-          >
-            <Typography as="h5" className="uppercase">
-            ANTHONY FOURNIER
-            </Typography>
-            <Typography as="span" className="capitalize desktop:text-[21px] desktop:mt-1 pb-4 border-b-2 border-white">
-            Technology Implementation
-            </Typography>   
-          </div>
-          <div
-            className='flex flex-col desktop:w-full desktop:justify-between mb-4'
-          >
-            <Typography as="h5" className="uppercase">
-            Wendy Goodfriend
-            </Typography>
-            <Typography as="span" className="capitalize desktop:text-[21px] desktop:mt-1 pb-4 border-b-2 border-white">
-            Planning and Climate Protection
-            </Typography>   
-          </div>
-          <div
-            className='flex flex-col desktop:w-full desktop:justify-between mb-4'
-          >
-            <Typography as="h5" className="uppercase">
-            Jeffrey Gove
-            </Typography>
-            <Typography as="span" className="capitalize desktop:text-[21px] desktop:mt-1 pb-4 border-b-2 border-white">
-            Compliance and Enforcement
-            </Typography>   
-          </div>
-          <div
-            className='flex flex-col desktop:w-full desktop:justify-between mb-4'
-          >
-            <Typography as="h5" className="uppercase">
-            PAMELA LEONG
-            </Typography>
-            <Typography as="span" className="capitalize desktop:text-[21px] desktop:mt-1 pb-4 border-b-2 border-white">
-            Engineering
-            </Typography>   
-          </div>
-          <div
-            className='flex flex-col desktop:w-full desktop:justify-between mb-4'
-          >
-            <Typography as="h5" className="uppercase">
-            Maricela Martinez
-            </Typography>
-            <Typography as="span" className="capitalize desktop:text-[21px] desktop:mt-1 pb-4 border-b-2 border-white">
-            Administrative Resources
-            </Typography>   
-          </div>
-          <div
-            className='flex flex-col desktop:w-full desktop:justify-between mb-4'
-          >
-            <Typography as="h5" className="uppercase">
-            Stephanie Osaze
-            </Typography>
-            <Typography as="span" className="capitalize desktop:text-[21px] desktop:mt-1 pb-4 border-b-2 border-white">
-            Finance
-            </Typography>   
-          </div>
-          <div
-            className='flex flex-col desktop:w-full desktop:justify-between mb-4'
-          >
-            <Typography as="h5" className="uppercase">
-            Suma Peesapati
-            </Typography>
-            <Typography as="span" className="capitalize desktop:text-[21px] desktop:mt-1 pb-4 border-b-2 border-white">
-            Environmental Justice and Community Engagement
-            </Typography>   
-          </div>
-          <div
-            className='flex flex-col desktop:w-full desktop:justify-between mb-4'
-          >
-            <Typography as="h5" className="uppercase">
-            Patricia Roman
-            </Typography>
-            <Typography as="span" className="capitalize desktop:text-[21px] desktop:mt-1 pb-4 border-b-2 border-white">
-            My Air Online
-            </Typography>   
-          </div>
-          <div
-            className='flex flex-col desktop:w-full desktop:justify-between mb-4'
-          >
-            <Typography as="h5" className="uppercase">
-            Kristine Roselius
-            </Typography>
-            <Typography as="span" className="capitalize desktop:text-[21px] desktop:mt-1 pb-4 border-b-2 border-white">
-            Communications
-            </Typography>   
-          </div>
-          <div
-            className='flex flex-col desktop:w-full desktop:justify-between mb-4'
-          >
-            <Typography as="h5" className="uppercase">
-            Karen Schkolnick
-            </Typography>
-            <Typography as="span" className="capitalize desktop:text-[21px] desktop:mt-1 pb-4 border-b-2 border-white">
-            Strategic Incentives
-            </Typography>   
-          </div>
-          <div
-            className='flex flex-col desktop:w-full desktop:justify-between mb-4'
-          >
-            <Typography as="h5" className="uppercase">
-            POSITION CURRENTLY VACANT
-            </Typography>
-            <Typography as="span" className="capitalize desktop:text-[21px] desktop:mt-1 pb-4">
-            Rules and Strategic Policy
-            </Typography>   
-          </div>
+          {divisionDirectorsAndOfficersData.map((person, index) => (
+            <div
+              key={index}
+              className='flex flex-col desktop:w-full desktop:justify-between mb-4'
+            >
+              <Typography as="h5" className="uppercase">
+                {person.name}
+              </Typography>
+              <Typography as="span" className={`capitalize desktop:text-[21px] desktop:mt-1 ${divisionDirectorsAndOfficersData?.length > index + 1 && "pb-4 border-b-2 border-white" } `}>
+                {person.position}
+              </Typography>   
+            </div>
+          ))}
         </SectionGraph>
       </section>
 

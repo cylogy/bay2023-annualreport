@@ -12,7 +12,8 @@ interface Props {
     options: GraphItem[];
     footerTitles?: string;
     background: "white" | "dark-blue" | "light-blue" | "blue";
-    children?: React.ReactNode
+    children?: React.ReactNode;
+    headChildren?: React.ReactNode;
 }
 
 const index = ({
@@ -20,7 +21,8 @@ const index = ({
     options,
     footerTitles,
     background,
-    children
+    children,
+    headChildren
 }:Props) => {
     
     const cardColor = {
@@ -37,9 +39,16 @@ const index = ({
     desktop:flex-row desktop:space-x-9 desktop:justify-between 
     ${!children ? "px-6 mt-15" : "mt-6"}
     `}>
-        <Typography as="h2" className="w-full text-dark-blue uppercase pb-2 border-b-2 border-dark-blue h-fit">
-            {title}
-        </Typography>
+        {
+        headChildren ?
+            <div className='h-fit pt-2 border-t-2 border-dark-blue w-full'>
+                {headChildren}
+            </div>
+        :
+            <Typography as="h2" className="w-full text-dark-blue uppercase pb-2 border-b-2 border-dark-blue h-fit">
+                {title}
+            </Typography>
+        }
 
         <div className={`
         border-2 rounded-[20px] p-6 my-9  

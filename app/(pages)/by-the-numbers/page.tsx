@@ -110,6 +110,148 @@ const airPolutionComplaintsData = [
     },
   ]
 
+  const sourceTestData  = [
+  {
+    items: [
+      {
+        label: "Refinery Source Tests",
+        value: "12"
+      },
+      {
+        label: "Compliance Rate",
+        value: "100%",
+        rigth: true
+      }
+    ]
+  },
+  {
+    items: [
+      {
+        label: "Title V Source Tests (excludes refineries)",
+        value: "19"
+      },
+      {
+        label: "Compliance Rate",
+        value: "94.7%",
+        rigth: true
+      }
+    ]
+  },
+  {
+    items: [
+      {
+        label: "Non-Title V Source Tests",
+        value: "13"
+      },
+      {
+        label: "Compliance Rate",
+        value: "92.3%",
+        rigth: true
+      }
+    ]
+  },
+  {
+    items: [
+      {
+        label: "Synthetic Minor Source Tests",
+        value: "3"
+      },
+      {
+        label: "Compliance Rate",
+        value: "66.7%",
+        rigth: true
+      }
+    ]
+  },
+  {
+    items: [
+      {
+        label: "Gasoline Cargo Tanks",
+        value: "127"
+      },
+      {
+        label: "Compliance Rate",
+        value: "97.6%",
+        rigth: true
+      }
+    ]
+  },
+  {
+    items: [
+      {
+        label: "Other Facility Source Tests Reviewed in 2023 (contractors)",
+        value: "338"
+      },
+      {
+        label: "Compliance Rate (reviewed and approved)",
+        value: "88.8%",
+        rigth: true
+      }
+    ]
+  },
+  {
+    items: [
+      {
+        label: "Other Facility Source Tests Disapproved or Invalidated in 2023 (contractors)",
+        value: "145"
+      },
+      {
+        label: "Disapproval Rate (reviewed)",
+        value: "42.9%",
+        rigth: true
+      }
+    ]
+  },
+  {
+    items: [
+      {
+        label: "Other Facility Source Test Protocols Reviewed in 2023 (contractors)",
+        value: "196"
+      }
+    ]
+  },
+  {
+    items: [
+      {
+        label: "Facility CEMS Excess Emission Reports Reviewed in 2023 (reviewed)",
+        value: "201"
+      },
+      {
+        label: "Compliance Rate (reviewed)",
+        value: "26.9%",
+        rigth: true
+      }
+    ]
+  },
+  {
+    items: [
+      {
+        label: "Gasoline Dispensing Facilities (GDF)",
+        value: "92"
+      },
+      {
+        label: "Compliance Rate",
+        value: "53.3%",
+        rigth: true
+      }
+    ]
+  },
+  {
+    items: [
+      {
+        label: "Other GDF Source Tests (contractors)",
+        value: "15,714"
+      },
+      {
+        label: "Compliance Rate",
+        value: "99.7%",
+        rigth: true
+      }
+    ]
+  },
+];
+
+
 
 const Page: FC = () => {
   const swiperRef = useRef<SwiperType>();
@@ -219,221 +361,29 @@ const Page: FC = () => {
           title="Division Directors and Officers"
           options={[]}
           background="blue">
-            <div
-              className='flex flex-col desktop:w-full desktop:justify-between mb-4'
-            >
-              <Typography as="h5" className="uppercase mb-6">
+            <Typography as="h5" className="uppercase mb-6">
               Number of Source Tests and Reviews in 2023
-              </Typography>
-              <div className=" flex w-full justify-between">
-                <Typography as="span" className="capitalize desktop:text-[21px] desktop:mt-1">
-                Refinery Source Tests
-                </Typography>   
-                <Typography as="h5" className="uppercase">
-                12
-                </Typography>
+            </Typography>
+            {sourceTestData.map((section, index) => (
+              <div
+                key={index}
+                className='flex flex-col desktop:w-full desktop:justify-between mb-4'
+              >
+                {section.items.map((item, idx) => (
+                  <div key={idx} className={`flex flex-col desktop:flex-row w-full justify-between space-y-1 desktop:space-x-4 ${item?.rigth && " desktop:pl-9 "}`}>
+                    <Typography as="span" className="capitalize desktop:text-[21px] desktop:mt-1">
+                      {item.label}
+                    </Typography>
+                    <Typography as="h5" className="uppercase">
+                      {item.value}
+                    </Typography>
+                  </div>
+                ))}
               </div>
-              <div className="flex w-full justify-between desktop:pl-9 mt-2">
-                <Typography as="span" className="capitalize desktop:text-[21px] pb-4">
-                Compliance Rate
-                </Typography>   
-                <Typography as="h5" className="uppercase">
-                100%
-                </Typography>
-              </div>
-            </div>
-            <div
-              className='flex flex-col desktop:w-full desktop:justify-between mb-4'
-            >
-              <div className=" flex w-full justify-between">
-                <Typography as="span" className="capitalize desktop:text-[21px] desktop:mt-1">
-                Title V Source Tests (excludes refineries)
-                </Typography>   
-                <Typography as="h5" className="uppercase">
-                19
-                </Typography>
-              </div>
-              <div className="flex w-full justify-between desktop:pl-9 mt-2">
-                <Typography as="span" className="capitalize desktop:text-[21px] pb-4">
-                Compliance Rate
-                </Typography>   
-                <Typography as="h5" className="uppercase">
-                94.7%
-                </Typography>
-              </div>
-            </div>
-            <div
-              className='flex flex-col desktop:w-full desktop:justify-between mb-4'
-            >
-              <div className=" flex w-full justify-between">
-                <Typography as="span" className="capitalize desktop:text-[21px] desktop:mt-1">
-                Non-Title V Source Tests
-                </Typography>   
-                <Typography as="h5" className="uppercase">
-                13
-                </Typography>
-              </div>
-              <div className="flex w-full justify-between desktop:pl-9 mt-2">
-                <Typography as="span" className="capitalize desktop:text-[21px] pb-4">
-                Compliance Rate
-                </Typography>   
-                <Typography as="h5" className="uppercase">
-                92.3%
-                </Typography>
-              </div>
-            </div>
-            <div
-              className='flex flex-col desktop:w-full desktop:justify-between mb-4'
-            >
-              <div className=" flex w-full justify-between">
-                <Typography as="span" className="capitalize desktop:text-[21px] desktop:mt-1">
-                Synthetic Minor Source Tests
-                </Typography>   
-                <Typography as="h5" className="uppercase">
-                3
-                </Typography>
-              </div>
-              <div className="flex w-full justify-between desktop:pl-9 mt-2">
-                <Typography as="span" className="capitalize desktop:text-[21px] pb-4">
-                Compliance Rate
-                </Typography>   
-                <Typography as="h5" className="uppercase">
-                66.7%
-                </Typography>
-              </div>
-            </div>
-            <div
-              className='flex flex-col desktop:w-full desktop:justify-between mb-4'
-            >
-              <div className=" flex w-full justify-between">
-                <Typography as="span" className="capitalize desktop:text-[21px] desktop:mt-1">
-                Gasoline Cargo Tanks
-                </Typography>   
-                <Typography as="h5" className="uppercase">
-                127
-                </Typography>
-              </div>
-              <div className="flex w-full justify-between desktop:pl-9 mt-2">
-                <Typography as="span" className="capitalize desktop:text-[21px] pb-4">
-                Compliance Rate
-                </Typography>   
-                <Typography as="h5" className="uppercase">
-                97.6%
-                </Typography>
-              </div>
-            </div>
-            <div
-              className='flex flex-col desktop:w-full desktop:justify-between mb-4'
-            >
-              <div className=" flex w-full justify-between">
-                <Typography as="span" className="capitalize desktop:text-[21px] desktop:mt-1">
-                Other Facility Source Tests Reviewed in 2023 (contractors)
-                </Typography>   
-                <Typography as="h5" className="uppercase">
-                338
-                </Typography>
-              </div>
-              <div className="flex w-full justify-between desktop:pl-9 mt-2">
-                <Typography as="span" className="capitalize desktop:text-[21px] pb-4">
-                Compliance Rate (reviewed and approved)
-                </Typography>   
-                <Typography as="h5" className="uppercase">
-                88.8%
-                </Typography>
-              </div>
-            </div>
-            <div
-              className='flex flex-col desktop:w-full desktop:justify-between mb-4'
-            >
-              <div className=" flex w-full justify-between">
-                <Typography as="span" className="capitalize desktop:text-[21px] desktop:mt-1">
-                Other Facility Source Tests Disapproved or Invalidated in 2023 (contractors)
-                </Typography>   
-                <Typography as="h5" className="uppercase">
-                145
-                </Typography>
-              </div>
-              <div className="flex w-full justify-between desktop:pl-9 mt-2">
-                <Typography as="span" className="capitalize desktop:text-[21px] pb-4">
-                Disapproval Rate (reviewed)
-                </Typography>   
-                <Typography as="h5" className="uppercase">
-                42.9%
-                </Typography>
-              </div>
-            </div>
-            <div
-              className='flex flex-col desktop:w-full desktop:justify-between mb-4'
-            >
-              <div className=" flex w-full justify-between">
-                <Typography as="span" className="capitalize desktop:text-[21px] desktop:mt-1">
-                Other Facility Source Test Protocols Reviewed in 2023 (contractors)
-                </Typography>   
-                <Typography as="h5" className="uppercase">
-                196
-                </Typography>
-              </div>
-            </div>
-            <div
-              className='flex flex-col desktop:w-full desktop:justify-between mb-4'
-            >
-              <div className=" flex w-full justify-between">
-                <Typography as="span" className="capitalize desktop:text-[21px] desktop:mt-1">
-                Facility CEMS Excess Emission Reports Reviewed in 2023 (reviewed)
-                </Typography>   
-                <Typography as="h5" className="uppercase">
-                201
-                </Typography>
-              </div>
-              <div className="flex w-full justify-between desktop:pl-9 mt-2">
-                <Typography as="span" className="capitalize desktop:text-[21px] pb-4">
-                Compliance Rate (reviewed)
-                </Typography>   
-                <Typography as="h5" className="uppercase">
-                26.9%
-                </Typography>
-              </div>
-            </div>
-            <div
-              className='flex flex-col desktop:w-full desktop:justify-between mb-4'
-            >
-              <div className=" flex w-full justify-between">
-                <Typography as="span" className="capitalize desktop:text-[21px] desktop:mt-1">
-                Gasoline Dispensing Facilities (GDF)
-                </Typography>   
-                <Typography as="h5" className="uppercase">
-                92
-                </Typography>
-              </div>
-              <div className="flex w-full justify-between desktop:pl-9 mt-2">
-                <Typography as="span" className="capitalize desktop:text-[21px] pb-4">
-                Compliance Rate
-                </Typography>   
-                <Typography as="h5" className="uppercase">
-                53.3%
-                </Typography>
-              </div>
-            </div>
-            <div
-              className='flex flex-col desktop:w-full desktop:justify-between mb-4 border-b-2 border-white'
-            >
-              <div className=" flex w-full justify-between">
-                <Typography as="span" className="capitalize desktop:text-[21px] desktop:mt-1">
-                Other GDF Source Tests (contractors)
-                </Typography>   
-                <Typography as="h5" className="uppercase">
-                15,714
-                </Typography>
-              </div>
-              <div className="flex w-full justify-between desktop:pl-9 mt-2">
-                <Typography as="span" className="capitalize desktop:text-[21px] pb-4">
-                Compliance Rate
-                </Typography>   
-                <Typography as="h5" className="uppercase">
-                99.7%
-                </Typography>
-              </div>
-            </div>
+            ))}
+
+            <div className="w-full border-b-2 my-6" />
+
             <div className="flex flex-col desktop:flex-row desktop:justify-between">
               <Typography as="h5" className="uppercase mb-6">
                 Total Source Tests
