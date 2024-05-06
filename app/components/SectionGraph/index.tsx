@@ -11,7 +11,7 @@ interface Props {
     title: string;
     options: GraphItem[];
     footerTitles?: string;
-    background: "white" | "dark-blue";
+    background: "white" | "dark-blue" | "light-blue" | "blue";
     children?: React.ReactNode
 }
 
@@ -26,6 +26,8 @@ const index = ({
     const cardColor = {
         white: "bg-white text-dark-blue",
         "dark-blue": "bg-dark-blue text-white",
+        "light-blue": "bg-light-blue text-white",
+        blue: "bg-blue text-white"
     }
 
     const selectedCardColor = cardColor[background]
@@ -40,7 +42,7 @@ const index = ({
         </Typography>
 
         <div className={`
-        border-2 border-dark-blue rounded-[20px] p-6 my-9  
+        border-2 rounded-[20px] p-6 my-9  
         desktop:px-20 desktop:py-15 w-full desktop:min-w-[720px] desktop:my-0   
         ${children ? "desktop:max-w-[720px] desktop:m-0 " : " max-w-[720px] "}  
         ${selectedCardColor}
