@@ -143,13 +143,13 @@ const Page: FC = () => {
           title="AIR POLLUTION COMPLAINTS"
           options={airPolutionComplaintsData}
           footerTitles="*includes flaring, generators, and unpermitted sources"
-          background="bg-white"
+          background="white"
         />
 
         <SectionGraph
           title="Compliance Inspections"
           options={complianceInspectionsData}
-          background="bg-white"
+          background="white"
         />
         <SubSectionGraph
           title="PENALTIES AND VIOLATIONS"

@@ -11,7 +11,8 @@ interface Props {
     title: string;
     options: GraphItem[];
     footerTitles?: string;
-    background: string;
+    background: "white" | "dark-blue";
+    children?: React.ReactNode
 }
 
 const index = ({
@@ -19,15 +20,35 @@ const index = ({
     options,
     footerTitles,
     background,
+    children
 }:Props) => {
+    
+    const cardColor = {
+        white: "bg-white text-dark-blue",
+        "dark-blue": "bg-dark-blue text-white",
+    }
 
+    const selectedCardColor = cardColor[background]
   return (
-    <div className='w-full flex flex-col px-6 mt-15 mb-20 desktop:flex-row desktop:space-x-9 desktop:justify-between'>
-        <Typography as="h2" className=" text-dark-blue uppercase pb-2 border-b-2 border-dark-blue h-fit">
+    <div className={`
+    w-full flex flex-col mb-20  
+    desktop:flex-row desktop:space-x-9 desktop:justify-between 
+    ${!children ? "px-6 mt-15" : "mt-6"}
+    `}>
+        <Typography as="h2" className="w-full text-dark-blue uppercase pb-2 border-b-2 border-dark-blue h-fit">
             {title}
         </Typography>
 
-        <div className={`border-2 border-dark-blue rounded-[20px] ${background} bg-white p-6 my-9 desktop:my-0 desktop:px-20 desktop:py-15 w-full max-w-[720px] desktop:min-w-[720px]`}>
+        <div className={`
+        border-2 border-dark-blue rounded-[20px] p-6 my-9  
+        desktop:px-20 desktop:py-15 w-full desktop:min-w-[720px] desktop:my-0   
+        ${children ? "desktop:max-w-[720px] desktop:m-0 " : " max-w-[720px] "}  
+        ${selectedCardColor}
+        `}>
+            {children ?
+                children
+            :
+            <>
                 <div className="space-y-9 flex flex-col">
                     {options.map((item, index) => (
                         <div
@@ -38,7 +59,7 @@ const index = ({
                                 {item.title}
                             </Typography>
                             <div className={`grid ${options[0].percents ? "grid-cols-2" : "grid-cols-1"} max-w-[170px] desktop:max-w-none `}>
-                                <Typography as="h5" className="uppercase">
+                                <Typography as="h5" className="uppercase text-dark-blue">
                                     {item.value}
                                 </Typography>
                                 {item.percents &&
@@ -106,6 +127,8 @@ const index = ({
                 </Typography>
                 </div>
                 }
+            </>
+            }
          </div>
     </div>
   )
