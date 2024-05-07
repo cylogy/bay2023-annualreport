@@ -1,3 +1,5 @@
+'use client'
+
 import React, { FC } from 'react'
 import Hero from '../../components/Hero'
 import TextBlock from '@/app/components/TextBlock'

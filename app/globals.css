@@ -264,7 +264,7 @@
 }
 
 .menu-viewer:hover .square-block {
-  background-color: var(--dark-blue);
+  background-color: var(--lighter-grey);
 }
 
 .grid-group {

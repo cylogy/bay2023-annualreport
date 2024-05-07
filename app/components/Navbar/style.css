@@ -41,6 +41,10 @@
     width: fit-content;
 }
 
+button {
+    font-family: Proxima Nova-Semibold, Helvetica;
+}
+
 .hamburger-menu-wrapper {
     display: none;
     background-image: url(/img/menuhamburguer-16.png);

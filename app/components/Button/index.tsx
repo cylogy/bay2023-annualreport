@@ -27,9 +27,9 @@ export const Button: React.FC<ButtonProps> = ({
 }) => {
   return (
     <button
-      className={` button w-max ${type} size-${size} color-1-${color} icon-${icon ? 'true' : 'false'} ${className}`}
+      className={`button w-max ${type} size-${size} color-1-${color} icon-${icon ? 'true' : 'false'} ${className}`}
     >
-      <div className={`${downloadPdfClassName}`}>{text}</div>
+      <div className={`${downloadPdfClassName} font-proxima`}>{text}</div>
       {icon && (
         <Image
           width={12}

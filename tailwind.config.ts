@@ -39,6 +39,7 @@ const config: Config = {
         h5: ['Anton', 'Helvetica'],
         h6: ['Poppins', 'Helvetica'],
         'pull-quote': ['Poppins', 'Helvetica'],
+        proxima: 'Proxima Nova-Semibold',
       },
       margin: {
         15: '60px',
