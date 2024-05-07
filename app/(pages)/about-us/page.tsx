@@ -195,7 +195,7 @@ const page: FC = () => {
         </TextBlock>
       </div>
 
-      {/* <section className='
+      <section className='
       desktop:space-y-[100px] py-25 desktop:py-36 desktop:px-20 desktop:space-x-0
       relative flex w-full flex-col justify-center space-y-9 px-6'>
          <div className="w-full pb-1 border-b-2 border-dark-blue mb-6 desktop:mb-0">
@@ -216,7 +216,7 @@ const page: FC = () => {
         >
           hjadshjkasdkhjas
         </SectionGraph>
-      </section> */}
+      </section>
 
       <section className='
       desktop:space-y-[100px] py-25 desktop:py-36 desktop:px-20 desktop:space-x-0

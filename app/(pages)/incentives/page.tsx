@@ -1,4 +1,6 @@
-import React, { FC } from 'react'
+'use client';
+
+import React, { FC, useEffect, useRef, useState } from 'react'
 import Hero from '../../components/Hero'
 import TextBlock from '@/app/components/TextBlock'
 import Typography from '@/app/components/Typography'
@@ -6,8 +8,261 @@ import Image from 'next/image'
 import { InfoCard } from '@/app/components/InfoCard'
 import Navigation from '@/app/components/Navigation'
 import { InfoCardText } from '@/app/components/InfoCardText'
+import InfoCardImage from '@/app/components/InfoCardImage'
+import Carousel from '@/app/components/Carousel';
 
 const page: FC = () => {
+
+  const [load, setLoad] = useState(false);
+  const videoRef = useRef(null);
+
+  const slides = [
+    () => (
+      <div className='flex flex-col'>
+        <Typography as="h3" className=" text-dark-blue uppercase text-start desktop:mx-15 mb-9 border-b-2">
+        OFF-ROAD EQUIPMENT AND INFRASTRUCTURE
+        </Typography>
+        <div
+          className='border-2 border-dark-blue rounded-[20px] bg-white text-dark-blue flex-1 desktop:rounded-[20px] flex h-full flex-col text-left desktop:mx-15 py-15 p-6 px-6 desktop:p-[80px]'
+        >
+          <div className="w-full flex flex-col desktop:flex-row justify-between desktop:border-b-2 border-dark-blue pb-4">
+            <Typography as="h5" className=" text-dark-blue uppercase text-start border-b-2 mb-4 pb-2 desktop:pb-0 desktop:mb-0 desktop:border-b-0">
+              TOTAL FUNDS AWARDED
+            </Typography>
+            <Typography as="h5" className=" text-dark-blue uppercase text-start">
+              $7.01M
+            </Typography>
+          </div>
+
+          <Typography as="h5" className=" text-dark-blue uppercase text-start mt-10">
+            Estimated Annual Emissions Reduction for the Projects Funded (tons/year)
+          </Typography>
+
+          <div className="flex flex-col desktop:flex-row desktop:justify-between mt-6">
+            <Typography as="span" className="text-start">
+              Oxides of Nitrogen (NOx)
+            </Typography>
+            <Typography as="h5" className="text-start">
+              17.2
+            </Typography>
+          </div>
+          <div className="flex flex-col desktop:flex-row desktop:justify-between mt-6">
+            <Typography as="span" className="text-start">
+             Reactive Organic Compounds (ROG)
+            </Typography>
+            <Typography as="h5" className="text-start">
+              1.9
+            </Typography>
+          </div>
+          <div className="flex flex-col desktop:flex-row desktop:justify-between mt-6">
+            <Typography as="span" className="text-start">
+              Particulate Matter (PM10)
+            </Typography>
+            <Typography as="h5" className="text-start">
+              1.2
+            </Typography>
+          </div>
+          <div className="w-full flex flex-col desktop:flex-row justify-between desktop:border-t-2 border-dark-blue pt-4 mt-6">
+            <Typography as="h5" className=" text-dark-blue uppercase text-start border-t-2 border-b-2 desktop:border-0 pt-4 desktop:pt-0 pb-2 desktop:pb-0">
+              Total
+            </Typography>
+            <Typography as="h5" className=" text-dark-blue uppercase text-start desktop:mt-0 mt-2">
+            20.3
+            </Typography>
+          </div>
+        </div>
+      </div>
+    ),
+    () => (
+      <div className='flex flex-col'>
+        <Typography as="h3" className=" text-dark-blue uppercase text-start desktop:mx-15 mb-9 border-b-2">
+        On-Road Vehicles and Infrastructure
+        </Typography>
+        <div
+          className='border-2 border-dark-blue rounded-[20px] bg-white text-dark-blue flex-1 desktop:rounded-[20px] flex h-full flex-col text-left desktop:mx-15 py-15 p-6 px-6 desktop:p-[80px]'
+        >
+          <div className="w-full flex flex-col desktop:flex-row justify-between desktop:border-b-2 border-dark-blue pb-4">
+            <Typography as="h5" className=" text-dark-blue uppercase text-start border-b-2 mb-4 pb-2 desktop:pb-0 desktop:mb-0 desktop:border-b-0">
+            TOTAL FUNDS AWARDED
+            </Typography>
+            <Typography as="h5" className=" text-dark-blue uppercase text-start">
+            $21.60M
+            </Typography>
+          </div>
+
+          <Typography as="h5" className=" text-dark-blue uppercase text-start mt-10">
+          Estimated Annual Emissions Reduction for the Projects funded (tons/year)
+          </Typography>
+
+          <div className="flex flex-col desktop:flex-row desktop:justify-between mt-6">
+            <Typography as="span" className="text-start">
+              NOx
+            </Typography>
+            <Typography as="h5" className="text-start">
+             3.0
+            </Typography>
+          </div>
+          <div className="flex flex-col desktop:flex-row desktop:justify-between mt-6">
+            <Typography as="span" className="text-start">
+             ROG
+            </Typography>
+            <Typography as="h5" className="text-start">
+             0.3
+            </Typography>
+          </div>
+          <div className="flex flex-col desktop:flex-row desktop:justify-between mt-6">
+            <Typography as="span" className="text-start">
+              PM10
+            </Typography>
+            <Typography as="h5" className="text-start">
+              0.0
+            </Typography>
+          </div>
+          <div className="w-full flex flex-col desktop:flex-row justify-between desktop:border-t-2 border-dark-blue pt-4 mt-6">
+            <Typography as="h5" className=" text-dark-blue uppercase text-start border-t-2 border-b-2 desktop:border-0 pt-4 desktop:pt-0 pb-2 desktop:pb-0">
+              Total
+            </Typography>
+            <Typography as="h5" className=" text-dark-blue uppercase text-start desktop:mt-0 mt-2">
+            20.3
+            </Typography>
+          </div>
+        </div>
+      </div>
+    ),
+    () => (
+      <div className='flex flex-col'>
+        <Typography as="h3" className=" text-dark-blue uppercase text-start desktop:mx-15 mb-9 border-b-2">
+        Other Projects (including Trip Reduction)
+        </Typography>
+        <div
+          className='border-2 border-dark-blue rounded-[20px] bg-white text-dark-blue flex-1 desktop:rounded-[20px] flex h-full flex-col text-left desktop:mx-15 py-15 p-6 px-6 desktop:p-[80px]'
+        >
+          <div className="w-full flex flex-col desktop:flex-row justify-between desktop:border-b-2 border-dark-blue pb-4">
+            <Typography as="h5" className=" text-dark-blue uppercase text-start border-b-2 mb-4 pb-2 desktop:pb-0 desktop:mb-0 desktop:border-b-0">
+            TOTAL FUNDS AWARDED
+            </Typography>
+            <Typography as="h5" className=" text-dark-blue uppercase text-start">
+            $1.91M
+            </Typography>
+          </div>
+
+          <Typography as="h5" className=" text-dark-blue uppercase text-start mt-10">
+          Estimated Annual Emissions Reduction for the Projects Funded (tons/year)
+          </Typography>
+
+          <div className="flex flex-col desktop:flex-row desktop:justify-between mt-6">
+            <Typography as="span" className="text-start">
+              NOx
+            </Typography>
+            <Typography as="h5" className="text-start">
+            7.2
+            </Typography>
+          </div>
+          <div className="flex flex-col desktop:flex-row desktop:justify-between mt-6">
+            <Typography as="span" className="text-start">
+             ROG
+            </Typography>
+            <Typography as="h5" className="text-start">
+            8.9
+            </Typography>
+          </div>
+          <div className="flex flex-col desktop:flex-row desktop:justify-between mt-6">
+            <Typography as="span" className="text-start">
+              PM10
+            </Typography>
+            <Typography as="h5" className="text-start">
+              22.6
+            </Typography>
+          </div>
+          <div className="w-full flex flex-col desktop:flex-row justify-between desktop:border-t-2 border-dark-blue pt-4 mt-6">
+            <Typography as="h5" className=" text-dark-blue uppercase text-start border-t-2 border-b-2 desktop:border-0 pt-4 desktop:pt-0 pb-2 desktop:pb-0">
+              Total
+            </Typography>
+            <Typography as="h5" className=" text-dark-blue uppercase text-start desktop:mt-0 mt-2">
+            38.7
+            </Typography>
+          </div>
+        </div>
+      </div>
+    ),
+    () => (
+      <div className='flex flex-col'>
+        <Typography as="h3" className=" text-dark-blue uppercase text-start desktop:mx-15 mb-9 border-b-2">
+        Congestion Management Agency Projects
+        </Typography>
+        <div
+          className='border-2 border-dark-blue rounded-[20px] bg-white text-dark-blue flex-1 desktop:rounded-[20px] flex h-full flex-col text-left desktop:mx-15 py-15 p-6 px-6 desktop:p-[80px]'
+        >
+          <div className="w-full flex flex-col desktop:flex-row justify-between desktop:border-b-2 border-dark-blue pb-4">
+            <Typography as="h5" className=" text-dark-blue uppercase text-start border-b-2 mb-4 pb-2 desktop:pb-0 desktop:mb-0 desktop:border-b-0">
+            TOTAL FUNDS AWARDED
+            </Typography>
+            <Typography as="h5" className=" text-dark-blue uppercase text-start">
+            $12M
+            </Typography>
+          </div>
+
+          <Typography as="h5" className=" text-dark-blue uppercase text-start mt-10">
+          Estimated Annual Emissions Reduction for the Projects Funded (tons/year)
+          </Typography>
+
+          <div className="flex flex-col desktop:flex-row desktop:justify-between mt-6">
+            <Typography as="span" className="text-start">
+              NOx
+            </Typography>
+            <Typography as="h5" className="text-start">
+             12.7
+            </Typography>
+          </div>
+          <div className="flex flex-col desktop:flex-row desktop:justify-between mt-6">
+            <Typography as="span" className="text-start">
+              ROG
+            </Typography>
+            <Typography as="h5" className="text-start">
+              15.4
+            </Typography>
+          </div>
+          <div className="flex flex-col desktop:flex-row desktop:justify-between mt-6">
+            <Typography as="span" className="text-start">
+              PM10
+            </Typography>
+            <Typography as="h5" className="text-start">
+              38.1
+            </Typography>
+          </div>
+          <div className="w-full flex flex-col desktop:flex-row justify-between desktop:border-t-2 border-dark-blue pt-4 mt-6">
+            <Typography as="h5" className=" text-dark-blue uppercase text-start border-t-2 border-b-2 desktop:border-0 pt-4 desktop:pt-0 pb-2 desktop:pb-0">
+              Total
+            </Typography>
+            <Typography as="h5" className=" text-dark-blue uppercase text-start desktop:mt-0 mt-2">
+              66.2
+            </Typography>
+          </div>
+        </div>
+      </div>
+    ),    
+  ];
+
+  useEffect(() => {
+    const observer = new IntersectionObserver((entries) => {
+      if (entries[0].isIntersecting) {
+        setLoad(true);
+        observer.disconnect();
+      }
+    });
+
+    if (videoRef.current) {
+      observer.observe(videoRef.current);
+    }
+
+    return () => {
+      if (videoRef.current) {
+        observer.unobserve(videoRef.current);
+      }
+    };
+  }, []);
+
+
   return (
     <div className='flex flex-col min-h-screen'>
       <Hero
@@ -127,7 +382,35 @@ const page: FC = () => {
           position="rigth"
         />
       </section>
-
+      <section className="pl-15 desktop:pl-6 desktop:flex mt-12 hidden w-full bg-transparent relative desktop:py-[160px]">
+        <Image
+          src="/img/Frame 19849.png"
+          alt="Close-up of foliage"
+          className="object-top -z-[5] flex"
+          fill
+        />
+        <Carousel
+          slideComponents={slides}
+          breakpoints={{
+            1441: {
+              // width: 768,
+              slidesPerView: 1.1,
+              spaceBetween: 0,
+            },
+          }}
+        />
+      </section>
+      <section className="desktop:hidden mt-12 flex w-full flex-col px-6 desktop:px-0 relative space-y-[60px] py-15">
+      <Image
+          src="/img/Frame 19854.png"
+          alt="Close-up of foliage"
+          className="object-top -z-[5] flex"
+          fill
+        />
+        {slides.map((Component, index) => (
+          <Component key={`slides-${index}`} />
+        ))}
+      </section>
       <Navigation prevLink="/community" nextLink="/by-the-numbers" />
     </div>
   )

@@ -38,11 +38,14 @@ const Carousel = ({
       onBeforeInit={(swiper) => {
         swiperRef.current = swiper;
       }}
+      style={{
+        background: "transparent",
+      }}
     >
       {slideComponents.map((Component, index: number) => (
         <SwiperSlide
           key={`carousel-${index}`}
-          style={{ justifyContent: 'center' }}
+          style={{ justifyContent: 'center', backgroundColor: 'transparent' }}
         >
           <Component />
         </SwiperSlide>
