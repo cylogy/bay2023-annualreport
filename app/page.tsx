@@ -10,11 +10,11 @@ import AnimatedTile from './components/AnimatedTile';
 export default function Home() {
   return (
     <main className="flex min-h-screen flex-col items-center justify-between">
-      <section className=" flex w-full flex-col overflow-hidden desktop:flex-row">
-        <div className="z-30 flex bg-white desktop:order-1 desktop:flex-[0.3]">
+      <section className="flex w-full flex-col overflow-hidden desktop:flex-row">
+        <div className="z-30 flex w-full flex-1 bg-white desktop:order-1 desktop:flex-[0.3]">
           <AnimatedTile
             key={1}
-            className="flex items-center justify-center bg-blue p-9 desktop:h-[384px]"
+            className="flex w-full items-center justify-center bg-blue p-9 desktop:h-[384px]"
           >
             <Animated
               as="h1"
@@ -23,10 +23,10 @@ export default function Home() {
             />
           </AnimatedTile>
         </div>
-        <div className="z-10 flex bg-white desktop:order-3 desktop:flex-[0.3]">
+        <div className="z-10 flex bg-white desktop:order-3">
           <AnimatedTile
             key={3}
-            className="flex w-full min-w-[335px] items-center justify-center whitespace-nowrap bg-dark-blue p-9 desktop:h-[384px]"
+            className="flex w-full items-center justify-center whitespace-nowrap bg-dark-blue p-9 desktop:h-[384px] desktop:w-[335px]"
           >
             <Animated
               as="h1"
@@ -35,37 +35,37 @@ export default function Home() {
             />
           </AnimatedTile>
         </div>
-        <div className="z-20 flex bg-white desktop:order-2 desktop:flex-1">
+        <div className="z-20 flex overflow-hidden bg-white desktop:order-2 desktop:flex-1">
           <AnimatedTile
             key={2}
             className="relative flex h-[384px] w-full items-center justify-center bg-dark-blue px-9 "
           >
             <Image
               src="/img/image-square-1.png"
-              className="hidden h-[350px] flex-1 flex-grow object-cover object-center desktop:flex"
+              className="hidden h-[350px] flex-1 flex-grow object-cover object-center transition-all duration-300 hover:scale-105 desktop:flex"
               fill
-              alt="sky"
+              alt="White clouds against a blue sky"
             />
             <Image
               src="/img/image-square-4-2x.png"
               className="flex h-96 flex-1 flex-grow object-cover object-center desktop:hidden"
               fill
-              alt="sky"
+              alt="White clouds against a blue sky"
             />
           </AnimatedTile>
         </div>
       </section>
-      <section className="flex h-[768px] w-full flex-1 flex-col md:flex-row">
-        <div className="z-30 flex bg-white desktop:w-1/2  desktop:flex-[0.5]">
+      <section className="flex h-[768px] w-full flex-1 flex-col overflow-hidden md:flex-row">
+        <div className="z-30 flex overflow-hidden bg-white  desktop:w-1/2 desktop:flex-[0.5]">
           <AnimatedTile
             key={4}
             className="relative hidden h-full desktop:flex desktop:w-full"
           >
             <Image
               src="/img/image-large-desktop.png"
-              alt="landscape"
+              alt="Flower field set against mountains"
               fill
-              className="object-cover"
+              className="object-cover transition-all duration-300 hover:scale-105 "
             />
           </AnimatedTile>
         </div>
@@ -89,9 +89,9 @@ export default function Home() {
             >
               <Image
                 src="/img/image-square-5-2x.png"
-                alt="landscape"
+                alt="Above view of pedestrians crossing the street"
                 fill
-                className="object-cover"
+                className="object-cover transition-all duration-300 hover:scale-105 "
               />
             </AnimatedTile>
             <AnimatedTile
@@ -125,7 +125,7 @@ export default function Home() {
           </AnimatedTile>
         </article>
       </section>
-      <section className="flex w-full flex-1 flex-col desktop:h-[569px] desktop:flex-row">
+      <section className="flex w-full flex-1 flex-col overflow-hidden desktop:h-[569px] desktop:flex-row">
         <div className="z-20 flex bg-white desktop:order-2  desktop:flex-[0.5]">
           <AnimatedTile
             key={8}
@@ -134,8 +134,8 @@ export default function Home() {
             <Image
               src="/img/adobestock-526164757-1.png"
               fill
-              alt=" "
-              className="object-cover"
+              alt="Two teenagers swinging in a park"
+              className="object-cover transition-all duration-300 hover:scale-105 "
             />
           </AnimatedTile>
         </div>
@@ -171,13 +171,13 @@ export default function Home() {
           </AnimatedTile>
         </div>
       </section>
-      <section className="hidden h-[384px] w-full desktop:flex">
+      <section className="hidden h-[384px] w-full overflow-hidden desktop:flex">
         <div className="z-30 flex w-1/3 bg-white">
           <AnimatedTile key={10} className="block h-full w-full bg-light-blue">
             &nbsp;
           </AnimatedTile>
         </div>
-        <div className="z-20 flex w-1/3 bg-white">
+        <div className="z-20 flex w-1/3 overflow-hidden bg-white">
           <AnimatedTile
             key={11}
             className="relative flex h-full w-full flex-col items-center justify-center px-9"
@@ -185,8 +185,8 @@ export default function Home() {
             <Image
               src="/img/rectangle-251.png"
               fill
-              alt=" "
-              className="object-cover"
+              alt="Two hikers on a mountain trail"
+              className="object-cover transition-all duration-300 hover:scale-105 "
             />
           </AnimatedTile>
         </div>

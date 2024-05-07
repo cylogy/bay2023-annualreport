@@ -32,10 +32,10 @@
 .nav-item {
     color: var(--dark-blue);
     display: block;
-    font-family: "Proxima Nova-Semibold", Helvetica;
+    font-family: Proxima Nova-Semibold, Helvetica;
     font-size: 14px;
-    font-weight: 400;
-    letter-spacing: 1.12px;
+    font-weight: 600;
+    letter-spacing: 0.08rem;
     line-height: 19.6px;
     white-space: nowrap;
     width: fit-content;

@@ -49,7 +49,10 @@ const Navbar = (props: Props) => {
               }}
               key={link.id}
             >
-              <Link className="nav-item" href={link.to}>
+              <Link
+                className="nav-item font-body-text font-semibold tracking-[8%]"
+                href={link.to}
+              >
                 {link.title}
               </Link>
             </motion.li>

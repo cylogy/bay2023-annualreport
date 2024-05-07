@@ -41,10 +41,18 @@ const Animated = ({ text, as: Tag = 'p', className }: Props) => {
         }}
         aria-hidden
       >
-        {text.split('').map((char) => (
-          <motion.span className="inline-block" variants={defaultAnimations}>
-            {char}
-          </motion.span>
+        {text.split(' ').map((word) => (
+          <span className="inline-block">
+            {word.split('').map((char) => (
+              <motion.span
+                className="inline-block"
+                variants={defaultAnimations}
+              >
+                {char}
+              </motion.span>
+            ))}
+            <span className="inline-block">&nbsp;</span>
+          </span>
         ))}
       </motion.span>
     </Tag>

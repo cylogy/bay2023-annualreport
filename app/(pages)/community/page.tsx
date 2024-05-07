@@ -4,6 +4,7 @@ import Carousel from '@/app/components/Carousel';
 import Hero from '@/app/components/Hero';
 import { InfoCard } from '@/app/components/InfoCard';
 import InfoCardImage from '@/app/components/InfoCardImage';
+import Navigation from '@/app/components/Navigation';
 import TextBlock from '@/app/components/TextBlock';
 import Typography from '@/app/components/Typography';
 import Image from 'next/image';
@@ -130,20 +131,20 @@ const Community = (props: Props) => {
         alt="Woman smiling while engaging with a whiteboard"
       />
       <TextBlock align="left">
-        <div className="desktop:mt-40 mt-22.5 desktop:max-w-[855px] desktop:mx-25 flex w-full flex-col">
+        <div className="mt-22.5 flex w-full flex-col desktop:mx-25 desktop:mt-40 desktop:max-w-[855px]">
           <Typography
             as="h2"
-            className="text-dark-blue desktop:p-0 px-15 uppercase"
+            className="px-15 uppercase text-dark-blue desktop:p-0"
           >
             AB 617 Community Health Protection Program
           </Typography>
           <Typography
             as="blockquote"
-            className="text-dark-blue desktop:p-0 px-15 mb-20 mt-6"
+            className="mb-20 mt-6 px-15 text-dark-blue desktop:p-0"
           >
             We continued to work in collaboration with community members and
             other stakeholders to{' '}
-            <span className="font-pull-quote-mobile-bold desktop:font-pull-quote-desktop-bold tablet-portrait:font-pull-quote-tablet-bold">
+            <span className="font-pull-quote-mobile-bold tablet-portrait:font-pull-quote-tablet-bold desktop:font-pull-quote-desktop-bold">
               {' '}
               develop and implement health-protective measures in highly
               impacted communities
@@ -152,7 +153,7 @@ const Community = (props: Props) => {
           </Typography>
         </div>
       </TextBlock>
-      <section className="pl-15 desktop:pl-6 desktop:flex mb-40 mt-12 hidden w-full">
+      <section className="mb-40 mt-12 hidden w-full pl-15 desktop:flex desktop:pl-6">
         <Carousel
           slideComponents={slides}
           breakpoints={{
@@ -164,12 +165,12 @@ const Community = (props: Props) => {
           }}
         />
       </section>
-      <section className="desktop:hidden mt-12 flex w-full flex-col">
+      <section className="mt-12 flex w-full flex-col desktop:hidden">
         {slides.map((Component, index) => (
           <Component key={`slides-${index}`} />
         ))}
       </section>
-      <section className="tablet-portrait:h-[330px] desktop:h-[573px] tablet-portrait:px-7 tablet-landscape:px-24 desktop:px-25 my-25 desktop:mb-40 desktop:mt-12 flex h-[171px] w-full max-w-[1018px] flex-col px-2">
+      <section className="my-25 flex h-[171px] w-full max-w-[1018px] flex-col px-2 tablet-portrait:h-[330px] tablet-portrait:px-7 tablet-landscape:px-24 desktop:mb-40 desktop:mt-12 desktop:h-[573px] desktop:px-25">
         <div className="iframeContainer" ref={videoRef}>
           {load ? (
             <iframe
@@ -185,17 +186,17 @@ const Community = (props: Props) => {
           )}
         </div>
       </section>
-      <section className="desktop:mb-40 flex w-full justify-center">
-        <div className="desktop:flex hidden flex-[0.33]">&nbsp;</div>
-        <div className=" desktop:pr-15 desktop:flex-[0.67] desktop:justify-start flex w-full flex-grow flex-col items-center justify-center px-6 ">
-          <div className="desktop:max-w-[1141px] desktop:items-start flex  w-full flex-col space-y-6">
+      <section className="flex w-full justify-center desktop:mb-40">
+        <div className="hidden flex-[0.33] desktop:flex">&nbsp;</div>
+        <div className=" flex w-full flex-grow flex-col items-center justify-center px-6 desktop:flex-[0.67] desktop:justify-start desktop:pr-15 ">
+          <div className="flex w-full flex-col  space-y-6 desktop:max-w-[1141px] desktop:items-start">
             <Typography
               as="h3"
-              className="text-dark-blue desktop:p-0 uppercase"
+              className="uppercase text-dark-blue desktop:p-0"
             >
               at a glance
             </Typography>
-            <div className="desktop:flex-row flex flex-col gap-4">
+            <div className="flex flex-col gap-4 desktop:flex-row">
               <InfoCard
                 backgroundColor="dark-blue"
                 cardTitle="22"
@@ -216,17 +217,17 @@ const Community = (props: Props) => {
           </div>
         </div>
       </section>
-      <section className="desktop:bg-lighter-green desktop:pt-40 pt-25 flex w-full justify-center">
-        <div className="desktop:flex hidden flex-[0.33]">&nbsp;</div>
-        <div className=" desktop:pr-15 desktop:flex-[0.67] desktop:justify-start flex w-full flex-grow flex-col items-center justify-center ">
-          <div className="desktop:max-w-[1141px] desktop:items-start flex  w-full flex-col space-y-6">
+      <section className="flex w-full justify-center pt-25 desktop:bg-lighter-green desktop:pt-40">
+        <div className="hidden flex-[0.33] desktop:flex">&nbsp;</div>
+        <div className=" flex w-full flex-grow flex-col items-center justify-center desktop:flex-[0.67] desktop:justify-start desktop:pr-15 ">
+          <div className="flex w-full flex-col  space-y-6 desktop:max-w-[1141px] desktop:items-start">
             <Typography
               as="h3"
-              className="text-dark-blue desktop:p-0 px-6 uppercase"
+              className="px-6 uppercase text-dark-blue desktop:p-0"
             >
               James Cary Smith Community Grant Program
             </Typography>
-            <Typography as="p" className="text-gray desktop:p-0 my-6 px-6">
+            <Typography as="p" className="my-6 px-6 text-gray desktop:p-0">
               The grant program funded 33 nonprofits to{' '}
               <span className="font-bold">
                 {' '}
@@ -238,7 +239,7 @@ const Community = (props: Props) => {
               capacity-building projects, including bilingual environmental
               justice academies and interactive youth advocacy campaigns.
             </Typography>
-            <div className="desktop:h-[531px] relative flex h-[350px] w-full">
+            <div className="relative flex h-[350px] w-full desktop:h-[531px]">
               <Image
                 src="/img/rectangle-255-2-2.png"
                 fill
@@ -249,7 +250,7 @@ const Community = (props: Props) => {
           </div>
         </div>
       </section>
-      <section className="desktop:mb-40 desktop:pt-40 desktop:bg-lighter-green desktop:pb-40 flex w-full justify-center">
+      <section className="flex w-full justify-center desktop:mb-40 desktop:bg-lighter-green desktop:pb-40 desktop:pt-40">
         <InfoCardImage
           title="Home and School Air Filtration Program"
           body={() => (
@@ -276,17 +277,17 @@ const Community = (props: Props) => {
           alt="Mother sitting beside toddler using an inhaler"
         />
       </section>
-      <section className=" pt-25 desktop:mb-40 flex w-full justify-center bg-white">
-        <div className="desktop:flex hidden flex-[0.33]">&nbsp;</div>
-        <div className=" desktop:pr-15 desktop:flex-[0.67] desktop:justify-start flex w-full flex-grow flex-col items-center justify-center ">
-          <div className="desktop:max-w-[1141px] desktop:items-start flex  w-full flex-col space-y-6">
+      <section className=" flex w-full justify-center bg-white pt-25 desktop:mb-40">
+        <div className="hidden flex-[0.33] desktop:flex">&nbsp;</div>
+        <div className=" flex w-full flex-grow flex-col items-center justify-center desktop:flex-[0.67] desktop:justify-start desktop:pr-15 ">
+          <div className="flex w-full flex-col  space-y-6 desktop:max-w-[1141px] desktop:items-start">
             <Typography
               as="h3"
-              className="text-dark-blue desktop:p-0 px-6 uppercase"
+              className="px-6 uppercase text-dark-blue desktop:p-0"
             >
               Community Advisory Council
             </Typography>
-            <Typography as="p" className="text-gray desktop:p-0 my-6 px-6">
+            <Typography as="p" className="my-6 px-6 text-gray desktop:p-0">
               The Community Advisory Council (CAC), consisting of 17 members
               from across the Bay Area, was created in 2021 to advise our
               leadership on community-related matters, advance an equity-forward
@@ -301,7 +302,7 @@ const Community = (props: Props) => {
               September, the CAC held its inaugural retreat, an event focused on
               environmental justice and community action.
             </Typography>
-            <div className="desktop:h-[531px] relative flex h-[350px] w-full">
+            <div className="relative flex h-[350px] w-full desktop:h-[531px]">
               <Image
                 src="/img/rectangle-255-3-2.png"
                 fill
@@ -313,7 +314,7 @@ const Community = (props: Props) => {
         </div>
       </section>
 
-      <section className="bg-lighter-blue desktop:pt-40 flex w-full justify-center pb-20 ">
+      <section className="flex w-full justify-center bg-lighter-blue pb-20 desktop:pt-40 ">
         <InfoCardImage
           title="Bay Area Healthy Homes Initiative"
           body={() => (
@@ -341,16 +342,16 @@ const Community = (props: Props) => {
         />
       </section>
       <section className="flex w-full justify-center bg-[#E4EEFC] py-20 ">
-        <div className="desktop:flex hidden flex-[0.33]">&nbsp;</div>
-        <div className=" desktop:pr-15 desktop:flex-[0.67] desktop:justify-start flex w-full flex-grow flex-col items-center justify-center px-6 ">
-          <div className="desktop:max-w-[1141px] desktop:items-start flex  w-full flex-col space-y-6">
+        <div className="hidden flex-[0.33] desktop:flex">&nbsp;</div>
+        <div className=" flex w-full flex-grow flex-col items-center justify-center px-6 desktop:flex-[0.67] desktop:justify-start desktop:pr-15 ">
+          <div className="flex w-full flex-col  space-y-6 desktop:max-w-[1141px] desktop:items-start">
             <Typography
               as="h3"
-              className="text-dark-blue desktop:p-0 uppercase"
+              className="uppercase text-dark-blue desktop:p-0"
             >
               US EPA Regional Climate Planning Grant
             </Typography>
-            <Typography as="p" className="text-gray desktop:p-0 my-6">
+            <Typography as="p" className="my-6 text-gray desktop:p-0">
               We secured a $1 million grant from the US EPA’s Climate Pollution
               Reduction Grant Program to lead the development of a regional
               climate action plan that incorporates input from and reflects the
@@ -367,7 +368,7 @@ const Community = (props: Props) => {
               consisting of staff from Bay Area regional agencies and local
               governments.
             </Typography>
-            <div className="desktop:flex-row flex flex-col gap-4">
+            <div className="flex flex-col gap-4 desktop:flex-row">
               <InfoCard
                 backgroundColor="white"
                 cardTitle="$1M"
@@ -388,6 +389,7 @@ const Community = (props: Props) => {
           </div>
         </div>
       </section>
+      <Navigation nextLink="/incentives" prevLink="/air-quality" />
     </main>
   );
 };
