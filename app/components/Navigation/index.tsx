@@ -11,7 +11,7 @@ type Props = {
 
 const Navigation = ({ prevLink, nextLink }: Props) => {
   return (
-    <nav className="flex w-full items-center justify-between bg-dark-blue px-5 py-10 text-white">
+    <nav className="z-10 flex w-full items-center justify-between bg-dark-blue px-5 py-10 text-white">
       <Link href={prevLink}>
         <Image
           src="/img/arrow-element-6.png"

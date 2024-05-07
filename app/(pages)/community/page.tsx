@@ -10,6 +10,7 @@ import TextBlock from '@/app/components/TextBlock';
 import Typography from '@/app/components/Typography';
 import Image from 'next/image';
 import React, { useEffect, useRef, useState } from 'react';
+import { Controller, Scene } from 'react-scrollmagic-r18';
 
 type Props = {};
 
@@ -187,215 +188,252 @@ const Community = (props: Props) => {
           )}
         </div>
       </section>
-      <section className="flex w-full justify-center desktop:mb-40">
-        <div className="hidden flex-[0.33] desktop:flex">&nbsp;</div>
-        <div className=" flex w-full flex-grow flex-col items-center justify-center px-6 desktop:flex-[0.67] desktop:justify-start desktop:pr-15 ">
-          <div className="flex w-full flex-col  space-y-6 desktop:max-w-[1141px] desktop:items-start">
-            <Typography
-              as="h3"
-              className="uppercase text-dark-blue desktop:p-0"
-            >
-              at a glance
-            </Typography>
-            <div className="flex flex-col gap-4 desktop:flex-row">
-              <InfoCard
-                backgroundColor="dark-blue"
-                cardTitle="22"
-                cardBody="James Cary Smith Community Grant awardees continued on to a second year of capacity-building projects"
-              />
-              <InfoCard
-                backgroundColor="white"
-                cardTitle="594"
-                cardBody="home air filtration units and replacement filters were distributed through the Home and School Air Filtration Program"
-              />
+      <Controller globalSceneOptions={{ triggerHook: 'onLeave' }}>
+        <Scene pin triggerElement="#slide1">
+          <section
+            id="slide0"
+            className="flex w-full justify-center bg-white desktop:mb-40"
+          >
+            <div className="hidden flex-[0.33] desktop:flex">&nbsp;</div>
+            <div className=" flex w-full flex-grow flex-col items-center justify-center px-6 desktop:flex-[0.67] desktop:justify-start desktop:pr-15 ">
+              <div className="flex w-full flex-col  space-y-6 desktop:max-w-[1141px] desktop:items-start">
+                <Typography
+                  as="h3"
+                  className="uppercase text-dark-blue desktop:p-0"
+                >
+                  at a glance
+                </Typography>
+                <div className="flex flex-col gap-4 desktop:flex-row">
+                  <InfoCard
+                    backgroundColor="dark-blue"
+                    cardTitle="22"
+                    cardBody="James Cary Smith Community Grant awardees continued on to a second year of capacity-building projects"
+                  />
+                  <InfoCard
+                    backgroundColor="white"
+                    cardTitle="594"
+                    cardBody="home air filtration units and replacement filters were distributed through the Home and School Air Filtration Program"
+                  />
 
-              <InfoCard
-                backgroundColor="light-blue"
-                cardTitle="17"
-                cardBody="community leaders serve on the Community Advisory Council, helping to direct our environmental justice policies"
+                  <InfoCard
+                    backgroundColor="light-blue"
+                    cardTitle="17"
+                    cardBody="community leaders serve on the Community Advisory Council, helping to direct our environmental justice policies"
+                  />
+                </div>
+              </div>
+            </div>
+          </section>
+        </Scene>
+        <Scene pin triggerElement="#slide2" triggerHook={'onLeave'}>
+          <section
+            id="slide1"
+            className=" flex min-h-screen w-full flex-col desktop:bg-lighter-green"
+          >
+            <div className="flex  w-full justify-center pt-10 desktop:pt-40">
+              <div className="hidden flex-[0.33] desktop:flex">&nbsp;</div>
+              <div className=" flex w-full flex-grow flex-col items-center justify-center desktop:flex-[0.67] desktop:justify-start desktop:pr-15 ">
+                <div className="flex w-full flex-col  space-y-6 desktop:max-w-[1141px] desktop:items-start">
+                  <Typography
+                    as="h3"
+                    className="px-6 uppercase text-dark-blue desktop:p-0"
+                  >
+                    James Cary Smith Community Grant Program
+                  </Typography>
+                  <Typography
+                    as="p"
+                    className="my-6 px-6 text-gray desktop:p-0"
+                  >
+                    The grant program funded 33 nonprofits to{' '}
+                    <span className="font-bold">
+                      {' '}
+                      engage community members in decisions that impact their
+                      air quality and health,{' '}
+                    </span>
+                    focusing on neighborhoods most impacted by air pollution.
+                    Twenty-two eligible awardees continued on to a second year
+                    of capacity-building projects, including bilingual
+                    environmental justice academies and interactive youth
+                    advocacy campaigns.
+                  </Typography>
+                  <AnimatedImage
+                    key={67}
+                    className="relative flex h-[350px] w-full desktop:h-[531px]"
+                  >
+                    <Image
+                      src="/img/rectangle-255-2-2.png"
+                      fill
+                      className="object-cover object-top"
+                      alt="Group of cyclists wearing helmets"
+                    />
+                  </AnimatedImage>
+                </div>
+              </div>
+            </div>
+            <div className=" flex w-full justify-center desktop:mb-40 desktop:bg-lighter-green desktop:pb-40 desktop:pt-40">
+              <InfoCardImage
+                title="Home and School Air Filtration Program"
+                body={() => (
+                  <Typography as="p">
+                    The program engaged with six partners in the Asthma
+                    Mitigation Program, five local health centers, two
+                    community-based organizations, and six James Cary Smith
+                    Community grantees to
+                    <span className="font-bold">
+                      {' '}
+                      distribute 594 home air filtration units and replacement
+                      filters to vulnerable populations and communities impacted
+                      by air pollution.
+                    </span>{' '}
+                    We installed high-performance air filtration systems in four
+                    West Contra Costa Unified District Schools: King Elementary
+                    School, Washington Elementary School, Riverside Elementary
+                    School, and Dover Elementary School.
+                  </Typography>
+                )}
+                backgroundColor="bg-blue text-white"
+                imageFirst
+                imageSrc="/img/image-square-13-2x.png"
+                imageTablet="/img/image-square-13-2x.png"
+                alt="Mother sitting beside toddler using an inhaler"
               />
             </div>
-          </div>
-        </div>
-      </section>
-      <section className="flex w-full justify-center pt-25 desktop:bg-lighter-green desktop:pt-40">
-        <div className="hidden flex-[0.33] desktop:flex">&nbsp;</div>
-        <div className=" flex w-full flex-grow flex-col items-center justify-center desktop:flex-[0.67] desktop:justify-start desktop:pr-15 ">
-          <div className="flex w-full flex-col  space-y-6 desktop:max-w-[1141px] desktop:items-start">
-            <Typography
-              as="h3"
-              className="px-6 uppercase text-dark-blue desktop:p-0"
-            >
-              James Cary Smith Community Grant Program
-            </Typography>
-            <Typography as="p" className="my-6 px-6 text-gray desktop:p-0">
-              The grant program funded 33 nonprofits to{' '}
-              <span className="font-bold">
-                {' '}
-                engage community members in decisions that impact their air
-                quality and health,{' '}
-              </span>
-              focusing on neighborhoods most impacted by air pollution.
-              Twenty-two eligible awardees continued on to a second year of
-              capacity-building projects, including bilingual environmental
-              justice academies and interactive youth advocacy campaigns.
-            </Typography>
-            <AnimatedImage
-              key={67}
-              className="relative flex h-[350px] w-full desktop:h-[531px]"
-            >
-              <Image
-                src="/img/rectangle-255-2-2.png"
-                fill
-                className="object-cover object-top"
-                alt="Group of cyclists wearing helmets"
-              />
-            </AnimatedImage>
-          </div>
-        </div>
-      </section>
-      <section className="flex w-full justify-center desktop:mb-40 desktop:bg-lighter-green desktop:pb-40 desktop:pt-40">
-        <InfoCardImage
-          title="Home and School Air Filtration Program"
-          body={() => (
-            <Typography as="p">
-              The program engaged with six partners in the Asthma Mitigation
-              Program, five local health centers, two community-based
-              organizations, and six James Cary Smith Community grantees to
-              <span className="font-bold">
-                {' '}
-                distribute 594 home air filtration units and replacement filters
-                to vulnerable populations and communities impacted by air
-                pollution.
-              </span>{' '}
-              We installed high-performance air filtration systems in four West
-              Contra Costa Unified District Schools: King Elementary School,
-              Washington Elementary School, Riverside Elementary School, and
-              Dover Elementary School.
-            </Typography>
-          )}
-          backgroundColor="bg-blue text-white"
-          imageFirst
-          imageSrc="/img/image-square-13-2x.png"
-          imageTablet="/img/image-square-13-2x.png"
-          alt="Mother sitting beside toddler using an inhaler"
-        />
-      </section>
-      <section className=" flex w-full justify-center bg-white pt-25 desktop:mb-40">
-        <div className="hidden flex-[0.33] desktop:flex">&nbsp;</div>
-        <div className=" flex w-full flex-grow flex-col items-center justify-center desktop:flex-[0.67] desktop:justify-start desktop:pr-15 ">
-          <div className="flex w-full flex-col  space-y-6 desktop:max-w-[1141px] desktop:items-start">
-            <Typography
-              as="h3"
-              className="px-6 uppercase text-dark-blue desktop:p-0"
-            >
-              Community Advisory Council
-            </Typography>
-            <Typography as="p" className="my-6 px-6 text-gray desktop:p-0">
-              The Community Advisory Council (CAC), consisting of 17 members
-              from across the Bay Area, was created in 2021 to advise our
-              leadership on community-related matters, advance an equity-forward
-              policy agenda, and provide input on key policies and programs. In
-              2023, the CAC recommended, and our Board approved, the CAC’s
-              foundational documents: the Community Advisory Council Charter and
-              the Community Advisory Council Compensation Policy and Procedures.
-              The Board also approved the Resolution Establishing a Governance
-              Structure for the Community Advisory Council. The CAC ad hoc
-              committees developed an annual work plan and environmental justice
-              policy goals for integration into our strategic plan. In
-              September, the CAC held its inaugural retreat, an event focused on
-              environmental justice and community action.
-            </Typography>
-            <AnimatedImage
-              key={23}
-              className="relative flex h-[350px] w-full desktop:h-[531px]"
-            >
-              <Image
-                src="/img/rectangle-255-3-2.png"
-                fill
-                className="object-cover object-center"
-                alt="Women speaking into microphone"
-              />
-            </AnimatedImage>
-          </div>
-        </div>
-      </section>
-
-      <section className="flex w-full justify-center bg-lighter-blue pb-20 desktop:pt-40 ">
-        <InfoCardImage
-          title="Bay Area Healthy Homes Initiative"
-          body={() => (
-            <Typography as="p">
-              We launched the initiative to improve health outcomes and climate
-              resilience in overburdened communities of Contra Costa and Alameda
-              counties in January 2023. The program brings{' '}
-              <span className="font-bold">
-                {' '}
-                asthma services and home retrofits to address health triggers,
-                improve energy efficiency, and keep outdoor pollution out of the
-                home
-              </span>{' '}
-              through a unique partnership between our agency, the Bay Area
-              Regional Energy Network, county health departments, and a local
-              non-profit. By the end of 2023, the program had enrolled 71
-              residents in both multifamily and single-family homes.
-            </Typography>
-          )}
-          backgroundColor="bg-blue text-white"
-          imageFirst
-          imageSrc="/img/image-square-12-22.png"
-          imageTablet="/img/image-square-12-2.png"
-          alt="Mother sitting beside toddler using an inhaler"
-        />
-      </section>
-      <section className="flex w-full justify-center bg-[#E4EEFC] py-20 ">
-        <div className="hidden flex-[0.33] desktop:flex">&nbsp;</div>
-        <div className=" flex w-full flex-grow flex-col items-center justify-center px-6 desktop:flex-[0.67] desktop:justify-start desktop:pr-15 ">
-          <div className="flex w-full flex-col  space-y-6 desktop:max-w-[1141px] desktop:items-start">
-            <Typography
-              as="h3"
-              className="uppercase text-dark-blue desktop:p-0"
-            >
-              US EPA Regional Climate Planning Grant
-            </Typography>
-            <Typography as="p" className="my-6 text-gray desktop:p-0">
-              We secured a $1 million grant from the US EPA’s Climate Pollution
-              Reduction Grant Program to lead the development of a regional
-              climate action plan that incorporates input from and reflects the
-              priorities of the region’s local governments and communities. The
-              plan will highlight{' '}
-              <span className="font-bold">
-                priority greenhouse gas (GHG) reduction measures that benefit
-                frontline communities — communities that are marginalized,
-                underserved, and overburdened by pollution.
-              </span>{' '}
-              Measures included in the plan will be eligible for nationally
-              competitive $4.6 billion in implementation funding. We are leading
-              this effort in collaboration with a regional advisory work group,
-              consisting of staff from Bay Area regional agencies and local
-              governments.
-            </Typography>
-            <div className="flex flex-col gap-4 desktop:flex-row">
-              <InfoCard
-                backgroundColor="white"
-                cardTitle="$1M"
-                cardBody="in funding was secured through the US EPA's Climate Protection Grant Program"
-              />
-              <InfoCard
-                backgroundColor="light-blue"
-                cardTitle="67"
-                cardBody="residents enrolled in the Bay Area Healthy Homes Initiative"
-              />
-
-              <InfoCard
-                backgroundColor="dark-blue"
-                cardTitle="&ldquo"
-                cardBody="priority greenhouse gas (GHG) reduction measures that benefit frontline communities."
-              />
+          </section>
+        </Scene>
+        <Scene pin triggerElement="#slide2">
+          <section
+            id="slide2"
+            className="flex w-full  justify-start bg-white pt-25 desktop:mb-40"
+          >
+            <div className="hidden flex-[0.33] desktop:flex">&nbsp;</div>
+            <div className=" flex w-full flex-grow flex-col items-center justify-start desktop:mt-10 desktop:flex-[0.67] desktop:pr-15 ">
+              <div className="flex w-full flex-col  space-y-6 desktop:max-w-[1141px] desktop:items-start">
+                <Typography
+                  as="h3"
+                  className="px-6 uppercase text-dark-blue desktop:p-0"
+                >
+                  Community Advisory Council
+                </Typography>
+                <Typography as="p" className="my-6 px-6 text-gray desktop:p-0">
+                  The Community Advisory Council (CAC), consisting of 17 members
+                  from across the Bay Area, was created in 2021 to advise our
+                  leadership on community-related matters, advance an
+                  equity-forward policy agenda, and provide input on key
+                  policies and programs. In 2023, the CAC recommended, and our
+                  Board approved, the CAC’s foundational documents: the
+                  Community Advisory Council Charter and the Community Advisory
+                  Council Compensation Policy and Procedures. The Board also
+                  approved the Resolution Establishing a Governance Structure
+                  for the Community Advisory Council. The CAC ad hoc committees
+                  developed an annual work plan and environmental justice policy
+                  goals for integration into our strategic plan. In September,
+                  the CAC held its inaugural retreat, an event focused on
+                  environmental justice and community action.
+                </Typography>
+                <AnimatedImage
+                  key={23}
+                  className="relative flex h-[350px] w-full desktop:h-[531px]"
+                >
+                  <Image
+                    src="/img/rectangle-255-3-2.png"
+                    fill
+                    className="object-cover object-center"
+                    alt="Women speaking into microphone"
+                  />
+                </AnimatedImage>
+              </div>
             </div>
-          </div>
-        </div>
-      </section>
+          </section>
+        </Scene>
+        <Scene pin triggerElement="#slide3">
+          <>
+            <section
+              id="slide3"
+              className="z-10 flex w-full justify-center bg-lighter-blue pb-20 desktop:pt-40 "
+            >
+              <InfoCardImage
+                title="Bay Area Healthy Homes Initiative"
+                body={() => (
+                  <Typography as="p">
+                    We launched the initiative to improve health outcomes and
+                    climate resilience in overburdened communities of Contra
+                    Costa and Alameda counties in January 2023. The program
+                    brings{' '}
+                    <span className="font-bold">
+                      {' '}
+                      asthma services and home retrofits to address health
+                      triggers, improve energy efficiency, and keep outdoor
+                      pollution out of the home
+                    </span>{' '}
+                    through a unique partnership between our agency, the Bay
+                    Area Regional Energy Network, county health departments, and
+                    a local non-profit. By the end of 2023, the program had
+                    enrolled 71 residents in both multifamily and single-family
+                    homes.
+                  </Typography>
+                )}
+                backgroundColor="bg-blue text-white"
+                imageFirst
+                imageSrc="/img/image-square-12-22.png"
+                imageTablet="/img/image-square-12-2.png"
+                alt="Mother sitting beside toddler using an inhaler"
+              />
+            </section>
+
+            <section
+              id="slide4"
+              className="z-10 flex w-full justify-center bg-lighter-blue py-20 "
+            >
+              <div className="hidden flex-[0.33] desktop:flex">&nbsp;</div>
+              <div className=" flex w-full flex-grow flex-col items-center justify-center px-6 desktop:flex-[0.67] desktop:justify-start desktop:pr-15 ">
+                <div className="flex w-full flex-col  space-y-6 desktop:max-w-[1141px] desktop:items-start">
+                  <Typography
+                    as="h3"
+                    className="uppercase text-dark-blue desktop:p-0"
+                  >
+                    US EPA Regional Climate Planning Grant
+                  </Typography>
+                  <Typography as="p" className="my-6 text-gray desktop:p-0">
+                    We secured a $1 million grant from the US EPA’s Climate
+                    Pollution Reduction Grant Program to lead the development of
+                    a regional climate action plan that incorporates input from
+                    and reflects the priorities of the region’s local
+                    governments and communities. The plan will highlight{' '}
+                    <span className="font-bold">
+                      priority greenhouse gas (GHG) reduction measures that
+                      benefit frontline communities — communities that are
+                      marginalized, underserved, and overburdened by pollution.
+                    </span>{' '}
+                    Measures included in the plan will be eligible for
+                    nationally competitive $4.6 billion in implementation
+                    funding. We are leading this effort in collaboration with a
+                    regional advisory work group, consisting of staff from Bay
+                    Area regional agencies and local governments.
+                  </Typography>
+                  <div className="flex flex-col gap-4 desktop:flex-row">
+                    <InfoCard
+                      backgroundColor="white"
+                      cardTitle="$1M"
+                      cardBody="in funding was secured through the US EPA's Climate Protection Grant Program"
+                    />
+                    <InfoCard
+                      backgroundColor="light-blue"
+                      cardTitle="67"
+                      cardBody="residents enrolled in the Bay Area Healthy Homes Initiative"
+                    />
+
+                    <InfoCard
+                      backgroundColor="dark-blue"
+                      cardTitle="&ldquo;"
+                      cardBody="priority greenhouse gas (GHG) reduction measures that benefit frontline communities."
+                    />
+                  </div>
+                </div>
+              </div>
+            </section>
+          </>
+        </Scene>
+      </Controller>
       <Navigation nextLink="/incentives" prevLink="/air-quality" />
     </main>
   );

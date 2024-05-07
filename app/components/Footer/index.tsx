@@ -5,7 +5,7 @@ import Link from 'next/link';
 
 export const Footer = () => {
   return (
-    <footer className="footer">
+    <footer className="footer z-30 bg-red-200">
       <address className="address-section font-sizes">
         <span>375 Beale Street, Suite 600</span>
         <span>San Francisco, CA 94105</span>

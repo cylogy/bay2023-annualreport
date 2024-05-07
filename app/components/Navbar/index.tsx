@@ -10,7 +10,7 @@ type Props = {};
 
 const Navbar = (props: Props) => {
   return (
-    <nav className="header bg-white">
+    <nav className="header sticky top-0 z-50 bg-white">
       <Link href={'/'}>
         <motion.div
           initial={{ opacity: 0, y: -10 }}
