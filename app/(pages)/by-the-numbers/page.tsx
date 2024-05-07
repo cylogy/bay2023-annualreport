@@ -1,4 +1,5 @@
 'use client';
+
 import React, { FC, useEffect, useRef, useState } from 'react'
 import Hero from '../../components/Hero'
 import SectionGraph from '../../components/SectionGraph'
@@ -6,11 +7,165 @@ import SubSectionGraph from '../../components/SectionGraph/SubSectionGraph'
 import Navigation from '@/app/components/Navigation'
 import Image from 'next/image'
 import Typography from '@/app/components/Typography'
-import { A11y, Navigation as SwiperNavigation } from 'swiper/modules';
-import { Swiper, SwiperSlide } from 'swiper/react';
-import { Swiper as SwiperType } from 'swiper';
 import 'swiper/css';
 import 'swiper/css/pagination';
+import Carousel from '@/app/components/Carousel';
+
+const slides = [
+  () => (
+    <div className='flex flex-col'>
+      <div
+        className='border-2 border-dark-blue rounded-[20px] bg-white text-dark-blue flex-1 desktop:rounded-[20px] flex h-full flex-col text-left desktop:mx-15 py-15 p-6 px-6 desktop:p-[80px]'
+      >
+        <div className="w-full flex flex-col desktop:flex-row justify-between">
+          <Typography as="h5" className=" text-dark-blue uppercase text-start border-b-2 mb-4 pb-2 desktop:pb-0 desktop:mb-0 desktop:border-b-0">
+          Bay Area Permitted Facilities
+          </Typography>
+        </div>
+
+        <div className="flex flex-col desktop:flex-row desktop:justify-between mt-6">
+          <Typography as="span" className="text-start">
+          Refineries
+          </Typography>
+          <Typography as="h5" className="text-start">
+          5
+          </Typography>
+        </div>
+        <div className="flex flex-col desktop:flex-row desktop:justify-between mt-6">
+          <Typography as="span" className="text-start">
+          Major Facilities (excludes refineries)
+          </Typography>
+          <Typography as="h5" className="text-start">
+          73
+          </Typography>
+        </div>
+        <div className="flex flex-col desktop:flex-row desktop:justify-between mt-6">
+          <Typography as="span" className="text-start">
+          Gasoline Dispensing Facilities
+          </Typography>
+          <Typography as="h5" className="text-start">
+          2,264
+          </Typography>
+        </div>
+        <div className="flex flex-col desktop:flex-row desktop:justify-between mt-6">
+          <Typography as="span" className="text-start">
+          All Other Facilities
+          </Typography>
+          <Typography as="h5" className="text-start">
+          8,090
+          </Typography>
+        </div>
+        <div className="w-full flex flex-col desktop:flex-row justify-between desktop:border-t-2 border-dark-blue pt-4 mt-6">
+          <Typography as="h5" className=" text-dark-blue uppercase text-start border-t-2 border-b-2 desktop:border-0 pt-4 desktop:pt-0 pb-2 desktop:pb-0">
+          Total Permitted Facilities
+          </Typography>
+          <Typography as="h5" className=" text-dark-blue uppercase text-start desktop:mt-0 mt-2">
+          10,432
+          </Typography>
+        </div>
+        <div className="w-full flex flex-col desktop:flex-row justify-between border-dark-blue pt-4">
+          <Typography as="h5" className=" text-dark-blue uppercase text-start border-t-2 border-b-2 desktop:border-0 pt-4 desktop:pt-0 pb-2 desktop:pb-0">
+          Permitted Devices and Operations
+          </Typography>
+          <Typography as="h5" className=" text-dark-blue uppercase text-start desktop:mt-0 mt-2">
+          23,325
+          </Typography>
+        </div>
+      </div>
+    </div>
+  ),
+  () => (
+    <div className='flex flex-col'>
+      <div
+        className='border-2 border-dark-blue rounded-[20px] bg-white text-dark-blue flex-1 desktop:rounded-[20px] flex h-full flex-col text-left desktop:mx-15 py-15 p-6 px-6 desktop:p-[80px] desktop:min-h-[530px]'
+      >
+        <div className="w-full flex flex-col desktop:flex-row justify-between">
+          <Typography as="h5" className=" text-dark-blue uppercase text-start border-b-2 mb-4 pb-2 desktop:pb-0 desktop:mb-0 desktop:border-b-0">
+          New Permit Applications
+          </Typography>
+        </div>
+
+        <div className="flex flex-col desktop:flex-row desktop:justify-between mt-6">
+          <Typography as="span" className="text-start">
+          Major Source Review (Title V)
+          </Typography>
+          <Typography as="h5" className="text-start">
+          47
+          </Typography>
+        </div>
+        <div className="flex flex-col desktop:flex-row desktop:justify-between mt-6">
+          <Typography as="span" className="text-start">
+          New Source Review (NSR)
+          </Typography>
+          <Typography as="h5" className="text-start">
+          907
+          </Typography>
+        </div>
+        <div className="flex flex-col desktop:flex-row desktop:justify-between mt-6">
+          <Typography as="span" className="text-start">
+          All other applications
+          </Typography>
+          <Typography as="h5" className="text-start">
+          42
+          </Typography>
+        </div>
+        <div className="w-full flex flex-col desktop:flex-row justify-between desktop:border-t-2 border-dark-blue pt-4 mt-6">
+          <Typography as="h5" className=" text-dark-blue uppercase text-start border-t-2 border-b-2 desktop:border-0 pt-4 desktop:pt-0 pb-2 desktop:pb-0">
+          Total New Permits Applications
+          </Typography>
+          <Typography as="h5" className=" text-dark-blue uppercase text-start desktop:mt-0 mt-2">
+          996
+          </Typography>
+        </div>
+      </div>
+    </div>
+  ),
+  () => (
+    <div className='flex flex-col'>
+      <div
+        className='border-2 border-dark-blue rounded-[20px] bg-white text-dark-blue flex-1 desktop:rounded-[20px] flex h-full flex-col text-left desktop:mx-15 py-15 p-6 px-6 desktop:p-[80px] desktop:min-h-[530px]'
+      >
+        <div className="w-full flex flex-col desktop:flex-row justify-between">
+          <Typography as="h5" className=" text-dark-blue uppercase text-start border-b-2 mb-4 pb-2 desktop:pb-0 desktop:mb-0 desktop:border-b-0">
+          Application Health Risk Assessments
+          </Typography>
+        </div>
+        <div className="flex flex-col desktop:flex-row desktop:justify-between mt-6">
+          <Typography as="span" className="text-start">
+          Diesel Engines
+          </Typography>
+          <Typography as="h5" className="text-start">
+          243
+          </Typography>
+        </div>
+        <div className="flex flex-col desktop:flex-row desktop:justify-between mt-6">
+          <Typography as="span" className="text-start">
+          Gasoline Dispensing Facilities
+          </Typography>
+          <Typography as="h5" className="text-start">
+          8
+          </Typography>
+        </div>
+        <div className="flex flex-col desktop:flex-row desktop:justify-between mt-6">
+          <Typography as="span" className="text-start">
+          Other Commercial/Industrial Facilities
+          </Typography>
+          <Typography as="h5" className="text-start">
+          56
+          </Typography>
+        </div>
+        <div className="w-full flex flex-col desktop:flex-row justify-between desktop:border-t-2 border-dark-blue pt-4 mt-6">
+          <Typography as="h5" className=" text-dark-blue uppercase text-start border-t-2 border-b-2 desktop:border-0 pt-4 desktop:pt-0 pb-2 desktop:pb-0">
+          Total Health Risk Assessments
+          </Typography>
+          <Typography as="h5" className=" text-dark-blue uppercase text-start desktop:mt-0 mt-2">
+          307
+          </Typography>
+        </div>
+      </div>
+    </div>
+  ),
+];
 
 const airPolutionComplaintsData = [
     {
@@ -254,15 +409,12 @@ const airPolutionComplaintsData = [
 
 
 const Page: FC = () => {
-  const swiperRef = useRef<SwiperType>();
-  const [isOpen, setIsOpen] = useState(false)
+  const [load, setLoad] = useState(false);
+  const videoRef = useRef(null);
 
-  useEffect(() => {
-    setIsOpen(true)
-  }, [])
   
 
-  return (isOpen &&
+  return (
     <div className='flex flex-col min-h-screen'>
       <Hero
         title='By the Numbers'
@@ -299,62 +451,23 @@ const Page: FC = () => {
           background="bg-white"
         />
       </section>
-      {/* <section className='pl-15 desktop:pl-25 mb-40 mt-12 flex w-full flex-col'>
-        <Typography
-          as="h3"
-          className="text-dark-blue desktop:p-0 px-15 uppercase"
-        >
-          PERMITTING ACTIVITY
-        </Typography>
-        <Swiper
-          modules={[SwiperNavigation, A11y]}
-          slidesPerView={1.6}
-          spaceBetween={80}
-          pagination={{
-            clickable: true,
+      <section className="pl-15 desktop:pl-6 desktop:flex mt-12 hidden w-full bg-transparent relative desktop:pt-[160px]">
+        <Carousel
+          slideComponents={slides}
+          breakpoints={{
+            1441: {
+              // width: 768,
+              slidesPerView: 1.1,
+              spaceBetween: 0,
+            },
           }}
-          className="pl-25 flex h-[594px] w-full"
-          draggable
-          onBeforeInit={(swiper) => {
-            swiperRef.current = swiper;
-          }}
-        >
-          <SwiperSlide>
-            <div className="tablet-portrait:h-[617.17px] desktop:h-[786px] relative flex h-[247px] w-full">
-              <Image
-                src="/img/rectangle-255-2.png"
-                fill
-                className="object-cover"
-                alt="Technicians analyzing machinery for air quality"
-              />
-            </div>
-          </SwiperSlide>
-          <div className="mt-15 flex w-full items-center justify-end px-6">
-            <button
-              title="previous"
-              onClick={() => swiperRef.current?.slidePrev()}
-            >
-              <Image
-                src={'/img/arrow-element-22.png'}
-                width={68}
-                height={48}
-                alt="previous slide"
-              />
-            </button>
-            <button
-              title="previous"
-              onClick={() => swiperRef.current?.slideNext()}
-            >
-              <Image
-                src={'/img/arrow-element-23.png'}
-                width={68}
-                height={48}
-                alt="next slide"
-              />
-            </button>
-          </div>
-        </Swiper>
-      </section> */}
+        />
+      </section>
+      <section className="desktop:hidden mt-12 flex w-full flex-col px-6 desktop:px-0 relative space-y-[60px] py-15">
+        {slides.map((Component, index) => (
+          <Component key={`slides-${index}`} />
+        ))}
+      </section>
       <section className="desktop:space-y-[100px] py-25 desktop:py-36 desktop:px-20 desktop:space-x-0
       relative flex w-full flex-col justify-center space-y-9 px-6 bg-transparent">
         <SectionGraph
