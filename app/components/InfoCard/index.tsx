@@ -1,5 +1,8 @@
+'use client';
+
 import React from 'react';
 import Typography from '../Typography';
+import { motion } from 'framer-motion';
 
 type Props = {
   cardBody: string;
@@ -12,7 +15,7 @@ export const InfoCard = ({
   cardTitle,
   cardBody,
   backgroundColor = 'blue',
-  allwidth
+  allwidth,
 }: Props) => {
   const styles = {
     white: 'bg-white border border-dark-blue text-dark-blue',
@@ -25,11 +28,28 @@ export const InfoCard = ({
   const variantSizeClass = styles[backgroundColor]; // handle case where Tag not found
 
   return (
-    <article
-      className={`desktop:min-h-fit flex min-h-[370px] flex-col justify-between rounded-[20px] p-10 ${variantSizeClass} ${allwidth && "w-full desktop:h-[370px]"}`}
+    <motion.article
+      initial={{ y: '-10%', opacity: 0 }}
+      whileInView={{
+        y: 0,
+        opacity: 1,
+        transition: {
+          staggerChildren: 2,
+          stiffness: 10,
+          mass: 0.1,
+          delayChildren: 20,
+        },
+      }}
+      exit={{ y: 0 }}
+      transition={{
+        ease: 'easeInOut',
+        duration: 0.5,
+      }}
+      viewport={{ once: true }}
+      className={`flex min-h-[370px] flex-col justify-between rounded-[20px] p-10 desktop:min-h-fit ${variantSizeClass} ${allwidth && 'w-full desktop:h-[370px]'}`}
     >
       <Typography as="h2">{cardTitle}</Typography>
       <Typography as="p">{cardBody}</Typography>
-    </article>
+    </motion.article>
   );
 };

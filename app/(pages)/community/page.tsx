@@ -1,5 +1,6 @@
 'use client';
 
+import AnimatedImage from '@/app/components/AnimatedImage';
 import Carousel from '@/app/components/Carousel';
 import Hero from '@/app/components/Hero';
 import { InfoCard } from '@/app/components/InfoCard';
@@ -239,14 +240,17 @@ const Community = (props: Props) => {
               capacity-building projects, including bilingual environmental
               justice academies and interactive youth advocacy campaigns.
             </Typography>
-            <div className="relative flex h-[350px] w-full desktop:h-[531px]">
+            <AnimatedImage
+              key={67}
+              className="relative flex h-[350px] w-full desktop:h-[531px]"
+            >
               <Image
                 src="/img/rectangle-255-2-2.png"
                 fill
-                className="object-cover"
+                className="object-cover object-top"
                 alt="Group of cyclists wearing helmets"
               />
-            </div>
+            </AnimatedImage>
           </div>
         </div>
       </section>
@@ -302,14 +306,17 @@ const Community = (props: Props) => {
               September, the CAC held its inaugural retreat, an event focused on
               environmental justice and community action.
             </Typography>
-            <div className="relative flex h-[350px] w-full desktop:h-[531px]">
+            <AnimatedImage
+              key={23}
+              className="relative flex h-[350px] w-full desktop:h-[531px]"
+            >
               <Image
                 src="/img/rectangle-255-3-2.png"
                 fill
-                className="object-cover"
-                alt="Group of cyclists wearing helmets"
+                className="object-cover object-center"
+                alt="Women speaking into microphone"
               />
-            </div>
+            </AnimatedImage>
           </div>
         </div>
       </section>

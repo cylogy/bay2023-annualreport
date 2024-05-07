@@ -1,3 +1,6 @@
+'use client';
+
+import AnimatedImage from '@/app/components/AnimatedImage';
 import Hero from '@/app/components/Hero';
 import { InfoCard } from '@/app/components/InfoCard';
 import InfoCardImage from '@/app/components/InfoCardImage';
@@ -18,16 +21,17 @@ const Achievements = (props: Props) => {
         background="bg-dark-blue text-white"
         image="/img/frame-19723.png"
         imageTablet="/img/frame-19723.png"
+        alt="?"
       />
       <TextBlock>
-        <div className="desktop:mt-40 mt-22.5 desktop:max-w-[1200px] flex w-full flex-col items-start justify-start place-self-end">
+        <div className="mt-22.5 flex w-full flex-col items-start justify-start place-self-end desktop:mt-40 desktop:max-w-[1200px]">
           <Typography
             as="h3"
-            className="text-dark-blue desktop:pl-0 px-15 capitalize"
+            className="px-15 capitalize text-dark-blue desktop:pl-0"
           >
             Building Appliance Rule Amendments
           </Typography>
-          <Typography as="p" className="text-dark-gray desktop:pl-0 px-15 mt-6">
+          <Typography as="p" className="mt-6 px-15 text-dark-gray desktop:pl-0">
             Amendments to Regulation 9, Rules 4 and 6, were adopted to eliminate
             emissions of nitrogen oxides, or NOx, from{' '}
             <span className="font-bold">
@@ -53,15 +57,18 @@ const Achievements = (props: Props) => {
             incentive program administrators, labor unions, contractors, and
             others.
           </Typography>
-          <div className="desktop:h-[531px] relative mt-12 flex h-[350px] w-full">
+          <AnimatedImage
+            key={18}
+            className="relative mt-12 flex h-[350px] w-full desktop:h-[531px]"
+          >
             <Image
               fill
-              alt="Rectangle"
+              alt="Close-up of a building appliance"
               src={'/img/rectangle-257.png'}
               className="object-cover"
             />
-          </div>
-          <div className="mt-15 desktop:pr-15 desktop:flex-row desktop:pl-0 flex w-full flex-col gap-9 px-5">
+          </AnimatedImage>
+          <div className="mt-15 flex w-full flex-col gap-9 px-5 desktop:flex-row desktop:pl-0 desktop:pr-15">
             <InfoCard
               backgroundColor="blue"
               cardTitle="$890M"
@@ -75,11 +82,11 @@ const Achievements = (props: Props) => {
           </div>
           <Typography
             as="h3"
-            className="text-dark-blue desktop:pl-0 px-15 mt-25 capitalize"
+            className="mt-25 px-15 capitalize text-dark-blue desktop:pl-0"
           >
             Air Quality Violation Data Tool
           </Typography>
-          <Typography as="p" className="text-dark-gray desktop:pl-0 px-15 mt-6">
+          <Typography as="p" className="mt-6 px-15 text-dark-gray desktop:pl-0">
             In September, we launched a notices of violation data tool on our
             website that provides searchable information of all violations that
             our agency has issued within the past five years. Members of the
@@ -94,7 +101,7 @@ const Achievements = (props: Props) => {
           </Typography>
         </div>
       </TextBlock>
-      <div className="desktop:space-y-40 desktop:mb-40 flex w-full flex-col pt-40">
+      <div className="flex w-full flex-col pt-40 desktop:mb-40 desktop:space-y-40">
         <InfoCardImage
           backgroundColor="bg-gray text-white"
           title="First-of-its-Kind Environmental Justice Guidance"
@@ -115,6 +122,7 @@ const Achievements = (props: Props) => {
             </Typography>
           )}
           imageSrc="/img/highway.png"
+          alt="Aerial view of intersecting highways"
         />
         <InfoCardImage
           backgroundColor="bg-green text-white"
@@ -138,6 +146,7 @@ const Achievements = (props: Props) => {
           )}
           imageSrc="/img/highway.png"
           imageFirst
+          alt="Heavy traffic on the highway"
         />
       </div>
       <Navigation prevLink="/introduction" nextLink="/air-quality" />

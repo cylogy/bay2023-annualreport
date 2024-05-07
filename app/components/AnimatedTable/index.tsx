@@ -4,18 +4,16 @@ import React from 'react';
 import { motion } from 'framer-motion';
 
 type Props = {
-  key: number;
   className?: string;
   children: React.ReactNode;
 };
 
-const AnimatedTile = ({ key, className, children }: Props) => {
+const AnimatedTable = ({ className, children }: Props) => {
   return (
     <motion.article
-      key={key}
-      initial={{ x: '-100%', opacity: 0 }}
+      initial={{ y: '-10%', opacity: 0 }}
       whileInView={{
-        x: 1,
+        y: 0,
         opacity: 1,
         transition: {
           staggerChildren: 2,
@@ -24,7 +22,7 @@ const AnimatedTile = ({ key, className, children }: Props) => {
           delayChildren: 20,
         },
       }}
-      exit={{ x: 0 }}
+      exit={{ y: 0 }}
       transition={{
         ease: 'easeInOut',
         duration: 0.5,
@@ -37,4 +35,4 @@ const AnimatedTile = ({ key, className, children }: Props) => {
   );
 };
 
-export default AnimatedTile;
+export default AnimatedTable;

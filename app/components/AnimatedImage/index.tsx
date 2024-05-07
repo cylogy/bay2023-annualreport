@@ -1,37 +1,42 @@
 'use client';
 
 import React from 'react';
-import { motion } from 'framer-motion';
+import { delay, motion } from 'framer-motion';
 
 type Props = {
-  key: number;
+  key: number | string;
   className?: string;
   children: React.ReactNode;
 };
 
 const AnimatedImage = ({ key, className, children }: Props) => {
   return (
-    <motion.article
-      key={key}
-      initial={{ scale: 1.2, opacity: 0 }}
-      animate={{
-        scale: 1.1,
-        opacity: 1,
-        transition: {
-          stiffness: 10,
-          mass: 0.1,
-          delayChildren: 20,
-        },
-      }}
-      exit={{ scale: 1 }}
-      transition={{
-        ease: 'easeInOut',
-        duration: 0.5,
-      }}
-      className={className}
+    <article
+      className={`"flex w-full overflow-hidden bg-transparent ${className}`}
     >
-      {children}
-    </motion.article>
+      <motion.div
+        key={key}
+        whileInView={{
+          scale: 1,
+          opacity: 1,
+          transition: {
+            stiffness: 10,
+            mass: 0.1,
+            delayChildren: 20,
+          },
+        }}
+        initial={{ scale: 1.2, opacity: 0 }}
+        exit={{ scale: 1 }}
+        transition={{
+          ease: 'easeInOut',
+          duration: 0.5,
+        }}
+        viewport={{ once: true }}
+        className={`${className}`}
+      >
+        {children}
+      </motion.div>
+    </article>
   );
 };
 

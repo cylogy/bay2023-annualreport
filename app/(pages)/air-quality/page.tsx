@@ -15,6 +15,8 @@ import {
   nitrogenOxidePollution,
   particulatePollution,
 } from '@/utils/constants';
+import AnimatedTable from '@/app/components/AnimatedTable';
+import AnimatedImage from '@/app/components/AnimatedImage';
 
 const PieChartWithoutSSR = dynamic(
   () => import('@/app/components/PieChartWithoutSSR'),
@@ -26,7 +28,7 @@ type Props = {};
 const AirQuality = (props: Props) => {
   const slides = [
     () => (
-      <article className="tablet-portrait:h-[617.17px] desktop:h-[786px] relative flex h-[247px] w-full">
+      <article className="relative flex h-[247px] w-full tablet-portrait:h-[617.17px] desktop:h-[786px]">
         <Image
           src="/img/rectangle-255-2.png"
           fill
@@ -36,7 +38,7 @@ const AirQuality = (props: Props) => {
       </article>
     ),
     () => (
-      <article className="tablet-portrait:h-[617.17px] desktop:h-[786px] relative flex h-[247px] w-full">
+      <article className="relative flex h-[247px] w-full tablet-portrait:h-[617.17px] desktop:h-[786px]">
         <Image
           src="/img/rectangle-256.png"
           fill
@@ -59,16 +61,16 @@ const AirQuality = (props: Props) => {
         alt="Close-up of a Bay Air Center"
       />
       <TextBlock align="left">
-        <div className="desktop:mt-40 mt-22.5 desktop:max-w-[855px] desktop:mx-25 flex w-full flex-col">
+        <div className="mt-22.5 flex w-full flex-col desktop:mx-25 desktop:mt-40 desktop:max-w-[855px]">
           <Typography
             as="h3"
-            className="text-dark-blue desktop:p-0 px-15 capitalize"
+            className="px-15 capitalize text-dark-blue desktop:p-0"
           >
             AIR DISTRICT MONITORING SITES
           </Typography>
           <Typography
             as="p"
-            className="text-dark-blue desktop:p-0 px-15 mb-20 mt-6"
+            className="mb-20 mt-6 px-15 text-dark-blue desktop:p-0"
           >
             Our air monitoring network{' '}
             <span className="font-bold">
@@ -94,26 +96,28 @@ const AirQuality = (props: Props) => {
           </Typography>
         </div>
       </TextBlock>
-      <section className="desktop:flex-row desktop:pl-25 desktop:pr-[30px]  desktop:space-x-9 desktop:mb-25 desktop:space-y-0 px-15 mb-20 flex w-full flex-col justify-between space-y-9">
-        <div className="border-dark-blue desktop:w-[447px] flex h-min w-full items-center space-x-6 border-b">
-          <div className="bg-teal border-dark-blue block h-10 w-10 rounded-full border">
+      <section className="mb-20 flex w-full  flex-col justify-between space-y-9 px-15 desktop:mb-25 desktop:flex-row desktop:space-x-9 desktop:space-y-0 desktop:pl-25 desktop:pr-[30px]">
+        <div className="flex h-min w-full items-center space-x-6 border-b border-dark-blue desktop:w-[447px]">
+          <div className="block h-10 w-10 rounded-full border border-dark-blue bg-teal">
             &nbsp;
           </div>
-          <Typography as="h3" className="text-dark-blue pb-2">
+          <Typography as="h3" className="pb-2 text-dark-blue">
             AIR MONITORING SITES
           </Typography>
         </div>
-        <div className="border-dark-blue relative flex flex-1 justify-center rounded-[20px] border p-10">
-          <Image
-            alt="Map showing air monitoring sites"
-            src="/img/map1.png"
-            width={755.91}
-            height={910}
-            className="m-10 object-contain"
-          />
+        <div className="relative flex flex-1 justify-center rounded-[20px] border border-dark-blue p-10">
+          <AnimatedImage key={4} className="flex items-center justify-center">
+            <Image
+              alt="Map showing air monitoring sites"
+              src="/img/map1.png"
+              width={755.91}
+              height={910}
+              className="m-10 object-contain"
+            />
+          </AnimatedImage>
         </div>
       </section>
-      <section className="desktop:flex-row desktop:h-[610px] desktop:space-y-0 py-25 desktop:py-36 desktop:px-20 desktop:space-x-9 relative flex w-full flex-col justify-center space-y-9 px-6">
+      <section className="relative flex w-full flex-col justify-center space-y-9 px-6 py-25 desktop:h-[610px] desktop:flex-row desktop:space-x-9 desktop:space-y-0 desktop:px-20 desktop:py-36">
         <Image
           src="/img/background1.png"
           fill
@@ -137,14 +141,17 @@ const AirQuality = (props: Props) => {
         />
       </section>
       <TextBlock align="left">
-        <div className="desktop:mt-40 mt-22.5 desktop:max-w-[855px] desktop:mx-25 flex w-full flex-col">
+        <div className="mt-22.5 flex w-full flex-col desktop:mx-25 desktop:mt-40 desktop:max-w-[855px]">
           <Typography
             as="h3"
-            className="text-dark-blue desktop:p-0 px-15 capitalize"
+            className="px-5 capitalize text-dark-blue desktop:p-0 desktop:px-15"
           >
             EPA Health Standards for Particulate Matter
           </Typography>
-          <Typography as="p" className="text-dark-blue desktop:p-0 px-15 mt-6">
+          <Typography
+            as="p"
+            className="mt-6 px-5 text-dark-blue desktop:p-0 desktop:px-15"
+          >
             We fully supported the EPA’s lowering of the National Ambient Air
             Quality Standards (NAAQS) for particulate matter pollution. The
             NAAQS are designed to{' '}
@@ -160,7 +167,7 @@ const AirQuality = (props: Props) => {
           </Typography>
         </div>
       </TextBlock>
-      <section className="desktop:space-y-40 mt-40 flex w-full flex-col">
+      <section className="mt-40 flex w-full flex-col desktop:space-y-40">
         <InfoCardImage
           backgroundColor="bg-green text-white"
           title="East Oakland Community Air Monitoring Partnership"
@@ -187,14 +194,17 @@ const AirQuality = (props: Props) => {
         />
       </section>
       <TextBlock align="left">
-        <div className="desktop:mt-40 mt-22.5 desktop:max-w-[855px] desktop:mx-25 flex w-full flex-col">
+        <div className="mt-22.5 flex w-full flex-col desktop:mx-25 desktop:mt-40 desktop:max-w-[855px]">
           <Typography
             as="h3"
-            className="text-dark-blue desktop:p-0 px-15 capitalize"
+            className="mt-6 px-5 text-dark-blue desktop:p-0 desktop:px-15"
           >
             Bay Air Center Launches Public Website
           </Typography>
-          <Typography as="p" className="text-dark-blue desktop:p-0 px-15 mt-6">
+          <Typography
+            as="p"
+            className="mt-6 px-5 text-dark-blue desktop:p-0 desktop:px-15"
+          >
             We sponsored the Bay Air Center as a resource that offers{' '}
             <span className="font-bold">
               {' '}
@@ -210,11 +220,11 @@ const AirQuality = (props: Props) => {
           </Typography>
         </div>
       </TextBlock>
-      <section className="pl-15 desktop:pl-25 mb-40 mt-12 flex w-full">
+      <section className="mb-40 mt-12 flex w-full pl-5 tablet-landscape:pl-15 desktop:pl-25">
         <Carousel slideComponents={slides} />
       </section>
-      <section className="desktop:h-[1281px] fill-blue relative flex w-full overflow-hidden">
-        <div className="bg-light-blue/20 absolute bottom-0 left-0 right-0 top-0 -z-10 block">
+      <section className="relative flex w-full justify-center overflow-hidden fill-blue desktop:h-[1281px] desktop:justify-end">
+        <div className="absolute bottom-0 left-0 right-0 top-0 -z-10 block bg-light-blue/20">
           &nbsp;
         </div>
         <Image
@@ -223,17 +233,17 @@ const AirQuality = (props: Props) => {
           alt="Trail in the forest"
           className=" -z-20 object-cover opacity-30"
         />
-        <article className="mx-auto flex flex-col items-center justify-center overflow-hidden">
-          <div className="desktop:mt-40 mt-22.5 desktop:max-w-[1317px] desktop:mx-25 flex w-full flex-col overflow-hidden">
+        <article className=" flex w-full flex-col items-center justify-center overflow-hidden desktop:flex-[0.8] desktop:items-end">
+          <div className=" mt-22.5 flex w-full flex-col overflow-hidden px-5 desktop:mt-40 desktop:max-w-[1317px] desktop:self-start desktop:pr-10">
             <Typography
               as="h2"
-              className="text-dark-blue desktop:p-0 px-15 capitalize"
+              className="capitalize text-dark-blue desktop:p-0"
             >
               Ad Hoc Committee on Incident Response Program Improvements
             </Typography>
             <Typography
               as="p"
-              className="text-gray desktop:p-0 px-15 text-body-text-desktop mt-6 leading-9"
+              className="mb-10 mt-6 text-body-text-desktop leading-9 text-gray tablet-portrait:mb-20 desktop:p-0"
             >
               Our Board of Directors formed an ad hoc committee to strengthen
               our incident response program through increased coordination with
@@ -244,23 +254,24 @@ const AirQuality = (props: Props) => {
               opportunities to fill gaps in monitoring, which will be considered
               as part of upcoming strategic planning and budget processes.
             </Typography>
-            <div className="tablet-portrait:mt-20 tablet-portrait:ml-15 desktop:ml-0 relative mt-10 flex h-[531px] w-[1440px]">
-              <Image
-                src="/img/rectangle-255-3.png"
-                fill
-                alt="Residential street with fog from power plant chimneys in the background"
-              />
-            </div>
           </div>
+          <AnimatedImage key={23} className="relative flex h-[531px] w-full">
+            <Image
+              src="/img/rectangle-255-3.png"
+              fill
+              className="object-cover"
+              alt="Residential street with fog from power plant chimneys in the background"
+            />
+          </AnimatedImage>
         </article>
       </section>
-      <section className="desktop:px-25 tablet-portrait:px-12 desktop:flex-row flex w-full flex-col items-start justify-between gap-x-9 px-6 py-40">
-        <div className="border-dark-blue desktop:w-[447px] flex h-min w-full items-center space-x-6 border-b">
-          <Typography as="h3" className="text-dark-blue pb-2 uppercase">
+      <section className="flex w-full flex-col items-start justify-between gap-x-9 px-6 py-40 tablet-portrait:px-12 desktop:flex-row desktop:px-25">
+        <div className="flex h-min w-full items-center space-x-6 border-b border-dark-blue desktop:w-[447px]">
+          <Typography as="h3" className="pb-2 uppercase text-dark-blue">
             LABORATORY
           </Typography>
         </div>
-        <article className="bg-green py-15 desktop:max-w-[800px] desktop:mt-0 mt-9 flex w-full flex-1 flex-col space-y-6 rounded-[20px] px-9 text-white">
+        <AnimatedTable className="mt-9 flex w-full flex-1 flex-col space-y-6 rounded-[20px] bg-green px-9 py-15 text-white desktop:mt-0 desktop:max-w-[800px]">
           <Typography as="h5">2023 Analyses Performed in the Lab*</Typography>
           <div className="flex w-full items-center justify-between">
             <Typography as="p">Particulate Matter</Typography>
@@ -285,21 +296,21 @@ const AirQuality = (props: Props) => {
           <div className="flex w-full items-center justify-between">
             <Typography
               as="p"
-              className="desktop:text-caption-desktop tablet:text-caption-tablet text-caption-mobile"
+              className="tablet:text-caption-tablet text-caption-mobile desktop:text-caption-desktop"
             >
               *Samples provide information about pollutant levels in ambient
               air, which help to identify areas for further reductions.
             </Typography>
           </div>
-        </article>
+        </AnimatedTable>
       </section>
-      <section className="desktop:px-25 tablet-portrait:px-12 desktop:flex-row flex w-full flex-col items-start justify-between gap-x-9 px-6 py-40">
-        <div className="border-dark-blue desktop:w-[447px] flex h-min w-full items-center space-x-6 border-b">
-          <Typography as="h3" className="text-dark-blue pb-2 uppercase">
+      <section className="flex w-full flex-col items-start justify-between gap-x-9 px-6 py-40 tablet-portrait:px-12 desktop:flex-row desktop:px-25">
+        <div className="flex h-min w-full items-center space-x-6 border-b border-dark-blue desktop:w-[447px]">
+          <Typography as="h3" className="pb-2 uppercase text-dark-blue">
             EXCEEDANCES OF AIR QUALITY STANDARDS
           </Typography>
         </div>
-        <article className="border-gray py-15 desktop:max-w-[800px] desktop:mt-0 text-dark-gray mt-9 flex w-full flex-1 flex-col space-y-6 rounded-[20px] border bg-white px-9">
+        <AnimatedTable className="mt-9 flex w-full flex-1 flex-col space-y-6 rounded-[20px] border border-gray bg-white px-9 py-15 text-dark-gray desktop:mt-0 desktop:max-w-[800px]">
           <Typography as="h5">OZONE</Typography>
           <div className="flex w-full items-center justify-between">
             <Typography as="p">Days over National 8-Hour Standard</Typography>
@@ -354,15 +365,15 @@ const AirQuality = (props: Props) => {
           </div>
           <Typography
             as="p"
-            className="desktop:text-caption-desktop tablet:text-caption-tablet text-caption-mobile"
+            className="tablet:text-caption-tablet text-caption-mobile desktop:text-caption-desktop"
           >
             *Pending final certification <br />
             Final certification of exceedance data will occur May 1, 2024..
           </Typography>
-        </article>
+        </AnimatedTable>
       </section>
       <section className="relative flex w-full flex-col">
-        <div className="bg-light-blue/20 absolute bottom-0 left-0 right-0 top-0 -z-10 block">
+        <div className="absolute bottom-0 left-0 right-0 top-0 -z-10 block bg-light-blue/20">
           &nbsp;
         </div>
         <Image
@@ -372,34 +383,34 @@ const AirQuality = (props: Props) => {
           className=" -z-20 object-cover opacity-30"
         />
         <TextBlock align="left">
-          <div className="desktop:mt-40 mt-22.5 desktop:pl-25 desktop:pr-[30px] tablet-portrait:px-12 flex w-full flex-1 flex-grow flex-col px-6">
-            <div className="border-dark-blue desktop:mb-[120px] mb-20 flex h-min w-full flex-1 items-center space-x-6 border-b">
-              <Typography as="h3" className="text-dark-blue pb-2 uppercase">
+          <div className="mt-22.5 flex w-full flex-1 flex-grow flex-col px-6 tablet-portrait:px-12 desktop:mt-40 desktop:pl-25 desktop:pr-[30px]">
+            <div className="mb-20 flex h-min w-full flex-1 items-center space-x-6 border-b border-dark-blue desktop:mb-[120px]">
+              <Typography as="h3" className="pb-2 uppercase text-dark-blue">
                 Bay Area Pollution Sources
               </Typography>
             </div>
-            <div className="border-dark-blue desktop:mb-[120px] mb-9 flex h-min w-full flex-1 items-center space-x-6 border-b">
-              <Typography as="h3" className="text-dark-blue relative pb-2">
+            <div className="mb-9 flex h-min w-full flex-1 items-center space-x-6 border-b border-dark-blue desktop:mb-[120px]">
+              <Typography as="h3" className="relative pb-2 text-dark-blue">
                 SOURCES OF GREENHOUSE GAS EMISSIONS{' '}
-                <span className="text-body-text-desktop absolute -right-4 -top-2 align-text-top font-bold">
+                <span className="absolute -right-4 -top-2 align-text-top text-body-text-desktop font-bold">
                   a
                 </span>
               </Typography>
             </div>
             <PieChartWithoutSSR data={greenhouseEmissions} />
-            <div className="border-dark-blue desktop:mt-40 desktop:mb-[120px] mb-9 flex h-min w-full flex-1 items-center space-x-6 border-b">
-              <Typography as="h3" className="text-dark-blue relative pb-2">
+            <div className="mb-9 flex h-min w-full flex-1 items-center space-x-6 border-b border-dark-blue desktop:mb-[120px] desktop:mt-40">
+              <Typography as="h3" className="relative pb-2 text-dark-blue">
                 SOURCES OF ANNUAL FINE PARTICULATE POLLUTION
-                <span className="text-body-text-desktop absolute -right-4 -top-2 align-text-top font-bold">
+                <span className="absolute -right-4 -top-2 align-text-top text-body-text-desktop font-bold">
                   d
                 </span>
               </Typography>
             </div>
             <PieChartWithoutSSR data={particulatePollution} />
-            <div className="border-dark-blue desktop:mt-40 desktop:mb-[120px] mb-9 flex h-min w-full flex-1 items-center space-x-6 border-b">
-              <Typography as="h3" className="text-dark-blue relative pb-2">
+            <div className="mb-9 flex h-min w-full flex-1 items-center space-x-6 border-b border-dark-blue desktop:mb-[120px] desktop:mt-40">
+              <Typography as="h3" className="relative pb-2 text-dark-blue">
                 SOURCES OF ANNUAL NITROGEN OXIDE POLLUTION
-                <span className="text-body-text-desktop absolute -right-4 -top-2 align-text-top font-bold">
+                <span className="absolute -right-4 -top-2 align-text-top text-body-text-desktop font-bold">
                   d
                 </span>
               </Typography>
@@ -409,7 +420,7 @@ const AirQuality = (props: Props) => {
         </TextBlock>
         <Typography
           as="p"
-          className="desktop:my-40 tablet-portrait:mb-25 mt-22.5 tablet-portrait:px-12 desktop:px-0 text-dark-blue mx-auto mb-6 flex w-full max-w-[1241px] flex-1 flex-grow flex-col px-6"
+          className="mx-auto mb-6 mt-22.5 flex w-full max-w-[1241px] flex-1 flex-grow flex-col px-6 text-dark-blue tablet-portrait:mb-25 tablet-portrait:px-12 desktop:my-40 desktop:px-0"
         >
           a The Air District’s latest greenhouse gas (GHG) emissions estimates
           can be found here: baaqmd.gov/capghg. These estimates do not reflect

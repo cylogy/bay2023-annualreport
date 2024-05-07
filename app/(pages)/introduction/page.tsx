@@ -1,5 +1,7 @@
 'use client';
 
+import AnimatedImage from '@/app/components/AnimatedImage';
+import AnimatedTile from '@/app/components/AnimatedTile';
 import Hero from '@/app/components/Hero';
 import Navigation from '@/app/components/Navigation';
 import TextBlock from '@/app/components/TextBlock';
@@ -18,13 +20,14 @@ const Page = (props: Props) => {
         background="bg-green text-white"
         image="/img/frame-19722-14.png"
         imageTablet="/img/Frame 19722 (1).png"
+        alt="Dr. Philip Fine"
       />
       <TextBlock align="left">
-        <div className="desktop:pt-40 desktop:pl-25 tablet-portrait:px-15 tablet-portrait:pt-22.5 tablet-portrait:pb-20 desktop:pb-20 desktop:max-w-[855px] flex w-full flex-col place-self-start px-5 pb-6 pt-20">
-          <Typography as="h2" className=" text-dark-blue capitalize">
+        <div className="flex w-full flex-col place-self-start px-5 pb-6 pt-20 tablet-portrait:px-15 tablet-portrait:pb-20 tablet-portrait:pt-22.5 desktop:max-w-[855px] desktop:pb-20 desktop:pl-25 desktop:pt-40">
+          <Typography as="h2" className=" capitalize text-dark-blue">
             EXECUTIVE SUMMARY 2023
           </Typography>
-          <Typography as="p" className=" text-dark-blue mt-6">
+          <Typography as="p" className=" mt-6 text-dark-blue">
             This year was a year of{' '}
             <span className="font-bold">renewal and change</span> at the Air
             District. I joined as Executive Officer in February and am joined by
@@ -38,10 +41,10 @@ const Page = (props: Props) => {
         </div>
       </TextBlock>
       <TextBlock align="right">
-        <div className="desktop:max-w-[1200px] flex w-full flex-col items-start justify-start place-self-end">
+        <div className="flex w-full flex-col items-start justify-start place-self-end desktop:max-w-[1200px]">
           <Typography
             as="p"
-            className="text-gray tablet-portrait:px-15 tablet-portrait:pb-15 desktop:mt-10 mb-6 px-5"
+            className="mb-6 px-5 text-gray tablet-portrait:px-15 tablet-portrait:pb-15 desktop:mt-10"
           >
             <span className="font-bold">
               Our mission is to significantly reduce the disproportionate levels
@@ -68,31 +71,41 @@ const Page = (props: Props) => {
           </Typography>
         </div>
       </TextBlock>
-      <div className="desktop:flex-row desktop:h-[490px] flex w-full flex-col">
-        <div className="desktop:h-full desktop:w-1/2 relative flex h-[350px] w-full">
-          <Image
-            src="/img/rectangle-251.png"
-            fill
-            alt=""
-            className="object-cover"
-          />
+      <div className="flex w-full flex-col desktop:h-[490px] desktop:flex-row">
+        <div className="relative z-20 flex h-[350px] w-full desktop:h-full desktop:w-1/2">
+          <div className="z-20 flex w-full overflow-hidden bg-white">
+            <AnimatedImage
+              key={11}
+              className="relative flex h-full w-full flex-col items-center justify-center"
+            >
+              <Image
+                src="/img/rectangle-251.png"
+                fill
+                alt="Two hikers on a mountain trail"
+                className="object-cover "
+              />
+            </AnimatedImage>
+          </div>
         </div>
-        <div className="bg-blue desktop:w-1/2 desktop:p-20 flex h-full w-full flex-col items-start justify-center px-20 py-10 text-white">
+        <AnimatedTile
+          key={10}
+          className="flex h-full w-full flex-col items-start justify-center bg-blue px-20 py-10 text-white desktop:w-1/2 desktop:p-20"
+        >
           <Typography as="h1" className="text-left">
             &ldquo;
           </Typography>
           <Typography
             as="p"
-            className="text-pull-quote-desktop desktop:-mt-16 font-body-text -mt-10"
+            className="-mt-10 font-body-text text-pull-quote-desktop desktop:-mt-16"
           >
             Our mission is to significantly reduce the disproportionate levels
             of air pollution that many communities face.
           </Typography>
-        </div>
+        </AnimatedTile>
       </div>
       <TextBlock align="right">
-        <div className="tablet-portrait:px-15 desktop:max-w-[1200px] flex w-full flex-col items-start justify-start place-self-end px-5">
-          <Typography as="p" className="text-gray tablet-portrait:pb-15 mt-10 ">
+        <div className="flex w-full flex-col items-start justify-start place-self-end px-5 tablet-portrait:px-15 desktop:max-w-[1200px]">
+          <Typography as="p" className="mt-10 text-gray tablet-portrait:pb-15 ">
             As part of our efforts to increase transparency around our
             enforcement work, we developed an online tool that allows the public
             to view air quality violations and penalties issued to local
@@ -119,7 +132,7 @@ const Page = (props: Props) => {
             strengthen our efforts to protect our air, our climate, and our
             communities.
           </Typography>
-          <div className="desktop:mb-40 mb-15 flex flex-col items-start justify-center">
+          <div className="mb-15 flex flex-col items-start justify-center desktop:mb-40">
             <Image
               src="/img/signature.png"
               width={233}
@@ -128,7 +141,7 @@ const Page = (props: Props) => {
             />
             <Typography
               as="p"
-              className="text-body-text-desktop-bold text-dark-gray font-bold"
+              className="text-body-text-desktop-bold font-bold text-dark-gray"
             >
               Dr. Philip Fine
             </Typography>

@@ -15,13 +15,13 @@ type Props = {
 
 const defaultAnimations = {
   hidden: {
-    y: 90,
+    y: '110%',
   },
   visible: {
     y: 0,
     transition: {
-      ease: [0, 0.31, 0.35, 0.8],
-      duration: 0.3,
+      ease: [0, 0.2, 0.7, 0.8],
+      duration: 0.2,
       stiffnes: 100,
       mass: 0.2,
     },
@@ -42,7 +42,7 @@ const Animated = ({ text, as: Tag = 'p', className }: Props) => {
         aria-hidden
       >
         {text.split(' ').map((word) => (
-          <span className="inline-block">
+          <span className="inline-block whitespace-nowrap">
             {word.split('').map((char) => (
               <motion.span
                 className="inline-block"

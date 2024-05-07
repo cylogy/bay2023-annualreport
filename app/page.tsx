@@ -19,7 +19,7 @@ export default function Home() {
           >
             <Animated
               as="h1"
-              className="overflow-hidden whitespace-nowrap font-h1 font-h6-desktop uppercase leading-none text-white desktop:text-h1-tablet"
+              className="tablet:text-h1-tablet overflow-hidden whitespace-nowrap font-h1 text-h1-mobile font-h6-desktop uppercase leading-none text-white"
               text="Protecting"
             />
           </AnimatedTile>
@@ -31,7 +31,7 @@ export default function Home() {
           >
             <Animated
               as="h1"
-              className="overflow-hidden whitespace-nowrap font-h1 font-h6-desktop uppercase text-white desktop:text-h1-tablet"
+              className="tablet:text-h1-tablet overflow-hidden whitespace-nowrap font-h1 text-h1-mobile font-h6-desktop uppercase text-white"
               text="Our Air,"
             />
           </AnimatedTile>
@@ -39,7 +39,7 @@ export default function Home() {
         <div className="z-20 flex overflow-hidden bg-white desktop:order-2 desktop:flex-1">
           <AnimatedImage
             key={2}
-            className="relative flex h-[384px] w-full items-center justify-center bg-dark-blue px-9 "
+            className="relative flex h-[384px] w-full items-center justify-center"
           >
             <Image
               src="/img/image-square-1.png"
@@ -57,7 +57,7 @@ export default function Home() {
         </div>
       </section>
       <section className="flex h-[768px] w-full flex-1 flex-col overflow-hidden md:flex-row">
-        <div className="z-30 flex overflow-hidden bg-white  desktop:w-1/2 desktop:flex-[0.5]">
+        <div className="z-30 flex overflow-hidden bg-white  desktop:w-1/2">
           <AnimatedImage
             key={4}
             className="relative hidden h-full desktop:flex desktop:w-full"
@@ -70,52 +70,41 @@ export default function Home() {
             />
           </AnimatedImage>
         </div>
-        <article className="z-20 flex w-full flex-col overflow-hidden desktop:w-1/2 desktop:flex-[0.5]">
-          <article className="flex flex-col desktop:flex-row">
-            <div className="z-20 flex bg-white desktop:flex-1">
-              <AnimatedTile
-                key={5}
-                className="flex flex-grow items-center justify-center bg-light-blue p-9 desktop:h-[384px]"
+        <article className="z-20 flex w-full flex-col overflow-hidden desktop:w-1/2">
+          <div className="flex h-full w-full flex-col desktop:flex-row">
+            <AnimatedTile
+              key={5}
+              className="flex w-full flex-1 flex-grow items-center justify-center bg-light-blue p-9 desktop:h-[384px] desktop:w-max"
+            >
+              <Animated
+                as="h1"
+                className="tablet:text-h1-tablet overflow-hidden whitespace-nowrap font-h1 text-h1-mobile font-h6-desktop uppercase text-white"
+                text="Climate"
+              />
+            </AnimatedTile>
+            <div className="flex w-min">
+              <AnimatedImage
+                key={6}
+                className="flex-0 relative hidden h-full overflow-visible desktop:flex desktop:w-[335px]"
               >
-                <Animated
-                  as="h1"
-                  className="overflow-hidden whitespace-nowrap font-h1 font-h6-desktop uppercase leading-none text-white desktop:text-h1-tablet"
-                  text="Climate"
+                <Image
+                  src="/img/image-square-5-2x.png"
+                  alt="Above view of pedestrians crossing the street"
+                  fill
+                  className="object-cover "
                 />
-              </AnimatedTile>
+              </AnimatedImage>
             </div>
-            <AnimatedImage
-              key={6}
-              className="relative hidden h-full min-w-[335px] overflow-visible desktop:flex"
-            >
-              <Image
-                src="/img/image-square-5-2x.png"
-                alt="Above view of pedestrians crossing the street"
-                fill
-                className="object-cover "
-              />
-            </AnimatedImage>
-            <AnimatedImage
-              key={7}
-              className="relative flex h-[350px] w-full desktop:hidden"
-            >
-              <Image
-                src="/img/image-large.png"
-                alt="landscape"
-                fill
-                className="object-cover"
-              />
-            </AnimatedImage>
-          </article>
+          </div>
           <div className="z-20 flex bg-white desktop:flex-1">
             <AnimatedTile
               key={7}
-              className="flex h-[384px] w-full flex-col items-center justify-center bg-green p-9  text-left md:order-3"
+              className="flex w-full flex-col items-center justify-center bg-green p-9 text-left  md:order-3 desktop:h-[384px]"
             >
               <div className="flex flex-col text-left">
                 <Animated
                   as="h1"
-                  className="overflow-hidden whitespace-nowrap font-h1 font-h6-desktop uppercase leading-none text-white desktop:text-h1-tablet"
+                  className="tablet:text-h1-tablet overflow-hidden whitespace-nowrap font-h1 text-h1-mobile font-h6-desktop uppercase leading-none text-white"
                   text="And Communities"
                 />
                 <Animated
@@ -132,7 +121,7 @@ export default function Home() {
         <div className="z-20 flex bg-white desktop:order-2  desktop:flex-[0.5]">
           <AnimatedImage
             key={8}
-            className="relative flex h-[350px] w-full flex-col items-center justify-center px-9 desktop:h-full desktop:w-full"
+            className="relative flex h-[350px] w-full flex-col items-center justify-center desktop:h-full desktop:w-full"
           >
             <Image
               src="/img/adobestock-526164757-1.png"
@@ -183,7 +172,7 @@ export default function Home() {
         <div className="z-20 flex w-1/3 overflow-hidden bg-white">
           <AnimatedImage
             key={11}
-            className="relative flex h-full w-full flex-col items-center justify-center px-9"
+            className="relative flex h-full w-full flex-col items-center justify-center"
           >
             <Image
               src="/img/rectangle-251.png"
