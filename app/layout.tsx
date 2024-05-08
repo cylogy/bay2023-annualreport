@@ -1,8 +1,15 @@
-'use client';
-
 import './globals.css';
 import Navbar from './components/Navbar';
 import { Footer } from './components/Footer';
+import { Metadata } from 'next';
+
+export const metadata: Metadata = {
+  title: {
+    template: '%s | Air District 2023 Annual Report',
+    default: 'Homepage | Air District 2023 Annual Report',
+  },
+  description: '',
+};
 
 export default function RootLayout({
   children,
@@ -24,6 +31,10 @@ https://cdn.jsdelivr.net/npm/@dannymichel/proxima-nova@4.5.2/index.min.css
 "
           rel="stylesheet"
         ></link>
+        <meta
+          name="viewport"
+          content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no"
+        ></meta>
       </head>
       <body className="overflow-x-hidden antialiased">
         <Navbar />

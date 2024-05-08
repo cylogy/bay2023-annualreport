@@ -64,7 +64,10 @@ const PieChartWithoutSSR = ({ data }: Props) => {
     <div className="mb-9 flex w-full flex-col items-center justify-center gap-9 desktop:m-0 desktop:flex-row">
       <div className="flex w-full flex-col desktop:w-4/12">
         {data.map(({ name, value, color }, index) => (
-          <div className="flex w-full items-center justify-between border-b border-dark-blue py-2 text-dark-gray">
+          <div
+            key={`${index}-${value}`}
+            className="flex w-full items-center justify-between border-b border-dark-blue py-2 text-dark-gray"
+          >
             <div className="flex gap-x-4">
               <div
                 className="block h-7 w-7"
