@@ -45,12 +45,14 @@ export default function Home() {
               src="/img/image-square-1.png"
               className="hidden h-[350px] flex-1 flex-grow object-cover object-center desktop:flex"
               fill
+              priority
               alt="White clouds against a blue sky"
             />
             <Image
               src="/img/image-square-4-2x.png"
               className="flex h-96 flex-1 flex-grow object-cover object-center desktop:hidden"
               fill
+              priority
               alt="White clouds against a blue sky"
             />
           </AnimatedImage>
@@ -66,6 +68,7 @@ export default function Home() {
               src="/img/image-large-desktop.png"
               alt="Flower field set against mountains"
               fill
+              priority
               className="object-cover "
             />
           </AnimatedImage>
@@ -91,6 +94,7 @@ export default function Home() {
                   src="/img/image-square-5-2x.png"
                   alt="Above view of pedestrians crossing the street"
                   fill
+                  priority
                   className="object-cover "
                 />
               </AnimatedImage>
@@ -104,7 +108,7 @@ export default function Home() {
               <div className="flex flex-col text-left">
                 <Animated
                   as="h1"
-                  className="tablet:text-h1-tablet overflow-hidden whitespace-nowrap font-h1 text-h1-mobile font-h6-desktop uppercase leading-none text-white"
+                  className="tablet:text-h1-tablet overflow-hidden whitespace-nowrap font-h1 text-h1-mobile font-h6-desktop uppercase leading-none text-white "
                   text="And Communities"
                 />
                 <Animated
@@ -126,6 +130,7 @@ export default function Home() {
             <Image
               src="/img/adobestock-526164757-1.png"
               fill
+              priority
               alt="Two teenagers swinging in a park"
               className="object-cover "
             />
@@ -177,6 +182,7 @@ export default function Home() {
             <Image
               src="/img/rectangle-251.png"
               fill
+              priority
               alt="Two hikers on a mountain trail"
               className="object-cover "
             />

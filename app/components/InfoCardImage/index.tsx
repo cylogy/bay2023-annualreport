@@ -41,6 +41,7 @@ const InfoCardImage = ({
           fill
           className="object-cover object-top"
           alt={alt}
+          priority
         />
       </AnimatedImage>
       <AnimatedImage

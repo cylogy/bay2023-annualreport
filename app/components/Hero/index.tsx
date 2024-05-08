@@ -33,10 +33,22 @@ const Hero = ({
       <div className={`z-30 flex bg-white`}>
         <AnimatedImage key={1} className="relative z-20 h-full w-full">
           <div className="relative flex h-[350px] w-full tablet-portrait:hidden desktop:flex desktop:h-full desktop:w-120">
-            <Image src={image} fill alt={alt} className="object-cover" />
+            <Image
+              priority
+              src={image}
+              fill
+              alt={alt}
+              className="object-cover"
+            />
           </div>
           <div className="relative hidden h-[350px] w-full tablet-portrait:flex desktop:hidden">
-            <Image src={imageTablet} fill alt={alt} className="object-cover" />
+            <Image
+              priority
+              src={imageTablet}
+              fill
+              alt={alt}
+              className="object-cover"
+            />
           </div>
         </AnimatedImage>
       </div>

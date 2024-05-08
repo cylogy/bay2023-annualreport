@@ -322,8 +322,8 @@ const page: FC = () => {
       <Hero
         title='About us'
         description="Who Are We?"
-        image="/img/about-us-mobile-tablet.png"
-        imageTablet="/img/about-us-mobile-tablet.png"
+        image="/img/about-us-mobile.png"
+        imageTablet="/img/about-us-mobile.png"
         background="bg-green text-white"
         finalReverse
         alt='About us'

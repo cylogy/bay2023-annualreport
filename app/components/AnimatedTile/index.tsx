@@ -15,7 +15,7 @@ const AnimatedTile = ({ key, className, children }: Props) => {
       key={key}
       initial={{ x: '-100%', opacity: 0 }}
       whileInView={{
-        x: 1,
+        x: 0,
         opacity: 1,
         transition: {
           staggerChildren: 2,
@@ -24,7 +24,6 @@ const AnimatedTile = ({ key, className, children }: Props) => {
           delayChildren: 20,
         },
       }}
-      exit={{ x: 0 }}
       transition={{
         ease: 'easeInOut',
         duration: 0.5,
