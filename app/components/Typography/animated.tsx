@@ -41,10 +41,14 @@ const Animated = ({ text, as: Tag = 'p', className }: Props) => {
         }}
         aria-hidden
       >
-        {text.split(' ').map((word) => (
-          <span className="flex flex-wrap justify-start tablet-portrait:inline-block tablet-portrait:whitespace-nowrap">
-            {word.split('').map((char) => (
+        {text.split(' ').map((word, index) => (
+          <span
+            key={`${index}-${word}`}
+            className="flex flex-wrap justify-start tablet-portrait:inline-block tablet-portrait:whitespace-nowrap"
+          >
+            {word.split('').map((char, index) => (
               <motion.span
+                key={`${index}-${char}`}
                 className="inline-block"
                 variants={defaultAnimations}
               >
