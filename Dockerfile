@@ -50,16 +50,12 @@ COPY --from=builder --chown=nextjs:nodejs /app/next.config.mjs ./
 COPY --from=builder --chown=nextjs:nodejs /app/public ./public
 COPY --from=builder --chown=nextjs:nodejs /app/package.json ./package.json
 
+COPY --from=builder --chown=nextjs:nodejs /app/healthcheck.js ./
 
 # Automatically leverage output traces to reduce image size
 # https://nextjs.org/docs/advanced-features/output-file-tracing
-# COPY --from=builder --chown=nextjs:nodejs /app/.next/standalone ./
-# COPY --from=builder --chown=nextjs:nodejs /app/.next/static ./.next/static
-
-COPY --from=builder --chown=nextjs:nodejs /app/.next ./.next
-COPY --from=builder --chown=nextjs:nodejs /app/node_modules ./node_modules
-COPY --from=builder --chown=nextjs:nodejs /app/package.json ./
-COPY --from=builder --chown=nextjs:nodejs /app/healthcheck.js ./
+COPY --from=builder --chown=nextjs:nodejs /app/.next/standalone ./
+COPY --from=builder --chown=nextjs:nodejs /app/.next/static ./.next/static
 
 # RUN chown -R nextjs:nodejs /app
 EXPOSE ${DEFAULT_PORT}
@@ -71,4 +67,4 @@ ENV HOSTNAME "0.0.0.0"
 
 HEALTHCHECK --interval=30s --timeout=30s --start-period=5s --retries=3 CMD [ "node", "healthcheck.js" ]
 
-CMD ["yarn", "start"]
+CMD ["node", "server.js"]
