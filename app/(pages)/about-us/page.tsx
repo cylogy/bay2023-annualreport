@@ -7,6 +7,8 @@ import Typography from '@/app/components/Typography'
 import Navigation from '@/app/components/Navigation'
 import SectionGraph from '@/app/components/SectionGraph'
 import Image from 'next/image'
+import PieChartWithoutSSR from '@/app/components/PieChartWithoutSSR'
+import { Bar, BarChart, CartesianGrid, Cell, Legend, Pie, PieChart, ResponsiveContainer, Tooltip, XAxis, YAxis } from 'recharts';
 
 const page: FC = () => {
   const complianceInspectionsData = [
@@ -157,7 +159,163 @@ const page: FC = () => {
       position: "Rules and Strategic Policy"
     }
   ];
+
+
+  const demographicsData = [
+    { name: 'White', value: 0.47, color: '#7F7A7F' },
+    { name: 'Hispanic', value: 0.2, color: '#94B3EF' },
+    { name: 'Asian', value: 0.24, color: '#1D67C7' },
+    { name: 'Black', value: 0.05, color: '#ADFBE8' },
+    { name: 'Other/ Unkown', value: 0.04, color: '#006E6E' },
+    { name: 'American Indian/ Alaskan Native', value: 0.01, color: '#E87551' },
+  ];
+
+  const genderData = [
+    { name: 'Male', value: 0.5, color: '#3368B2' },
+    { name: 'Female', value: 0.5, color: '#7F7A7F' },
+  ];
+
+  const raceListData = [
+    { name: 'Hispanic', value: 0.5, color: '#94B3EF' },
+    { name: 'Asian', value: 0.5, color: '#1D67C7' },
+    { name: 'Black', value: 0.5, color: '#ADFBE8' },
+  ];
+
+  const data = [
+    {
+      name: '2023',
+      w: 0.4,
+      h: 0.4,
+      a: 0.1,
+      b: 0.07,
+      o: 0.03,
+      aa: 0.01,
+    },
+    {
+      name: '2022',
+      w: 0.42,
+      h: 0.4,
+      a: 0.09,
+      b: 0.08,
+      o: 0.02,
+      aa: 0.01,
+    },
+    {
+      name: '2021',
+      w: 0.4,
+      h: 0.41,
+      a: 0.09,
+      b: 0.08,
+      o: 0.02,
+      aa: 0.01,
+    },
+    {
+      name: '2020',
+      w: 0.4,
+      h: 0.42,
+      a: 0.08,
+      b: 0.08,
+      o: 0.01,
+      aa: 0.01,
+    },
+    {
+      name: '2019',
+      w: 0.39,
+      h: 0.44,
+      a: 0.08,
+      b: 0.08,
+      aa: 0.01,
+    },
+  ];
+
+  const genderBarData = [
+    {
+      name: '2023',
+      w: 0.42,
+      h: 0.56,
+    },
+    {
+      name: '2022',
+      w: 0.44,
+      h: 0.56,
+    },
+    {
+      name: '2021',
+      w: 0.42,
+      h: 0.58,
+    },
+    {
+      name: '2020',
+      w: 0.43,
+      h: 0.57,
+    },
+    {
+      name: '2019',
+      w: 0.42,
+      h: 0.58,
+    },
+  ];
+
+  const raceBarData = [
+    {
+      name: '2023',
+      w: 0.29,
+      h: 0.13,
+      b: 0.04,
+    },
+    {
+      name: '2019',
+      w: 0.15,
+      h: 0.10,
+    },
+  ];
+
+  const genderSecondBarData = [
+    {
+      name: '2023',
+      w: 0.38,
+      h: 0.63,
+    },
+    {
+      name: '2019',
+      w: 0.65,
+      h: 0.35,
+    },
+  ];
+
+  const RADIAN = Math.PI / 180;
+  let fontSize = '19px';
+  let factor = 1.4;
   
+  const renderCustomizedLabel = ({
+    cx,
+    cy,
+    midAngle,
+    innerRadius,
+    outerRadius,
+    percent,
+    index,
+  }: {
+    [key: string]: number;
+  }) => {
+    const radius = innerRadius + (outerRadius - innerRadius) * factor;
+    const x = cx + radius * Math.cos(-midAngle * RADIAN) + 10;
+    const y = cy + radius * Math.sin(-midAngle * RADIAN) - 10;
+    if (percent >= 0.06)
+      return (
+        <text
+          x={x}
+          y={y}
+          fill="#0A215B"
+          textAnchor={x > cx ? 'start' : 'end'}
+          dominantBaseline="central"
+          style={{ fontSize, fontWeight: 400, fontFamily: 'Anton' }}
+        >
+          {`${(percent * 100).toFixed(1)}%`}
+        </text>
+      );
+  };
+
 
   return (
     <div className='flex flex-col min-h-screen'>
@@ -197,8 +355,9 @@ const page: FC = () => {
         </TextBlock>
       </div>
 
+
       <section className='
-      desktop:space-y-[100px] py-25 desktop:py-36 desktop:px-20 desktop:space-x-0
+      desktop:space-y-[100px] pb-25 desktop:pb-36 desktop:px-20 desktop:space-x-0
       relative flex w-full flex-col justify-center space-y-9 px-6'>
          <div className="w-full pb-1 border-b-2 border-dark-blue mb-6 desktop:mb-0">
           <Typography as="h2" className=" text-dark-blue uppercase">
@@ -211,12 +370,378 @@ const page: FC = () => {
           options={[]}
           background="white"
           headChildren={
-            <>
-            asdasdasdas
-            </>
+            <div className='flex flex-col w-full'>
+            {genderData.map((item, index) => (
+              <div
+                key={`${item.name}-${index}`}
+                className="flex w-full items-center pb-2 border-b-2 mb-2"
+              >
+                <div
+                  className="w-7 h-7 mr-6"
+                  style={{
+                    backgroundColor: item.color
+                  }}
+                />
+                <Typography
+                    as="span"
+                    className="text-start w-full"
+                  >
+                   {item.name}
+                </Typography>  
+              </div>
+            ))}
+              <Typography
+                as="span"
+                className="text-start w-full"
+              >
+                *American Community Survey (ACS) Census Bureau
+              </Typography>
+              <Typography
+                as="span"
+                className="text-start w-full"
+              >
+                ** Total percentages may vary by 1% due to rounding
+              </Typography>  
+            </div>
           }
         >
-          hjadshjkasdkhjas
+        <div className="flex w-full h-[320px] flex-col">
+          <Typography
+              as="h5"
+              className=" mb-4 border-b-2 pb-2 text-start"
+            >
+             Air District Staff
+          </Typography>
+          <ResponsiveContainer width="100%" height="100%">
+            <BarChart
+              height={300}
+              data={genderBarData}
+              layout="vertical"
+              margin={{top: 5, bottom: 5}}
+            >
+              <XAxis hide type="number" />
+              <YAxis
+                type="category" 
+                dataKey="name"
+                axisLine={false}
+                tickLine={false}
+              />
+              <Bar dataKey="w" stackId="a" fill="#3368B2" />
+              <Bar dataKey="h" stackId="a" fill="#7F7A7F" />
+            </BarChart>
+          </ResponsiveContainer>
+        </div>
+        </SectionGraph>
+
+        <SectionGraph
+          title=""
+          options={[]}
+          background="white"
+          headChildren={
+            <div>
+            </div>
+          }
+        >
+          <div className="flex w-full h-[310px] flex-col">
+            <Typography
+                as="h5"
+                className=" mb-4 border-b-2 pb-2 text-start"
+              >
+                Bay Area
+            </Typography>
+            <Typography
+                as="span"
+                className=" mb-4 text-start"
+              >
+                5 YEAR AVERAGE   Ages 18 — 64*
+            </Typography>
+            <ResponsiveContainer>
+              <PieChart>
+                <Pie
+                  data={genderData}
+                  cx="50%"
+                  cy="50%"
+                  labelLine={false}
+                  label={renderCustomizedLabel}
+                  outerRadius={100}
+                  rotate={'45deg'}
+                  fill="#000000"
+                  dataKey="value"
+                  startAngle={-270}
+                >
+
+                    {genderData.reverse().map((entry, index) => (
+                      <Cell
+                        stroke="#000000"
+                        key={`cell-${index}`}
+                        fill={entry.color}
+                      />
+                    ))}
+                </Pie>
+              </PieChart>
+            </ResponsiveContainer>
+          </div>
+        </SectionGraph>
+      </section>
+
+      <section className='
+      desktop:space-y-[100px] pb-25 desktop:pb-36 desktop:px-20 desktop:space-x-0
+      relative flex w-full flex-col justify-center space-y-9 px-6'>
+         <div className="w-full pb-1 border-b-2 border-dark-blue mb-6 desktop:mb-0">
+          <Typography as="h2" className=" text-dark-blue uppercase">
+            Air District Executive Management (Directors & Above)
+          </Typography>
+        </div>
+
+        <SectionGraph
+          title="EXECUTIVE MANAGEMENT"
+          options={[]}
+          background="white"
+          headChildren={
+            <div className='flex flex-col w-full'>
+            {raceListData.map((item, index) => (
+              <div
+                key={`${item.name}-${index}`}
+                className="flex w-full items-center pb-2 border-b-2 mb-2"
+              >
+                <div
+                  className="w-7 h-7 mr-6"
+                  style={{
+                    backgroundColor: item.color
+                  }}
+                />
+                <Typography
+                    as="span"
+                    className="text-start w-full"
+                  >
+                   {item.name}
+                </Typography>  
+              </div>
+            ))}
+            </div>
+          }
+        >
+        <div className="flex w-full h-[193px] flex-col">
+          <Typography
+              as="h5"
+              className=" mb-4 border-b-2 pb-2 text-start"
+            >
+             Race and Ethnicity
+          </Typography>
+          <ResponsiveContainer width="100%" height="100%">
+            <BarChart
+              height={300}
+              data={raceBarData}
+              layout="vertical"
+              margin={{top: 5, bottom: 5}}
+            >
+              <XAxis hide type="number" />
+              <YAxis
+                type="category" 
+                dataKey="name"
+                axisLine={false}
+                tickLine={false}
+              />
+              <Bar dataKey="w" stackId="a" fill="#3368B2" />
+              <Bar dataKey="h" stackId="a" fill="#94B3EF" />
+              <Bar dataKey="b" stackId="a" fill="#ADFBE8" />
+            </BarChart>
+          </ResponsiveContainer>
+        </div>
+        </SectionGraph>
+
+        <SectionGraph
+          title="EXECUTIVE MANAGEMENT"
+          options={[]}
+          background="white"
+          headChildren={
+            <div className='flex flex-col w-full'>
+            {genderData.map((item, index) => (
+              <div
+                key={`${item.name}-${index}`}
+                className="flex w-full items-center pb-2 border-b-2 mb-2"
+              >
+                <div
+                  className="w-7 h-7 mr-6"
+                  style={{
+                    backgroundColor: item.color
+                  }}
+                />
+                <Typography
+                    as="span"
+                    className="text-start w-full"
+                  >
+                   {item.name}
+                </Typography>  
+              </div>
+            ))}
+            </div>
+          }
+        >
+        <div className="flex w-full h-[193px] flex-col">
+          <Typography
+              as="h5"
+              className=" mb-4 border-b-2 pb-2 text-start"
+            >
+            Gender
+          </Typography>
+          <ResponsiveContainer width="100%" height="100%">
+            <BarChart
+              height={300}
+              data={genderSecondBarData}
+              layout="vertical"
+              margin={{top: 5, bottom: 5}}
+            >
+              <XAxis hide type="number" />
+              <YAxis
+                type="category" 
+                dataKey="name"
+                axisLine={false}
+                tickLine={false}
+              />
+              <Bar dataKey="w" stackId="a" fill="#3368B2" />
+              <Bar dataKey="h" stackId="a" fill="#7F7A7F" />
+            </BarChart>
+          </ResponsiveContainer>
+        </div>
+        </SectionGraph>
+      </section>
+
+      <section className='
+      desktop:space-y-[100px] pb-25 desktop:pb-36 desktop:px-20 desktop:space-x-0
+      relative flex w-full flex-col justify-center space-y-9 px-6'>
+        <Image
+          src="/img/Frame 19855.png"
+          fill
+          className="-z-[5] flex object-top"
+          alt="Group of cyclists wearing helmets"
+        />
+         <div className="w-full pb-1 border-b-2 border-dark-blue mb-6 desktop:mb-0">
+          <Typography as="h2" className=" text-dark-blue uppercase">
+            DEMOGRAPHICS BY RACE AND ETHNICITY**
+          </Typography>
+        </div>
+
+        <SectionGraph
+          title="EXECUTIVE MANAGEMENT"
+          options={[]}
+          background="white"
+          headChildren={
+            <div className='flex flex-col w-full'>
+            {demographicsData.map((item, index) => (
+              <div
+                key={`${item.name}-${index}`}
+                className="flex w-full items-center pb-2 border-b-2 mb-2"
+              >
+                <div
+                  className="w-7 h-7 mr-6"
+                  style={{
+                    backgroundColor: item.color
+                  }}
+                />
+                <Typography
+                    as="span"
+                    className="text-start w-full"
+                  >
+                   {item.name}
+                </Typography>  
+              </div>
+            ))}
+              <Typography
+                as="span"
+                className="text-start w-full"
+              >
+                *American Community Survey (ACS) Census Bureau
+              </Typography>
+              <Typography
+                as="span"
+                className="text-start w-full"
+              >
+                ** Total percentages may vary by 1% due to rounding
+              </Typography>  
+            </div>
+          }
+        >
+        <div className="flex w-full h-[320px] flex-col">
+          <Typography
+              as="h5"
+              className=" mb-4 border-b-2 pb-2 text-start"
+            >
+              Air District Staff
+          </Typography>
+          <ResponsiveContainer width="100%" height="100%">
+            <BarChart
+              height={300}
+              data={data}
+              layout="vertical"
+              margin={{top: 5, bottom: 5}}
+            >
+              <XAxis hide type="number" />
+              <YAxis
+                type="category" 
+                dataKey="name"
+                axisLine={false}
+                tickLine={false}
+              />
+              <Bar dataKey="w" stackId="a" fill="#3368B2" />
+              <Bar dataKey="h" stackId="a" fill="#7F7A7F" />
+              <Bar dataKey="a" stackId="a" fill="#94B3EF" />
+              <Bar dataKey="b" stackId="a" fill="#ADFBE8" />
+              <Bar dataKey="o" stackId="a" fill="#006E6E" />
+              <Bar dataKey="aa" stackId="a" fill="#E77550" />
+            </BarChart>
+          </ResponsiveContainer>
+        </div>
+        </SectionGraph>
+
+        <SectionGraph
+          title=""
+          options={[]}
+          background="white"
+          headChildren={
+            <div>
+            </div>
+          }
+        >
+          <div className="flex w-full h-[310px] flex-col">
+            <Typography
+                as="h5"
+                className=" mb-4 border-b-2 pb-2 text-start"
+              >
+                Bay Area
+            </Typography>
+            <Typography
+                as="span"
+                className=" mb-4 text-start"
+              >
+                5 YEAR AVERAGE   Ages 18 — 64*
+            </Typography>
+            <ResponsiveContainer>
+              <PieChart>
+                <Pie
+                  data={demographicsData}
+                  cx="50%"
+                  cy="50%"
+                  labelLine={false}
+                  label={renderCustomizedLabel}
+                  outerRadius={100}
+                  rotate={'45deg'}
+                  fill="#000000"
+                  dataKey="value"
+                  startAngle={-270}
+                >
+
+                    {demographicsData.reverse().map((entry, index) => (
+                      <Cell
+                        stroke="#000000"
+                        key={`cell-${index}`}
+                        fill={entry.color}
+                      />
+                    ))}
+                </Pie>
+              </PieChart>
+            </ResponsiveContainer>
+          </div>
         </SectionGraph>
       </section>
 

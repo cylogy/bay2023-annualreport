@@ -41,9 +41,7 @@ const index = ({
     `}>
         {
         headChildren ?
-            <div className='h-fit pt-2 border-t-2 border-dark-blue w-full'>
-                {headChildren}
-            </div>
+                headChildren
         :
             <Typography as="h2" className="w-full text-dark-blue uppercase pb-2 border-b-2 border-dark-blue h-fit">
                 {title}
