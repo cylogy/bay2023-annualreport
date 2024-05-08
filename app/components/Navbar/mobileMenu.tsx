@@ -15,7 +15,7 @@ type Props = {
 const MobileMenu = ({ setIsOpen }: Props) => {
   return (
     <motion.div
-      className="fixed left-0 top-0 z-[100] flex h-screen w-full -translate-x-1/2 flex-col items-center justify-start bg-dark-blue p-8 text-white"
+      className="fixed left-0 top-0 z-[100] flex h-screen w-full -translate-x-1/2 flex-col items-center justify-start overflow-scroll bg-dark-blue p-8 text-white"
       variants={menuTransition}
       initial="enter"
       animate="center"
@@ -60,12 +60,19 @@ const MobileMenu = ({ setIsOpen }: Props) => {
                 transition: { delay: index / 20, duration: 0.2 },
               }}
               key={link.id}
+              onClick={() => setIsOpen(false)}
             >
               <Link
-                className="flex w-full items-center justify-between border-b border-white py-4 text-left font-body-text tracking-[8%] text-white"
                 href={link.to}
+                className="font-proxima flex w-full items-center justify-between border-b border-white py-4 text-left  tracking-[8%] text-white"
               >
                 {link.title}
+                <Image
+                  alt="Baaqmd Header Logo"
+                  src="/img/arrowRightOrange.svg"
+                  width={20}
+                  height={20}
+                />
               </Link>
             </motion.li>
           ))}
