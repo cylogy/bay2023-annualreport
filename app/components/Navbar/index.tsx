@@ -1,14 +1,19 @@
+'use client';
+
 import Link from 'next/link';
-import React from 'react';
+import React, { useState } from 'react';
 import { links } from '@/utils/constants';
 import { Button } from '../Button';
 import './style.css';
 import Image from 'next/image';
-import { motion } from 'framer-motion';
+import { AnimatePresence, motion } from 'framer-motion';
+import MobileMenu from './mobileMenu';
 
 type Props = {};
 
 const Navbar = (props: Props) => {
+  const [isOpen, setIsOpen] = useState(false);
+
   return (
     <nav className="header sticky top-0 z-50 bg-white">
       <Link href={'/'}>
@@ -67,7 +72,13 @@ const Navbar = (props: Props) => {
           />
         </motion.ul>
       </div>
-      <div className="hamburger-menu-wrapper"></div>
+      <div
+        className="hamburger-menu-wrapper"
+        onClick={() => setIsOpen(!isOpen)}
+      ></div>
+      <AnimatePresence mode="popLayout">
+        {isOpen && <MobileMenu setIsOpen={setIsOpen} />}
+      </AnimatePresence>
     </nav>
   );
 };

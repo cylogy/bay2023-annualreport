@@ -16,3 +16,18 @@ export const leftToRightTransition = {
     },
   },
 };
+
+export const menuTransition = {
+  enter: {
+    x: -500,
+    opacity: 0,
+  },
+  center: {
+    x: 0,
+    opacity: 1,
+  },
+  exit: {
+    x: -500,
+    opacity: 0,
+  },
+};
