@@ -100,24 +100,27 @@ const Document: FC = () => {
           <Typography as="h3" className=" uppercase text-dark-blue">
             AB 617 statewide funding
           </Typography>
-          <div className="flex flex-col space-y-9 desktop:min-h-[370px] desktop:flex-row desktop:space-x-9 desktop:space-y-0 desktop:pt-6">
+          <div className="flex flex-col space-y-9 min-h-[370px]  desktop:max-h-[290px] desktop:flex-row desktop:space-x-9 desktop:space-y-0 desktop:pt-6">
             <InfoCard
               cardTitle="$60M"
               cardBody="for implementation"
               backgroundColor="light-blue"
               allwidth
+              small
             />
             <InfoCard
               cardTitle="$234M"
               cardBody="For incentives"
               backgroundColor="green"
               allwidth
+              small
             />
             <InfoCard
               cardTitle="$6M"
               cardBody="Community grants"
               backgroundColor="dark-blue"
               allwidth
+              small
             />
           </div>
           <Typography as="p" className="py-9 text-dark-gray">

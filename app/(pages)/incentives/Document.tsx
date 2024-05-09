@@ -355,7 +355,7 @@ const Document: FC = () => {
         </div>
       </TextBlock>
       <TextBlock>
-        <div className="flex w-full flex-col items-start justify-start place-self-end desktop:max-w-[1200px]">
+        <div className="flex w-full flex-col items-start justify-start place-self-end desktop:max-w-[75%]">
           <Typography as="p" className="px-15 text-dark-gray desktop:pl-0">
             We awarded a loan guarantee to
             <span className="font-bold"> SPARKZ, </span>
@@ -383,7 +383,7 @@ const Document: FC = () => {
         </div>
       </TextBlock>
       <TextBlock>
-        <div className="mt-10 flex w-full flex-col items-start justify-start place-self-end desktop:max-w-[1200px]">
+        <div className="mt-10 flex w-full flex-col items-start justify-start place-self-end desktop:max-w-[75%]">
           <Typography
             as="h2"
             className="break-all px-15 capitalize text-dark-blue desktop:pl-0"
@@ -427,7 +427,7 @@ const Document: FC = () => {
       <section
         className="
       relative mt-10
-      flex w-full flex-col justify-center space-y-9 place-self-end px-6 py-25 desktop:h-[610px] desktop:max-w-[1200px] desktop:flex-row desktop:space-x-9  desktop:space-y-0 desktop:px-0 desktop:py-36 desktop:pr-15"
+      flex w-full flex-col justify-center space-y-9 place-self-end px-6 py-25 desktop:h-[610px] desktop:max-w-[75%] desktop:flex-row desktop:space-x-9  desktop:space-y-0 desktop:px-0 desktop:py-36 desktop:pr-15"
       >
         <InfoCard
           cardTitle="3"
@@ -445,7 +445,7 @@ const Document: FC = () => {
           backgroundColor="blue"
         />
       </section>
-      <section className="relative flex w-full flex-col justify-center space-y-9 place-self-end px-6  desktop:max-w-[1200px] desktop:space-y-0 desktop:px-0 desktop:pr-15">
+      <section className="relative flex w-full flex-col justify-center space-y-9 place-self-end px-6  desktop:max-w-[75%] desktop:space-y-0 desktop:px-0 desktop:pr-15">
         <Typography as="h2" className="capitalize text-dark-blue">
           Clean Ports
         </Typography>
@@ -458,7 +458,7 @@ const Document: FC = () => {
       </section>
       <section
         className="relative mt-6 flex h-[350px]
-     w-full flex-col justify-center place-self-end py-25 desktop:mt-0 desktop:h-[610px] desktop:max-w-[1200px] desktop:space-y-0 desktop:px-0 desktop:py-36 desktop:pr-15"
+     w-full flex-col justify-center place-self-end py-25 desktop:mt-0 desktop:h-[610px] desktop:max-w-[75%] desktop:space-y-0 desktop:px-0 desktop:py-36 desktop:pr-15"
       >
         <Image
           src="/img/port-image.png"

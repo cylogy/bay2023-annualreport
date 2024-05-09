@@ -9,6 +9,7 @@ type Props = {
   cardTitle: string;
   backgroundColor: 'white' | 'dark-blue' | 'blue' | 'green' | 'light-blue';
   allwidth?: boolean;
+  small?: boolean;
 };
 
 export const InfoCard = ({
@@ -16,6 +17,7 @@ export const InfoCard = ({
   cardBody,
   backgroundColor = 'blue',
   allwidth,
+  small
 }: Props) => {
   const styles = {
     white: 'bg-white border border-dark-blue text-dark-blue',
@@ -46,7 +48,10 @@ export const InfoCard = ({
         duration: 0.5,
       }}
       viewport={{ once: true }}
-      className={`flex min-h-[370px] flex-col justify-between rounded-[20px] p-10 desktop:min-h-fit ${variantSizeClass} ${allwidth && 'w-full desktop:h-[370px]'}`}
+      className={`
+      ${small && "desktop:h-[290px]"}
+      ${allwidth && 'w-full desktop:h-[370px]'} ${variantSizeClass} 
+      flex min-h-[370px] flex-col justify-between rounded-[20px] p-10 desktop:min-h-fit`}
     >
       <Typography as="h2">{cardTitle}</Typography>
       <Typography as="p">{cardBody}</Typography>
