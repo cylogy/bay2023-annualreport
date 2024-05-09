@@ -1,5 +1,6 @@
 import React, { FC } from 'react'
 import Typography from '../Typography';
+import AnimatedTable from '../AnimatedTable';
 
 interface GraphItem {
     title: string;
@@ -48,10 +49,10 @@ const index = ({
             </Typography>
         }
 
-        <div className={`
+        <AnimatedTable className={`
         border-2 rounded-[20px] p-6 my-9  
-        desktop:px-20 desktop:py-15 w-full desktop:min-w-[720px] desktop:my-0   
-        ${children ? "desktop:max-w-[720px] desktop:m-0 " : " max-w-[720px] "}  
+        desktop:px-20 desktop:py-15 w-full desktop:min-w-[50%] desktop:my-0   
+        ${children ? "desktop:max-w-[50%] desktop:m-0 " : " max-w-[50%] "}  
         ${selectedCardColor}
         `}>
             {children ?
@@ -138,7 +139,7 @@ const index = ({
                 }
             </>
             }
-         </div>
+         </AnimatedTable>
     </div>
   )
 }

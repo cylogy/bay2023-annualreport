@@ -1,5 +1,6 @@
 import React from 'react'
 import Typography from '../../Typography'
+import AnimatedTable from '../../AnimatedTable';
 
 interface GraphItem {
     title: string;
@@ -24,7 +25,7 @@ const index = ({
         <Typography as="h2" className=" text-dark-blue uppercase pb-2 border-b-2 border-dark-blue h-fit">
             {title}
         </Typography>
-        <div className={`border-2 border-dark-blue rounded-[20px] ${background} bg-white p-6 my-9 desktop:my-0 desktop:px-20 desktop:py-15 w-full max-w-[720px] desktop:min-w-[720px]`}>
+        <AnimatedTable className={`border-2 border-dark-blue rounded-[20px] ${background} bg-white p-6 my-9 desktop:my-0 desktop:px-20 desktop:py-15 w-full max-w-[50%] desktop:min-w-[50%]`}>
                 <div className="space-y-9 flex flex-col">
                     {options.map((item, index) => (
                         <div
@@ -50,7 +51,7 @@ const index = ({
                 </Typography>
                 </div>
                 }
-         </div>        
+         </AnimatedTable>        
     </div>
   )
 }
