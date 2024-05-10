@@ -8,8 +8,8 @@ import AnimatedTile from '../AnimatedTile';
 type Props = {
   title: string;
   description?: string;
-  image: string;
-  imageTablet: string;
+  image: any;
+  imageTablet: any;
   background: string;
   alt: string;
   imageLast?: boolean;

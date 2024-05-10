@@ -17,6 +17,7 @@ import {
   XAxis,
   YAxis,
 } from 'recharts';
+import HeroImage from "../../../public/img/about-us-mobile.png";
 
 const Document: FC = () => {
   const complianceInspectionsData = [
@@ -328,8 +329,8 @@ const Document: FC = () => {
       <Hero
         title="About us"
         description="Who Are We?"
-        image="/img/about-us-mobile.png"
-        imageTablet="/img/about-us-mobile.png"
+        image={HeroImage}
+        imageTablet={HeroImage}
         background="bg-green text-white"
         finalReverse
         alt="About us"
