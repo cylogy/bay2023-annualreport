@@ -1,6 +1,4 @@
-'use client';
-
-import React from 'react';
+import React, { useEffect } from 'react';
 import { motion } from 'framer-motion';
 import { menuTransition } from '@/app/animations';
 import Image from 'next/image';
@@ -13,6 +11,20 @@ type Props = {
 };
 
 const MobileMenu = ({ setIsOpen }: Props) => {
+  const handleKeyPress = (event: KeyboardEvent) => {
+    if (event.key === 'Escape') {
+      setIsOpen(false);
+    }
+  };
+
+  useEffect(() => {
+    document.addEventListener('keydown', handleKeyPress);
+
+    return () => {
+      document.removeEventListener('keydown', handleKeyPress);
+    };
+  }, []);
+
   return (
     <motion.div
       className="fixed left-0 top-0 z-[100] flex h-screen w-full -translate-x-1/2 flex-col items-center justify-start overflow-scroll bg-dark-blue p-8 text-white"
@@ -25,13 +37,20 @@ const MobileMenu = ({ setIsOpen }: Props) => {
         opacity: { transition: 0.2 },
       }}
     >
-      <div className="flex w-full justify-end" onClick={() => setIsOpen(false)}>
-        <Image
-          alt="Baaqmd Header Logo"
-          src="/img/x-thin-svgrepo-com.svg"
-          width={48}
-          height={48}
-        />
+      <div className="flex w-full justify-end">
+        <button
+          className="focus:outline-none"
+          onClick={() => setIsOpen(false)}
+          aria-label="Close Menu"
+          role="button"
+        >
+          <Image
+            alt="Close Icon"
+            src="/img/x-thin-svgrepo-com.svg"
+            width={48}
+            height={48}
+          />
+        </button>
       </div>
       <div className="mt-10 flex w-full flex-col items-center justify-start">
         <Image
@@ -42,41 +61,25 @@ const MobileMenu = ({ setIsOpen }: Props) => {
           height={32.19}
         />
 
-        <motion.ul
-          initial={{ opacity: 0, y: -10 }}
-          animate={{
-            opacity: 1,
-            y: 0,
-            transition: { duration: 0.2 },
-          }}
-          className="mt-10 flex w-full flex-col space-y-6"
-        >
+        <ul className="mt-10 flex w-full flex-col space-y-6">
           {links.map((link, index) => (
-            <motion.li
-              initial={{ opacity: 0, y: -10 }}
-              animate={{
-                opacity: 1,
-                y: 0,
-                transition: { delay: index / 20, duration: 0.2 },
-              }}
-              key={link.id}
-              onClick={() => setIsOpen(false)}
-            >
+            <li key={`${index}-${link.to}`}>
               <Link
                 href={link.to}
+                onClick={() => setIsOpen(false)}
                 className="font-proxima flex w-full items-center justify-between border-b border-white py-4 text-left  tracking-[8%] text-white"
               >
                 {link.title}
                 <Image
-                  alt="Baaqmd Header Logo"
+                  alt="Arrow Icon"
                   src="/img/arrowRightOrange.svg"
                   width={20}
                   height={20}
                 />
               </Link>
-            </motion.li>
+            </li>
           ))}
-        </motion.ul>
+        </ul>
         <div className="mt-10 flex w-full justify-start">
           <Button
             color="brick"

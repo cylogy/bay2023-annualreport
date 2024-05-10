@@ -27,7 +27,9 @@ export const Button: React.FC<ButtonProps> = ({
 }) => {
   return (
     <button
+      role="button"
       className={`button w-max ${type} size-${size} color-1-${color} icon-${icon ? 'true' : 'false'} ${className}`}
+      aria-label={text}
     >
       <div className={`${downloadPdfClassName} font-proxima`}>{text}</div>
       {icon && (

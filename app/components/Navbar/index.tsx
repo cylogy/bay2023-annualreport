@@ -1,21 +1,16 @@
-'use client';
-
 import Link from 'next/link';
 import React, { useState } from 'react';
 import { links } from '@/utils/constants';
 import { Button } from '../Button';
-import './style.css';
 import Image from 'next/image';
 import { AnimatePresence, motion } from 'framer-motion';
 import MobileMenu from './mobileMenu';
 
-type Props = {};
-
-const Navbar = (props: Props) => {
+const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
 
   return (
-    <nav className="header sticky top-0 z-50 bg-white">
+    <nav className="header sticky top-0 z-50 bg-white" role="navigation">
       <Link href={'/'}>
         <motion.div
           initial={{ opacity: 0, y: -10 }}
@@ -46,13 +41,13 @@ const Navbar = (props: Props) => {
         >
           {links.map((link, index) => (
             <motion.li
+              key={`${index}-${link.to}`}
               initial={{ opacity: 0, y: -10 }}
               animate={{
                 opacity: 1,
                 y: 0,
                 transition: { delay: index / 20, duration: 0.2 },
               }}
-              key={link.id}
             >
               <Link
                 className="nav-item font-proxima font-semibold tracking-[8%]"
@@ -74,7 +69,15 @@ const Navbar = (props: Props) => {
       </div>
       <div
         className="hamburger-menu-wrapper"
+        role="button"
+        aria-label="Toggle Menu"
         onClick={() => setIsOpen(!isOpen)}
+        onKeyDown={(e) => {
+          if (e.key === 'Enter') {
+            setIsOpen(!isOpen);
+          }
+        }}
+        tabIndex={0}
       ></div>
       <AnimatePresence mode="popLayout">
         {isOpen && <MobileMenu setIsOpen={setIsOpen} />}
