@@ -9,7 +9,23 @@ export const metadata: Metadata = {
     template: '%s | Air District 2023 Annual Report',
     default: 'About us: Who are we | Air District 2023 Annual Report',
   },
-  description: '',
+  description:
+    'Staff demographics, financial report, leadership and contact information.',
+  keywords: [
+    'Diversity',
+    'Equity',
+    'Inclusion',
+    'Gender',
+    'Ethnicity',
+    'Finances',
+    'Executive management',
+    'Directors',
+    'Officers',
+    'Board members',
+    'Social media',
+    'Websites',
+    'Phone numbers',
+  ],
 };
 
 const AboutUs = (props: Props) => {

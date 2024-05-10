@@ -10,7 +10,16 @@ export const metadata: Metadata = {
     default:
       'Achievements: What are some new steps forward in our work? | Air District 2023 Annual Report',
   },
-  description: '',
+  description: 'Notable achievements in 2023.',
+  keywords: [
+    'Regulations',
+    'Emissions reductions',
+    'Facility violations',
+    'CEQA',
+    'Environmental justice',
+    'Particulate matter',
+    'Modeling tool',
+  ],
 };
 
 const Achievements = (props: Props) => {

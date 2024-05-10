@@ -10,7 +10,18 @@ export const metadata: Metadata = {
     default:
       'Advocacy: How are we championing legislation to protect air quality | Air District 2023 Annual Report',
   },
-  description: '',
+  description: 'Details on state and federal legislative initiatives.',
+  keywords: [
+    'State legislature',
+    'Funding',
+    'Environmental justice',
+    'Community',
+    'Emission reductions',
+    'Decarbonization',
+    'Air quality violations',
+    'Wildfire smoke',
+    'Whale protections',
+  ],
 };
 
 const Advocacy = (props: Props) => {

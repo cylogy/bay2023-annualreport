@@ -6,7 +6,18 @@ export const metadata: Metadata = {
     template: '%s | Air District 2023 Annual Report',
     default: 'Homepage | Air District 2023 Annual Report',
   },
-  description: '',
+  description: 'Website page menu',
+  keywords: [
+    'Air quality',
+    'Air monitoring',
+    'Public health',
+    'Community partners',
+    'Climate solutions',
+    'Emissions reductions',
+    'Legislation',
+    'Leadership',
+    'Contact information',
+  ],
 };
 
 export default function Home() {

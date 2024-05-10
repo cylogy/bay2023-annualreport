@@ -8,9 +8,18 @@ export const metadata: Metadata = {
   title: {
     template: '%s | Air District 2023 Annual Report',
     default:
-      'By the Numbers: How do we track and improve air quality protections? | Air District 202 3 Annual Report',
+      'By the Numbers: How do we track and improve air quality protections? | Air District 2023 Annual Report',
   },
-  description: '',
+  description: 'Data from our air quality monitoring and inspection work.',
+  keywords: [
+    'Air quality violations',
+    'Air quality complaints',
+    'Compliance',
+    'Penalties',
+    'Permitting',
+    'Inspections',
+    'Regulations',
+  ],
 };
 
 const ByTheNumbers = (props: Props) => {

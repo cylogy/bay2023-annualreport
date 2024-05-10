@@ -10,7 +10,17 @@ export const metadata: Metadata = {
     default:
       'Incentives: How we reduce emissions and protect communities and the climate | Air District 2023 Annual Report',
   },
-  description: '',
+  description:
+    'Air District innovative programs that protect the climate and reduce emissions.',
+  keywords: [
+    'Innovation',
+    'Greenhouse gases',
+    'Electrification',
+    'Emissions reductions',
+    'Public health',
+    'Ports',
+    'School buses',
+  ],
 };
 
 const Incentives = (props: Props) => {

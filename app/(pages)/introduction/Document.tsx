@@ -71,7 +71,7 @@ const Document = (props: Props) => {
           </Typography>
         </div>
       </TextBlock>
-      <div className="flex w-full flex-col desktop:h-[490px] desktop:flex-row">
+      <section className="flex w-full flex-col desktop:h-[490px] desktop:flex-row">
         <div className="relative z-20 flex h-[350px] w-full desktop:h-full desktop:w-1/2">
           <div className="z-20 flex w-full overflow-hidden bg-white">
             <AnimatedImage
@@ -102,7 +102,7 @@ const Document = (props: Props) => {
             of air pollution that many communities face.
           </Typography>
         </AnimatedTile>
-      </div>
+      </section>
       <TextBlock align="right">
         <div className="flex w-full flex-col items-start justify-start place-self-end px-5 tablet-portrait:px-15 desktop:max-w-[1200px]">
           <Typography as="p" className="mt-10 text-gray tablet-portrait:pb-15 ">
