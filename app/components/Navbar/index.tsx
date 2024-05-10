@@ -6,6 +6,7 @@ import { Button } from '../Button';
 import Image from 'next/image';
 import { AnimatePresence, motion } from 'framer-motion';
 import MobileMenu from './mobileMenu';
+import './style.css';
 
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
