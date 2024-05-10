@@ -27,10 +27,11 @@ const Hero = ({
   alt,
 }: Props) => {
   return (
-    <article
+    <header
       className={`${finalReverse ? ' desktop:flex-row-reverse ' : ' desktop:flex-row '} flex w-full flex-col  desktop:h-120 ${imageLast ? 'justify-between' : ''} overflow-hidden`}
+      role="banner"
     >
-      <div className={`z-30 flex bg-white`}>
+      <article className={`z-30 flex bg-white`} aria-label={title}>
         <AnimatedImage key={1} className="relative z-20 h-full w-full">
           <div className="relative flex h-[350px] w-full tablet-portrait:hidden desktop:flex desktop:h-full desktop:w-120">
             <Image
@@ -51,7 +52,7 @@ const Hero = ({
             />
           </div>
         </AnimatedImage>
-      </div>
+      </article>
 
       <AnimatedTile
         key={2}
@@ -66,7 +67,7 @@ const Hero = ({
           {description}
         </Typography>
       </AnimatedTile>
-    </article>
+    </header>
   );
 };
 

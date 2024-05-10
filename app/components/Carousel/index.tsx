@@ -39,19 +39,27 @@ const Carousel = ({
         swiperRef.current = swiper;
       }}
       style={{
-        background: "transparent",
+        background: 'transparent',
       }}
+      role="region"
+      aria-label="Carousel"
     >
       {slideComponents.map((Component, index: number) => (
         <SwiperSlide
           key={`carousel-${index}`}
           style={{ justifyContent: 'center', backgroundColor: 'transparent' }}
+          role="tabpanel"
         >
           <Component />
         </SwiperSlide>
       ))}
       <div className="mt-15 flex w-full items-center justify-end px-6">
-        <button title="previous" onClick={() => swiperRef.current?.slidePrev()}>
+        <button
+          title="previous"
+          role="button"
+          onClick={() => swiperRef.current?.slidePrev()}
+          aria-label="Previous Slide"
+        >
           <Image
             src={'/img/arrow-element-22.png'}
             width={68}
@@ -59,7 +67,12 @@ const Carousel = ({
             alt="previous slide"
           />
         </button>
-        <button title="next" onClick={() => swiperRef.current?.slideNext()}>
+        <button
+          role="button"
+          title="next"
+          onClick={() => swiperRef.current?.slideNext()}
+          aria-label="Next Slide"
+        >
           <Image
             src={'/img/arrow-element-23.png'}
             width={68}

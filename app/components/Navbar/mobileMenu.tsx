@@ -36,6 +36,8 @@ const MobileMenu = ({ setIsOpen }: Props) => {
         y: { type: 'easeInOut' },
         opacity: { transition: 0.2 },
       }}
+      role="menu"
+      aria-labelledby="mobile-menu"
     >
       <div className="flex w-full justify-end">
         <button

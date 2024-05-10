@@ -38,6 +38,7 @@ const Navbar = () => {
             transition: { duration: 0.2 },
           }}
           className="nav-links"
+          role="menubar"
         >
           {links.map((link, index) => (
             <motion.li
@@ -48,6 +49,7 @@ const Navbar = () => {
                 y: 0,
                 transition: { delay: index / 20, duration: 0.2 },
               }}
+              role="menuitem"
             >
               <Link
                 className="nav-item font-proxima font-semibold tracking-[8%]"

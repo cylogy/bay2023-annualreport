@@ -5,13 +5,16 @@ import Link from 'next/link';
 
 export const Footer = () => {
   return (
-    <footer className="footer z-30 bg-red-200">
+    <footer className="footer" role="contentinfo">
       <address className="address-section font-sizes">
         <span>375 Beale Street, Suite 600</span>
         <span>San Francisco, CA 94105</span>
       </address>
 
-      <address className="footer-contact-info font-sizes">
+      <address
+        className="footer-contact-info font-sizes"
+        aria-label="Contact Information"
+      >
         <div className="footer-contact-info-wrapper">
           <div className="contact-phone-numbers">
             {contactPhones.map((phone) => (
@@ -41,6 +44,8 @@ export const Footer = () => {
         className="footer-logo"
         alt="Baaqmd Footer Logo"
         src="/img/baaqmd-logo-fullcolor-black-2.png"
+        role="img"
+        aria-label="Baaqmd Footer Logo"
       />
     </footer>
   );
