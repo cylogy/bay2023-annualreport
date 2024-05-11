@@ -335,7 +335,7 @@ const Document = (props: Props) => {
                   className="relative flex h-[350px] w-full desktop:h-[531px]"
                 >
                   <Image
-                    src="/img/rectangle-255-3-2.png"
+                    src="/img/rectangle-255-3-2.jpg"
                     fill
                     className="object-cover object-center"
                     alt="Women speaking into microphone"

@@ -41,7 +41,7 @@ const Document = (props: Props) => {
     () => (
       <article className="relative flex h-[247px] w-full tablet-portrait:h-[617.17px] desktop:h-[786px]">
         <Image
-          src="/img/rectangle-256.png"
+          src="/img/rectangle-256.jpg"
           fill
           className="object-cover"
           alt="Attendees participating in the Air Quality Foundation's workshop"
