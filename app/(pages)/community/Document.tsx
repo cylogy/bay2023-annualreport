@@ -261,7 +261,7 @@ const Document = (props: Props) => {
                     className="relative flex h-[350px] w-full desktop:h-[531px]"
                   >
                     <Image
-                      src="/img/rectangle-255-2-2.png"
+                      src="/img/rectangle-255-2-2.jpg"
                       fill
                       className="object-cover object-top"
                       alt="Group of cyclists wearing helmets"

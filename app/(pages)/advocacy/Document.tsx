@@ -96,7 +96,7 @@ const Document: FC = () => {
       </TextBlock>
 
       <section className="w-full place-self-end desktop:max-w-[1200px] desktop:pr-9">
-        <div className="relative flex h-auto w-full flex-col justify-center space-y-9 bg-teal p-6 desktop:space-y-0 desktop:rounded-[20px] desktop:p-9">
+        <div className="relative flex h-auto w-full flex-col justify-center space-y-9 bg-lighter-teal p-6 desktop:space-y-0 desktop:rounded-[20px] desktop:p-9">
           <Typography as="h3" className=" uppercase text-dark-blue">
             AB 617 statewide funding
           </Typography>
