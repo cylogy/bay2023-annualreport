@@ -27,7 +27,7 @@ const MobileMenu = ({ setIsOpen }: Props) => {
 
   return (
     <motion.div
-      className="fixed left-0 top-0 z-[100] flex h-screen w-full -translate-x-1/2 flex-col items-center justify-start overflow-scroll bg-dark-blue p-8 text-white"
+      className="fixed left-0 top-0 z-[100] flex h-screen w-full -translate-x-1/2 flex-col items-center justify-start overflow-scroll bg-dark-blue px-6 py-9 text-white"
       variants={menuTransition}
       initial="enter"
       animate="center"
@@ -49,27 +49,27 @@ const MobileMenu = ({ setIsOpen }: Props) => {
           <Image
             alt="Close Icon"
             src="/img/x-thin-svgrepo-com.svg"
-            width={48}
-            height={48}
+            width={32}
+            height={32}
           />
         </button>
       </div>
-      <div className="mt-10 flex w-full flex-col items-center justify-start">
+      <div className="mt-12 flex w-full flex-col items-center justify-start">
         <Image
           className="logo-img"
           alt="Baaqmd Header Logo"
-          src="/img/BAAQMD_Logo_FullColor-dark background.png"
+          src="/img/BAAQMD_Logo_FullColor-Black 1.png"
           width={186.15}
-          height={32.19}
+          height={44.07}
         />
 
-        <ul className="mt-10 flex w-full flex-col space-y-6">
+        <ul className="mt-6 flex w-full flex-col space-y-6">
           {links.map((link, index) => (
-            <li key={`${index}-${link.to}`}>
+            <li key={`${index}-${link.to}`} className="w-full">
               <Link
                 href={link.to}
                 onClick={() => setIsOpen(false)}
-                className="font-proxima flex w-full items-center justify-between border-b border-white py-4 text-left  tracking-[8%] text-white"
+                className="flex w-full items-center justify-between border-b border-white pb-6 pr-5 text-left font-proxima text-sm font-semibold tracking-[8%] text-white"
               >
                 {link.title}
                 <Image

@@ -6,12 +6,15 @@ import { Button } from './components/Button';
 import Animated from './components/Typography/animated';
 import AnimatedTile from './components/AnimatedTile';
 import AnimatedImage from './components/AnimatedImage';
+import { useState } from 'react';
+import LightboxComponent from './components/Lightbox';
 
 type Props = {};
 
 const Document = (props: Props) => {
   return (
     <main className="flex min-h-screen flex-col items-center justify-between">
+      <LightboxComponent />
       <section className="flex w-full flex-col overflow-hidden desktop:flex-row">
         <div className="z-30 flex w-full flex-1 bg-white desktop:order-1 desktop:flex-[0.3]">
           <AnimatedTile

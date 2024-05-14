@@ -31,3 +31,44 @@ export const menuTransition = {
     opacity: 0,
   },
 };
+
+export const backdropVariants = {
+  visible: {
+    opacity: 1,
+    transition: {
+      type: 'spring',
+      mass: 0.4,
+      damping: 8,
+      when: 'beforeChildren',
+      staggerChildren: 0.4,
+    },
+  },
+  hidden: {
+    opacity: 0,
+    transition: {
+      type: 'spring',
+      mass: 0.4,
+      damping: 8,
+      when: 'afterChildren',
+      staggerChildren: 0.4,
+    },
+  },
+};
+
+export const modalVariants = {
+  hidden: {
+    opacity: 0,
+    innerHeight: 0,
+  },
+  visible: {
+    opacity: 1,
+    transition: {
+      type: 'spring',
+      mass: 0.1,
+      damping: 10,
+      when: 'beforeChildren',
+      staggerChildren: 0.1,
+    },
+    outerHeight: 800,
+  },
+};

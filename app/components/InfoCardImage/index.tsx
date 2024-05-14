@@ -46,7 +46,7 @@ const InfoCardImage = ({
       </AnimatedImage>
       <AnimatedImage
         key={title}
-        className={`relative hidden h-[350px] w-full flex-shrink-0 overflow-hidden rounded-[20px] desktop:flex desktop:min-h-[460px] desktop:w-[460px] ${imageFirst ? 'order-1 desktop:order-1 desktop:rounded-l-[20px] desktop:rounded-r-none' : ' order-1 desktop:order-2 desktop:rounded-l-none desktop:rounded-r-[20px]'}`}
+        className={`relative hidden h-full w-full flex-shrink-0 overflow-hidden rounded-[20px] desktop:flex desktop:min-h-[460px] desktop:w-[460px] ${imageFirst ? 'order-1 desktop:order-1 desktop:rounded-l-[20px] desktop:rounded-r-none' : ' order-1 desktop:order-2 desktop:rounded-l-none desktop:rounded-r-[20px]'}`}
       >
         <Image src={imageSrc} fill className="object-cover" alt={alt} />
       </AnimatedImage>
