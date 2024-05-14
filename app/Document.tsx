@@ -132,7 +132,7 @@ const Document = (props: Props) => {
             className="relative flex h-[350px] w-full flex-col items-center justify-center desktop:h-full desktop:w-full"
           >
             <Image
-              src="/img/adobestock-526164757-1.png"
+              src="/img/adobestock-526164757-1.jpg"
               fill
               priority
               alt="Two teenagers swinging in a park"
@@ -184,7 +184,7 @@ const Document = (props: Props) => {
             className="relative flex h-full w-full flex-col items-center justify-center"
           >
             <Image
-              src="/img/rectangle-251.png"
+              src="/img/rectangle-251.jpg"
               fill
               priority
               alt="Two hikers on a mountain trail"
