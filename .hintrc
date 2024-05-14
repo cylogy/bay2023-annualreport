@@ -19,6 +19,13 @@
           "iframe[allow]"
         ]
       }
-    ]
+    ],
+    "axe/aria": [
+      "default",
+      {
+        "aria-roles": "off"
+      }
+    ],
+    "button-type": "off"
   }
 }

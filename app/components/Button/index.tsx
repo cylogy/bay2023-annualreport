@@ -12,6 +12,7 @@ type ButtonProps = {
   className?: string;
   downloadPdfClassName?: string;
   groupClassName?: string;
+  role?: React.AriaRole;
 };
 
 export const Button: React.FC<ButtonProps> = ({
@@ -24,10 +25,11 @@ export const Button: React.FC<ButtonProps> = ({
   text = 'DOWNLOAD PDF',
   groupClassName = '',
   group = '/img/group.png',
+  role = 'button',
 }) => {
   return (
     <button
-      role="button"
+      role={role}
       className={`button w-max ${type} size-${size} color-1-${color} icon-${icon ? 'true' : 'false'} ${className}`}
       aria-label={text}
     >

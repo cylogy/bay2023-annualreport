@@ -5,7 +5,7 @@
     "browser": true,
     "node": true
   },
-  "plugins": ["prettier", "decorators"],
+  "plugins": ["prettier", "decorators", "jsx-a11y"] ,
   "rules": {
     "no-console": "warn",
     "quotes": ["warn", "single"]

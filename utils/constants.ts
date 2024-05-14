@@ -17,8 +17,8 @@ export const footerLinks = [
 
 export const contactPhones = [
   { id: 1, title: '(415) 749-5000', number: '4157495000' },
-  { id: 2, title: '1-800-HELP-AIR', number: '4157495000' },
-  { id: 3, title: '877-4N0-BURN', number: '4157495000' },
+  { id: 2, title: '1-800-HELP-AIR', number: '18004357247' },
+  { id: 3, title: '877-4N0-BURN', number: '8774602876' },
 ];
 
 export const emissionsCarouselCards = [

@@ -339,3 +339,8 @@
   z-index: 9999;
   background-color: inherit;
 }
+
+button.yarl__button.yarl__navigation_prev,
+button.yarl__button.yarl__navigation_next {
+  display: none
+}

@@ -33,7 +33,7 @@ https://cdn.jsdelivr.net/npm/@dannymichel/proxima-nova@4.5.2/index.min.css
         ></link>
         <meta
           name="viewport"
-          content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no"
+          content="width=device-width, initial-scale=1"
         ></meta>
       </head>
       <body className="overflow-x-hidden antialiased">

@@ -1,4 +1,4 @@
-'use client'
+'use client';
 import Link from 'next/link';
 import React, { useState } from 'react';
 import { links } from '@/utils/constants';
@@ -46,12 +46,12 @@ const Navbar = () => {
             <motion.li
               key={`${index}-${link.to}`}
               initial={{ opacity: 0, y: -10 }}
+              role="menuitem"
               animate={{
                 opacity: 1,
                 y: 0,
                 transition: { delay: index / 20, duration: 0.2 },
               }}
-              role="menuitem"
             >
               <Link
                 className="nav-item font-proxima font-semibold tracking-[8%]"
@@ -62,6 +62,7 @@ const Navbar = () => {
             </motion.li>
           ))}
           <Button
+            role="menuitem"
             color="brick"
             icon={false}
             size="large"
