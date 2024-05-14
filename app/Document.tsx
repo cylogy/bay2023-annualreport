@@ -8,6 +8,7 @@ import AnimatedTile from './components/AnimatedTile';
 import AnimatedImage from './components/AnimatedImage';
 import { useState } from 'react';
 import LightboxComponent from './components/Lightbox';
+import Link from 'next/link';
 
 type Props = {};
 
@@ -160,15 +161,17 @@ const Document = (props: Props) => {
               vehicles to programs that educate residents on how to reduce their
               impact.
             </Typography>
-            <Button
-              className="w-full self-start"
-              color="white"
-              downloadPdfClassName="button-instance"
-              icon
-              size="large"
-              text="BEGIN THE REPORT"
-              type="outlined"
-            />
+            <Link href={'/introduction'}>
+              <Button
+                className="w-full self-start"
+                color="white"
+                downloadPdfClassName="button-instance"
+                icon
+                size="large"
+                text="BEGIN THE REPORT"
+                type="outlined"
+              />
+            </Link>
           </AnimatedTile>
         </div>
       </section>
