@@ -26,8 +26,8 @@ const Document = (props: Props) => {
         title="Notable Achievements"
         description="What are some new steps forward in our work? "
         background="bg-dark-blue text-white"
-        image="/img/NA section header.jpg"
-        imageTablet="/img/NA section header.jpg"
+        image="/img/NA section header.jpeg"
+        imageTablet="/img/NA section header.jpeg"
         alt="?"
       />
       <TextBlock>
@@ -128,7 +128,7 @@ const Document = (props: Props) => {
               process.
             </Typography>
           )}
-          imageSrc="/img/EJ Guidance.jpg"
+          imageSrc="/img/EJ Guidance.jpeg"
           alt="Aerial view of intersecting highways"
         />
         <InfoCardImage

@@ -187,7 +187,7 @@ const Document = (props: Props) => {
             className="relative flex h-full w-full flex-col items-center justify-center"
           >
             <Image
-              src="/img/Bayview cropped sample.jpg"
+              src="/img/Bayview cropped sample.jpeg"
               fill
               priority
               alt="Two hikers on a mountain trail"
