@@ -71,7 +71,7 @@ const Document = (props: Props) => {
             <Image
               fill
               alt="Close-up of a building appliance"
-              src={'/img/rectangle-257.jpeg'}
+              src={'/img/rectangle-fire.png'}
               className="object-cover"
             />
           </AnimatedImage>
