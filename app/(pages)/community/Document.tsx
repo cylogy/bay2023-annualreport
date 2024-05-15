@@ -48,7 +48,7 @@ const Document = (props: Props) => {
         title="Richmond-North Richmond-San Pablo"
         body={() => (
           <Typography as="p">
-            In Richmond-North Richmond-San Pablo, we continued to partner with
+            We continued to partner with
             21 steering committee members that represent Richmond, North
             Richmond and San Pablo working to develop and finalize the Community
             Emission Reduction Plan. The plan remains focused on six priority
@@ -355,9 +355,9 @@ const Document = (props: Props) => {
                 title="Bay Area Healthy Homes Initiative"
                 body={() => (
                   <Typography as="p">
-                    We launched the initiative to improve health outcomes and
-                    climate resilience in overburdened communities of Contra
-                    Costa and Alameda counties in January 2023. The program
+                    In January 2023, we launched this initiative to improve
+                    health outcomes and climate resilience in overburdened
+                    communities in Contra Costa and Alameda counties. The program
                     brings{' '}
                     <span className="font-bold">
                       {' '}

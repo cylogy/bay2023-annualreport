@@ -345,8 +345,7 @@ const Document: FC = () => {
             Climate Tech Finance
           </Typography>
           <Typography as="p" className=" mt-6 text-dark-blue">
-            TThis year, in partnership with IBank, our Climate Tech Finance
-            program took significant steps in
+          This year, in partnership with iBank, our Climate Tech Finance program took significant steps in
             <span className="font-bold">
               {' '}
               endorsing sustainable technological advancements.
@@ -358,22 +357,22 @@ const Document: FC = () => {
         <div className="flex w-full flex-col items-start justify-start place-self-end desktop:max-w-[75%]">
           <Typography as="p" className="px-15 text-dark-gray desktop:pl-0">
             We awarded a loan guarantee to
-            <span className="font-bold"> SPARKZ, </span>
-            whose energy storage solution reduces the cost of domestic lithium
+            <span className="font-bold"> SPARKZ</span>
+            , whose energy storage solution reduces the cost of domestic lithium
             battery production by eliminating the cobalt and nickel
             traditionally used in their manufacturing. The pioneering process
             developed by SPARKZ not only lowers the cost of lithium-ion
             batteries, it removes environmental concerns around mining cobalt,
             and reduces constrictions created by a foreign supply chain. Another
-            loan guarantee was accorded to
-            <span className="font-bold"> EV Life, </span>a startup whose goal is
+            loan guarantee was awarded to
+            <span className="font-bold"> EV Life</span>, a startup whose goal is
             making electric vehicles (EVs) more accessible by spearheading
             solutions to eliminate the 'green premium' — the additional cost
             often associated with eco-friendly options. Their efforts are
             focused on making electric driving an achievable dream for millions
             deterred by the hefty initial cost of EVs. The most recent loan
             guarantee we awarded was to
-            <span className="font-bold"> One Way Trigger, </span>a company that
+            <span className="font-bold"> One Way Trigger</span>, a company that
             specializes in pavement preservation techniques as a greener and
             more cost-effective alternative to traditional road maintenance.
             This approach not only optimizes taxpayer dollars, but also reduces

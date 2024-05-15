@@ -284,7 +284,7 @@ const complianceInspectionsData = [
 
 const PenaltiesViolationsData = [
   {
-    title: 'Civil Penalties',
+    title: 'Penalties',
     value: '$3,403,279',
   },
   {
@@ -445,14 +445,14 @@ const Document: FC = () => {
     <div className="flex min-h-screen flex-col">
       <Head>
         <title>
-          By the Numbers: How do we track and improve air quality protections? |
-          Air District 202 3 Annual Report
+          By the Numbers: How do we enforce and improve air quality protections? |
+          Air District 2023 Annual Report
         </title>
       </Head>
 
       <Hero
         title="By the Numbers"
-        description="How do we track and improve air quality protections?"
+        description="How do we enforce and improve air quality protections?"
         image="/img/number-page-small.png"
         imageTablet="/img/number-page-tablet.png"
         background="bg-dark-blue text-white"

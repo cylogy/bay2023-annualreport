@@ -79,7 +79,7 @@ const Document = (props: Props) => {
             <InfoCard
               backgroundColor="blue"
               cardTitle="$890M"
-              cardBody="per year in health impacts due to air pollution exposure will be eliminated through these rule amendments."
+              cardBody="per year in health impacts due to air pollution exposure will be eliminated through these rule amendments"
             />
             <InfoCard
               backgroundColor="white"
@@ -133,7 +133,7 @@ const Document = (props: Props) => {
         />
         <InfoCardImage
           backgroundColor="bg-green text-white"
-          title="Developing Methodology and Tools for CEQA Air Quality Assessment"
+          title="Methodology and Tools for CEQA Air Quality Assessment"
           body={() => (
             <Typography as="p" className="leading-8">
               We developed a{' '}

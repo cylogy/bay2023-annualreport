@@ -387,8 +387,8 @@ const Document = (props: Props) => {
                   className="tablet:text-caption-tablet text-caption-mobile desktop:text-caption-desktop"
                 >
                   *Pending final certification <br />
-                  Final certification of exceedance data will occur May 1,
-                  2024..
+                  Final certification of exceedance data will occur in June
+                  2024.
                 </Typography>
               </AnimatedTable>
             </section>

@@ -77,16 +77,16 @@ const Document: FC = () => {
       position: 'Deputy Executive Officer of Finance and Administration',
     },
     {
+      name: 'Arsenio Mataka',
+      position: 'Deputy Executive Officer of Equity and Community Programs',
+    },
+    {
       name: 'GREGORY NUDD',
       position: 'Deputy Executive Officer of Science and Policy',
     },
     {
       name: 'Viet Tran',
       position: 'Deputy Executive Officer of Public Affairs',
-    },
-    {
-      name: 'Arsenio Mataka',
-      position: 'Deputy Executive Officer of Equity and Community Programs',
     },
     {
       name: 'JOHN CHILADAKIS',
@@ -164,8 +164,8 @@ const Document: FC = () => {
       position: 'Strategic Incentives',
     },
     {
-      name: 'POSITION CURRENTLY VACANT',
-      position: 'Rules and Strategic Policy',
+      name: 'Idania Zamora',
+      position: 'Acting, Rules and Strategic Policy',
     },
   ];
 
@@ -811,7 +811,7 @@ const Document: FC = () => {
               as="span"
               className="mt-1 border-b-2 border-dark-blue pb-4 capitalize desktop:text-[21px]"
             >
-              Mark Sanchez
+              Mark Salinas
             </Typography>
           </div>
           <div className="mb-4 flex flex-col desktop:mb-6 desktop:w-full desktop:justify-between">
