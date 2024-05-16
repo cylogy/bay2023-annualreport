@@ -17,7 +17,7 @@ import {
   XAxis,
   YAxis,
 } from 'recharts';
-import HeroImage from "../../../public/img/about-us-mobile.png";
+import HeroImage from '../../../public/img/about-us-mobile.png';
 
 const Document: FC = () => {
   const complianceInspectionsData = [
@@ -179,8 +179,8 @@ const Document: FC = () => {
   ];
 
   const genderData = [
-    { name: 'Male', value: 0.5, color: '#3368B2' },
-    { name: 'Female', value: 0.5, color: '#7F7A7F' },
+    { name: 'Male', value: 0.5, color: '#7F7A7F' },
+    { name: 'Female', value: 0.5, color: '#3368B2' },
   ];
 
   const raceListData = [

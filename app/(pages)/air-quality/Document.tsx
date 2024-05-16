@@ -435,38 +435,49 @@ const Document = (props: Props) => {
             as="p"
             className="mx-auto mb-6 mt-22.5 flex w-full max-w-[1241px] flex-1 flex-grow flex-col px-6 text-dark-blue tablet-portrait:mb-25 tablet-portrait:px-12 desktop:my-40 desktop:px-0"
           >
-            a The Air District’s latest greenhouse gas (GHG) emissions estimates
-            can be found here: baaqmd.gov/capghg. These estimates do not reflect
-            specific emissions changes in 2023 due to the impact of COVID-19
-            pandemic or wildfires.
-            <br />
-            b This category includes GHG emissions from refining processes and
-            combustion of gas, liquid and solid fuels at refineries; it does not
-            include GHG emissions generated during cogeneration at refineries,
-            which is included in the Electricity/Co-Generation category.
-            <br />
-            c This category includes GHG emissions from combustion and processes
-            at cement plants, natural gas combustion, combustion of solid and
-            liquid fuels in industries, natural gas distribution fugitive losses
-            (primarily methane), and industrial process emissions.
-            <br />
-            d These percentage estimates are developed based on the Air
-            District’s currently available regional inventory data. These
-            estimates do not reflect specific emissions changes in 2023 due to
-            the impact of COVID-19 pandemic or wildfires.
-            <br />
-            e This category includes wind-blown dust from agricultural land and
-            dust from construction operations.
-            <br />
-            f This category includes construction and mining equipment,
-            agricultural equipment, industrial and light commercial equipment,
-            and airport ground support equipment, etc.
-            <br />
-            g This category includes trains, lawn and garden equipment and other
-            off-road equipment.
-            <br />
-            h This category includes passenger cars, buses, motorcycles, etc.
-            <br />
+            <span>
+              <sup>a</sup> The Air District’s latest greenhouse gas (GHG)
+              emissions estimates can be found here: baaqmd.gov/capghg. These
+              estimates do not reflect specific emissions changes in 2023 due to
+              the impact of COVID-19 pandemic or wildfires.
+            </span>
+            <span>
+              <sup>b</sup> This category includes GHG emissions from refining
+              processes and combustion of gas, liquid and solid fuels at
+              refineries; it does not include GHG emissions generated during
+              cogeneration at refineries, which is included in the
+              Electricity/Co-Generation category.
+            </span>
+            <span>
+              <sup>c</sup> This category includes GHG emissions from combustion
+              and processes at cement plants, natural gas combustion, combustion
+              of solid and liquid fuels in industries, natural gas distribution
+              fugitive losses (primarily methane), and industrial process
+              emissions.
+            </span>
+            <span>
+              <sup>d</sup> These percentage estimates are developed based on the
+              Air District’s currently available regional inventory data. These
+              estimates do not reflect specific emissions changes in 2023 due to
+              the impact of COVID-19 pandemic or wildfires.
+            </span>
+            <span>
+              <sup>e</sup> This category includes wind-blown dust from
+              agricultural land and dust from construction operations.
+            </span>
+            <span>
+              <sup>f</sup> This category includes construction and mining
+              equipment, agricultural equipment, industrial and light commercial
+              equipment, and airport ground support equipment, etc.
+            </span>
+            <span>
+              <sup>g</sup> This category includes trains, lawn and garden
+              equipment and other off-road equipment.
+            </span>
+            <span>
+              <sup>h</sup> This category includes passenger cars, buses,
+              motorcycles, etc.
+            </span>
           </Typography>
         </section>
 

@@ -445,8 +445,8 @@ const Document: FC = () => {
     <div className="flex min-h-screen flex-col">
       <Head>
         <title>
-          By the Numbers: How do we enforce and improve air quality protections? |
-          Air District 2023 Annual Report
+          By the Numbers: How do we enforce and improve air quality protections?
+          | Air District 2023 Annual Report
         </title>
       </Head>
 
@@ -588,16 +588,16 @@ const Document: FC = () => {
             <Typography as="h5" className="uppercase">
               Rules Adopted or Amended
             </Typography>
-
             <Typography as="h5" className="mt-6 uppercase">
-              December 20, 2023 - Refinery Wastewater Systems Amendments
+              March 15, 2023 - Building Appliance Amendments
             </Typography>
             <Typography
               as="span"
               className="mt-2 pb-1 capitalize desktop:text-[21px]"
             >
-              Regulation 8: Organic Compounds, Rule 8: Wastewater Collection and
-              Separation Systems
+              Regulation 9: Inorganic Gaseous Pollutants, Rule 4: Nitrogen
+              Oxides from Fan Type Central Furnaces, and Rule 6: Nitrogen Oxides
+              Emissions from Natural Gas-Fired Boilers and Water Heaters
             </Typography>
 
             <Typography as="h5" className="mt-6 uppercase">
@@ -611,15 +611,14 @@ const Document: FC = () => {
             </Typography>
 
             <Typography as="h5" className="mt-6 uppercase">
-              March 15, 2023 - Building Appliance Amendments
+              December 20, 2023 - Refinery Wastewater Systems Amendments
             </Typography>
             <Typography
               as="span"
               className="mt-2 pb-1 capitalize desktop:text-[21px]"
             >
-              Regulation 9: Inorganic Gaseous Pollutants, Rule 4: Nitrogen
-              Oxides from Fan Type Central Furnaces, and Rule 6: Nitrogen Oxides
-              Emissions from Natural Gas-Fired Boilers and Water Heaters
+              Regulation 8: Organic Compounds, Rule 8: Wastewater Collection and
+              Separation Systems
             </Typography>
           </div>
         </SectionGraph>
