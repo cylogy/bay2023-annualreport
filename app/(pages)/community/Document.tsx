@@ -367,7 +367,7 @@ const Document = (props: Props) => {
                     </span>{' '}
                     through a unique partnership between our agency, the Bay
                     Area Regional Energy Network, county health departments, and
-                    a local non-profit. By the end of 2023, the program had
+                    a local nonprofit. By the end of 2023, the program had
                     enrolled 71 residents in both multifamily and single-family
                     homes.
                   </Typography>

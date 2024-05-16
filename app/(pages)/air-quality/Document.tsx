@@ -132,7 +132,7 @@ const Document = (props: Props) => {
             backgroundColor="blue"
           />
           <InfoCard
-            cardTitle="10"
+            cardTitle="132"
             cardBody="different pollutants are measured by our monitoring network"
             backgroundColor="white"
           />
