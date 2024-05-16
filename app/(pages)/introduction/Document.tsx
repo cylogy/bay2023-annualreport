@@ -79,7 +79,7 @@ const Document = (props: Props) => {
               className="relative flex h-full w-full flex-col items-center justify-center"
             >
               <Image
-                src="/img/rectangle-251.jpg"
+                src="/img/Bayview cropped sample.jpeg"
                 fill
                 alt="Two hikers on a mountain trail"
                 className="object-cover "
