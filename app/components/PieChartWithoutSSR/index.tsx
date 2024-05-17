@@ -10,6 +10,7 @@ type Props = {
     value: number;
     name: string;
     color: string;
+    sup?: string;
   }[];
 };
 
@@ -60,10 +61,12 @@ const PieChartWithoutSSR = ({ data }: Props) => {
       );
   };
 
+  const reversedData = data.reverse();
+
   return (
     <div className="mb-9 flex w-full flex-col items-center justify-center gap-9 desktop:m-0 desktop:flex-row">
       <div className="flex w-full flex-col desktop:w-4/12">
-        {data.map(({ name, value, color }, index) => (
+        {data.map(({ name, value, color, sup }, index) => (
           <div
             key={`${index}-${value}`}
             className="flex w-full items-center justify-between border-b border-dark-blue py-2 text-dark-gray"
@@ -82,7 +85,7 @@ const PieChartWithoutSSR = ({ data }: Props) => {
                 as="p"
                 className="tablet:text-caption-tablet text-caption-mobile desktop:text-caption-desktop"
               >
-                {name}
+                {name} {sup && <sup>{sup}</sup>}
               </Typography>
             </div>
             <Typography
@@ -113,7 +116,7 @@ const PieChartWithoutSSR = ({ data }: Props) => {
               dataKey="value"
               startAngle={-270}
             >
-              {data.reverse().map((entry, index) => (
+              {reversedData.map((entry, index) => (
                 <Cell
                   stroke="#000000"
                   key={`cell-${index}`}

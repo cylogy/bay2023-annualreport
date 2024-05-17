@@ -483,14 +483,19 @@ export const sourceTestStats = [
 
 export const greenhouseEmissions = [
   { name: 'Transportation', value: 0.391, color: '#1D67C7' },
-  { name: 'Industrial - Oil Refineries', value: 0.189, color: '#FFFFFF' },
+  {
+    name: 'Industrial - Oil Refineries',
+    value: 0.189,
+    color: '#FFFFFF',
+    sup: 'b',
+  },
   { name: 'Electricity/Co-Generation', value: 0.131, color: '#94B3EF' },
   {
     name: 'Residential/Commercial Fuel Usage',
     value: 0.117,
     color: '#4B4848',
   },
-  { name: 'Industrial - Others', value: 0.08, color: '#0A215B' },
+  { name: 'Industrial - Others', value: 0.08, color: '#0A215B', sup: 'c' },
   {
     name: 'High Global Warming Potential Gases',
     value: 0.05,
@@ -519,7 +524,7 @@ export const particulatePollution = [
     value: 0.098,
     color: '#006E6E',
   },
-  { name: 'Other Dust e', value: 0.072, color: '#ADFBE8' },
+  { name: 'Other Dust', value: 0.072, color: '#ADFBE8', sup: 'e' },
   { name: 'Commercial Cooking', value: 0.056, color: '#7F7A7F' },
   { name: 'Accidental & Planned Fires', value: 0.021, color: '#E87551' },
 ];
@@ -538,19 +543,22 @@ export const nitrogenOxidePollution = [
     color: '#4B4848',
   },
   {
-    name: 'Mobile Off-Road Sources - Equipment f',
+    name: 'Mobile Off-Road Sources - Equipment',
     value: 0.086,
     color: '#0A215B',
+    sup: 'f',
   },
   {
-    name: 'Mobile Off-Road Sources - Other g',
+    name: 'Mobile Off-Road Sources - Other',
     value: 0.06,
     color: '#006E6E',
+    sup: 'g',
   },
   {
-    name: 'Mobile On-Road Sources - Other Vehicles h',
+    name: 'Mobile On-Road Sources - Other Vehicles',
     value: 0.055,
     color: '#ADFBE8',
+    sup: 'h',
   },
   {
     name: 'Residential Natural Gas Combustion',
