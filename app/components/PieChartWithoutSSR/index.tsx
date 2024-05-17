@@ -2,7 +2,7 @@
 
 import React from 'react';
 import Typography from '../Typography';
-import { Cell, Pie, PieChart, ResponsiveContainer } from 'recharts';
+import { Cell, Pie, PieChart, ResponsiveContainer, Tooltip } from 'recharts';
 import { useWindowWidth } from '@/hooks/useWindowWidth';
 
 type Props = {
@@ -124,6 +124,9 @@ const PieChartWithoutSSR = ({ data }: Props) => {
                 />
               ))}
             </Pie>
+            <Tooltip
+              formatter={(value: number) => `${(value * 100).toFixed(1)}%`}
+            />
           </PieChart>
         </ResponsiveContainer>
       </div>

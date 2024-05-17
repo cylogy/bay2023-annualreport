@@ -440,6 +440,9 @@ const Document: FC = () => {
                     />
                   ))}
                 </Pie>
+                <Tooltip
+                  formatter={(value: number) => `${(value * 100).toFixed(1)}%`}
+                />
               </PieChart>
             </ResponsiveContainer>
           </div>
@@ -684,6 +687,9 @@ const Document: FC = () => {
                     />
                   ))}
                 </Pie>
+                <Tooltip
+                  formatter={(value: number) => `${(value * 100).toFixed(1)}%`}
+                />
               </PieChart>
             </ResponsiveContainer>
           </div>
