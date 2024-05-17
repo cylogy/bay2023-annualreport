@@ -88,7 +88,7 @@ const Document = (props: Props) => {
           </div>
         </div>
         <AnimatedTile
-          key={10}
+          id={10}
           className="flex h-full w-full flex-col items-start justify-center bg-blue px-20 py-10 text-white desktop:w-1/2 desktop:p-20"
         >
           <Typography as="h1" className="text-left">

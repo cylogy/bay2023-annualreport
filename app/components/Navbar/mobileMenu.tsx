@@ -83,14 +83,22 @@ const MobileMenu = ({ setIsOpen }: Props) => {
           ))}
         </ul>
         <div className="mt-10 flex w-full justify-start">
-          <Button
-            color="brick"
-            icon={false}
-            size="large"
-            text="DOWNLOAD PDF"
-            type="filled"
-            downloadPdfClassName="download-pdf"
-          />
+          <a
+            title="download pdf"
+            href="/BAY_2023_AnnualReport.pdf"
+            target="_blank"
+            rel="noopener noreferrer"
+            download
+          >
+            <Button
+              color="brick"
+              icon={false}
+              size="large"
+              text="DOWNLOAD PDF"
+              type="filled"
+              downloadPdfClassName="download-pdf"
+            />
+          </a>
         </div>
         <div className="mt-4 flex w-full flex-col space-y-2">
           <a href="https://www.baaqmd.gov/about-the-air-district/accessibility">

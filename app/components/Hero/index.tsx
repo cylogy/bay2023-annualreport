@@ -55,7 +55,7 @@ const Hero = ({
       </article>
 
       <AnimatedTile
-        key={2}
+        id={2}
         className={`flex flex-1 flex-col items-start justify-center px-6 py-9 desktop:px-20 desktop:py-16 ${background}`}
       >
         <Animated

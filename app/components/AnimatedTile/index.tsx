@@ -4,15 +4,15 @@ import React from 'react';
 import { motion } from 'framer-motion';
 
 type Props = {
-  key: number;
+  id: number;
   className?: string;
   children: React.ReactNode;
 };
 
-const AnimatedTile = ({ key, className, children }: Props) => {
+const AnimatedTile = ({ id, className, children }: Props) => {
   return (
     <motion.article
-      key={key}
+      key={id}
       initial={{ x: '-100%', opacity: 0 }}
       whileInView={{
         x: 0,

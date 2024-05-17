@@ -61,15 +61,23 @@ const Navbar = () => {
               </Link>
             </motion.li>
           ))}
-          <Button
-            role="menuitem"
-            color="brick"
-            icon={false}
-            size="large"
-            text="DOWNLOAD PDF"
-            type="filled"
-            downloadPdfClassName="download-pdf"
-          />
+          <a
+            title="download pdf"
+            href="/BAY_2023_AnnualReport.pdf"
+            target="_blank"
+            rel="noopener noreferrer"
+            download
+          >
+            <Button
+              role="menuitem"
+              color="brick"
+              icon={false}
+              size="large"
+              text="DOWNLOAD PDF"
+              type="filled"
+              downloadPdfClassName="download-pdf"
+            />
+          </a>
         </motion.ul>
       </div>
       <div

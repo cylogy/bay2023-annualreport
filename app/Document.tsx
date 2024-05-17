@@ -19,7 +19,7 @@ const Document = (props: Props) => {
       <section className="flex w-full flex-col overflow-hidden desktop:flex-row">
         <div className="z-30 flex w-full flex-1 bg-white desktop:order-1 desktop:flex-[0.3]">
           <AnimatedTile
-            key={1}
+            id={1}
             className="flex w-full items-center justify-center bg-blue p-9 desktop:h-[384px]"
           >
             <Animated
@@ -31,7 +31,7 @@ const Document = (props: Props) => {
         </div>
         <div className="z-10 flex bg-white desktop:order-3">
           <AnimatedTile
-            key={3}
+            id={3}
             className="flex w-full items-center justify-center whitespace-nowrap bg-dark-blue p-9 desktop:h-[384px] desktop:w-[335px]"
           >
             <Animated
@@ -81,7 +81,7 @@ const Document = (props: Props) => {
         <article className="z-20 flex w-full flex-col overflow-hidden desktop:w-1/2">
           <div className="flex h-full w-full flex-col desktop:flex-row">
             <AnimatedTile
-              key={5}
+              id={5}
               className="flex w-full flex-1 flex-grow items-center justify-center bg-light-blue p-9 desktop:h-[384px] desktop:w-max"
             >
               <Animated
@@ -107,7 +107,7 @@ const Document = (props: Props) => {
           </div>
           <div className="z-20 flex bg-white desktop:flex-1">
             <AnimatedTile
-              key={7}
+              id={7}
               className="flex w-full flex-col items-center justify-center bg-green p-9 text-left  md:order-3 desktop:h-[384px]"
             >
               <div className="flex flex-col text-left">
@@ -143,7 +143,7 @@ const Document = (props: Props) => {
         </div>
         <div className="z-30 flex bg-white desktop:order-1 desktop:flex-[0.5]">
           <AnimatedTile
-            key={9}
+            id={9}
             className="flex h-full w-full flex-col items-start justify-center space-y-6 bg-dark-blue px-15 py-20 desktop:w-full"
           >
             <Typography
@@ -177,7 +177,7 @@ const Document = (props: Props) => {
       </section>
       <section className="hidden h-[384px] w-full overflow-hidden desktop:flex">
         <div className="z-30 flex w-1/3 bg-white">
-          <AnimatedTile key={10} className="block h-full w-full bg-light-blue">
+          <AnimatedTile id={10} className="block h-full w-full bg-light-blue">
             &nbsp;
           </AnimatedTile>
         </div>
@@ -195,7 +195,7 @@ const Document = (props: Props) => {
             />
           </AnimatedImage>
         </div>
-        <AnimatedTile key={12} className="block h-full w-1/3 bg-blue">
+        <AnimatedTile id={12} className="block h-full w-1/3 bg-blue">
           &nbsp;
         </AnimatedTile>
       </section>
