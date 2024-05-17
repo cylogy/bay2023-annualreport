@@ -174,7 +174,7 @@ const Document: FC = () => {
     { name: 'Hispanic', value: 0.2, color: '#94B3EF' },
     { name: 'Asian', value: 0.24, color: '#1D67C7' },
     { name: 'Black', value: 0.05, color: '#ADFBE8' },
-    { name: 'Other/ Unkown', value: 0.04, color: '#006E6E' },
+    { name: 'Other/ Unknown', value: 0.04, color: '#006E6E' },
     { name: 'American Indian/ Alaskan Native', value: 0.01, color: '#E87551' },
   ];
 
