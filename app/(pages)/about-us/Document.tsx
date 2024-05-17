@@ -14,51 +14,13 @@ import {
   Pie,
   PieChart,
   ResponsiveContainer,
+  Tooltip,
   XAxis,
   YAxis,
 } from 'recharts';
 import HeroImage from '../../../public/img/about-us-mobile.png';
 
 const Document: FC = () => {
-  const complianceInspectionsData = [
-    {
-      title: 'Source Inspections',
-      value: 4755,
-    },
-    {
-      title: 'Air Pollution Complaints (excludes smoking vehicles)',
-      value: 3768,
-    },
-    {
-      title: 'Gasoline Dispensing Facility Inspections',
-      value: 965,
-    },
-    {
-      title: 'Asbestos Inspections',
-      value: 2070,
-    },
-    {
-      title: 'Reportable Compliance Activities',
-      value: 734,
-    },
-    {
-      title: 'Diesel Compliance and Grant Inspections',
-      value: 125,
-    },
-    {
-      title: 'Portable Equipment Registration Program (PERP) Inspections',
-      value: 7,
-    },
-    {
-      title: 'Open Burn Inspections',
-      value: 4,
-    },
-    {
-      title: 'Naturally Occurring Asbestos (NOA) Inspections',
-      value: 23,
-    },
-  ];
-
   const executiveManagementData = [
     {
       name: 'Philip M. Fine',
@@ -192,102 +154,102 @@ const Document: FC = () => {
   const data = [
     {
       name: '2023',
-      w: 0.4,
-      h: 0.4,
-      a: 0.1,
-      b: 0.07,
-      o: 0.03,
-      aa: 0.01,
+      Asian: 0.4,
+      White: 0.4,
+      Hispanic: 0.1,
+      Black: 0.07,
+      'Other/Unknown': 0.03,
+      'American Indian/ Alaskan Native': 0.01,
     },
     {
       name: '2022',
-      w: 0.42,
-      h: 0.4,
-      a: 0.09,
-      b: 0.08,
-      o: 0.02,
-      aa: 0.01,
+      Asian: 0.42,
+      White: 0.4,
+      Hispanic: 0.09,
+      Black: 0.08,
+      'Other/Unknown': 0.02,
+      'American Indian/ Alaskan Native': 0.01,
     },
     {
       name: '2021',
-      w: 0.4,
-      h: 0.41,
-      a: 0.09,
-      b: 0.08,
-      o: 0.02,
-      aa: 0.01,
+      Asian: 0.4,
+      White: 0.41,
+      Hispanic: 0.09,
+      Black: 0.08,
+      'Other/Unknown': 0.02,
+      'American Indian/ Alaskan Native': 0.01,
     },
     {
       name: '2020',
-      w: 0.4,
-      h: 0.42,
-      a: 0.08,
-      b: 0.08,
-      o: 0.01,
-      aa: 0.01,
+      Asian: 0.4,
+      White: 0.42,
+      Hispanic: 0.08,
+      Black: 0.08,
+      'Other/Unknown': 0.01,
+      'American Indian/ Alaskan Native': 0.01,
     },
     {
       name: '2019',
-      w: 0.39,
-      h: 0.44,
-      a: 0.08,
-      b: 0.08,
-      aa: 0.01,
+      Asian: 0.39,
+      White: 0.44,
+      Hispanic: 0.08,
+      Black: 0.08,
+      'American Indian/ Alaskan Native': 0.01,
     },
   ];
 
   const genderBarData = [
     {
       name: '2023',
-      w: 0.42,
-      h: 0.56,
+      Female: 0.42,
+      Male: 0.56,
     },
     {
       name: '2022',
-      w: 0.44,
-      h: 0.56,
+      Female: 0.44,
+      Male: 0.56,
     },
     {
       name: '2021',
-      w: 0.42,
-      h: 0.58,
+      Female: 0.42,
+      Male: 0.58,
     },
     {
       name: '2020',
-      w: 0.43,
-      h: 0.57,
+      Female: 0.43,
+      Male: 0.57,
     },
     {
       name: '2019',
-      w: 0.42,
-      h: 0.58,
+      Female: 0.42,
+      Male: 0.58,
     },
   ];
 
   const raceBarData = [
     {
       name: '2023',
-      w: 0.29,
-      h: 0.13,
-      b: 0.04,
+      Asian: 0.29,
+      Hispanic: 0.13,
+      Black: 0.04,
     },
     {
       name: '2019',
-      w: 0.15,
-      h: 0.1,
+      Asian: 0.15,
+      Hispanic: 0.1,
     },
   ];
 
   const genderSecondBarData = [
     {
       name: '2023',
-      w: 0.38,
-      h: 0.63,
+      Female: 0.38,
+      Male: 0.63,
     },
     {
       name: '2019',
-      w: 0.65,
-      h: 0.35,
+      Female: 0.65,
+      Male: 0.35,
     },
   ];
 
@@ -433,8 +395,11 @@ const Document: FC = () => {
                   axisLine={false}
                   tickLine={false}
                 />
-                <Bar dataKey="w" stackId="a" fill="#3368B2" />
-                <Bar dataKey="h" stackId="a" fill="#7F7A7F" />
+                <Tooltip
+                  formatter={(value: number) => `${(value * 100).toFixed(0)}%`}
+                />
+                <Bar dataKey="Female" stackId="a" fill="#3368B2" />
+                <Bar dataKey="Male" stackId="a" fill="#7F7A7F" />
               </BarChart>
             </ResponsiveContainer>
           </div>
@@ -535,9 +500,12 @@ const Document: FC = () => {
                   axisLine={false}
                   tickLine={false}
                 />
-                <Bar dataKey="w" stackId="a" fill="#3368B2" />
-                <Bar dataKey="h" stackId="a" fill="#94B3EF" />
-                <Bar dataKey="b" stackId="a" fill="#ADFBE8" />
+                <Tooltip
+                  formatter={(value: number) => `${(value * 100).toFixed(0)}%`}
+                />
+                <Bar dataKey="Asian" stackId="a" fill="#3368B2" />
+                <Bar dataKey="Hispanic" stackId="a" fill="#94B3EF" />
+                <Bar dataKey="Black" stackId="a" fill="#ADFBE8" />
               </BarChart>
             </ResponsiveContainer>
           </div>
@@ -586,8 +554,11 @@ const Document: FC = () => {
                   axisLine={false}
                   tickLine={false}
                 />
-                <Bar dataKey="w" stackId="a" fill="#3368B2" />
-                <Bar dataKey="h" stackId="a" fill="#7F7A7F" />
+                <Tooltip
+                  formatter={(value: number) => `${(value * 100).toFixed(0)}%`}
+                />
+                <Bar dataKey="Female" stackId="a" fill="#3368B2" />
+                <Bar dataKey="Male" stackId="a" fill="#7F7A7F" />
               </BarChart>
             </ResponsiveContainer>
           </div>
@@ -660,12 +631,19 @@ const Document: FC = () => {
                   axisLine={false}
                   tickLine={false}
                 />
-                <Bar dataKey="w" stackId="a" fill="#3368B2" />
-                <Bar dataKey="h" stackId="a" fill="#7F7A7F" />
-                <Bar dataKey="a" stackId="a" fill="#94B3EF" />
-                <Bar dataKey="b" stackId="a" fill="#ADFBE8" />
-                <Bar dataKey="o" stackId="a" fill="#006E6E" />
-                <Bar dataKey="aa" stackId="a" fill="#E77550" />
+                <Tooltip
+                  formatter={(value: number) => `${(value * 100).toFixed(0)}%`}
+                />
+                <Bar dataKey="Asian" stackId="a" fill="#3368B2" />
+                <Bar dataKey="White" stackId="a" fill="#7F7A7F" />
+                <Bar dataKey="Hispanic" stackId="a" fill="#94B3EF" />
+                <Bar dataKey="Black" stackId="a" fill="#ADFBE8" />
+                <Bar dataKey="Other/Unknown" stackId="a" fill="#006E6E" />
+                <Bar
+                  dataKey="American Indian/ Alaskan Native"
+                  stackId="a"
+                  fill="#E77550"
+                />
               </BarChart>
             </ResponsiveContainer>
           </div>

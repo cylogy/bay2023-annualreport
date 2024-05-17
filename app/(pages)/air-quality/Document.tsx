@@ -404,28 +404,19 @@ const Document = (props: Props) => {
               </div>
               <div className="mb-9 flex h-min w-full flex-1 items-center space-x-6 border-b border-dark-blue desktop:mb-[120px]">
                 <Typography as="h3" className="relative pb-2 text-dark-blue">
-                  SOURCES OF GREENHOUSE GAS EMISSIONS{' '}
-                  <span className="absolute -right-4 -top-2 align-text-top text-body-text-desktop font-bold">
-                    a
-                  </span>
+                  SOURCES OF GREENHOUSE GAS EMISSIONS <sup>a</sup>
                 </Typography>
               </div>
               <PieChartWithoutSSR data={greenhouseEmissions} />
               <div className="mb-9 flex h-min w-full flex-1 items-center space-x-6 border-b border-dark-blue desktop:mb-[120px] desktop:mt-40">
                 <Typography as="h3" className="relative pb-2 text-dark-blue">
-                  SOURCES OF ANNUAL FINE PARTICULATE POLLUTION
-                  <span className="absolute -right-4 -top-2 align-text-top text-body-text-desktop font-bold">
-                    d
-                  </span>
+                  SOURCES OF ANNUAL FINE PARTICULATE POLLUTION <sup>d</sup>
                 </Typography>
               </div>
               <PieChartWithoutSSR data={particulatePollution} />
               <div className="mb-9 flex h-min w-full flex-1 items-center space-x-6 border-b border-dark-blue desktop:mb-[120px] desktop:mt-40">
                 <Typography as="h3" className="relative pb-2 text-dark-blue">
-                  SOURCES OF ANNUAL NITROGEN OXIDE POLLUTION
-                  <span className="absolute -right-4 -top-2 align-text-top text-body-text-desktop font-bold">
-                    d
-                  </span>
+                  SOURCES OF ANNUAL NITROGEN OXIDE POLLUTION <sup>d</sup>
                 </Typography>
               </div>
               <PieChartWithoutSSR data={nitrogenOxidePollution} />

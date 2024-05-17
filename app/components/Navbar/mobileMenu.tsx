@@ -93,9 +93,15 @@ const MobileMenu = ({ setIsOpen }: Props) => {
           />
         </div>
         <div className="mt-4 flex w-full flex-col space-y-2">
-          <p>Accessibility</p>
-          <p>Terms of Use</p>
-          <p>Privacy Policy</p>
+          <a href="https://www.baaqmd.gov/about-the-air-district/accessibility">
+            <p>Accessibility</p>
+          </a>
+          <a href="https://www.baaqmd.gov/online-services/terms-of-use">
+            <p>Terms of Use</p>
+          </a>
+          <a href="https://www.baaqmd.gov/online-services/privacy-policy">
+            <p>Privacy Policy</p>
+          </a>
         </div>
       </div>
     </motion.div>
