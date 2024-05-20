@@ -726,7 +726,7 @@ const Document: FC = () => {
               </Typography>
               <Typography
                 as="span"
-                className={`capitalize desktop:mt-1 desktop:text-[21px] ${executiveManagementData?.length > index + 1 && 'border-b-2 border-dark-blue pb-4'} `}
+                className={`capitalize text-gray desktop:mt-1 desktop:text-[21px] ${executiveManagementData?.length > index + 1 && 'border-b-2 border-dark-blue pb-4'} `}
               >
                 {person.position}
               </Typography>
@@ -758,15 +758,14 @@ const Document: FC = () => {
         </SectionGraph>
       </section>
 
-      <section
-        className="
-      relative flex w-full flex-col justify-center
-      space-y-9 bg-transparent px-6 py-25 desktop:space-x-0 desktop:space-y-[100px] desktop:px-20 desktop:py-36"
-      >
+      <section className="relative flex w-full flex-col justify-center bg-transparent px-6 py-25 desktop:space-x-0  desktop:px-20 desktop:pt-36">
+        <div className="absolute bottom-0 left-0 right-0 top-0 -z-[4] block bg-green/20">
+          &nbsp;
+        </div>
         <Image
           src="/img/frame-19851.png"
           alt="Close-up of foliage"
-          className="-z-[5] object-top"
+          className="-z-[5] object-top opacity-40"
           fill
         />
         <SectionGraph
@@ -780,25 +779,25 @@ const Document: FC = () => {
             </Typography>
             <Typography
               as="span"
-              className="mt-4 pb-1 capitalize desktop:text-[21px]"
+              className="mt-4 pb-1 capitalize text-gray desktop:text-[21px]"
             >
               Juan Gonzalez
             </Typography>
             <Typography
               as="span"
-              className="mt-1 pb-1 capitalize desktop:text-[21px]"
+              className="mt-1 pb-1 capitalize text-gray desktop:text-[21px]"
             >
               David Haubert
             </Typography>
             <Typography
               as="span"
-              className="mt-1 pb-1 capitalize desktop:text-[21px]"
+              className="mt-1 pb-1 capitalize text-gray desktop:text-[21px]"
             >
               Nate Miley
             </Typography>
             <Typography
               as="span"
-              className="mt-1 border-b-2 border-dark-blue pb-4 capitalize desktop:text-[21px]"
+              className="mt-1 border-b-2 border-dark-blue pb-4 capitalize text-gray desktop:text-[21px]"
             >
               Mark Salinas
             </Typography>
@@ -809,25 +808,25 @@ const Document: FC = () => {
             </Typography>
             <Typography
               as="span"
-              className="mt-4 pb-1 capitalize desktop:text-[21px]"
+              className="mt-4 pb-1 capitalize text-gray desktop:text-[21px]"
             >
               Ken Carlson
             </Typography>
             <Typography
               as="span"
-              className="mt-1 pb-1 capitalize desktop:text-[21px]"
+              className="mt-1 pb-1 capitalize text-gray desktop:text-[21px]"
             >
               John Gioia
             </Typography>
             <Typography
               as="span"
-              className="mt-1 pb-1 capitalize desktop:text-[21px]"
+              className="mt-1 pb-1 capitalize text-gray desktop:text-[21px]"
             >
               David E. Hudson
             </Typography>
             <Typography
               as="span"
-              className="mt-1 border-b-2 border-dark-blue pb-4 capitalize desktop:text-[21px]"
+              className="mt-1 border-b-2 border-dark-blue pb-4 capitalize text-gray desktop:text-[21px]"
             >
               Mark Ross
             </Typography>
@@ -838,7 +837,7 @@ const Document: FC = () => {
             </Typography>
             <Typography
               as="span"
-              className="mt-1 border-b-2 border-dark-blue pb-4 capitalize desktop:text-[21px]"
+              className="mt-1 border-b-2 border-dark-blue pb-4 capitalize text-gray desktop:text-[21px]"
             >
               Katie Rice
             </Typography>
@@ -849,7 +848,7 @@ const Document: FC = () => {
             </Typography>
             <Typography
               as="span"
-              className="mt-1 border-b-2 border-dark-blue pb-4 capitalize desktop:text-[21px]"
+              className="mt-1 border-b-2 border-dark-blue pb-4 capitalize text-gray desktop:text-[21px]"
             >
               Joelle Gallagher
             </Typography>
@@ -860,19 +859,19 @@ const Document: FC = () => {
             </Typography>
             <Typography
               as="span"
-              className="mt-4 pb-1 capitalize desktop:text-[21px]"
+              className="mt-4 pb-1 capitalize text-gray desktop:text-[21px]"
             >
               Tyrone Jue (Mayor’s Appointee)
             </Typography>
             <Typography
               as="span"
-              className="mt-1 pb-1 capitalize desktop:text-[21px]"
+              className="mt-1 pb-1 capitalize text-gray desktop:text-[21px]"
             >
               Shamann Walton
             </Typography>
             <Typography
               as="span"
-              className="mt-1 border-b-2 border-dark-blue pb-4 capitalize desktop:text-[21px]"
+              className="mt-1 border-b-2 border-dark-blue pb-4 capitalize text-gray desktop:text-[21px]"
             >
               One seat currently vacant
             </Typography>
@@ -883,19 +882,19 @@ const Document: FC = () => {
             </Typography>
             <Typography
               as="span"
-              className="mt-4 pb-1 capitalize desktop:text-[21px]"
+              className="mt-4 pb-1 capitalize text-gray desktop:text-[21px]"
             >
               Noelia Corzo
             </Typography>
             <Typography
               as="span"
-              className="mt-1 pb-1 capitalize desktop:text-[21px]"
+              className="mt-1 pb-1 capitalize text-gray desktop:text-[21px]"
             >
               Davina Hurt, Chair
             </Typography>
             <Typography
               as="span"
-              className="mt-1 border-b-2 border-dark-blue pb-4 capitalize desktop:text-[21px]"
+              className="mt-1 border-b-2 border-dark-blue pb-4 capitalize text-gray desktop:text-[21px]"
             >
               Ray Mueller
             </Typography>
@@ -906,25 +905,25 @@ const Document: FC = () => {
             </Typography>
             <Typography
               as="span"
-              className="mt-4 pb-1 capitalize desktop:text-[21px]"
+              className="mt-4 pb-1 capitalize text-gray desktop:text-[21px]"
             >
               Margaret Abe-Koga
             </Typography>
             <Typography
               as="span"
-              className="mt-1 pb-1 capitalize desktop:text-[21px]"
+              className="mt-1 pb-1 capitalize text-gray desktop:text-[21px]"
             >
               Otto Lee
             </Typography>
             <Typography
               as="span"
-              className="mt-1 pb-1 capitalize desktop:text-[21px]"
+              className="mt-1 pb-1 capitalize text-gray desktop:text-[21px]"
             >
               Sergio Lopez
             </Typography>
             <Typography
               as="span"
-              className="mt-1 border-b-2 border-dark-blue pb-4 capitalize desktop:text-[21px]"
+              className="mt-1 border-b-2 border-dark-blue pb-4 capitalize text-gray desktop:text-[21px]"
             >
               Vicki Veenker
             </Typography>
@@ -935,13 +934,13 @@ const Document: FC = () => {
             </Typography>
             <Typography
               as="span"
-              className="mt-4 pb-1 capitalize desktop:text-[21px]"
+              className="mt-4 pb-1 capitalize text-gray desktop:text-[21px]"
             >
               Erin Hannigan
             </Typography>
             <Typography
               as="span"
-              className="mt-1 border-b-2 border-dark-blue pb-4 capitalize desktop:text-[21px]"
+              className="mt-1 border-b-2 border-dark-blue pb-4 capitalize text-gray desktop:text-[21px]"
             >
               Steve Young
             </Typography>
@@ -952,13 +951,13 @@ const Document: FC = () => {
             </Typography>
             <Typography
               as="span"
-              className="mt-4 pb-1 capitalize desktop:text-[21px]"
+              className="mt-4 pb-1 capitalize text-gray desktop:text-[21px]"
             >
               Brian Barnacle
             </Typography>
             <Typography
               as="span"
-              className="mt-1 border-b-2 border-dark-blue pb-4 capitalize desktop:text-[21px]"
+              className="mt-1 pb-4 capitalize text-gray desktop:text-[21px]"
             >
               Lynda Hopkins, Vice Chair
             </Typography>
@@ -975,7 +974,7 @@ const Document: FC = () => {
             </Typography>
             <Typography
               as="span"
-              className="mt-1 border-b-2 border-dark-blue pb-4 capitalize desktop:text-[21px]"
+              className="mt-1 border-b-2 border-dark-blue pb-4 capitalize text-gray desktop:text-[21px]"
             >
               800.334.ODOR (6367)
             </Typography>
@@ -986,19 +985,19 @@ const Document: FC = () => {
             </Typography>
             <Typography
               as="span"
-              className="mt-4 pb-1 capitalize desktop:text-[21px]"
+              className="mt-4 pb-1 capitalize text-gray desktop:text-[21px]"
             >
               800.HELP.AIR (435.7247)
             </Typography>
             <Typography
               as="span"
-              className="mt-1 pb-1 capitalize desktop:text-[21px]"
+              className="mt-1 pb-1 capitalize text-gray desktop:text-[21px]"
             >
               Spare the Air Alerts,
             </Typography>
             <Typography
               as="span"
-              className="mt-1 border-b-2 border-dark-blue pb-4 capitalize desktop:text-[21px]"
+              className="mt-1 border-b-2 border-dark-blue pb-4 capitalize text-gray desktop:text-[21px]"
             >
               Agricultural Burn Days
             </Typography>
@@ -1009,7 +1008,7 @@ const Document: FC = () => {
             </Typography>
             <Typography
               as="span"
-              className="mt-1 border-b-2 border-dark-blue pb-4 capitalize desktop:text-[21px]"
+              className="mt-1 border-b-2 border-dark-blue pb-4 capitalize text-gray desktop:text-[21px]"
             >
               415.749.4999
             </Typography>
@@ -1020,7 +1019,7 @@ const Document: FC = () => {
             </Typography>
             <Typography
               as="span"
-              className="mt-1 border-b-2 border-dark-blue pb-4 capitalize desktop:text-[21px]"
+              className="mt-1 border-b-2 border-dark-blue pb-4 capitalize text-gray desktop:text-[21px]"
             >
               415.749.4990
             </Typography>
@@ -1031,7 +1030,7 @@ const Document: FC = () => {
             </Typography>
             <Typography
               as="span"
-              className="mt-1 border-b-2 border-dark-blue pb-4 capitalize desktop:text-[21px]"
+              className="mt-1 border-b-2 border-dark-blue pb-4 capitalize text-gray desktop:text-[21px]"
             >
               415.749.5000
             </Typography>
@@ -1042,7 +1041,7 @@ const Document: FC = () => {
             </Typography>
             <Typography
               as="span"
-              className="mt-1 border-b-2 border-dark-blue pb-4 capitalize desktop:text-[21px]"
+              className="mt-1 border-b-2 border-dark-blue pb-4 capitalize text-gray desktop:text-[21px]"
             >
               415.749.5000
             </Typography>
@@ -1053,7 +1052,7 @@ const Document: FC = () => {
             </Typography>
             <Typography
               as="span"
-              className="mt-1 border-b-2 border-dark-blue pb-4 capitalize desktop:text-[21px]"
+              className="mt-1 border-b-2 border-dark-blue pb-4  capitalize text-gray desktop:text-[21px]"
             >
               800.EXHAUST (394.2878)
             </Typography>
@@ -1064,7 +1063,7 @@ const Document: FC = () => {
             </Typography>
             <Typography
               as="span"
-              className="mt-1 pb-4 capitalize desktop:text-[21px]"
+              className="mt-1 pb-4 capitalize text-gray desktop:text-[21px]"
             >
               877.4NO.BURN (466.2876)
             </Typography>
