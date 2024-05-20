@@ -6,7 +6,6 @@ import { Button } from './components/Button';
 import Animated from './components/Typography/animated';
 import AnimatedTile from './components/AnimatedTile';
 import AnimatedImage from './components/AnimatedImage';
-import { useState } from 'react';
 import LightboxComponent from './components/Lightbox';
 import Link from 'next/link';
 

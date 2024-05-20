@@ -18,7 +18,7 @@ import {
   XAxis,
   YAxis,
 } from 'recharts';
-import HeroImage from '../../../public/img/about-us-mobile.png';
+import HeroImage from '../../../public/img/about-us.jpeg';
 
 const Document: FC = () => {
   const executiveManagementData = [
@@ -134,10 +134,10 @@ const Document: FC = () => {
   const demographicsData = [
     { name: 'White', value: 0.47, color: '#7F7A7F' },
     { name: 'Hispanic', value: 0.2, color: '#94B3EF' },
-    { name: 'Asian', value: 0.24, color: '#1D67C7' },
     { name: 'Black', value: 0.05, color: '#ADFBE8' },
     { name: 'Other/ Unknown', value: 0.04, color: '#006E6E' },
     { name: 'American Indian/ Alaskan Native', value: 0.01, color: '#E87551' },
+    { name: 'Asian', value: 0.24, color: '#1D67C7' },
   ];
 
   const genderData = [
@@ -254,7 +254,7 @@ const Document: FC = () => {
   ];
 
   const RADIAN = Math.PI / 180;
-  let fontSize = '19px';
+  let fontSize = '16px';
   let factor = 1.4;
 
   const renderCustomizedLabel = ({
@@ -268,22 +268,21 @@ const Document: FC = () => {
   }: {
     [key: string]: number;
   }) => {
-    const radius = innerRadius + (outerRadius - innerRadius) * factor;
-    const x = cx + radius * Math.cos(-midAngle * RADIAN) + 10;
-    const y = cy + radius * Math.sin(-midAngle * RADIAN) - 10;
-    if (percent >= 0.06)
-      return (
-        <text
-          x={x}
-          y={y}
-          fill="#0A215B"
-          textAnchor={x > cx ? 'start' : 'end'}
-          dominantBaseline="central"
-          style={{ fontSize, fontWeight: 400, fontFamily: 'Anton' }}
-        >
-          {`${(percent * 100).toFixed(1)}%`}
-        </text>
-      );
+    const radius = innerRadius + (outerRadius - innerRadius) * 1.2;
+    const x = cx + radius * Math.cos(-midAngle * RADIAN) + 5;
+    const y = cy + radius * Math.sin(-midAngle * RADIAN) - 5;
+    return (
+      <text
+        x={x}
+        y={y}
+        fill="#0A215B"
+        textAnchor={x > cx ? 'start' : 'end'}
+        dominantBaseline="central"
+        style={{ fontSize, fontWeight: 400, fontFamily: 'Anton' }}
+      >
+        {`${(percent * 100).toFixed(0)}%`}
+      </text>
+    );
   };
 
   return (
@@ -299,7 +298,7 @@ const Document: FC = () => {
       />
       <div className="inline-block">
         <TextBlock align="left">
-          <div className="flex w-full flex-col place-self-start px-5 pb-6 pt-20 tablet-portrait:px-15 tablet-portrait:pb-20 tablet-portrait:pt-22.5 desktop:max-w-[855px] desktop:pb-20 desktop:pl-25 desktop:pt-40">
+          <div className="flex w-full flex-col place-self-start px-5 pb-6 pt-20 tablet-portrait:px-6 tablet-portrait:pb-20 tablet-portrait:pt-22.5 desktop:max-w-[855px] desktop:pb-20 desktop:pl-25 desktop:pt-40">
             <Typography as="h2" className=" uppercase text-dark-blue">
               Strengthening Diversity, Equity and Inclusion Within the Air
               District
@@ -338,10 +337,10 @@ const Document: FC = () => {
       <section
         className="
       relative flex w-full flex-col justify-center
-      space-y-9 px-6 pb-25 desktop:space-x-0 desktop:space-y-[100px] desktop:px-20 desktop:pb-36"
+      space-y-0 px-6 pb-25 desktop:space-x-0 desktop:space-y-[100px] desktop:px-25 desktop:pb-36"
       >
         <div className="mb-6 w-full border-b-2 border-dark-blue pb-1 desktop:mb-0">
-          <Typography as="h2" className=" uppercase text-dark-blue">
+          <Typography as="h3" className=" uppercase text-dark-blue">
             Demographics by gender
           </Typography>
         </div>
@@ -397,6 +396,7 @@ const Document: FC = () => {
                 />
                 <Tooltip
                   formatter={(value: number) => `${(value * 100).toFixed(0)}%`}
+                  itemStyle={{ color: 'black' }}
                 />
                 <Bar dataKey="Female" stackId="a" fill="#3368B2" />
                 <Bar dataKey="Male" stackId="a" fill="#7F7A7F" />
@@ -442,6 +442,7 @@ const Document: FC = () => {
                 </Pie>
                 <Tooltip
                   formatter={(value: number) => `${(value * 100).toFixed(1)}%`}
+                  itemStyle={{ color: 'black' }}
                 />
               </PieChart>
             </ResponsiveContainer>
@@ -455,7 +456,7 @@ const Document: FC = () => {
       space-y-9 px-6 pb-25 desktop:space-x-0 desktop:space-y-[100px] desktop:px-20 desktop:pb-36"
       >
         <div className="mb-6 w-full border-b-2 border-dark-blue pb-1 desktop:mb-0">
-          <Typography as="h2" className=" uppercase text-dark-blue">
+          <Typography as="h3" className=" uppercase text-dark-blue">
             Air District Executive Management (Directors & Above)
           </Typography>
         </div>
@@ -504,6 +505,7 @@ const Document: FC = () => {
                   tickLine={false}
                 />
                 <Tooltip
+                  itemStyle={{ color: 'black' }}
                   formatter={(value: number) => `${(value * 100).toFixed(0)}%`}
                 />
                 <Bar dataKey="Asian" stackId="a" fill="#3368B2" />
@@ -558,6 +560,7 @@ const Document: FC = () => {
                   tickLine={false}
                 />
                 <Tooltip
+                  itemStyle={{ color: 'black' }}
                   formatter={(value: number) => `${(value * 100).toFixed(0)}%`}
                 />
                 <Bar dataKey="Female" stackId="a" fill="#3368B2" />
@@ -636,6 +639,7 @@ const Document: FC = () => {
                 />
                 <Tooltip
                   formatter={(value: number) => `${(value * 100).toFixed(0)}%`}
+                  itemStyle={{ color: 'black' }}
                 />
                 <Bar dataKey="Asian" stackId="a" fill="#3368B2" />
                 <Bar dataKey="White" stackId="a" fill="#7F7A7F" />
@@ -658,14 +662,14 @@ const Document: FC = () => {
           background="white"
           headChildren={<div></div>}
         >
-          <div className="flex h-[310px] w-full flex-col">
+          <div className="flex h-auto w-full flex-col">
             <Typography as="h5" className=" mb-4 border-b-2 pb-2 text-start">
               Bay Area
             </Typography>
             <Typography as="span" className=" mb-4 text-start">
               5 YEAR AVERAGE Ages 18 — 64*
             </Typography>
-            <ResponsiveContainer>
+            <ResponsiveContainer height={300}>
               <PieChart>
                 <Pie
                   data={demographicsData}
@@ -677,7 +681,7 @@ const Document: FC = () => {
                   rotate={'45deg'}
                   fill="#000000"
                   dataKey="value"
-                  startAngle={-270}
+                  startAngle={-355}
                 >
                   {demographicsData.reverse().map((entry, index) => (
                     <Cell
@@ -689,6 +693,7 @@ const Document: FC = () => {
                 </Pie>
                 <Tooltip
                   formatter={(value: number) => `${(value * 100).toFixed(1)}%`}
+                  itemStyle={{ color: 'black' }}
                 />
               </PieChart>
             </ResponsiveContainer>

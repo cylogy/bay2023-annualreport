@@ -48,7 +48,7 @@ const Hero = ({
               src={imageTablet}
               fill
               alt={alt}
-              className="object-cover"
+              className="object-cover object-[0%_45%]"
             />
           </div>
         </AnimatedImage>

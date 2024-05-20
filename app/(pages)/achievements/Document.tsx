@@ -34,7 +34,7 @@ const Document = (props: Props) => {
         <div className="mt-22.5 flex w-full flex-col items-start justify-start place-self-end desktop:mt-40 desktop:max-w-[1200px]">
           <Typography
             as="h3"
-            className="px-15 capitalize text-dark-blue desktop:pl-0"
+            className="px-15 uppercase text-dark-blue desktop:pl-0"
           >
             Building Appliance Rule Amendments
           </Typography>
