@@ -89,7 +89,7 @@ const Document = (props: Props) => {
           </div>
           <Typography
             as="h3"
-            className="mt-25 px-15 capitalize text-dark-blue desktop:pl-0"
+            className="mt-25 px-6 capitalize text-dark-blue desktop:px-15 desktop:pl-0"
           >
             Air Quality Violation Data Tool
           </Typography>

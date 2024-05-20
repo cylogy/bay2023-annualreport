@@ -11,6 +11,8 @@ type Props = {
     hidden: Variant;
     visible: Variant;
   };
+  oneLine?: boolean;
+  centered?: boolean;
 };
 
 const defaultAnimations = {
@@ -28,7 +30,13 @@ const defaultAnimations = {
   },
 };
 
-const Animated = ({ text, as: Tag = 'p', className }: Props) => {
+const Animated = ({
+  text,
+  as: Tag = 'p',
+  className,
+  oneLine,
+  centered,
+}: Props) => {
   return (
     <Tag className={`${className}`}>
       <span className="sr-only">{text}</span>
@@ -40,16 +48,17 @@ const Animated = ({ text, as: Tag = 'p', className }: Props) => {
           hidden: {},
         }}
         aria-hidden
+        className={`${oneLine ? 'flex w-full flex-nowrap whitespace-nowrap' : 'flex-wrap'} ${centered ? 'items-center justify-center' : ''}`}
       >
         {text.split(' ').map((word, index) => (
           <span
             key={`${index}-${word}`}
-            className="flex flex-wrap justify-start tablet-portrait:inline-block tablet-portrait:whitespace-nowrap"
+            className={`flex  justify-start whitespace-nowrap tablet-portrait:inline-block`}
           >
             {word.split('').map((char, index) => (
               <motion.span
                 key={`${index}-${char}`}
-                className="inline-block"
+                className="inline-block flex-nowrap"
                 variants={defaultAnimations}
               >
                 {char}

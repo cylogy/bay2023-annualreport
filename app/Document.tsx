@@ -35,8 +35,10 @@ const Document = (props: Props) => {
           >
             <Animated
               as="h1"
-              className="tablet:text-h1-tablet overflow-hidden whitespace-nowrap font-h1 text-h1-mobile font-h6-desktop uppercase text-white"
+              className=" flex w-full flex-nowrap items-center justify-center overflow-hidden whitespace-nowrap font-h1 text-h1-mobile font-h6-desktop uppercase text-white"
               text="Our Air,"
+              oneLine
+              centered
             />
           </AnimatedTile>
         </div>
@@ -119,6 +121,7 @@ const Document = (props: Props) => {
                   as="h2"
                   className="overflow-hidden whitespace-nowrap font-h6 font-h6-desktop uppercase leading-none text-white desktop:text-h6-tablet"
                   text="2023 Annual Report"
+                  oneLine
                 />
               </div>
             </AnimatedTile>
