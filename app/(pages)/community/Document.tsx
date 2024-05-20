@@ -48,15 +48,15 @@ const Document = (props: Props) => {
         title="Richmond-North Richmond-San Pablo"
         body={() => (
           <Typography as="p">
-            We continued to partner with
-            21 steering committee members that represent Richmond, North
-            Richmond and San Pablo working to develop and finalize the Community
-            Emission Reduction Plan. The plan remains focused on six priority
-            areas that include mobile, public health, marine and rail,
-            commercial and industrial, fuel refining, and land use and urban
-            greening. Within the last year, an additional subset of strategies
-            has been developed that include compliance and enforcement,
-            penalties, emissions inventory improvement and reporting.
+            We continued to partner with 21 steering committee members that
+            represent Richmond, North Richmond and San Pablo working to develop
+            and finalize the Community Emission Reduction Plan. The plan remains
+            focused on six priority areas that include mobile, public health,
+            marine and rail, commercial and industrial, fuel refining, and land
+            use and urban greening. Within the last year, an additional subset
+            of strategies has been developed that include compliance and
+            enforcement, penalties, emissions inventory improvement and
+            reporting.
           </Typography>
         )}
       />
@@ -136,13 +136,13 @@ const Document = (props: Props) => {
         <div className="mt-22.5 flex w-full flex-col desktop:mx-25 desktop:mt-40 desktop:max-w-[855px]">
           <Typography
             as="h2"
-            className="px-15 uppercase text-dark-blue desktop:p-0"
+            className="px-6 uppercase text-dark-blue tablet-portrait:px-15 desktop:p-0"
           >
             AB 617 Community Health Protection Program
           </Typography>
           <Typography
             as="blockquote"
-            className="mb-20 mt-6 px-15 text-dark-blue desktop:p-0"
+            className="mb-20 mt-6 px-6 text-dark-blue tablet-portrait:px-15 desktop:p-0"
           >
             We continued to work in collaboration with community members and
             other stakeholders to{' '}
@@ -230,10 +230,10 @@ const Document = (props: Props) => {
             id="slide1"
             className=" flex min-h-screen w-full flex-col desktop:bg-lighter-green"
           >
-            <div className="flex  w-full justify-center pt-10 desktop:pt-40">
+            <div className="relative flex w-full justify-center overflow-hidden fill-blue  desktop:justify-end">
               <div className="hidden flex-[0.33] desktop:flex">&nbsp;</div>
-              <div className=" flex w-full flex-grow flex-col items-center justify-center desktop:flex-[0.67] desktop:justify-start desktop:pr-15 ">
-                <div className="flex w-full flex-col  space-y-6 desktop:max-w-[1141px] desktop:items-start">
+              <div className=" mt-40 flex w-full flex-grow flex-col items-start justify-center desktop:flex-[0.67] desktop:justify-start ">
+                <div className="mb-10 flex w-full  flex-col space-y-6 desktop:max-w-[1141px] desktop:items-start desktop:pr-15">
                   <Typography
                     as="h3"
                     className="px-6 uppercase text-dark-blue desktop:p-0"
@@ -242,7 +242,7 @@ const Document = (props: Props) => {
                   </Typography>
                   <Typography
                     as="p"
-                    className="my-6 px-6 text-gray desktop:p-0"
+                    className="my-6 px-6 text-dark-gray desktop:p-0"
                   >
                     The grant program funded 33 nonprofits to{' '}
                     <span className="font-bold">
@@ -256,23 +256,23 @@ const Document = (props: Props) => {
                     environmental justice academies and interactive youth
                     advocacy campaigns.
                   </Typography>
-                  <AnimatedImage
-                    key={67}
-                    className="relative flex h-[350px] w-full desktop:h-[531px]"
-                  >
-                    <Image
-                      src="/img/rectangle-255-2-2.jpg"
-                      fill
-                      className="object-cover object-top"
-                      alt="Group of cyclists wearing helmets"
-                    />
-                  </AnimatedImage>
                 </div>
+                <AnimatedImage
+                  key={67}
+                  className="relative flex h-[350px] w-full desktop:h-[531px]"
+                >
+                  <Image
+                    src="/img/rectangle-255-2-2.jpg"
+                    fill
+                    className="object-cover object-top"
+                    alt="Group of cyclists wearing helmets"
+                  />
+                </AnimatedImage>
               </div>
             </div>
             <div className=" flex w-full justify-center desktop:mb-40 desktop:bg-lighter-green desktop:pb-40 desktop:pt-40">
               <InfoCardImage
-                title="Home and School Air Filtration Program"
+                title="HOME AND SCHOOL AIR FILTRATION PROGRAM"
                 body={() => (
                   <Typography as="p">
                     The program engaged with six partners in the Asthma
@@ -303,11 +303,11 @@ const Document = (props: Props) => {
         <Scene pin triggerElement="#slide2">
           <section
             id="slide2"
-            className="flex w-full  justify-start bg-white pt-25 desktop:mb-40"
+            className="relative flex w-full justify-center overflow-hidden fill-blue desktop:h-[1181px] desktop:justify-end"
           >
             <div className="hidden flex-[0.33] desktop:flex">&nbsp;</div>
-            <div className=" flex w-full flex-grow flex-col items-center justify-start desktop:mt-10 desktop:flex-[0.67] desktop:pr-15 ">
-              <div className="flex w-full flex-col  space-y-6 desktop:max-w-[1141px] desktop:items-start">
+            <article className=" flex w-full flex-col items-center justify-center overflow-hidden desktop:flex-[0.67]  desktop:items-end">
+              <div className=" mt-22.5 flex w-full flex-col overflow-hidden desktop:mt-40 desktop:max-w-[1317px] desktop:self-start desktop:pr-10">
                 <Typography
                   as="h3"
                   className="px-6 uppercase text-dark-blue desktop:p-0"
@@ -330,26 +330,26 @@ const Document = (props: Props) => {
                   the CAC held its inaugural retreat, an event focused on
                   environmental justice and community action.
                 </Typography>
-                <AnimatedImage
-                  key={23}
-                  className="relative flex h-[350px] w-full desktop:h-[531px]"
-                >
-                  <Image
-                    src="/img/rectangle-255-3-2.jpg"
-                    fill
-                    className="object-cover object-center"
-                    alt="Women speaking into microphone"
-                  />
-                </AnimatedImage>
               </div>
-            </div>
+              <AnimatedImage
+                key={33}
+                className="relative flex h-[531px] w-full"
+              >
+                <Image
+                  src="/img/rectangle-255-3-2.jpg"
+                  fill
+                  className="object-cover object-center"
+                  alt="Women speaking into microphone"
+                />
+              </AnimatedImage>
+            </article>
           </section>
         </Scene>
         <Scene pin triggerElement="#slide3">
           <>
             <section
               id="slide3"
-              className="z-10 flex w-full justify-center bg-lighter-blue pb-20 desktop:pt-40 "
+              className="z-10 flex w-full justify-center bg-lighter-blue pb-10 desktop:pt-40 "
             >
               <InfoCardImage
                 title="Bay Area Healthy Homes Initiative"
@@ -357,8 +357,8 @@ const Document = (props: Props) => {
                   <Typography as="p">
                     In January 2023, we launched this initiative to improve
                     health outcomes and climate resilience in overburdened
-                    communities in Contra Costa and Alameda counties. The program
-                    brings{' '}
+                    communities in Contra Costa and Alameda counties. The
+                    program brings{' '}
                     <span className="font-bold">
                       {' '}
                       asthma services and home retrofits to address health
@@ -382,7 +382,7 @@ const Document = (props: Props) => {
 
             <section
               id="slide4"
-              className="z-10 flex w-full justify-center bg-lighter-blue py-20 "
+              className="z-10 flex w-full justify-center bg-lighter-blue py-10 "
             >
               <div className="hidden flex-[0.33] desktop:flex">&nbsp;</div>
               <div className=" flex w-full flex-grow flex-col items-center justify-center px-6 desktop:flex-[0.67] desktop:justify-start desktop:pr-15 ">
@@ -393,7 +393,10 @@ const Document = (props: Props) => {
                   >
                     US EPA Regional Climate Planning Grant
                   </Typography>
-                  <Typography as="p" className="my-6 text-gray desktop:p-0">
+                  <Typography
+                    as="p"
+                    className="my-6 text-dark-gray desktop:p-0"
+                  >
                     We secured a $1 million grant from the US EPA’s Climate
                     Pollution Reduction Grant Program to lead the development of
                     a regional climate action plan that incorporates input from

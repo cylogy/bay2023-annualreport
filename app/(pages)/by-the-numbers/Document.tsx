@@ -19,13 +19,13 @@ const slides = [
         <div className="flex w-full flex-col justify-between desktop:flex-row">
           <Typography
             as="h5"
-            className=" mb-4 border-b-2 pb-2 text-start uppercase text-dark-blue desktop:mb-0 desktop:border-b-0 desktop:pb-0"
+            className=" mb-4 border-b-2 pb-2 text-start text-dark-blue desktop:mb-0 desktop:border-b-0 desktop:pb-0"
           >
             Bay Area Permitted Facilities
           </Typography>
         </div>
 
-        <div className="mt-6 flex flex-col desktop:flex-row desktop:justify-between">
+        <div className="mt-6 flex flex-col text-dark-gray desktop:flex-row desktop:justify-between">
           <Typography as="span" className="text-start">
             Refineries
           </Typography>
@@ -33,7 +33,7 @@ const slides = [
             5
           </Typography>
         </div>
-        <div className="mt-6 flex flex-col desktop:flex-row desktop:justify-between">
+        <div className="mt-6 flex flex-col text-dark-gray desktop:flex-row desktop:justify-between">
           <Typography as="span" className="text-start">
             Major Facilities (excludes refineries)
           </Typography>
@@ -41,7 +41,7 @@ const slides = [
             73
           </Typography>
         </div>
-        <div className="mt-6 flex flex-col desktop:flex-row desktop:justify-between">
+        <div className="mt-6 flex flex-col text-dark-gray desktop:flex-row desktop:justify-between">
           <Typography as="span" className="text-start">
             Gasoline Dispensing Facilities
           </Typography>
@@ -49,7 +49,7 @@ const slides = [
             2,264
           </Typography>
         </div>
-        <div className="mt-6 flex flex-col desktop:flex-row desktop:justify-between">
+        <div className="mt-6 flex flex-col text-dark-gray desktop:flex-row desktop:justify-between">
           <Typography as="span" className="text-start">
             All Other Facilities
           </Typography>
@@ -57,31 +57,25 @@ const slides = [
             8,090
           </Typography>
         </div>
-        <div className="mt-6 flex w-full flex-col justify-between border-dark-blue pt-4 desktop:flex-row desktop:border-t-2">
+        <div className="mt-6 flex w-full flex-col justify-between border-dark-blue pt-4 text-dark-gray desktop:flex-row desktop:border-t-2">
           <Typography
             as="h5"
-            className=" border-b-2 border-t-2 pb-2 pt-4 text-start uppercase text-dark-blue desktop:border-0 desktop:pb-0 desktop:pt-0"
+            className=" border-b-2 border-t-2 pb-2 pt-4 text-start desktop:border-0 desktop:pb-0 desktop:pt-0"
           >
             Total Permitted Facilities
           </Typography>
-          <Typography
-            as="h5"
-            className=" mt-2 text-start uppercase text-dark-blue desktop:mt-0"
-          >
+          <Typography as="h5" className=" mt-2 text-start  desktop:mt-0">
             10,432
           </Typography>
         </div>
-        <div className="flex w-full flex-col justify-between border-dark-blue pt-4 desktop:flex-row">
+        <div className="flex w-full flex-col justify-between border-dark-blue pt-4 text-dark-gray desktop:flex-row">
           <Typography
             as="h5"
-            className=" border-b-2 border-t-2 pb-2 pt-4 text-start uppercase text-dark-blue desktop:border-0 desktop:pb-0 desktop:pt-0"
+            className=" border-b-2 border-t-2 pb-2 pt-4 text-start  desktop:border-0 desktop:pb-0 desktop:pt-0"
           >
             Permitted Devices and Operations
           </Typography>
-          <Typography
-            as="h5"
-            className=" mt-2 text-start uppercase text-dark-blue desktop:mt-0"
-          >
+          <Typography as="h5" className=" mt-2 text-start  desktop:mt-0">
             23,325
           </Typography>
         </div>
@@ -91,16 +85,16 @@ const slides = [
   () => (
     <div className="flex flex-col">
       <div className="flex h-full flex-1 flex-col rounded-[20px] border-2 border-dark-blue bg-white p-6 px-6 py-15 text-left text-dark-blue desktop:mx-15 desktop:min-h-[530px] desktop:rounded-[20px] desktop:p-[80px]">
-        <div className="flex w-full flex-col justify-between desktop:flex-row">
+        <div className="flex w-full flex-col justify-between text-dark-gray desktop:flex-row">
           <Typography
             as="h5"
-            className=" mb-4 border-b-2 pb-2 text-start uppercase text-dark-blue desktop:mb-0 desktop:border-b-0 desktop:pb-0"
+            className=" mb-4 border-b-2 pb-2 text-start text-dark-blue desktop:mb-0 desktop:border-b-0 desktop:pb-0"
           >
             New Permit Applications
           </Typography>
         </div>
 
-        <div className="mt-6 flex flex-col desktop:flex-row desktop:justify-between">
+        <div className="mt-6 flex flex-col text-dark-gray desktop:flex-row desktop:justify-between">
           <Typography as="span" className="text-start">
             Major Source Review (Title V)
           </Typography>
@@ -108,7 +102,7 @@ const slides = [
             47
           </Typography>
         </div>
-        <div className="mt-6 flex flex-col desktop:flex-row desktop:justify-between">
+        <div className="mt-6 flex flex-col text-dark-gray desktop:flex-row desktop:justify-between">
           <Typography as="span" className="text-start">
             New Source Review (NSR)
           </Typography>
@@ -116,7 +110,7 @@ const slides = [
             907
           </Typography>
         </div>
-        <div className="mt-6 flex flex-col desktop:flex-row desktop:justify-between">
+        <div className="mt-6 flex flex-col text-dark-gray desktop:flex-row desktop:justify-between">
           <Typography as="span" className="text-start">
             All other applications
           </Typography>
@@ -127,13 +121,13 @@ const slides = [
         <div className="mt-6 flex w-full flex-col justify-between border-dark-blue pt-4 desktop:flex-row desktop:border-t-2">
           <Typography
             as="h5"
-            className=" border-b-2 border-t-2 pb-2 pt-4 text-start uppercase text-dark-blue desktop:border-0 desktop:pb-0 desktop:pt-0"
+            className=" border-b-2 border-t-2 pb-2 pt-4 text-start  text-dark-gray desktop:border-0 desktop:pb-0 desktop:pt-0"
           >
             Total New Permits Applications
           </Typography>
           <Typography
             as="h5"
-            className=" mt-2 text-start uppercase text-dark-blue desktop:mt-0"
+            className=" mt-2 text-start  text-dark-gray desktop:mt-0"
           >
             996
           </Typography>
@@ -147,12 +141,12 @@ const slides = [
         <div className="flex w-full flex-col justify-between desktop:flex-row">
           <Typography
             as="h5"
-            className=" mb-4 border-b-2 pb-2 text-start uppercase text-dark-blue desktop:mb-0 desktop:border-b-0 desktop:pb-0"
+            className=" mb-4 border-b-2 pb-2 text-start text-dark-blue desktop:mb-0 desktop:border-b-0 desktop:pb-0"
           >
             Application Health Risk Assessments
           </Typography>
         </div>
-        <div className="mt-6 flex flex-col desktop:flex-row desktop:justify-between">
+        <div className="mt-6 flex flex-col text-dark-gray desktop:flex-row desktop:justify-between">
           <Typography as="span" className="text-start">
             Diesel Engines
           </Typography>
@@ -160,7 +154,7 @@ const slides = [
             243
           </Typography>
         </div>
-        <div className="mt-6 flex flex-col desktop:flex-row desktop:justify-between">
+        <div className="mt-6 flex flex-col text-dark-gray desktop:flex-row desktop:justify-between">
           <Typography as="span" className="text-start">
             Gasoline Dispensing Facilities
           </Typography>
@@ -168,7 +162,7 @@ const slides = [
             8
           </Typography>
         </div>
-        <div className="mt-6 flex flex-col desktop:flex-row desktop:justify-between">
+        <div className="mt-6 flex flex-col text-dark-gray desktop:flex-row desktop:justify-between">
           <Typography as="span" className="text-start">
             Other Commercial/Industrial Facilities
           </Typography>
@@ -179,13 +173,13 @@ const slides = [
         <div className="mt-6 flex w-full flex-col justify-between border-dark-blue pt-4 desktop:flex-row desktop:border-t-2">
           <Typography
             as="h5"
-            className=" border-b-2 border-t-2 pb-2 pt-4 text-start uppercase text-dark-blue desktop:border-0 desktop:pb-0 desktop:pt-0"
+            className=" border-b-2 border-t-2 pb-2 pt-4 text-start  text-dark-gray desktop:border-0 desktop:pb-0 desktop:pt-0"
           >
             Total Health Risk Assessments
           </Typography>
           <Typography
             as="h5"
-            className=" mt-2 text-start uppercase text-dark-blue desktop:mt-0"
+            className=" mt-2 text-start  text-dark-gray desktop:mt-0"
           >
             307
           </Typography>
@@ -449,10 +443,9 @@ const Document: FC = () => {
           | Air District 2023 Annual Report
         </title>
       </Head>
-
       <Hero
         title="By the Numbers"
-        description="How do we enforce and improve air quality protections?"
+        description="How do we track and improve air quality protections?"
         image="/img/number-page-small.png"
         imageTablet="/img/number-page-tablet.png"
         background="bg-dark-blue text-white"
@@ -474,20 +467,29 @@ const Document: FC = () => {
           options={airPolutionComplaintsData}
           footerTitles="*includes flaring, generators, and unpermitted sources"
           background="white"
+          textColor="dark-gray"
         />
 
         <SectionGraph
           title="Compliance Inspections"
           options={complianceInspectionsData}
           background="white"
+          textColor="dark-gray"
         />
         <SubSectionGraph
           title="PENALTIES AND VIOLATIONS"
           options={PenaltiesViolationsData}
           background="bg-white"
+          textColor="dark-gray"
         />
       </section>
-      <section className="relative mt-12 hidden w-full bg-transparent pl-15 desktop:flex desktop:pl-6 desktop:pt-[160px]">
+      <section className="relative mt-12 hidden w-full flex-col bg-transparent pl-15 desktop:flex desktop:pl-6 desktop:pt-[160px]">
+        <Typography
+          as="h2"
+          className=" ml-18 mb-15 h-fit border-b-2 border-dark-blue pb-2 uppercase text-dark-blue"
+        >
+          PERMITTING ACTIVITY
+        </Typography>
         <Carousel
           slideComponents={slides}
           breakpoints={{
@@ -500,45 +502,53 @@ const Document: FC = () => {
         />
       </section>
       <section className="relative mt-12 flex w-full flex-col space-y-[60px] px-6 py-15 desktop:hidden desktop:px-0">
+        <Typography
+          as="h2"
+          className=" h-fit border-b-2 border-dark-blue pb-2 uppercase text-dark-blue"
+        >
+          PERMITTING ACTIVITY
+        </Typography>
         {slides.map((Component, index) => (
           <Component key={`slides-${index}`} />
         ))}
       </section>
       <section
         className="relative flex w-full flex-col justify-center
-      space-y-9 bg-transparent px-6 py-25 desktop:space-x-0 desktop:space-y-[100px] desktop:px-20 desktop:py-36"
+      gap-y-9 bg-transparent px-6 pt-25 desktop:gap-y-[100px] desktop:space-x-0 desktop:px-20 desktop:py-36"
       >
         <SectionGraph
-          title="Division Directors and Officers"
+          title="SOURCE TEST ACTIVITY"
           options={[]}
           background="blue"
         >
-          <Typography as="h5" className="mb-6 uppercase">
+          <Typography as="h5" className="mb-6">
             Number of Source Tests and Reviews in 2023
           </Typography>
-          {sourceTestData.map((section, index) => (
-            <div
-              key={index}
-              className="mb-4 flex flex-col desktop:w-full desktop:justify-between"
-            >
-              {section.items.map((item, idx) => (
-                <div
-                  key={idx}
-                  className={`flex w-full flex-col justify-between space-y-1 desktop:flex-row desktop:space-x-4 ${item?.rigth && ' desktop:pl-9 '}`}
-                >
-                  <Typography
-                    as="span"
-                    className="capitalize desktop:mt-1 desktop:text-[21px]"
+          <div className="flex flex-col gap-y-9">
+            {sourceTestData.map((section, index) => (
+              <div
+                key={index}
+                className=" flex flex-col desktop:w-full desktop:justify-between"
+              >
+                {section.items.map((item, idx) => (
+                  <div
+                    key={idx}
+                    className={`flex w-full flex-col justify-between space-y-1 desktop:flex-row desktop:space-x-4 ${item?.rigth && ' desktop:pl-9 '}`}
                   >
-                    {item.label}
-                  </Typography>
-                  <Typography as="h5" className="uppercase">
-                    {item.value}
-                  </Typography>
-                </div>
-              ))}
-            </div>
-          ))}
+                    <Typography
+                      as="span"
+                      className="capitalize desktop:mt-1 desktop:text-[21px]"
+                    >
+                      {item.label}
+                    </Typography>
+                    <Typography as="h5" className="uppercase">
+                      {item.value}
+                    </Typography>
+                  </div>
+                ))}
+              </div>
+            ))}
+          </div>
 
           <div className="my-6 w-full border-b-2" />
 
@@ -568,7 +578,6 @@ const Document: FC = () => {
           </div>
         </SectionGraph>
       </section>
-
       <section
         className="relative flex w-full flex-col justify-center
       space-y-9 bg-transparent px-6 py-25 desktop:space-x-0 desktop:space-y-[100px] desktop:px-20 desktop:py-36"
@@ -585,37 +594,37 @@ const Document: FC = () => {
           background="white"
         >
           <div className="mb-4 flex flex-col desktop:mb-6 desktop:w-full desktop:justify-between">
-            <Typography as="h5" className="uppercase">
+            <Typography as="h5" className="">
               Rules Adopted or Amended
             </Typography>
-            <Typography as="h5" className="mt-6 uppercase">
+            <Typography as="h5" className="mt-6 ">
               March 15, 2023 - Building Appliance Amendments
             </Typography>
             <Typography
               as="span"
-              className="mt-2 pb-1 capitalize desktop:text-[21px]"
+              className="mt-2 pb-1 capitalize text-dark-gray  desktop:text-[21px]"
             >
               Regulation 9: Inorganic Gaseous Pollutants, Rule 4: Nitrogen
               Oxides from Fan Type Central Furnaces, and Rule 6: Nitrogen Oxides
               Emissions from Natural Gas-Fired Boilers and Water Heaters
             </Typography>
 
-            <Typography as="h5" className="mt-6 uppercase">
+            <Typography as="h5" className="mt-6 ">
               June 7, 2023 - Fee Amendments
             </Typography>
             <Typography
               as="span"
-              className="mt-2 pb-1 capitalize desktop:text-[21px]"
+              className="mt-2 pb-1 capitalize text-dark-gray  desktop:text-[21px]"
             >
               Regulation 3: Fees
             </Typography>
 
-            <Typography as="h5" className="mt-6 uppercase">
+            <Typography as="h5" className="mt-6 ">
               December 20, 2023 - Refinery Wastewater Systems Amendments
             </Typography>
             <Typography
               as="span"
-              className="mt-2 pb-1 capitalize desktop:text-[21px]"
+              className="mt-2 pb-1 capitalize text-dark-gray  desktop:text-[21px]"
             >
               Regulation 8: Organic Compounds, Rule 8: Wastewater Collection and
               Separation Systems
@@ -623,7 +632,6 @@ const Document: FC = () => {
           </div>
         </SectionGraph>
       </section>
-
       <Navigation prevLink="/incentives" nextLink="/advocacy" />
     </div>
   );

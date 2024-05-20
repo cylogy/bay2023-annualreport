@@ -39,15 +39,12 @@ const Document: FC = () => {
             </Typography>
           </div>
 
-          <Typography
-            as="h5"
-            className=" mt-10 text-start uppercase text-dark-blue"
-          >
+          <Typography as="h5" className=" mt-10 text-start text-dark-blue">
             Estimated Annual Emissions Reduction for the Projects Funded
             (tons/year)
           </Typography>
 
-          <div className="mt-6 flex flex-col desktop:flex-row desktop:justify-between">
+          <div className="mt-6 flex flex-col text-dark-gray desktop:flex-row desktop:justify-between">
             <Typography as="span" className="text-start">
               Oxides of Nitrogen (NOx)
             </Typography>
@@ -55,7 +52,7 @@ const Document: FC = () => {
               17.2
             </Typography>
           </div>
-          <div className="mt-6 flex flex-col desktop:flex-row desktop:justify-between">
+          <div className="mt-6 flex flex-col text-dark-gray desktop:flex-row desktop:justify-between">
             <Typography as="span" className="text-start">
               Reactive Organic Compounds (ROG)
             </Typography>
@@ -63,7 +60,7 @@ const Document: FC = () => {
               1.9
             </Typography>
           </div>
-          <div className="mt-6 flex flex-col desktop:flex-row desktop:justify-between">
+          <div className="mt-6 flex flex-col text-dark-gray desktop:flex-row desktop:justify-between">
             <Typography as="span" className="text-start">
               Particulate Matter (PM10)
             </Typography>
@@ -74,13 +71,13 @@ const Document: FC = () => {
           <div className="mt-6 flex w-full flex-col justify-between border-dark-blue pt-4 desktop:flex-row desktop:border-t-2">
             <Typography
               as="h5"
-              className=" border-b-2 border-t-2 pb-2 pt-4 text-start uppercase text-dark-blue desktop:border-0 desktop:pb-0 desktop:pt-0"
+              className=" border-b-2 border-t-2 pb-2 pt-4 text-start text-dark-gray desktop:border-0 desktop:pb-0 desktop:pt-0"
             >
               Total
             </Typography>
             <Typography
               as="h5"
-              className=" mt-2 text-start uppercase text-dark-blue desktop:mt-0"
+              className=" mt-2 text-start uppercase text-dark-gray desktop:mt-0"
             >
               20.3
             </Typography>
@@ -96,7 +93,7 @@ const Document: FC = () => {
         >
           On-Road Vehicles and Infrastructure
         </Typography>
-        <div className="flex h-full flex-1 flex-col rounded-[20px] border-2 border-dark-blue bg-white p-6 px-6 py-15 text-left text-dark-blue desktop:mx-15 desktop:rounded-[20px] desktop:p-[80px]">
+        <div className="flex h-full flex-1 flex-col rounded-[20px] border-2 border-dark-gray bg-white p-6 px-6 py-15 text-left text-dark-blue desktop:mx-15 desktop:rounded-[20px] desktop:p-[80px]">
           <div className="flex w-full flex-col justify-between border-dark-blue pb-4 desktop:flex-row desktop:border-b-2">
             <Typography
               as="h5"
@@ -112,15 +109,12 @@ const Document: FC = () => {
             </Typography>
           </div>
 
-          <Typography
-            as="h5"
-            className=" mt-10 text-start uppercase text-dark-blue"
-          >
+          <Typography as="h5" className=" mt-10 text-start text-dark-blue">
             Estimated Annual Emissions Reduction for the Projects funded
             (tons/year)
           </Typography>
 
-          <div className="mt-6 flex flex-col desktop:flex-row desktop:justify-between">
+          <div className="mt-6 flex flex-col text-dark-gray desktop:flex-row desktop:justify-between">
             <Typography as="span" className="text-start">
               NOx
             </Typography>
@@ -128,7 +122,7 @@ const Document: FC = () => {
               3.0
             </Typography>
           </div>
-          <div className="mt-6 flex flex-col desktop:flex-row desktop:justify-between">
+          <div className="mt-6 flex flex-col text-dark-gray desktop:flex-row desktop:justify-between">
             <Typography as="span" className="text-start">
               ROG
             </Typography>
@@ -136,7 +130,7 @@ const Document: FC = () => {
               0.3
             </Typography>
           </div>
-          <div className="mt-6 flex flex-col desktop:flex-row desktop:justify-between">
+          <div className="mt-6 flex flex-col text-dark-gray desktop:flex-row desktop:justify-between">
             <Typography as="span" className="text-start">
               PM10
             </Typography>
@@ -144,16 +138,16 @@ const Document: FC = () => {
               0.0
             </Typography>
           </div>
-          <div className="mt-6 flex w-full flex-col justify-between border-dark-blue pt-4 desktop:flex-row desktop:border-t-2">
+          <div className="mt-6 flex w-full flex-col justify-between border-dark-gray pt-4 text-dark-gray desktop:flex-row desktop:border-t-2">
             <Typography
               as="h5"
-              className=" border-b-2 border-t-2 pb-2 pt-4 text-start uppercase text-dark-blue desktop:border-0 desktop:pb-0 desktop:pt-0"
+              className=" border-b-2 border-t-2 pb-2 pt-4 text-start uppercase desktop:border-0 desktop:pb-0 desktop:pt-0"
             >
               Total
             </Typography>
             <Typography
               as="h5"
-              className=" mt-2 text-start uppercase text-dark-blue desktop:mt-0"
+              className=" mt-2 text-start uppercase desktop:mt-0"
             >
               20.3
             </Typography>
@@ -185,15 +179,12 @@ const Document: FC = () => {
             </Typography>
           </div>
 
-          <Typography
-            as="h5"
-            className=" mt-10 text-start uppercase text-dark-blue"
-          >
+          <Typography as="h5" className=" mt-10 text-start text-dark-blue">
             Estimated Annual Emissions Reduction for the Projects Funded
             (tons/year)
           </Typography>
 
-          <div className="mt-6 flex flex-col desktop:flex-row desktop:justify-between">
+          <div className="mt-6 flex flex-col text-dark-gray desktop:flex-row desktop:justify-between">
             <Typography as="span" className="text-start">
               NOx
             </Typography>
@@ -201,7 +192,7 @@ const Document: FC = () => {
               7.2
             </Typography>
           </div>
-          <div className="mt-6 flex flex-col desktop:flex-row desktop:justify-between">
+          <div className="mt-6 flex flex-col text-dark-gray desktop:flex-row desktop:justify-between">
             <Typography as="span" className="text-start">
               ROG
             </Typography>
@@ -209,7 +200,7 @@ const Document: FC = () => {
               8.9
             </Typography>
           </div>
-          <div className="mt-6 flex flex-col desktop:flex-row desktop:justify-between">
+          <div className="mt-6 flex flex-col text-dark-gray desktop:flex-row desktop:justify-between">
             <Typography as="span" className="text-start">
               PM10
             </Typography>
@@ -217,16 +208,16 @@ const Document: FC = () => {
               22.6
             </Typography>
           </div>
-          <div className="mt-6 flex w-full flex-col justify-between border-dark-blue pt-4 desktop:flex-row desktop:border-t-2">
+          <div className="mt-6 flex w-full flex-col justify-between border-dark-gray pt-4 desktop:flex-row desktop:border-t-2">
             <Typography
               as="h5"
-              className=" border-b-2 border-t-2 pb-2 pt-4 text-start uppercase text-dark-blue desktop:border-0 desktop:pb-0 desktop:pt-0"
+              className=" border-b-2 border-t-2 pb-2 pt-4 text-start uppercase text-dark-gray desktop:border-0 desktop:pb-0 desktop:pt-0"
             >
               Total
             </Typography>
             <Typography
               as="h5"
-              className=" mt-2 text-start uppercase text-dark-blue desktop:mt-0"
+              className=" mt-2 text-start uppercase text-dark-gray desktop:mt-0"
             >
               38.7
             </Typography>
@@ -258,15 +249,12 @@ const Document: FC = () => {
             </Typography>
           </div>
 
-          <Typography
-            as="h5"
-            className=" mt-10 text-start uppercase text-dark-blue"
-          >
+          <Typography as="h5" className=" mt-10 text-start text-dark-blue">
             Estimated Annual Emissions Reduction for the Projects Funded
             (tons/year)
           </Typography>
 
-          <div className="mt-6 flex flex-col desktop:flex-row desktop:justify-between">
+          <div className="mt-6 flex flex-col text-dark-gray desktop:flex-row desktop:justify-between">
             <Typography as="span" className="text-start">
               NOx
             </Typography>
@@ -274,7 +262,7 @@ const Document: FC = () => {
               12.7
             </Typography>
           </div>
-          <div className="mt-6 flex flex-col desktop:flex-row desktop:justify-between">
+          <div className="mt-6 flex flex-col text-dark-gray desktop:flex-row desktop:justify-between">
             <Typography as="span" className="text-start">
               ROG
             </Typography>
@@ -282,7 +270,7 @@ const Document: FC = () => {
               15.4
             </Typography>
           </div>
-          <div className="mt-6 flex flex-col desktop:flex-row desktop:justify-between">
+          <div className="mt-6 flex flex-col text-dark-gray desktop:flex-row desktop:justify-between">
             <Typography as="span" className="text-start">
               PM10
             </Typography>
@@ -290,16 +278,16 @@ const Document: FC = () => {
               38.1
             </Typography>
           </div>
-          <div className="mt-6 flex w-full flex-col justify-between border-dark-blue pt-4 desktop:flex-row desktop:border-t-2">
+          <div className="mt-6 flex w-full flex-col justify-between border-dark-gray pt-4 desktop:flex-row desktop:border-t-2">
             <Typography
               as="h5"
-              className=" border-b-2 border-t-2 pb-2 pt-4 text-start uppercase text-dark-blue desktop:border-0 desktop:pb-0 desktop:pt-0"
+              className=" border-b-2 border-t-2 pb-2 pt-4 text-start uppercase text-dark-gray desktop:border-0 desktop:pb-0 desktop:pt-0"
             >
               Total
             </Typography>
             <Typography
               as="h5"
-              className=" mt-2 text-start uppercase text-dark-blue desktop:mt-0"
+              className=" mt-2 text-start uppercase text-dark-gray desktop:mt-0"
             >
               66.2
             </Typography>
@@ -345,7 +333,8 @@ const Document: FC = () => {
             Climate Tech Finance
           </Typography>
           <Typography as="p" className=" mt-6 text-dark-blue">
-          This year, in partnership with iBank, our Climate Tech Finance program took significant steps in
+            This year, in partnership with iBank, our Climate Tech Finance
+            program took significant steps in
             <span className="font-bold">
               {' '}
               endorsing sustainable technological advancements.
@@ -355,16 +344,18 @@ const Document: FC = () => {
       </TextBlock>
       <TextBlock>
         <div className="flex w-full flex-col items-start justify-start place-self-end desktop:max-w-[75%]">
-          <Typography as="p" className="px-15 text-dark-gray desktop:pl-0">
+          <Typography
+            as="p"
+            className="tablet-portait:px-15 px-6 text-dark-gray desktop:pl-0"
+          >
             We awarded a loan guarantee to
-            <span className="font-bold"> SPARKZ</span>
-            , whose energy storage solution reduces the cost of domestic lithium
-            battery production by eliminating the cobalt and nickel
-            traditionally used in their manufacturing. The pioneering process
-            developed by SPARKZ not only lowers the cost of lithium-ion
-            batteries, it removes environmental concerns around mining cobalt,
-            and reduces constrictions created by a foreign supply chain. Another
-            loan guarantee was awarded to
+            <span className="font-bold"> SPARKZ</span>, whose energy storage
+            solution reduces the cost of domestic lithium battery production by
+            eliminating the cobalt and nickel traditionally used in their
+            manufacturing. The pioneering process developed by SPARKZ not only
+            lowers the cost of lithium-ion batteries, it removes environmental
+            concerns around mining cobalt, and reduces constrictions created by
+            a foreign supply chain. Another loan guarantee was awarded to
             <span className="font-bold"> EV Life</span>, a startup whose goal is
             making electric vehicles (EVs) more accessible by spearheading
             solutions to eliminate the 'green premium' — the additional cost
@@ -385,11 +376,14 @@ const Document: FC = () => {
         <div className="mt-10 flex w-full flex-col items-start justify-start place-self-end desktop:max-w-[75%]">
           <Typography
             as="h2"
-            className="break-all px-15 capitalize text-dark-blue desktop:pl-0"
+            className="tablet-portait:px-15 break-all px-6 uppercase text-dark-blue desktop:pl-0"
           >
-            Building Appliance Rule Amendments
+            Supporting Electric Vehicle Adoption
           </Typography>
-          <Typography as="p" className="mt-6 px-15 text-dark-gray desktop:pl-0">
+          <Typography
+            as="p"
+            className="tablet-portait:px-15 mt-6 px-6 text-dark-gray desktop:pl-0"
+          >
             We continued our commitment to accelerating electric vehicle
             adoption in the Bay Area. The
             <span className="font-bold"> Charge! Program </span>
@@ -408,7 +402,10 @@ const Document: FC = () => {
             relaunched in Fall 2023 with increased grant award amounts and will
             expand zip code eligibility to all Bay Area residents in 2024.
           </Typography>
-          <Typography as="p" className="mt-4 px-15 text-dark-gray desktop:pl-0">
+          <Typography
+            as="p"
+            className="tablet-portait:px-15 mt-4 px-6 text-dark-gray desktop:pl-0"
+          >
             Additionally, we were awarded nearly $3 million in funding from the
             California Energy Commission (CEC) to expand equitable EV charging
             across the Bay Area. We are working with project partners and
@@ -445,7 +442,7 @@ const Document: FC = () => {
         />
       </section>
       <section className="relative flex w-full flex-col justify-center space-y-9 place-self-end px-6  desktop:max-w-[75%] desktop:space-y-0 desktop:px-0 desktop:pr-15">
-        <Typography as="h2" className="capitalize text-dark-blue">
+        <Typography as="h2" className="uppercase text-dark-blue">
           Clean Ports
         </Typography>
         <Typography as="p" className="pt-6 text-dark-gray">
@@ -467,7 +464,7 @@ const Document: FC = () => {
         />
       </section>
 
-      <section className="relative mt-6 flex w-full flex-col justify-center place-self-end py-25 desktop:mt-0 desktop:space-y-0 desktop:px-0 desktop:py-36 desktop:pr-15">
+      <section className="relative mt-6 flex w-full flex-col justify-center place-self-end desktop:mt-0 desktop:space-y-0 desktop:px-0 desktop:py-36 desktop:pr-15">
         <InfoCardText
           firstTitle="$30M"
           secondTitle="Heavy-Duty Vehicle and Equipment Electric Charging Infrastructure"
@@ -485,13 +482,20 @@ const Document: FC = () => {
           position="rigth"
         />
       </section>
-      <section className="relative mt-12 hidden w-full bg-transparent pl-15 desktop:flex desktop:py-[160px] desktop:pl-6">
+      <section className="relative mt-12 hidden w-full flex-col bg-transparent pl-15 desktop:flex desktop:pl-6 desktop:pt-[160px]">
         <Image
           src="/img/Frame 19849.png"
           alt="Close-up of foliage"
-          className="-z-[5] flex object-top"
+          className="-z-[5] flex object-cover object-top"
           fill
         />
+        <Typography
+          as="h3"
+          className=" mb-15 ml-15 h-fit border-b-2 border-dark-blue pb-2 uppercase text-dark-blue"
+        >
+          2023 EMISSION REDUCTIONS FROM AIR DISTRICT INCENTIVE PROJECTS
+        </Typography>
+
         <Carousel
           slideComponents={slides}
           breakpoints={{
@@ -503,13 +507,20 @@ const Document: FC = () => {
           }}
         />
       </section>
-      <section className="relative mt-12 flex w-full flex-col space-y-[60px] px-6 py-15 desktop:hidden desktop:px-0">
+      <section className="relative flex w-full flex-col space-y-[60px] px-6 py-15 desktop:hidden desktop:px-0">
         <Image
           src="/img/Frame 19854.png"
           alt="Close-up of foliage"
-          className="-z-[5] flex object-top"
+          className="-z-[5] flex object-cover object-top"
           fill
         />
+        <Typography
+          as="h3"
+          className=" h-fit border-b-2 border-dark-blue pb-2 uppercase text-dark-blue"
+        >
+          2023 EMISSION REDUCTIONS FROM AIR DISTRICT INCENTIVE PROJECTS
+        </Typography>
+
         {slides.map((Component, index) => (
           <Component key={`slides-${index}`} />
         ))}

@@ -15,6 +15,7 @@ interface Props {
   background: 'white' | 'dark-blue' | 'light-blue' | 'blue';
   children?: React.ReactNode;
   headChildren?: React.ReactNode;
+  textColor?: 'dark-blue' | 'dark-gray';
 }
 
 const index = ({
@@ -24,12 +25,17 @@ const index = ({
   background,
   children,
   headChildren,
+  textColor = 'dark-blue',
 }: Props) => {
   const cardColor = {
     white: 'bg-white text-dark-blue',
     'dark-blue': 'bg-dark-blue text-white',
     'light-blue': 'bg-light-blue text-white',
     blue: 'bg-blue text-white',
+  };
+  const textColorObject = {
+    'dark-gray': 'text-dark-gray',
+    'dark-blue': 'text-dark-blue',
   };
 
   const selectedCardColor = cardColor[background];
@@ -38,15 +44,15 @@ const index = ({
       className={`
     mb-25 flex w-full flex-col  
     desktop:flex-row desktop:justify-between desktop:space-x-9 
-    ${!children ? 'mt-15 px-6' : 'mt-6'}
+    ${!children ? 'mt-15' : 'mt-6'}
     `}
     >
       {headChildren ? (
         headChildren
       ) : (
         <Typography
-          as="h2"
-          className="h-fit w-full border-b-2 border-dark-blue pb-2 uppercase text-dark-blue"
+          as="h3"
+          className={`h-fit w-full border-b-2 border-dark-blue pb-2 text-h3-tablet uppercase text-dark-blue `}
         >
           {title}
         </Typography>
@@ -56,7 +62,7 @@ const index = ({
         className={`
         my-9 w-full rounded-[20px] border-2  
         p-6 desktop:my-0 desktop:min-w-[50%] desktop:px-20 desktop:py-15   
-        ${children ? 'desktop:m-0 desktop:max-w-[50%] ' : ' max-w-[50%] '}  
+        ${children ? 'desktop:m-0 desktop:max-w-[50%] ' : ' desktop:max-w-[50%] '}  
         ${selectedCardColor}
         `}
       >
@@ -77,9 +83,9 @@ const index = ({
                     {item.title}
                   </Typography>
                   <div
-                    className={`grid ${options[0].percents ? 'grid-cols-2' : 'grid-cols-1'} max-w-[170px] desktop:max-w-none `}
+                    className={`grid ${options[0].percents ? 'grid-cols-2' : 'grid-cols-1'} max-w-[170px] desktop:max-w-none  ${textColorObject[textColor]}`}
                   >
-                    <Typography as="h5" className="uppercase text-dark-blue">
+                    <Typography as="h5" className="uppercase ">
                       {item.value}
                     </Typography>
                     {item.percents && (

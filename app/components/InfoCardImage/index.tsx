@@ -29,7 +29,9 @@ const InfoCardImage = ({
       <div
         className={`flex-0 flex flex-shrink flex-col space-y-6 pt-15 text-left desktop:p-15 ${imageFirst ? 'order-2 desktop:order-2' : ' order-2 desktop:order-1'}`}
       >
-        <Typography as="h3">{title}</Typography>
+        <Typography as="h3" className="uppercase">
+          {title}
+        </Typography>
         {body()}
       </div>
       <AnimatedImage

@@ -27,7 +27,10 @@ const Document = (props: Props) => {
           <Typography as="h2" className=" capitalize text-dark-blue">
             EXECUTIVE SUMMARY 2023
           </Typography>
-          <Typography as="p" className=" mt-6 text-dark-blue">
+          <Typography
+            as="p"
+            className=" mt-6  text-pull-quote-mobile leading-10 text-dark-blue"
+          >
             This year was a year of{' '}
             <span className="font-bold">renewal and change</span> at the Air
             District. I joined as Executive Officer in February and am joined by
@@ -44,7 +47,7 @@ const Document = (props: Props) => {
         <div className="flex w-full flex-col items-start justify-start place-self-end desktop:max-w-[1200px]">
           <Typography
             as="p"
-            className="mb-6 px-5 text-gray tablet-portrait:px-15 tablet-portrait:pb-15 desktop:mt-10"
+            className="mb-6 px-5 text-body-text-tablet text-dark-gray tablet-portrait:px-15 tablet-portrait:pb-15 desktop:mt-10"
           >
             <span className="font-bold">
               Our mission is to significantly reduce the disproportionate levels
@@ -89,9 +92,9 @@ const Document = (props: Props) => {
         </div>
         <AnimatedTile
           id={10}
-          className="flex h-full w-full flex-col items-start justify-center bg-blue px-20 py-10 text-white desktop:w-1/2 desktop:p-20"
+          className="flex h-full w-full flex-col items-start justify-center bg-blue px-6 py-10 text-white tablet-portrait:px-15 desktop:w-1/2 desktop:p-20"
         >
-          <Typography as="h1" className="text-left">
+          <Typography as="h2" className=" text-left text-h1-desktop">
             &ldquo;
           </Typography>
           <Typography
@@ -104,8 +107,11 @@ const Document = (props: Props) => {
         </AnimatedTile>
       </section>
       <TextBlock align="right">
-        <div className="flex w-full flex-col items-start justify-start place-self-end px-5 tablet-portrait:px-15 desktop:max-w-[1200px]">
-          <Typography as="p" className="mt-10 text-gray tablet-portrait:pb-15 ">
+        <div className="flex w-full flex-col items-start justify-start place-self-end px-5 text-body-text-tablet tablet-portrait:px-15 desktop:max-w-[1200px]">
+          <Typography
+            as="p"
+            className="mt-10 text-dark-gray tablet-portrait:pb-15 "
+          >
             As part of our efforts to increase transparency around our
             enforcement work, we developed an online tool that allows the public
             to view air quality violations and penalties issued to local

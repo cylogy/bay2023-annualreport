@@ -7,7 +7,7 @@ type Props = {
   firstBody: string;
   secondBody: string;
   backgroundColor: 'white' | 'dark-blue' | 'blue';
-  position: 'rigth' | 'left'
+  position: 'rigth' | 'left';
 };
 
 export const InfoCardText = ({
@@ -16,7 +16,7 @@ export const InfoCardText = ({
   firstBody,
   secondBody,
   backgroundColor = 'blue',
-  position
+  position,
 }: Props) => {
   const styles = {
     white: 'bg-white',
@@ -32,60 +32,57 @@ export const InfoCardText = ({
   const directionPositon = {
     rigth: 'flex-col desktop:flex-row',
     left: 'flex-col-reverse desktop:flex-row-reverse',
-  }
+  };
 
   const primaryRoundedPositon = {
     rigth: 'border rounded-r-[20px]',
-    left: 'border rounded-l-[20px]',    
-  }
+    left: 'border rounded-l-[20px]',
+  };
 
   const variantSizeClass = styles[backgroundColor]; // handle case where Tag not found
   const cardPosition = positionStyles[position];
-  const directionPositonSelcted = directionPositon[position]
-  const primaryRoundedPositonSelected = primaryRoundedPositon[position]
+  const directionPositonSelcted = directionPositon[position];
+  const primaryRoundedPositonSelected = primaryRoundedPositon[position];
 
   return (
-    <article className={`${variantSizeClass} desktop:bg-transparent py-15 px-6 flex ${variantSizeClass} ${directionPositonSelcted}`}>
-         <div className={`my-15 desktop:min-h-fit flex flex-col desktop:justify-between desktop:hidden`}>
-            <Typography
-                as="h3"
-                className="text-white"
-            >
-              {secondTitle}
-            </Typography>
-            <Typography
-                as="p"
-                className="text-white mt-6 desktop:mt-0"
-            >
-                {secondBody}
-            </Typography>
-        </div>
-        <div className={`p-10 min-h-[370px] desktop:min-h-[456px] desktop:flex desktop:flex-col hidden h-full ${variantSizeClass} ${cardPosition}`}>
-            <Typography
-                as="h3"
-                className="text-white"
-            >
-              {secondTitle}
-            </Typography>
-            <Typography
-                as="p"
-                className="text-white mt-6 desktop:mt-0 desktop:text-[21px] desktop:pt-6"
-            >
-                {secondBody}
-            </Typography>
-        </div>
-        <div
-        className={`desktop:min-h-[456px] flex min-h-[370px] flex-col justify-between p-10 bg-white border rounded-[20px] border-dark-blue text-dark-blue desktop:hidden`}
+    <article
+      className={`${variantSizeClass} flex px-6 py-15 desktop:bg-transparent ${variantSizeClass} ${directionPositonSelcted}`}
+    >
+      <div
+        className={`my-15 flex flex-col desktop:hidden desktop:min-h-fit desktop:justify-between`}
+      >
+        <Typography as="h3" className="uppercase text-white">
+          {secondTitle}
+        </Typography>
+        <Typography as="p" className="mt-6 text-white desktop:mt-0">
+          {secondBody}
+        </Typography>
+      </div>
+      <div
+        className={`hidden h-full min-h-[370px] p-10 desktop:flex desktop:min-h-[456px] desktop:flex-col ${variantSizeClass} ${cardPosition}`}
+      >
+        <Typography as="h3" className="uppercase text-white">
+          {secondTitle}
+        </Typography>
+        <Typography
+          as="p"
+          className="mt-6 text-white desktop:mt-0 desktop:pt-6 desktop:text-[21px]"
         >
-            <Typography as="h2">{firstTitle}</Typography>
-            <Typography as="p">{firstBody}</Typography>
-        </div>
-        <div
-        className={`desktop:min-h-[456px] desktop:flex h-full min-h-[370px] flex-col justify-between p-10  border-dark-blue text-dark-blue hidden ${primaryRoundedPositonSelected}`}
-        >
-            <Typography as="h2">{firstTitle}</Typography>
-            <Typography as="p">{firstBody}</Typography>
-        </div>
+          {secondBody}
+        </Typography>
+      </div>
+      <div
+        className={`flex min-h-[370px] flex-col justify-between rounded-[20px] border border-dark-blue bg-white p-10 text-dark-blue desktop:hidden desktop:min-h-[456px]`}
+      >
+        <Typography as="h2">{firstTitle}</Typography>
+        <Typography as="p">{firstBody}</Typography>
+      </div>
+      <div
+        className={`hidden h-full min-h-[370px] flex-col justify-between border-dark-blue p-10  text-dark-blue desktop:flex desktop:min-h-[456px] ${primaryRoundedPositonSelected}`}
+      >
+        <Typography as="h2">{firstTitle}</Typography>
+        <Typography as="p">{firstBody}</Typography>
+      </div>
     </article>
   );
 };

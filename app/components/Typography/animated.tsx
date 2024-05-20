@@ -48,7 +48,7 @@ const Animated = ({
           hidden: {},
         }}
         aria-hidden
-        className={`${oneLine ? 'flex w-full flex-nowrap whitespace-nowrap' : 'flex-wrap'} ${centered ? 'items-center justify-center' : ''}`}
+        className={`${oneLine ? 'flex w-full flex-nowrap whitespace-nowrap' : 'flex w-full flex-wrap'} ${centered ? 'items-center justify-center' : ''}`}
       >
         {text.split(' ').map((word, index) => (
           <span

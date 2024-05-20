@@ -43,6 +43,7 @@ const config: Config = {
       },
       margin: {
         15: '60px',
+        18: '72px',
         22.5: '90px',
         25: '100px',
       },

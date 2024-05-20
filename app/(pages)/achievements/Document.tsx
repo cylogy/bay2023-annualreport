@@ -24,7 +24,7 @@ const Document = (props: Props) => {
 
       <Hero
         title="Notable Achievements"
-        description="What are some new steps forward in our work? "
+        description="What are some new steps forward in our work?"
         background="bg-dark-blue text-white"
         image="/img/NA section header.jpeg"
         imageTablet="/img/NA section header.jpeg"
@@ -34,11 +34,14 @@ const Document = (props: Props) => {
         <div className="mt-22.5 flex w-full flex-col items-start justify-start place-self-end desktop:mt-40 desktop:max-w-[1200px]">
           <Typography
             as="h3"
-            className="px-15 uppercase text-dark-blue desktop:pl-0"
+            className="px-6 uppercase text-dark-blue tablet-portrait:px-15 desktop:pl-0"
           >
             Building Appliance Rule Amendments
           </Typography>
-          <Typography as="p" className="mt-6 px-15 text-dark-gray desktop:pl-0">
+          <Typography
+            as="p"
+            className="mt-6 px-6 text-dark-gray tablet-portrait:px-15 desktop:pl-0"
+          >
             Amendments to Regulation 9, Rules 4 and 6, were adopted to eliminate
             emissions of nitrogen oxides, or NOx, from{' '}
             <span className="font-bold">
@@ -89,11 +92,14 @@ const Document = (props: Props) => {
           </div>
           <Typography
             as="h3"
-            className="mt-25 px-6 capitalize text-dark-blue desktop:px-15 desktop:pl-0"
+            className="mt-25 px-6 capitalize text-dark-blue tablet-portrait:px-15 desktop:pl-0"
           >
             Air Quality Violation Data Tool
           </Typography>
-          <Typography as="p" className="mt-6 px-15 text-dark-gray desktop:pl-0">
+          <Typography
+            as="p"
+            className="mt-6 px-6 text-dark-gray tablet-portrait:px-15 desktop:pl-0"
+          >
             In September, we launched a notices of violation data tool on our
             website that provides searchable information of all violations that
             our agency has issued within the past five years. Members of the

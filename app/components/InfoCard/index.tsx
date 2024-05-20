@@ -17,7 +17,7 @@ export const InfoCard = ({
   cardBody,
   backgroundColor = 'blue',
   allwidth,
-  small
+  small,
 }: Props) => {
   const styles = {
     white: 'bg-white border border-dark-blue text-dark-blue',
@@ -49,12 +49,19 @@ export const InfoCard = ({
       }}
       viewport={{ once: true }}
       className={`
-      ${small && "desktop:max-h-[290px]"}
+      ${small && 'desktop:max-h-[290px]'}
       ${allwidth && 'w-full desktop:h-[370px]'} ${variantSizeClass} 
       flex min-h-[370px] flex-col justify-between rounded-[20px] p-10 desktop:min-h-fit`}
     >
-      <Typography as="h2">{cardTitle}</Typography>
-      <Typography as="p">{cardBody}</Typography>
+      <Typography as="h2" className="text-h2-desktop">
+        {cardTitle}
+      </Typography>
+      <Typography
+        as="p"
+        className={` ${cardTitle == '“' ? 'text-pull-quote-desktop' : 'text-caption-desktop'}`}
+      >
+        {cardBody}
+      </Typography>
     </motion.article>
   );
 };

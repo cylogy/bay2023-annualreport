@@ -66,13 +66,13 @@ const Document = (props: Props) => {
           <div className="mt-22.5 flex w-full flex-col desktop:mx-25 desktop:mt-40 desktop:max-w-[855px]">
             <Typography
               as="h3"
-              className="px-15 capitalize text-dark-blue desktop:p-0"
+              className=" px-4 capitalize text-dark-blue tablet-landscape:px-15 desktop:p-0"
             >
               AIR DISTRICT MONITORING SITES
             </Typography>
             <Typography
               as="p"
-              className="mb-20 mt-6 px-15 text-dark-blue desktop:p-0"
+              className="mb-20 mt-6 px-4 text-dark-blue tablet-landscape:px-15 desktop:p-0"
             >
               Our air monitoring network{' '}
               <span className="font-bold">
@@ -98,9 +98,9 @@ const Document = (props: Props) => {
             </Typography>
           </div>
         </TextBlock>
-        <section className="mb-20 flex w-full  flex-col justify-between space-y-9 px-15 desktop:mb-25 desktop:flex-row desktop:space-x-9 desktop:space-y-0 desktop:pl-25 desktop:pr-[30px]">
+        <section className="mb-20 flex w-full flex-col items-center justify-center space-y-9 px-4 tablet-landscape:px-15 desktop:mb-25 desktop:flex-row desktop:space-x-9 desktop:space-y-0 desktop:pl-25 desktop:pr-[30px]">
           <div className="flex h-min w-full items-center space-x-6 border-b border-dark-blue desktop:w-[447px]">
-            <div className="block h-10 w-10 rounded-full border border-dark-blue bg-teal">
+            <div className="mb-2 block h-10 w-10 flex-shrink-0 rounded-full border border-dark-blue bg-teal">
               &nbsp;
             </div>
             <Typography as="h3" className="pb-2 text-dark-blue">
@@ -145,14 +145,14 @@ const Document = (props: Props) => {
         <TextBlock align="left">
           <div className="mt-22.5 flex w-full flex-col desktop:mx-25 desktop:mt-40 desktop:max-w-[855px]">
             <Typography
-              as="h3"
-              className="px-5 capitalize text-dark-blue desktop:p-0 desktop:px-15"
+              as="h2"
+              className="px-5 uppercase text-dark-blue desktop:p-0 desktop:px-15"
             >
               EPA Health Standards for Particulate Matter
             </Typography>
             <Typography
               as="p"
-              className="mt-6 px-5 text-dark-blue desktop:p-0 desktop:px-15"
+              className="mt-6 px-5 text-dark-gray desktop:p-0 desktop:px-15"
             >
               We fully supported the EPA’s lowering of the National Ambient Air
               Quality Standards (NAAQS) for particulate matter pollution. The
@@ -248,7 +248,7 @@ const Document = (props: Props) => {
               </Typography>
               <Typography
                 as="p"
-                className="mb-10 mt-6 text-body-text-desktop leading-9 text-gray tablet-portrait:mb-20 desktop:p-0"
+                className="mb-10 mt-6 text-body-text-desktop leading-9 text-dark-gray tablet-portrait:mb-20 desktop:p-0"
               >
                 Our Board of Directors formed an ad hoc committee to strengthen
                 our incident response program through increased coordination
@@ -261,11 +261,25 @@ const Document = (props: Props) => {
                 strategic planning and budget processes.
               </Typography>
             </div>
-            <AnimatedImage key={23} className="relative flex h-[531px] w-full">
+            <AnimatedImage
+              key={23}
+              className="tablet-desktop:flex relative hidden h-[531px] w-full"
+            >
               <Image
                 src="/img/rectangle-255-3.png"
                 fill
-                className="object-cover"
+                className="object-cover "
+                alt="Residential street with fog from power plant chimneys in the background"
+              />
+            </AnimatedImage>
+            <AnimatedImage
+              key={23}
+              className="tablet-desktop:hidden relative flex h-[531px] w-full"
+            >
+              <Image
+                src="/img/1 image.jpg"
+                fill
+                className="object-cover "
                 alt="Residential street with fog from power plant chimneys in the background"
               />
             </AnimatedImage>
@@ -273,7 +287,7 @@ const Document = (props: Props) => {
         </section>
         <Scene pin>
           <>
-            <section className="flex w-full flex-col items-start justify-between gap-x-9 bg-white px-6 py-40 tablet-portrait:px-12 desktop:flex-row desktop:px-25">
+            <section className="flex w-full flex-col items-start justify-between gap-x-9 bg-white px-5 pb-25 pt-15 tablet-portrait:px-12 desktop:flex-row desktop:px-25">
               <div className="flex h-min w-full items-center space-x-6 border-b border-dark-blue desktop:w-[447px]">
                 <Typography as="h3" className="pb-2 uppercase text-dark-blue">
                   LABORATORY
@@ -317,66 +331,54 @@ const Document = (props: Props) => {
                 </div>
               </AnimatedTable>
             </section>
-            <section className="flex w-full flex-col items-start justify-between gap-x-9 bg-white px-6 py-40 tablet-portrait:px-12 desktop:flex-row desktop:px-25">
+            <section className="flex w-full flex-col items-start justify-between gap-x-9 bg-white px-5 pb-25 tablet-portrait:px-12 desktop:flex-row desktop:px-25">
               <div className="flex h-min w-full items-center space-x-6 border-b border-dark-blue desktop:w-[447px]">
                 <Typography as="h3" className="pb-2 uppercase text-dark-blue">
                   EXCEEDANCES OF AIR QUALITY STANDARDS
                 </Typography>
               </div>
-              <AnimatedTable className="mt-9 flex w-full flex-1 flex-col space-y-6 rounded-[20px] border border-gray bg-white px-9 py-15 text-dark-gray desktop:mt-0 desktop:max-w-[800px]">
+              <AnimatedTable className="mt-9 flex w-full flex-1 flex-col gap-y-6 rounded-[20px] border border-gray bg-white px-4 py-15 text-dark-gray tablet-portrait:px-9 desktop:mt-0 desktop:max-w-[800px]">
                 <Typography as="h5">OZONE</Typography>
-                <div className="flex w-full items-center justify-between">
+                <div className="flex w-full flex-col items-start justify-between gap-y-2 tablet-portrait:flex-row tablet-portrait:items-center tablet-portrait:gap-y-0">
                   <Typography as="p">
                     Days over National 8-Hour Standard
                   </Typography>
-                  <Typography as="h5" className="relative">
-                    4{' '}
-                    <span className="absolute -right-4 -top-1 align-text-top font-bold">
-                      *
-                    </span>
+                  <Typography as="h5" className=" flex-nowrap">
+                    4<sup className="font-bold">*</sup>
                   </Typography>
                 </div>
-                <div className="flex w-full items-center justify-between">
+                <div className="flex w-full flex-col items-start justify-between gap-y-2 tablet-portrait:flex-row tablet-portrait:items-center tablet-portrait:gap-y-0">
                   <Typography as="p">
                     Days over California 1-Hour Standard
                   </Typography>
                   <Typography as="h5">0</Typography>
                 </div>
-                <div className="flex w-full items-center justify-between">
+                <div className="flex w-full flex-col items-start justify-between gap-y-2 tablet-portrait:flex-row tablet-portrait:items-center tablet-portrait:gap-y-0">
                   <Typography as="p">
                     Days over California 8-Hour Standard
                   </Typography>
                   <Typography as="h5" className="relative">
-                    4{' '}
-                    <span className="absolute -right-4 -top-1 align-text-top font-bold">
-                      *
-                    </span>
+                    4<sup className="font-bold">*</sup>
                   </Typography>
                 </div>
                 <Typography as="h5">PARTICULATE MATTER</Typography>
-                <div className="flex w-full items-center justify-between">
+                <div className="flex w-full flex-col items-start justify-between gap-y-2 tablet-portrait:flex-row tablet-portrait:items-center tablet-portrait:gap-y-0">
                   <Typography as="p">
                     Days over National 24-Hour PM10 Standard
                   </Typography>
                   <Typography as="h5" className="relative">
-                    0{' '}
-                    <span className="absolute -right-4 -top-1 align-text-top font-bold">
-                      *
-                    </span>
+                    0<sup className="font-bold">*</sup>
                   </Typography>
                 </div>
-                <div className="flex w-full items-center justify-between">
+                <div className="flex w-full flex-col items-start justify-between gap-y-2 tablet-portrait:flex-row tablet-portrait:items-center tablet-portrait:gap-y-0">
                   <Typography as="p">
                     Days over California 24-Hour PM10 Standard
                   </Typography>
                   <Typography as="h5" className="relative">
-                    0{' '}
-                    <span className="absolute -right-4 -top-1 align-text-top font-bold">
-                      *
-                    </span>
+                    0<sup className=" font-bold">*</sup>
                   </Typography>
                 </div>
-                <div className="flex w-full items-center justify-between">
+                <div className="flex w-full flex-col items-start justify-between gap-y-2 tablet-portrait:flex-row tablet-portrait:items-center tablet-portrait:gap-y-0">
                   <Typography as="p">
                     Days over National 24-Hour PM2.5 Standard
                   </Typography>
@@ -395,6 +397,9 @@ const Document = (props: Props) => {
           </>
         </Scene>
         <section className="relative flex w-full flex-col">
+          <div className="absolute bottom-0 left-0 right-0 top-0 -z-10 block bg-light-blue/20">
+            &nbsp;
+          </div>
           <TextBlock align="left">
             <div className="mt-22.5 flex w-full flex-1 flex-grow flex-col px-6 tablet-portrait:px-12 desktop:mt-40 desktop:pl-25 desktop:pr-[30px]">
               <div className="mb-20 flex h-min w-full flex-1 items-center space-x-6 border-b border-dark-blue desktop:mb-[120px]">
@@ -424,7 +429,7 @@ const Document = (props: Props) => {
           </TextBlock>
           <Typography
             as="p"
-            className="mx-auto mb-6 mt-22.5 flex w-full max-w-[1241px] flex-1 flex-grow flex-col px-6 text-dark-blue tablet-portrait:mb-25 tablet-portrait:px-12 desktop:my-40 desktop:px-0"
+            className="mx-auto mb-6 mt-15 flex w-full max-w-[1241px] flex-1 flex-grow flex-col px-6 text-dark-blue tablet-portrait:mb-25 tablet-portrait:mt-22.5 tablet-portrait:px-12 desktop:my-40 desktop:px-0"
           >
             <span>
               <sup>a</sup> The Air District’s latest greenhouse gas (GHG)

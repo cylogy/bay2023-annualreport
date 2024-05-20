@@ -63,7 +63,7 @@ const Hero = ({
           className="overflow-hidden font-h1 text-h1-mobile uppercase leading-none tablet-portrait:text-h1-tablet desktop:text-h1-desktop"
           as="h1"
         />
-        <Typography as="h6" className="uppercase">
+        <Typography as="h6" className="uppercase tracking-h6-mobilev">
           {description}
         </Typography>
       </AnimatedTile>
