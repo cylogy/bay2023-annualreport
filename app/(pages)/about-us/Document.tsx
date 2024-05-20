@@ -19,6 +19,11 @@ import {
   YAxis,
 } from 'recharts';
 import HeroImage from '../../../public/img/about-us.jpeg';
+import FacebookIcon from '../../components/icons/FacebookIcon'
+import TwitterIcon from '@/app/components/icons/TwitterIcon';
+import InstaIcon from '@/app/components/icons/InstaIcon';
+import YoutubeIcon from '@/app/components/icons/YoutubeIcon';
+import Link from 'next/link';
 
 const Document: FC = () => {
   const executiveManagementData = [
@@ -699,6 +704,123 @@ const Document: FC = () => {
             </ResponsiveContainer>
           </div>
         </SectionGraph>
+
+        <SectionGraph
+          title="2023 AIR DISTRICT FINANCIAL REPORT"
+          options={[]}
+          background="white"
+        >
+          <div className="mb-4 flex flex-col desktop:mb-6 desktop:w-full desktop:justify-between">
+            <Typography as="h5" className="uppercase">
+              Revenue
+            </Typography>
+            <div className="mt-6 mt- flex flex-col desktop:flex-row desktop:justify-between">
+              <Typography as="span" className="text-start">
+              Permit-Related Revenue
+              </Typography>
+              <Typography as="h5" className="text-start">
+                $65,252,023
+              </Typography>
+            </div>
+            <div className="mt-6 flex flex-col desktop:flex-row desktop:justify-between">
+              <Typography as="span" className="text-start">
+              County Property Tax
+              </Typography>
+              <Typography as="h5" className="text-start">
+              $45,219,314 
+              </Typography>
+            </div>
+            <div className="mt-6 flex flex-col desktop:flex-row desktop:justify-between">
+              <Typography as="span" className="text-start">
+              Federal Grants
+              </Typography>
+              <Typography as="h5" className="text-start">
+              $5,071,978 
+              </Typography>
+            </div>
+            <div className="mt-6 flex flex-col desktop:flex-row desktop:justify-between">
+              <Typography as="span" className="text-start">
+              State and Other Grants
+              </Typography>
+              <Typography as="h5" className="text-start">
+              $76,623,547 
+              </Typography>
+            </div>
+            <div className="mt-6 flex flex-col desktop:flex-row desktop:justify-between">
+              <Typography as="span" className="text-start">
+              Other Revenue
+              </Typography>
+              <Typography as="h5" className="text-start">
+              $2,412,989 
+              </Typography>
+            </div>
+            <div className="mt-6 flex w-full flex-col justify-between border-dark-blue pt-4 desktop:flex-row desktop:border-t-2">
+              <Typography
+                as="h5"
+                className=" border-b-2 border-t-2 pb-2 pt-4 text-start uppercase text-dark-blue desktop:border-0 desktop:pb-0 desktop:pt-0"
+              >
+                Total
+              </Typography>
+              <Typography
+                as="h5"
+                className=" mt-2 text-start uppercase text-dark-blue desktop:mt-0"
+              >
+                $194,579,851 
+              </Typography>
+            </div>
+
+
+            <Typography as="h5" className="uppercase mt-[56px] desktop:mt-[60px]">
+              Expenditures
+            </Typography>
+            <div className="mt-6 flex flex-col desktop:flex-row desktop:justify-between">
+              <Typography as="span" className="text-start">
+              Personnel
+              </Typography>
+              <Typography as="h5" className="text-start">
+              $95,579,663 
+              </Typography>
+            </div>
+            <div className="mt-6 flex flex-col desktop:flex-row desktop:justify-between">
+              <Typography as="span" className="text-start">
+              Program Distribution
+              </Typography>
+              <Typography as="h5" className="text-start">
+              $55,942,481 
+              </Typography>
+            </div>
+            <div className="mt-6 flex flex-col desktop:flex-row desktop:justify-between">
+              <Typography as="span" className="text-start">
+              Services and Supplies
+              </Typography>
+              <Typography as="h5" className="text-start">
+              $28,895,623 
+              </Typography>
+            </div>
+            <div className="mt-6 flex flex-col desktop:flex-row desktop:justify-between">
+              <Typography as="span" className="text-start">
+              Capital Outlay
+              </Typography>
+              <Typography as="h5" className="text-start">
+              $3,635,922 
+              </Typography>
+            </div>
+            <div className="mt-6 flex w-full flex-col justify-between border-dark-blue pt-4 desktop:flex-row desktop:border-t-2">
+              <Typography
+                as="h5"
+                className=" border-b-2 border-t-2 pb-2 pt-4 text-start uppercase text-dark-blue desktop:border-0 desktop:pb-0 desktop:pt-0"
+              >
+                Total
+              </Typography>
+              <Typography
+                as="h5"
+                className=" mt-2 text-start uppercase text-dark-blue desktop:mt-0"
+              >
+                $184,053,689 
+              </Typography>
+            </div>
+          </div>
+        </SectionGraph>
       </section>
 
       <section
@@ -1082,32 +1204,44 @@ const Document: FC = () => {
               Bay Area Air District
             </Typography>
             <Typography as="span" className="mt-6 desktop:text-[21px]">
-              sparetheair.org
+              baaqmd.gov
             </Typography>
-            <Typography
-              as="span"
-              className="mt-6 pb-1 capitalize desktop:text-[21px]"
-            >
-              @BayAreaAirDistrict
-            </Typography>
-            <Typography
-              as="span"
-              className="mt-1 pb-1 capitalize desktop:text-[21px]"
-            >
-              @AirDistrict
-            </Typography>
-            <Typography
-              as="span"
-              className="mt-1 pb-1 capitalize desktop:text-[21px]"
-            >
-              @BayAreaAirDistrict
-            </Typography>
-            <Typography
-              as="span"
-              className="mt-1 pb-1 capitalize desktop:text-[21px]"
-            >
-              @BayAreaAirDistrict
-            </Typography>
+            <div className='flex space-x-4 items-center mt-6 pb-1'>
+              <FacebookIcon />
+              <Typography
+                as="span"
+                className="capitalize text-[#4B4848] desktop:text-[21px]"
+              >
+                @BayAreaAirDistrict
+              </Typography>
+            </div>
+            <div className='flex space-x-[10px] items-center mt-1 pb-1'>
+              <TwitterIcon />
+              <Typography
+                as="span"
+                className="text-[#4B4848] capitalize desktop:text-[21px]"
+              >
+                @AirDistrict
+              </Typography>
+            </div>
+            <div className='flex space-x-4 items-center mt-1 pb-1'>
+              <InstaIcon />
+              <Typography
+                as="span"
+                className="text-[#4B4848] mt-1 pb-1 capitalize desktop:text-[21px]"
+              >
+                @BayAreaAirDistrict
+              </Typography>
+            </div>
+            <div className='flex space-x-4 items-center mt-1 pb-1'>
+              <YoutubeIcon />
+              <Typography
+                as="span"
+                className="text-[#4B4848] mt-1 pb-1 capitalize desktop:text-[21px]"
+              >
+                @BayAreaAirDistrict
+              </Typography>
+            </div>
             <Typography
               as="span"
               className="mt-1 border-b-2 border-dark-blue pb-4 capitalize desktop:pb-15 desktop:pt-6 desktop:text-[21px]"
@@ -1122,30 +1256,43 @@ const Document: FC = () => {
             <Typography as="span" className="mt-6 desktop:text-[21px]">
               sparetheair.org
             </Typography>
-            <Typography
-              as="span"
-              className="mt-6 pb-1 capitalize desktop:text-[21px]"
-            >
+
+            <div className='flex space-x-4 items-center mt-6 pb-1'>
+              <FacebookIcon />
+              <Typography
+                as="span"
+                className="text-[#4B4848] capitalize desktop:text-[21px]"
+              >
+                @SpareTheAir
+              </Typography>
+            </div>
+            <div className='flex space-x-[10px] items-center mt-1 pb-1'>
+              <TwitterIcon />
+              <Typography
+                as="span"
+                className="text-[#4B4848] capitalize desktop:text-[21px]"
+              >
               @SpareTheAir
-            </Typography>
-            <Typography
-              as="span"
-              className="mt-1 pb-1 capitalize desktop:text-[21px]"
-            >
-              @SpareTheAir
-            </Typography>
-            <Typography
-              as="span"
-              className="mt-1 pb-1 capitalize desktop:text-[21px]"
-            >
-              @SpareTheAir
-            </Typography>
-            <Typography
-              as="span"
-              className="mt-1 pb-1 capitalize desktop:text-[21px]"
-            >
-              @SpareTheAirBayArea
-            </Typography>
+              </Typography>
+            </div>
+            <div className='flex space-x-4 items-center mt-1 pb-1'>
+              <InstaIcon />
+              <Typography
+                as="span"
+                className="text-[#4B4848] capitalize desktop:text-[21px]"
+              >
+                @SpareTheAir
+              </Typography>
+            </div>
+            <div className='flex space-x-4 items-center mt-1 pb-1'>
+              <YoutubeIcon />
+              <Typography
+                as="span"
+                className="text-[#4B4848] capitalize desktop:text-[21px]"
+              >
+                @SpareTheAirBayArea
+              </Typography>
+            </div>
           </div>
         </SectionGraph>
       </section>
