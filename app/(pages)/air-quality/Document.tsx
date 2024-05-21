@@ -351,7 +351,9 @@ const Document = (props: Props) => {
                   <Typography as="p">
                     Days over California 1-Hour Standard
                   </Typography>
-                  <Typography as="h5">0</Typography>
+                  <Typography as="h5">
+                    0<sup className="text-white">*</sup>
+                  </Typography>
                 </div>
                 <div className="flex w-full flex-col items-start justify-between gap-y-2 tablet-portrait:flex-row tablet-portrait:items-center tablet-portrait:gap-y-0">
                   <Typography as="p">
@@ -382,7 +384,9 @@ const Document = (props: Props) => {
                   <Typography as="p">
                     Days over National 24-Hour PM2.5 Standard
                   </Typography>
-                  <Typography as="h5">3</Typography>
+                  <Typography as="h5">
+                    3<sup className="text-white">*</sup>
+                  </Typography>
                 </div>
                 <Typography
                   as="p"

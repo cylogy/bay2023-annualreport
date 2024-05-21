@@ -20,19 +20,25 @@ const PieChartWithoutSSR = ({ data }: Props) => {
   const RADIAN = Math.PI / 180;
 
   let fontSize = '44px';
-  let factor = 1.4;
-  let radius = 193;
+  let factor = 1.3;
+  let radius = 153;
+  let offset = 10;
+  let size = 300;
 
   if (screenWidth <= 480) {
     fontSize = '16px';
     factor = 1.15; // Adjust font size for the breakpoint
     radius = 74;
+    offset = 5;
+    size = 150;
   }
 
   if (screenWidth >= 481 && screenWidth <= 1025) {
     fontSize = '20px';
     factor = 1.2; // Adjust font size for the breakpoint
     radius = 85;
+    offset = 5;
+    size = 170;
   }
 
   const renderCustomizedLabel = ({
@@ -47,8 +53,8 @@ const PieChartWithoutSSR = ({ data }: Props) => {
     [key: string]: number;
   }) => {
     const radius = innerRadius + (outerRadius - innerRadius) * factor;
-    const x = cx + radius * Math.cos(-midAngle * RADIAN) + 5;
-    const y = cy + radius * Math.sin(-midAngle * RADIAN) - 5;
+    const x = cx + radius * Math.cos(-midAngle * RADIAN) + offset;
+    const y = cy + radius * Math.sin(-midAngle * RADIAN) - offset;
     if (percent >= 0.06)
       return (
         <text
@@ -104,9 +110,9 @@ const PieChartWithoutSSR = ({ data }: Props) => {
           <Typography as="h5">100%</Typography>
         </div>
       </div>
-      <div className="flex h-[210px] w-full flex-col items-center justify-center overflow-hidden rounded-[20px] border border-dark-blue bg-white tablet-portrait:h-[243px] tablet-landscape:h-[464px] desktop:w-8/12 desktop:p-5">
+      <div className="flex h-[210px] w-full flex-col items-center justify-center overflow-hidden rounded-[20px] border border-dark-blue bg-white tablet-portrait:h-[243px] tablet-landscape:h-[464px] desktop:h-[464px] desktop:w-8/12 desktop:p-5">
         <ResponsiveContainer>
-          <PieChart width={150} height={150}>
+          <PieChart width={size} height={size}>
             <Pie
               data={data}
               cx="50%"

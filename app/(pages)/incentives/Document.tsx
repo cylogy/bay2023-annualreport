@@ -46,7 +46,7 @@ const Document: FC = () => {
 
           <div className="mt-6 flex flex-col text-dark-gray desktop:flex-row desktop:justify-between">
             <Typography as="span" className="text-start">
-              Oxides of Nitrogen (NOx)
+              Oxides of Nitrogen (NO<sub>x</sub>)
             </Typography>
             <Typography as="h5" className="text-start">
               17.2
@@ -62,7 +62,7 @@ const Document: FC = () => {
           </div>
           <div className="mt-6 flex flex-col text-dark-gray desktop:flex-row desktop:justify-between">
             <Typography as="span" className="text-start">
-              Particulate Matter (PM10)
+              Particulate Matter (PM<sub>10</sub>)
             </Typography>
             <Typography as="h5" className="text-start">
               1.2
@@ -116,7 +116,7 @@ const Document: FC = () => {
 
           <div className="mt-6 flex flex-col text-dark-gray desktop:flex-row desktop:justify-between">
             <Typography as="span" className="text-start">
-              NOx
+              NO<sub>x</sub>
             </Typography>
             <Typography as="h5" className="text-start">
               3.0
@@ -132,7 +132,7 @@ const Document: FC = () => {
           </div>
           <div className="mt-6 flex flex-col text-dark-gray desktop:flex-row desktop:justify-between">
             <Typography as="span" className="text-start">
-              PM10
+              PM<sub>10</sub>
             </Typography>
             <Typography as="h5" className="text-start">
               0.0
@@ -186,7 +186,7 @@ const Document: FC = () => {
 
           <div className="mt-6 flex flex-col text-dark-gray desktop:flex-row desktop:justify-between">
             <Typography as="span" className="text-start">
-              NOx
+              NO<sub>x</sub>
             </Typography>
             <Typography as="h5" className="text-start">
               7.2
@@ -202,7 +202,7 @@ const Document: FC = () => {
           </div>
           <div className="mt-6 flex flex-col text-dark-gray desktop:flex-row desktop:justify-between">
             <Typography as="span" className="text-start">
-              PM10
+              PM<sub>10</sub>
             </Typography>
             <Typography as="h5" className="text-start">
               22.6
@@ -256,7 +256,7 @@ const Document: FC = () => {
 
           <div className="mt-6 flex flex-col text-dark-gray desktop:flex-row desktop:justify-between">
             <Typography as="span" className="text-start">
-              NOx
+              NO<sub>x</sub>
             </Typography>
             <Typography as="h5" className="text-start">
               12.7
@@ -272,7 +272,7 @@ const Document: FC = () => {
           </div>
           <div className="mt-6 flex flex-col text-dark-gray desktop:flex-row desktop:justify-between">
             <Typography as="span" className="text-start">
-              PM10
+              PM<sub>10</sub>
             </Typography>
             <Typography as="h5" className="text-start">
               38.1
@@ -482,7 +482,7 @@ const Document: FC = () => {
           position="rigth"
         />
       </section>
-      <section className="relative mt-12 hidden w-full flex-col bg-transparent pl-15 desktop:flex desktop:pl-6 desktop:pt-[160px]">
+      <section className="relative mt-12 hidden w-full flex-col bg-transparent pb-10 pl-15 desktop:flex desktop:pl-6 desktop:pt-[160px]">
         <Image
           src="/img/Frame 19849.png"
           alt="Close-up of foliage"

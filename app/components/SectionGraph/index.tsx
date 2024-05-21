@@ -83,7 +83,7 @@ const index = ({
                     {item.title}
                   </Typography>
                   <div
-                    className={`grid ${options[0].percents ? 'grid-cols-2' : 'grid-cols-1'} max-w-[170px] desktop:max-w-none  ${textColorObject[textColor]}`}
+                    className={`grid w-5/12 ${options[0].percents ? 'grid-cols-2 place-items-end ' : 'grid-cols-1 place-items-start desktop:place-items-end'} max-w-[170px] desktop:max-w-none  ${textColorObject[textColor]}`}
                   >
                     <Typography as="h5" className="uppercase ">
                       {item.value}
@@ -101,7 +101,9 @@ const index = ({
               <Typography as="h5" className="capitalize">
                 Total
               </Typography>
-              <div className="hidden desktop:flex desktop:space-x-16">
+              <div
+                className={`hidden w-5/12 desktop:grid ${options[0].percents ? 'grid-cols-2 place-items-end ' : 'grid-cols-1 place-items-start desktop:place-items-end'} max-w-[170px] text-dark-blue  desktop:max-w-none`}
+              >
                 <Typography as="h5" className="capitalize">
                   {options.reduce(
                     (accumulator: number, currentValue) =>
@@ -123,7 +125,9 @@ const index = ({
                 )}
               </div>
             </div>
-            <div className="flex w-full space-x-12 border-t-2 border-dark-blue py-4 desktop:hidden">
+            <div
+              className={`grid w-5/12  desktop:hidden ${options[0].percents ? 'grid-cols-2 place-items-end' : 'grid-cols-1 place-items-start desktop:place-items-end'} max-w-[170px] text-dark-blue  desktop:max-w-none`}
+            >
               <Typography as="h5" className="capitalize">
                 {options.reduce(
                   (accumulator: number, currentValue) =>

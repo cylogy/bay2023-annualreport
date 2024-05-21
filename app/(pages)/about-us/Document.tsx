@@ -19,7 +19,7 @@ import {
   YAxis,
 } from 'recharts';
 import HeroImage from '../../../public/img/about-us.jpeg';
-import FacebookIcon from '../../components/icons/FacebookIcon'
+import FacebookIcon from '../../components/icons/FacebookIcon';
 import TwitterIcon from '@/app/components/icons/TwitterIcon';
 import InstaIcon from '@/app/components/icons/InstaIcon';
 import YoutubeIcon from '@/app/components/icons/YoutubeIcon';
@@ -714,9 +714,9 @@ const Document: FC = () => {
             <Typography as="h5" className="uppercase">
               Revenue
             </Typography>
-            <div className="mt-6 mt- flex flex-col desktop:flex-row desktop:justify-between">
+            <div className="mt- mt-6 flex flex-col desktop:flex-row desktop:justify-between">
               <Typography as="span" className="text-start">
-              Permit-Related Revenue
+                Permit-Related Revenue
               </Typography>
               <Typography as="h5" className="text-start">
                 $65,252,023
@@ -724,34 +724,34 @@ const Document: FC = () => {
             </div>
             <div className="mt-6 flex flex-col desktop:flex-row desktop:justify-between">
               <Typography as="span" className="text-start">
-              County Property Tax
+                County Property Tax
               </Typography>
               <Typography as="h5" className="text-start">
-              $45,219,314 
+                $45,219,314 
               </Typography>
             </div>
             <div className="mt-6 flex flex-col desktop:flex-row desktop:justify-between">
               <Typography as="span" className="text-start">
-              Federal Grants
+                Federal Grants
               </Typography>
               <Typography as="h5" className="text-start">
-              $5,071,978 
+                $5,071,978 
               </Typography>
             </div>
             <div className="mt-6 flex flex-col desktop:flex-row desktop:justify-between">
               <Typography as="span" className="text-start">
-              State and Other Grants
+                State and Other Grants
               </Typography>
               <Typography as="h5" className="text-start">
-              $76,623,547 
+                $76,623,547 
               </Typography>
             </div>
             <div className="mt-6 flex flex-col desktop:flex-row desktop:justify-between">
               <Typography as="span" className="text-start">
-              Other Revenue
+                Other Revenue
               </Typography>
               <Typography as="h5" className="text-start">
-              $2,412,989 
+                $2,412,989 
               </Typography>
             </div>
             <div className="mt-6 flex w-full flex-col justify-between border-dark-blue pt-4 desktop:flex-row desktop:border-t-2">
@@ -769,40 +769,42 @@ const Document: FC = () => {
               </Typography>
             </div>
 
-
-            <Typography as="h5" className="uppercase mt-[56px] desktop:mt-[60px]">
+            <Typography
+              as="h5"
+              className="mt-[56px] uppercase desktop:mt-[60px]"
+            >
               Expenditures
             </Typography>
             <div className="mt-6 flex flex-col desktop:flex-row desktop:justify-between">
               <Typography as="span" className="text-start">
-              Personnel
+                Personnel
               </Typography>
               <Typography as="h5" className="text-start">
-              $95,579,663 
+                $95,579,663 
               </Typography>
             </div>
             <div className="mt-6 flex flex-col desktop:flex-row desktop:justify-between">
               <Typography as="span" className="text-start">
-              Program Distribution
+                Program Distribution
               </Typography>
               <Typography as="h5" className="text-start">
-              $55,942,481 
+                $55,942,481 
               </Typography>
             </div>
             <div className="mt-6 flex flex-col desktop:flex-row desktop:justify-between">
               <Typography as="span" className="text-start">
-              Services and Supplies
+                Services and Supplies
               </Typography>
               <Typography as="h5" className="text-start">
-              $28,895,623 
+                $28,895,623 
               </Typography>
             </div>
             <div className="mt-6 flex flex-col desktop:flex-row desktop:justify-between">
               <Typography as="span" className="text-start">
-              Capital Outlay
+                Capital Outlay
               </Typography>
               <Typography as="h5" className="text-start">
-              $3,635,922 
+                $3,635,922 
               </Typography>
             </div>
             <div className="mt-6 flex w-full flex-col justify-between border-dark-blue pt-4 desktop:flex-row desktop:border-t-2">
@@ -1203,96 +1205,132 @@ const Document: FC = () => {
             <Typography as="h4" className="uppercase">
               Bay Area Air District
             </Typography>
-            <Typography as="span" className="mt-6 desktop:text-[21px]">
-              baaqmd.gov
-            </Typography>
-            <div className='flex space-x-4 items-center mt-6 pb-1'>
-              <FacebookIcon />
-              <Typography
-                as="span"
-                className="capitalize text-[#4B4848] desktop:text-[21px]"
-              >
-                @BayAreaAirDistrict
+            <a role="link" href="https://www.baaqmd.gov/">
+              <Typography as="span" className="mt-6 desktop:text-[21px]">
+                baaqmd.gov
               </Typography>
-            </div>
-            <div className='flex space-x-[10px] items-center mt-1 pb-1'>
-              <TwitterIcon />
-              <Typography
-                as="span"
-                className="text-[#4B4848] capitalize desktop:text-[21px]"
-              >
-                @AirDistrict
-              </Typography>
-            </div>
-            <div className='flex space-x-4 items-center mt-1 pb-1'>
-              <InstaIcon />
-              <Typography
-                as="span"
-                className="text-[#4B4848] mt-1 pb-1 capitalize desktop:text-[21px]"
-              >
-                @BayAreaAirDistrict
-              </Typography>
-            </div>
-            <div className='flex space-x-4 items-center mt-1 pb-1'>
-              <YoutubeIcon />
-              <Typography
-                as="span"
-                className="text-[#4B4848] mt-1 pb-1 capitalize desktop:text-[21px]"
-              >
-                @BayAreaAirDistrict
-              </Typography>
-            </div>
+            </a>
+            <a role="link" href="https://www.facebook.com/bayareaairdistrict">
+              <div className="mt-6 flex items-center space-x-4 pb-1">
+                <FacebookIcon />
+                <Typography
+                  as="span"
+                  className="capitalize text-[#4B4848] desktop:text-[21px]"
+                >
+                  @BayAreaAirDistrict
+                </Typography>
+              </div>
+            </a>
+            <a role="link" href="https://twitter.com/airdistrict">
+              <div className="mt-1 flex items-center space-x-[10px] pb-1">
+                <TwitterIcon />
+                <Typography
+                  as="span"
+                  className="capitalize text-[#4B4848] desktop:text-[21px]"
+                >
+                  @AirDistrict
+                </Typography>
+              </div>
+            </a>
+            <a role="link" href="https://www.instagram.com/BayAreaAirDistrict/">
+              <div className="mt-1 flex items-center space-x-4 pb-1">
+                <InstaIcon />
+                <Typography
+                  as="span"
+                  className="mt-1 pb-1 capitalize text-[#4B4848] desktop:text-[21px]"
+                >
+                  @BayAreaAirDistrict
+                </Typography>
+              </div>
+            </a>
+            <a
+              role="link"
+              href="https://www.youtube.com/@BayAreaAirDistrict
+"
+            >
+              <div className="mt-1 flex items-center space-x-4 pb-1">
+                <YoutubeIcon />
+                <Typography
+                  as="span"
+                  className="mt-1 pb-1 capitalize text-[#4B4848] desktop:text-[21px]"
+                >
+                  @BayAreaAirDistrict
+                </Typography>
+              </div>
+            </a>
             <Typography
               as="span"
               className="mt-1 border-b-2 border-dark-blue pb-4 capitalize desktop:pb-15 desktop:pt-6 desktop:text-[21px]"
             >
-              Find us on Nextdoor and LinkedIn
+              Find us on{' '}
+              <a
+                role="link"
+                href="https://nextdoor.com/pages/bay-area-air-quality-management-district-1"
+              >
+                Nextdoor
+              </a>{' '}
+              and{' '}
+              <a
+                href="https://www.linkedin.com/company/bay-area-air-quality-management-district"
+                role="link"
+              >
+                LinkedIn
+              </a>
             </Typography>
           </div>
           <div className="mb-4 flex flex-col desktop:mb-6 desktop:w-full desktop:justify-between">
             <Typography as="h4" className="uppercase">
               Spare the Air
             </Typography>
-            <Typography as="span" className="mt-6 desktop:text-[21px]">
-              sparetheair.org
-            </Typography>
-
-            <div className='flex space-x-4 items-center mt-6 pb-1'>
-              <FacebookIcon />
-              <Typography
-                as="span"
-                className="text-[#4B4848] capitalize desktop:text-[21px]"
-              >
-                @SpareTheAir
+            <a role="link" href="https://www.sparetheair.org/">
+              <Typography as="span" className="mt-6 desktop:text-[21px]">
+                sparetheair.org
               </Typography>
-            </div>
-            <div className='flex space-x-[10px] items-center mt-1 pb-1'>
-              <TwitterIcon />
-              <Typography
-                as="span"
-                className="text-[#4B4848] capitalize desktop:text-[21px]"
-              >
-              @SpareTheAir
-              </Typography>
-            </div>
-            <div className='flex space-x-4 items-center mt-1 pb-1'>
-              <InstaIcon />
-              <Typography
-                as="span"
-                className="text-[#4B4848] capitalize desktop:text-[21px]"
-              >
-                @SpareTheAir
-              </Typography>
-            </div>
-            <div className='flex space-x-4 items-center mt-1 pb-1'>
-              <YoutubeIcon />
-              <Typography
-                as="span"
-                className="text-[#4B4848] capitalize desktop:text-[21px]"
-              >
-                @SpareTheAirBayArea
-              </Typography>
-            </div>
+            </a>
+            <a role="link" href="https://www.facebook.com/sparetheair/">
+              <div className="mt-6 flex items-center space-x-4 pb-1">
+                <FacebookIcon />
+                <Typography
+                  as="span"
+                  className="capitalize text-[#4B4848] desktop:text-[21px]"
+                >
+                  @SpareTheAir
+                </Typography>
+              </div>
+            </a>
+            <a href="https://twitter.com/sparetheair" role="link">
+              <div className="mt-1 flex items-center space-x-[10px] pb-1">
+                <TwitterIcon />
+                <Typography
+                  as="span"
+                  className="capitalize text-[#4B4848] desktop:text-[21px]"
+                >
+                  @SpareTheAir
+                </Typography>
+              </div>
+            </a>
+            <a href="https://www.instagram.com/SpareTheAir/" role="link">
+              <div className="mt-1 flex items-center space-x-4 pb-1">
+                <InstaIcon />
+                <Typography
+                  as="span"
+                  className="capitalize text-[#4B4848] desktop:text-[21px]"
+                >
+                  @SpareTheAir
+                </Typography>
+              </div>
+            </a>
+            <a href="https://www.youtube.com/@SpareTheAirBayArea" role="link">
+              <div className="mt-1 flex items-center space-x-4 pb-1">
+                <YoutubeIcon />
+                <Typography
+                  as="span"
+                  className="capitalize text-[#4B4848] desktop:text-[21px]"
+                >
+                  @SpareTheAirBayArea
+                </Typography>
+              </div>
+            </a>
           </div>
         </SectionGraph>
       </section>
