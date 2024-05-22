@@ -119,7 +119,7 @@ const Document = (props: Props) => {
                 />
                 <Animated
                   as="h2"
-                  className="overflow-hidden whitespace-nowrap font-h6 font-h6-desktop uppercase leading-none text-white desktop:text-h6-tablet"
+                  className="mt-2 overflow-hidden whitespace-nowrap font-h6 font-h6-desktop uppercase leading-none text-white desktop:text-h6-tablet"
                   text="2023 Annual Report"
                   oneLine
                 />
@@ -152,16 +152,13 @@ const Document = (props: Props) => {
               as="h3"
               className="font-h6-desktop uppercase text-white"
             >
-              CLIMATE CHANGE BRINGS NEW CHALLENGES FOR US ALL.
+              IMPROVING AIR QUALITY PROTECTIONS FOR ALL BAY AREA RESIDENTS.
             </Typography>
             <Typography as="p" className="text-white">
-              In 2022, we continued to partner with Bay Area communities most
-              impacted by pollution and sought new paths forward to reduce
-              climate-warming greenhouse gases. Our innovative grant programs
-              enabled residents and businesses to lower emissions and overall
-              carbon footprint through funds for cleaner engines and electric
-              vehicles to programs that educate residents on how to reduce their
-              impact.
+              In 2023, we continued to strengthen our partnerships with Bay Area
+              communities most impacted by air pollution. Our innovative
+              emission reduction and climate protection programs supported
+              cutting-edge projects to reduce greenhouse gases. 
             </Typography>
             <Link href={'/introduction'}>
               <Button
