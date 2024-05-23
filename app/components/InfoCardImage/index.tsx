@@ -27,7 +27,7 @@ const InfoCardImage = ({
       className={`flex h-full flex-col text-left desktop:flex-row desktop:rounded-[20px] ${backgroundColor} px-6 py-15 desktop:mx-15 desktop:p-0`}
     >
       <div
-        className={`flex-0 flex flex-shrink flex-col space-y-6 pt-15 text-left desktop:p-15 ${imageFirst ? 'order-2 desktop:order-2' : ' order-2 desktop:order-1'}`}
+        className={`flex-0 flex flex-shrink flex-col items-center justify-start space-y-6 pt-15 text-left desktop:px-15 desktop:py-10 ${imageFirst ? 'order-2 desktop:order-2' : ' order-2 desktop:order-1'}`}
       >
         <Typography as="h3" className="uppercase">
           {title}
@@ -36,7 +36,7 @@ const InfoCardImage = ({
       </div>
       <AnimatedImage
         key={`tablet-${title}`}
-        className={`relative flex h-[350px] w-full flex-shrink-0 overflow-hidden rounded-[20px] desktop:hidden desktop:min-h-[460px] desktop:w-[460px] ${imageFirst ? 'order-1 desktop:order-1 desktop:rounded-l-[20px] desktop:rounded-r-none' : ' order-1 desktop:order-2 desktop:rounded-l-none desktop:rounded-r-[20px]'}`}
+        className={`relative flex h-full w-full flex-shrink-0 overflow-hidden rounded-[20px] desktop:hidden  desktop:w-[460px] ${imageFirst ? 'order-1 desktop:order-1 desktop:rounded-l-[20px] desktop:rounded-r-none' : ' order-1 desktop:order-2 desktop:rounded-l-none desktop:rounded-r-[20px]'}`}
       >
         <Image
           src={imageTablet ? imageTablet : imageSrc}
