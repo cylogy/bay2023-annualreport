@@ -342,8 +342,8 @@ const Document: FC = () => {
 
       <section
         className="
-      relative flex w-full flex-col justify-center
-      space-y-0 px-6 pb-25 desktop:space-x-0 desktop:space-y-[100px] desktop:px-25 desktop:pb-36"
+      relative flex w-full flex-col justify-center mt-[100px]
+      space-y-0 px-6 pb-25 desktop:space-x-0 desktop:space-y-[100px] desktop:px-25 desktop:pb-36 desktop:mt-0"
       >
         <div className="mb-6 w-full border-b-2 border-dark-blue pb-1 desktop:mb-0">
           <Typography as="h3" className=" uppercase text-dark-blue">
@@ -373,7 +373,7 @@ const Document: FC = () => {
                   </Typography>
                 </div>
               ))}
-              <Typography as="span" className="w-full text-start">
+              <Typography as="span" className="w-full text-start mt-9">
                 *American Community Survey (ACS) Census Bureau
               </Typography>
               <Typography as="span" className="w-full text-start">
@@ -447,41 +447,42 @@ const Document: FC = () => {
           background="white"
           headChildren={<div></div>}
         >
-          <div className="flex h-[310px] w-full flex-col">
+          <div className="flex h-[310px] w-full flex-col relative">
             <Typography as="h5" className=" mb-4 border-b-2 pb-2 text-start">
               Bay Area
             </Typography>
             <Typography as="span" className=" mb-4 text-start">
               5 YEAR AVERAGE Ages 18 — 64*
             </Typography>
-            <ResponsiveContainer>
-              <PieChart>
-                <Pie
-                  data={genderData}
-                  cx="50%"
-                  cy="50%"
-                  labelLine={false}
-                  label={renderCustomizedLabel}
-                  outerRadius={100}
-                  rotate={'45deg'}
-                  fill="#000000"
-                  dataKey="value"
-                  startAngle={-270}
-                >
-                  {genderData.reverse().map((entry, index) => (
-                    <Cell
-                      stroke="#000000"
-                      key={`cell-${index}`}
-                      fill={entry.color}
-                    />
-                  ))}
-                </Pie>
-                <Tooltip
-                  formatter={(value: number) => `${(value * 100).toFixed(1)}%`}
-                  itemStyle={{ color: 'black' }}
-                />
-              </PieChart>
-            </ResponsiveContainer>
+
+              <ResponsiveContainer>
+                <PieChart>
+                  <Pie
+                    data={genderData}
+                    cx="50%"
+                    cy="50%"
+                    labelLine={false}
+                    label={renderCustomizedLabel}
+                    outerRadius={100}
+                    rotate={'45deg'}
+                    fill="#000000"
+                    dataKey="value"
+                    startAngle={-270}
+                  >
+                    {genderData.reverse().map((entry, index) => (
+                      <Cell
+                        stroke="#000000"
+                        key={`cell-${index}`}
+                        fill={entry.color}
+                      />
+                    ))}
+                  </Pie>
+                  <Tooltip
+                    formatter={(value: number) => `${(value * 100).toFixed(1)}%`}
+                    itemStyle={{ color: 'black' }}
+                  />
+                </PieChart>
+              </ResponsiveContainer>
           </div>
         </SectionGraph>
       </section>
@@ -1401,7 +1402,7 @@ const Document: FC = () => {
       <section
         className="
       relative flex w-full flex-col justify-center
-      space-y-9 bg-transparent px-6 py-25 desktop:space-x-0 desktop:space-y-[100px] desktop:px-20 desktop:py-36"
+      space-y-9 bg-transparent px-6 pt-25 desktop:space-x-0 desktop:space-y-[100px] desktop:px-20 desktop:py-36"
       >
         <SectionGraph title="SOCIAL + WEBSITES" options={[]} background="white">
           <div

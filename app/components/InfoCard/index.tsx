@@ -49,7 +49,7 @@ export const InfoCard = ({
       }}
       viewport={{ once: true }}
       className={`
-      ${small && 'desktop:max-h-[290px]'}
+      ${small && 'min-h-[305px] max-h-[305px] desktop:max-h-[290px]'}
       ${allwidth && 'w-full desktop:h-[370px]'} ${variantSizeClass} 
       flex min-h-[370px] flex-col justify-between rounded-[20px] p-10 desktop:min-h-fit`}
     >

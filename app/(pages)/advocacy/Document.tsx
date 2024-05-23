@@ -146,7 +146,7 @@ const Document: FC = () => {
         <InfoCard
           cardTitle="$80M"
           cardBody="for a suite of statewide equity transportation programs, including, but not limited to, the Clean Cars For All Program."
-          backgroundColor="dark-blue"
+          backgroundColor="blue"
           allwidth
         />
         <InfoCard

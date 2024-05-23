@@ -233,7 +233,7 @@ const Document = (props: Props) => {
           <article className=" flex w-full flex-col items-center justify-center overflow-hidden desktop:flex-[0.8] desktop:items-end">
             <div className=" mt-22.5 flex w-full flex-col overflow-hidden px-5 desktop:mt-40 desktop:max-w-[1317px] desktop:self-start desktop:pr-10">
               <Typography
-                as="h2"
+                as="h3"
                 className="capitalize text-dark-blue desktop:p-0"
               >
                 Ad Hoc Committee on Incident Response Program Improvements

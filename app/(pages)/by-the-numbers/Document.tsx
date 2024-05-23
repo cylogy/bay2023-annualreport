@@ -594,10 +594,10 @@ const Document: FC = () => {
           background="white"
         >
           <div className="mb-4 flex flex-col desktop:mb-6 desktop:w-full desktop:justify-between">
-            <Typography as="h5" className="">
+            <Typography as="h5" className=" capitalize">
               Rules Adopted or Amended
             </Typography>
-            <Typography as="h5" className="mt-6 ">
+            <Typography as="h5" className="mt-6 capitalize">
               March 15, 2023 - Building Appliance Amendments
             </Typography>
             <Typography
