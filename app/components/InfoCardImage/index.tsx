@@ -27,7 +27,7 @@ const InfoCardImage = ({
       className={`flex h-full flex-col text-left desktop:flex-row desktop:rounded-[20px] ${backgroundColor} px-6 py-15 desktop:mx-15 desktop:p-0`}
     >
       <div
-        className={`flex-0 flex flex-shrink flex-col items-center justify-start space-y-6 pt-15 text-left desktop:px-15 desktop:py-10 ${imageFirst ? 'order-2 desktop:order-2' : ' order-2 desktop:order-1'}`}
+        className={`flex-0 flex flex-shrink flex-col items-start justify-start space-y-6 pt-15 text-left desktop:px-15 desktop:py-10 ${imageFirst ? 'order-2 desktop:order-2' : ' order-2 desktop:order-1'}`}
       >
         <Typography as="h3" className="uppercase">
           {title}
