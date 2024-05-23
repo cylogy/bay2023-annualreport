@@ -1085,13 +1085,13 @@ const Document: FC = () => {
         </SectionGraph>
       </section>
 
-      <section className="relative flex w-full flex-col justify-center bg-transparent px-6 pt-10 desktop:py-25 desktop:space-x-0  desktop:px-20 desktop:pt-36">
+      <section className="relative flex w-full flex-col justify-center bg-transparent px-6 pt-10 desktop:space-x-0 desktop:px-20  desktop:py-25 desktop:pt-36">
         <div className="absolute bottom-0 left-0 right-0 top-0 -z-[4] block bg-green/20">
           &nbsp;
         </div>
         <Image
-          src="/img/frame-19851.png"
-          alt="Close-up of foliage"
+          src="/img/c465ba8b1e841383cf29389a033ebc50 Large.jpeg"
+          alt="Close up clouds in the skies"
           className="-z-[5] object-top opacity-40"
           fill
         />
@@ -1404,9 +1404,11 @@ const Document: FC = () => {
       space-y-9 bg-transparent px-6 py-25 desktop:space-x-0 desktop:space-y-[100px] desktop:px-20 desktop:py-36"
       >
         <SectionGraph title="SOCIAL + WEBSITES" options={[]} background="white">
-          <div className="mb-4 flex flex-col desktop:mb-6 desktop:w-full desktop:justify-between
-          ">
-            <Typography as="h5" className="capitalize mb-4">
+          <div
+            className="mb-4 flex flex-col desktop:mb-6 desktop:w-full desktop:justify-between
+          "
+          >
+            <Typography as="h5" className="mb-4 capitalize">
               Bay Area Air District
             </Typography>
             <a role="link" href="https://www.baaqmd.gov/">
@@ -1483,7 +1485,7 @@ const Document: FC = () => {
             </Typography>
           </div>
           <div className="flex flex-col desktop:mb-6 desktop:w-full desktop:justify-between">
-            <Typography as="h5" className="capitalize mb-4">
+            <Typography as="h5" className="mb-4 capitalize">
               Spare the Air
             </Typography>
             <a role="link" href="https://www.sparetheair.org/">
