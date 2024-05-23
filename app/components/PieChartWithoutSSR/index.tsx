@@ -19,10 +19,10 @@ const PieChartWithoutSSR = ({ data }: Props) => {
 
   const RADIAN = Math.PI / 180;
 
-  let fontSize = '44px';
-  let factor = 1.3;
+  let fontSize = '28px';
+  let factor = 1.2;
   let radius = 153;
-  let offset = 10;
+  let offset = 8;
   let size = 300;
 
   if (screenWidth <= 480) {

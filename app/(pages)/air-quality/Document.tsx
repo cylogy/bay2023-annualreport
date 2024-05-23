@@ -72,7 +72,7 @@ const Document = (props: Props) => {
             </Typography>
             <Typography
               as="p"
-              className="mb-20 mt-6 px-4 text-dark-blue tablet-landscape:px-15 desktop:p-0"
+              className="mb-20 mt-6 px-4 text-pull-quote-tablet text-dark-blue tablet-landscape:px-15 desktop:p-0"
             >
               Our air monitoring network{' '}
               <span className="font-bold">
@@ -98,7 +98,7 @@ const Document = (props: Props) => {
             </Typography>
           </div>
         </TextBlock>
-        <section className="mb-20 flex w-full flex-col items-center justify-center space-y-9 px-4 tablet-landscape:px-15 desktop:mb-25 desktop:flex-row desktop:space-x-9 desktop:space-y-0 desktop:pl-25 desktop:pr-[30px]">
+        <section className="mb-20 flex w-full flex-col items-start justify-center space-y-9 px-4 tablet-landscape:px-15 desktop:mb-25 desktop:flex-row desktop:space-x-9 desktop:space-y-0 desktop:pl-25 desktop:pr-[30px]">
           <div className="flex h-min w-full items-center space-x-6 border-b border-dark-blue desktop:w-[447px]">
             <div className="mb-2 block h-10 w-10 flex-shrink-0 rounded-full border border-dark-blue bg-teal">
               &nbsp;
@@ -263,18 +263,18 @@ const Document = (props: Props) => {
             </div>
             <AnimatedImage
               key={23}
-              className="tablet-desktop:flex relative hidden h-[531px] w-full"
+              className="tablet-desktop:hidden relative flex h-[531px] w-full"
             >
               <Image
-                src="/img/rectangle-255-3.png"
+                src="/img/rectangle-255-5.jpg"
                 fill
-                className="object-cover "
+                className="object-cover object-[0%_55%]"
                 alt="Residential street with fog from power plant chimneys in the background"
               />
             </AnimatedImage>
             <AnimatedImage
               key={23}
-              className="tablet-desktop:hidden relative flex h-[531px] w-full"
+              className="tablet-desktop:flex relative hidden h-[531px] w-full"
             >
               <Image
                 src="/img/1 image.jpg"
