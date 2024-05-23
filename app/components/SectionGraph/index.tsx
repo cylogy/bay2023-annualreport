@@ -83,7 +83,7 @@ const index = ({
                     {item.title}
                   </Typography>
                   <div
-                    className={`grid w-5/12 ${options[0].percents ? 'grid-cols-2 place-items-end ' : 'grid-cols-1 place-items-start desktop:place-items-end'} max-w-[170px] desktop:max-w-none  ${textColorObject[textColor]}`}
+                    className={`grid desktop:w-5/12 ${options[0].percents ? 'grid-cols-2 desktop:place-items-end ' : 'grid-cols-1 place-items-start desktop:place-items-end'} max-w-[170px] desktop:max-w-none  ${textColorObject[textColor]}`}
                   >
                     <Typography as="h5" className="uppercase ">
                       {item.value}
@@ -126,7 +126,7 @@ const index = ({
               </div>
             </div>
             <div
-              className={`grid w-5/12  desktop:hidden ${options[0].percents ? 'grid-cols-2 place-items-end' : 'grid-cols-1 place-items-start desktop:place-items-end'} max-w-[170px] text-dark-blue  desktop:max-w-none`}
+              className={`grid desktop:hidden ${options[0].percents ? 'grid-cols-2 ' : 'grid-cols-1 place-items-start desktop:place-items-end'} max-w-[170px] text-dark-blue  desktop:max-w-none`}
             >
               <Typography as="h5" className="capitalize">
                 {options.reduce(

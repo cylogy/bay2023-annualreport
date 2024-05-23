@@ -123,7 +123,7 @@ const Document: FC = () => {
               small
             />
           </div>
-          <Typography as="p" className="py-9 text-dark-gray">
+          <Typography as="p" className="pt-9 desktop:py-9 text-dark-gray">
             From this funding, we are expecting to receive:
           </Typography>
           <div className="flex w-full flex-col space-y-9 desktop:h-[249px] desktop:min-h-[370px] desktop:flex-row desktop:space-x-9 desktop:space-y-0">
