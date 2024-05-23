@@ -98,7 +98,7 @@ const Document = (props: Props) => {
             </Typography>
           </div>
         </TextBlock>
-        <section className="mb-20 flex w-full flex-col items-start justify-center space-y-9 px-4 tablet-landscape:px-15 desktop:mb-25 desktop:flex-row desktop:space-x-9 desktop:space-y-0 desktop:pl-25 desktop:pr-[30px]">
+        <section className="mb-20 flex w-full flex-col justify-center space-y-9 px-4 tablet-landscape:px-15 desktop:mb-25 desktop:flex-row desktop:items-start desktop:space-x-9 desktop:space-y-0 desktop:pl-25 desktop:pr-[30px]">
           <div className="flex h-min w-full items-center space-x-6 border-b border-dark-blue desktop:w-[447px]">
             <div className="mb-2 block h-10 w-10 flex-shrink-0 rounded-full border border-dark-blue bg-teal">
               &nbsp;
@@ -143,17 +143,14 @@ const Document = (props: Props) => {
           />
         </section>
         <TextBlock align="left">
-          <div className="mt-22.5 flex w-full flex-col desktop:mx-25 desktop:mt-40 desktop:max-w-[855px]">
+          <div className="mt-22.5 flex w-full flex-col px-5 tablet-portrait:px-15  desktop:mt-40 desktop:max-w-[855px] desktop:px-25">
             <Typography
               as="h2"
-              className="px-5 uppercase text-dark-blue desktop:p-0 desktop:px-15"
+              className=" uppercase text-dark-blue desktop:p-0"
             >
               EPA Health Standards for Particulate Matter
             </Typography>
-            <Typography
-              as="p"
-              className="mt-6 px-5 text-dark-gray desktop:p-0 desktop:px-15"
-            >
+            <Typography as="p" className="mt-6 text-dark-gray desktop:p-0">
               We fully supported the EPA’s lowering of the National Ambient Air
               Quality Standards (NAAQS) for particulate matter pollution. The
               NAAQS are designed to{' '}
@@ -169,7 +166,7 @@ const Document = (props: Props) => {
             </Typography>
           </div>
         </TextBlock>
-        <section className="mt-40 flex w-full flex-col desktop:space-y-40">
+        <section className="mt-40 flex w-full flex-col desktop:space-y-40  desktop:px-10">
           <InfoCardImage
             backgroundColor="bg-green text-white"
             title="East Oakland Community Air Monitoring Partnership"
@@ -194,20 +191,15 @@ const Document = (props: Props) => {
             alt="Truck in urban traffic"
             imageFirst
             imageSrc="/img/image-square-3-2.png"
+            imageTablet="/img/Image Square Large.jpeg"
           />
         </section>
         <TextBlock align="left">
-          <div className="mt-22.5 flex w-full flex-col desktop:mx-25 desktop:mt-40 desktop:max-w-[855px]">
-            <Typography
-              as="h3"
-              className="mt-6 px-5 text-dark-blue desktop:p-0 desktop:px-15"
-            >
+          <div className="mt-22.5 flex w-full flex-col px-5 desktop:mx-15 desktop:mt-40 desktop:max-w-[855px]  desktop:px-10">
+            <Typography as="h3" className="mt-6 text-dark-blue desktop:p-0">
               Bay Air Center Launches Public Website
             </Typography>
-            <Typography
-              as="p"
-              className="mt-6 px-5 text-dark-blue desktop:p-0 desktop:px-15"
-            >
+            <Typography as="p" className="mt-6 text-dark-blue desktop:p-0">
               We sponsored the Bay Air Center as a resource that offers{' '}
               <span className="font-bold">
                 {' '}

@@ -41,7 +41,7 @@ const InfoCardImage = ({
         <Image
           src={imageTablet ? imageTablet : imageSrc}
           fill
-          className="object-cover object-top"
+          className="object-cover object-[0%_55%]"
           alt={alt}
           priority
         />
@@ -50,7 +50,12 @@ const InfoCardImage = ({
         key={title}
         className={`relative hidden h-full w-full flex-shrink-0 overflow-hidden rounded-[20px] desktop:flex desktop:min-h-[460px] desktop:w-[460px] ${imageFirst ? 'order-1 desktop:order-1 desktop:rounded-l-[20px] desktop:rounded-r-none' : ' order-1 desktop:order-2 desktop:rounded-l-none desktop:rounded-r-[20px]'}`}
       >
-        <Image src={imageSrc} fill className="object-cover" alt={alt} />
+        <Image
+          src={imageSrc}
+          fill
+          className="object-cover object-bottom"
+          alt={alt}
+        />
       </AnimatedImage>
     </article>
   );
