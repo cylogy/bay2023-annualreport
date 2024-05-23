@@ -55,7 +55,7 @@ const PieChartWithoutSSR = ({ data }: Props) => {
     const radius = innerRadius + (outerRadius - innerRadius) * factor;
     const x = cx + radius * Math.cos(-midAngle * RADIAN) + offset;
     const y = cy + radius * Math.sin(-midAngle * RADIAN) - offset;
-    if (percent >= 0.06)
+    if (percent >= 0.03)
       return (
         <text
           x={x}

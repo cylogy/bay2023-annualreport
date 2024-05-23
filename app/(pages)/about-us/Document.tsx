@@ -11,6 +11,8 @@ import {
   Bar,
   BarChart,
   Cell,
+  LabelList,
+  Legend,
   Pie,
   PieChart,
   ResponsiveContainer,
@@ -23,7 +25,6 @@ import FacebookIcon from '../../components/icons/FacebookIcon';
 import TwitterIcon from '@/app/components/icons/TwitterIcon';
 import InstaIcon from '@/app/components/icons/InstaIcon';
 import YoutubeIcon from '@/app/components/icons/YoutubeIcon';
-import Link from 'next/link';
 
 const Document: FC = () => {
   const executiveManagementData = [
@@ -381,16 +382,16 @@ const Document: FC = () => {
             </div>
           }
         >
-          <div className="flex h-[320px] w-full flex-col">
+          <div className="flex h-[380px] w-full flex-col">
             <Typography as="h5" className=" mb-4 border-b-2 pb-2 text-start">
               Air District Staff
             </Typography>
             <ResponsiveContainer width="100%" height="100%">
               <BarChart
-                height={300}
+                height={500}
                 data={genderBarData}
                 layout="vertical"
-                margin={{ top: 5, bottom: 5 }}
+                barCategoryGap={50}
               >
                 <XAxis hide type="number" />
                 <YAxis
@@ -403,8 +404,38 @@ const Document: FC = () => {
                   formatter={(value: number) => `${(value * 100).toFixed(0)}%`}
                   itemStyle={{ color: 'black' }}
                 />
-                <Bar dataKey="Female" stackId="a" fill="#3368B2" />
-                <Bar dataKey="Male" stackId="a" fill="#7F7A7F" />
+                <Bar dataKey="Female" stackId="a" fill="#3368B2" barSize={30}>
+                  <LabelList
+                    dx={20}
+                    dataKey="Female"
+                    position="insideBottomLeft"
+                    offset={-20}
+                    fontSize={12}
+                    style={{
+                      fontWeight: 'bold',
+                    }}
+                    fill="#0A215B"
+                    formatter={(value: number) =>
+                      `${(value * 100).toFixed(0)}%`
+                    }
+                  />
+                </Bar>
+                <Bar dataKey="Male" stackId="a" fill="#7F7A7F" barSize={30}>
+                  <LabelList
+                    dx={20}
+                    dataKey="Male"
+                    position="insideBottomLeft"
+                    offset={-20}
+                    fontSize={12}
+                    style={{
+                      fontWeight: 'bold',
+                    }}
+                    fill="#0A215B"
+                    formatter={(value: number) =>
+                      `${(value * 100).toFixed(0)}%`
+                    }
+                  />
+                </Bar>
               </BarChart>
             </ResponsiveContainer>
           </div>
@@ -513,9 +544,54 @@ const Document: FC = () => {
                   itemStyle={{ color: 'black' }}
                   formatter={(value: number) => `${(value * 100).toFixed(0)}%`}
                 />
-                <Bar dataKey="Asian" stackId="a" fill="#3368B2" />
-                <Bar dataKey="Hispanic" stackId="a" fill="#94B3EF" />
-                <Bar dataKey="Black" stackId="a" fill="#ADFBE8" />
+                <Bar dataKey="Asian" stackId="a" fill="#3368B2" barSize={30}>
+                  <LabelList
+                    dx={20}
+                    dataKey="Asian"
+                    position="insideBottomLeft"
+                    offset={-20}
+                    fontSize={12}
+                    style={{
+                      fontWeight: 'bold',
+                    }}
+                    fill="#0A215B"
+                    formatter={(value: number) =>
+                      `${(value * 100).toFixed(0)}%`
+                    }
+                  />
+                </Bar>
+                <Bar dataKey="Hispanic" stackId="a" fill="#94B3EF" barSize={30}>
+                  <LabelList
+                    dx={20}
+                    dataKey="Hispanic"
+                    position="insideBottomLeft"
+                    offset={-20}
+                    fontSize={12}
+                    style={{
+                      fontWeight: 'bold',
+                    }}
+                    fill="#0A215B"
+                    formatter={(value: number) =>
+                      `${(value * 100).toFixed(0)}%`
+                    }
+                  />
+                </Bar>
+                <Bar dataKey="Black" stackId="a" fill="#ADFBE8" barSize={30}>
+                  <LabelList
+                    dx={20}
+                    dataKey="Black"
+                    position="insideBottomLeft"
+                    offset={-20}
+                    fontSize={12}
+                    style={{
+                      fontWeight: 'bold',
+                    }}
+                    fill="#0A215B"
+                    formatter={(value: number) =>
+                      `${(value * 100).toFixed(0)}%`
+                    }
+                  />
+                </Bar>
               </BarChart>
             </ResponsiveContainer>
           </div>
@@ -568,8 +644,38 @@ const Document: FC = () => {
                   itemStyle={{ color: 'black' }}
                   formatter={(value: number) => `${(value * 100).toFixed(0)}%`}
                 />
-                <Bar dataKey="Female" stackId="a" fill="#3368B2" />
-                <Bar dataKey="Male" stackId="a" fill="#7F7A7F" />
+                <Bar dataKey="Female" stackId="a" fill="#3368B2" barSize={30}>
+                  <LabelList
+                    dx={20}
+                    dataKey="Female"
+                    position="insideBottomLeft"
+                    offset={-20}
+                    fontSize={12}
+                    style={{
+                      fontWeight: 'bold',
+                    }}
+                    fill="#0A215B"
+                    formatter={(value: number) =>
+                      `${(value * 100).toFixed(0)}%`
+                    }
+                  />
+                </Bar>
+                <Bar dataKey="Male" stackId="a" fill="#7F7A7F" barSize={30}>
+                  <LabelList
+                    dx={20}
+                    dataKey="Male"
+                    position="insideBottomLeft"
+                    offset={-20}
+                    fontSize={12}
+                    style={{
+                      fontWeight: 'bold',
+                    }}
+                    fill="#0A215B"
+                    formatter={(value: number) =>
+                      `${(value * 100).toFixed(0)}%`
+                    }
+                  />
+                </Bar>
               </BarChart>
             </ResponsiveContainer>
           </div>
@@ -624,7 +730,7 @@ const Document: FC = () => {
             </div>
           }
         >
-          <div className="flex h-[320px] w-full flex-col">
+          <div className="flex h-[360px] w-full flex-col">
             <Typography as="h5" className=" mb-4 border-b-2 pb-2 text-start">
               Air District Staff
             </Typography>
@@ -634,6 +740,7 @@ const Document: FC = () => {
                 data={data}
                 layout="vertical"
                 margin={{ top: 5, bottom: 5 }}
+                barCategoryGap={50}
               >
                 <XAxis hide type="number" />
                 <YAxis
@@ -646,16 +753,112 @@ const Document: FC = () => {
                   formatter={(value: number) => `${(value * 100).toFixed(0)}%`}
                   itemStyle={{ color: 'black' }}
                 />
-                <Bar dataKey="Asian" stackId="a" fill="#3368B2" />
-                <Bar dataKey="White" stackId="a" fill="#7F7A7F" />
-                <Bar dataKey="Hispanic" stackId="a" fill="#94B3EF" />
-                <Bar dataKey="Black" stackId="a" fill="#ADFBE8" />
-                <Bar dataKey="Other/Unknown" stackId="a" fill="#006E6E" />
+                <Bar dataKey="Asian" stackId="a" fill="#3368B2" barSize={25}>
+                  <LabelList
+                    dx={20}
+                    dataKey="Asian"
+                    position="insideBottomLeft"
+                    offset={-20}
+                    fontSize={12}
+                    style={{
+                      fontWeight: 'bold',
+                    }}
+                    fill="#0A215B"
+                    formatter={(value: number) =>
+                      `${(value * 100).toFixed(0)}%`
+                    }
+                  />
+                </Bar>
+                <Bar dataKey="White" stackId="a" fill="#7F7A7F" barSize={25}>
+                  <LabelList
+                    dx={20}
+                    dataKey="White"
+                    position="insideBottomLeft"
+                    offset={-20}
+                    fontSize={12}
+                    style={{
+                      fontWeight: 'bold',
+                    }}
+                    fill="#0A215B"
+                    formatter={(value: number) =>
+                      `${(value * 100).toFixed(0)}%`
+                    }
+                  />
+                </Bar>
+                <Bar dataKey="Hispanic" stackId="a" fill="#94B3EF" barSize={25}>
+                  <LabelList
+                    dx={20}
+                    dataKey="Hispanic"
+                    position="insideBottomLeft"
+                    offset={-20}
+                    fontSize={12}
+                    style={{
+                      fontWeight: 'bold',
+                    }}
+                    fill="#0A215B"
+                    formatter={(value: number) =>
+                      `${(value * 100).toFixed(0)}%`
+                    }
+                  />
+                </Bar>
+                <Bar dataKey="Black" stackId="a" fill="#ADFBE8" barSize={25}>
+                  <LabelList
+                    dx={20}
+                    dataKey="Black"
+                    position="insideBottomLeft"
+                    offset={-20}
+                    fontSize={12}
+                    style={{
+                      fontWeight: 'bold',
+                    }}
+                    fill="#0A215B"
+                    formatter={(value: number) =>
+                      `${(value * 100).toFixed(0)}%`
+                    }
+                  />
+                </Bar>
+                <Bar
+                  dataKey="Other/Unknown"
+                  stackId="a"
+                  fill="#006E6E"
+                  barSize={25}
+                >
+                  <LabelList
+                    dx={20}
+                    dataKey="Other/Unknown"
+                    position="insideBottomLeft"
+                    offset={-20}
+                    fontSize={12}
+                    style={{
+                      fontWeight: 'bold',
+                    }}
+                    fill="#0A215B"
+                    formatter={(value: number) =>
+                      `${(value * 100).toFixed(0)}%`
+                    }
+                  />
+                </Bar>
                 <Bar
                   dataKey="American Indian/ Alaskan Native"
                   stackId="a"
                   fill="#E77550"
-                />
+                  barSize={25}
+                >
+                  <LabelList
+                    dx={35}
+                    dataKey="American Indian/ Alaskan Native"
+                    position="insideBottomLeft"
+                    offset={-20}
+                    fontSize={12}
+                    style={{
+                      fontWeight: 'bold',
+                    }}
+                    fill="#0A215B"
+                    formatter={(value: number) =>
+                      `${(value * 100).toFixed(0)}%`
+                    }
+                  />
+                </Bar>
               </BarChart>
             </ResponsiveContainer>
           </div>

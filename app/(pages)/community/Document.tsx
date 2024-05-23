@@ -128,8 +128,8 @@ const Document = (props: Props) => {
         title="Community"
         description="What Community Partnerships Have We Built?"
         background="bg-blue text-white"
-        image="/img/frame-19722-2-2.png"
-        imageTablet="/img/frame-19722-2-2.png"
+        image="/img/frame-19722-2-2.jpg"
+        imageTablet="/img/frame-19722-2-2.jpg"
         alt="Woman smiling while engaging with a whiteboard"
       />
       <TextBlock align="left">
@@ -303,7 +303,7 @@ const Document = (props: Props) => {
         <Scene pin triggerElement="#slide2">
           <section
             id="slide2"
-            className="relative flex w-full justify-center overflow-hidden fill-blue desktop:h-[1181px] desktop:justify-end"
+            className="relative flex w-full items-start justify-center overflow-hidden fill-blue desktop:h-[1181px] desktop:justify-end"
           >
             <div className="hidden flex-[0.33] desktop:flex">&nbsp;</div>
             <article className=" flex w-full flex-col items-center justify-center overflow-hidden desktop:flex-[0.67]  desktop:items-end">
