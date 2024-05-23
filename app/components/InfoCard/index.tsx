@@ -53,9 +53,11 @@ export const InfoCard = ({
       ${allwidth && 'w-full desktop:h-[370px]'} ${variantSizeClass} 
       flex min-h-[370px] flex-col justify-between rounded-[20px] p-10 desktop:min-h-fit`}
     >
-      <Typography as="h2" className="text-h2-desktop">
+      <h2
+        className={`font-h1  ${cardTitle === '“' ? 'text-[145px] leading-none' : 'text-h2-desktop'}`}
+      >
         {cardTitle}
-      </Typography>
+      </h2>
       <Typography
         as="p"
         className={` ${cardTitle === '“' ? 'text-caption-desktop desktop:text-pull-quote-desktop' : 'text-caption-desktop'}`}

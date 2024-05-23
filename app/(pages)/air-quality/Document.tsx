@@ -9,7 +9,7 @@ import Image from 'next/image';
 import React from 'react';
 import Navigation from '@/app/components/Navigation';
 import dynamic from 'next/dynamic';
-import Carousel from '@/app/components/Carousel';
+import { ImagesCarousel } from '@/app/components/Carousel';
 import {
   greenhouseEmissions,
   nitrogenOxidePollution,
@@ -216,7 +216,7 @@ const Document = (props: Props) => {
           </div>
         </TextBlock>
         <section className="mb-40 mt-12 flex w-full pl-5 tablet-landscape:pl-15 desktop:pl-25">
-          <Carousel slideComponents={slides} />
+          <ImagesCarousel slideComponents={slides} />
         </section>
         <section className="relative flex w-full justify-center overflow-hidden fill-blue desktop:h-[1281px] desktop:justify-end">
           <div className="absolute bottom-0 left-0 right-0 top-0 -z-10 block bg-light-blue/20">
