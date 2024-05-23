@@ -343,11 +343,8 @@ const Document: FC = () => {
         </div>
       </TextBlock>
       <TextBlock>
-        <div className="flex w-full flex-col items-start justify-start place-self-end desktop:max-w-[75%]">
-          <Typography
-            as="p"
-            className="tablet-portait:px-15 px-6 text-dark-gray desktop:pl-0"
-          >
+        <div className="flex w-full flex-col items-start justify-start place-self-end px-6 tablet-portrait:px-15 desktop:max-w-[75%] desktop:pl-0">
+          <Typography as="p" className=" text-dark-gray desktop:pl-0">
             We awarded a loan guarantee to
             <span className="font-bold"> SPARKZ</span>, whose energy storage
             solution reduces the cost of domestic lithium battery production by
@@ -373,17 +370,14 @@ const Document: FC = () => {
         </div>
       </TextBlock>
       <TextBlock>
-        <div className="mt-10 flex w-full flex-col items-start justify-start place-self-end desktop:max-w-[75%]">
+        <div className="mt-10 flex w-full flex-col  items-start justify-start place-self-end px-6 tablet-portrait:px-15 desktop:max-w-[75%] desktop:pl-0">
           <Typography
             as="h2"
-            className="tablet-portait:px-15 break-all px-6 uppercase text-dark-blue desktop:pl-0"
+            className=" break-all uppercase text-dark-blue desktop:pl-0"
           >
             Supporting Electric Vehicle Adoption
           </Typography>
-          <Typography
-            as="p"
-            className="tablet-portait:px-15 mt-6 px-6 text-dark-gray desktop:pl-0"
-          >
+          <Typography as="p" className="mt-6 text-dark-gray desktop:pl-0">
             We continued our commitment to accelerating electric vehicle
             adoption in the Bay Area. The
             <span className="font-bold"> Charge! Program </span>
@@ -402,10 +396,7 @@ const Document: FC = () => {
             relaunched in Fall 2023 with increased grant award amounts and will
             expand zip code eligibility to all Bay Area residents in 2024.
           </Typography>
-          <Typography
-            as="p"
-            className="tablet-portait:px-15 mt-4 px-6 text-dark-gray desktop:pl-0"
-          >
+          <Typography as="p" className="mt-4  text-dark-gray desktop:pl-0">
             Additionally, we were awarded nearly $3 million in funding from the
             California Energy Commission (CEC) to expand equitable EV charging
             across the Bay Area. We are working with project partners and
@@ -464,7 +455,7 @@ const Document: FC = () => {
         />
       </section>
 
-      <section className="relative mt-6 flex w-full flex-col justify-center place-self-end desktop:mt-0 desktop:space-y-0 desktop:px-0 desktop:py-36 desktop:pr-15">
+      <section className="relative mt-6 flex w-full flex-col justify-center place-self-end desktop:mt-0 desktop:space-y-0 desktop:px-15 desktop:py-36">
         <InfoCardText
           firstTitle="$30M"
           secondTitle="Heavy-Duty Vehicle and Equipment Electric Charging Infrastructure"
