@@ -36,7 +36,7 @@ const InfoCardImage = ({
       </div>
       <AnimatedImage
         key={`tablet-${title}`}
-        className={`relative flex h-full w-full flex-shrink-0 overflow-hidden rounded-[20px] desktop:hidden  desktop:w-[460px] ${imageFirst ? 'order-1 desktop:order-1 desktop:rounded-l-[20px] desktop:rounded-r-none' : ' order-1 desktop:order-2 desktop:rounded-l-none desktop:rounded-r-[20px]'}`}
+        className={`relative flex h-[350px] w-full flex-shrink-0 overflow-hidden rounded-[20px] desktop:hidden desktop:min-h-[460px] desktop:w-[460px] ${imageFirst ? 'order-1 desktop:order-1 desktop:rounded-l-[20px] desktop:rounded-r-none' : ' order-1 desktop:order-2 desktop:rounded-l-none desktop:rounded-r-[20px]'}`}
       >
         <Image
           src={imageTablet ? imageTablet : imageSrc}
