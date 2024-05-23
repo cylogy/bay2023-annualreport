@@ -305,7 +305,7 @@ const Document: FC = () => {
       <div className="inline-block">
         <TextBlock align="left">
           <div className="flex w-full flex-col place-self-start px-5 pb-6 pt-20 tablet-portrait:px-6 tablet-portrait:pb-20 tablet-portrait:pt-22.5 desktop:max-w-[855px] desktop:pb-20 desktop:pl-25 desktop:pt-40">
-            <Typography as="h2" className=" uppercase text-dark-blue">
+            <Typography as="h3" className=" uppercase text-dark-blue">
               Strengthening Diversity, Equity and Inclusion Within the Air
               District
             </Typography>
@@ -694,7 +694,7 @@ const Document: FC = () => {
           alt="Group of cyclists wearing helmets"
         />
         <div className="mb-6 w-full border-b-2 border-dark-blue pb-1 desktop:mb-0">
-          <Typography as="h2" className=" uppercase text-dark-blue">
+          <Typography as="h3" className=" uppercase text-dark-blue">
             DEMOGRAPHICS BY RACE AND ETHNICITY**
           </Typography>
         </div>
@@ -1404,8 +1404,9 @@ const Document: FC = () => {
       space-y-9 bg-transparent px-6 py-25 desktop:space-x-0 desktop:space-y-[100px] desktop:px-20 desktop:py-36"
       >
         <SectionGraph title="SOCIAL + WEBSITES" options={[]} background="white">
-          <div className="mb-4 flex flex-col desktop:mb-6 desktop:w-full desktop:justify-between">
-            <Typography as="h4" className="uppercase">
+          <div className="mb-4 flex flex-col desktop:mb-6 desktop:w-full desktop:justify-between
+          ">
+            <Typography as="h5" className="capitalize mb-4">
               Bay Area Air District
             </Typography>
             <a role="link" href="https://www.baaqmd.gov/">
@@ -1482,7 +1483,7 @@ const Document: FC = () => {
             </Typography>
           </div>
           <div className="flex flex-col desktop:mb-6 desktop:w-full desktop:justify-between">
-            <Typography as="h4" className="uppercase">
+            <Typography as="h5" className="capitalize mb-4">
               Spare the Air
             </Typography>
             <a role="link" href="https://www.sparetheair.org/">
