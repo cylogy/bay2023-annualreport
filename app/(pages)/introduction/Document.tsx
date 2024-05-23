@@ -94,12 +94,12 @@ const Document = (props: Props) => {
           id={10}
           className="flex h-full w-full flex-col items-start justify-center bg-blue px-6 py-10 text-white tablet-portrait:px-15 desktop:w-1/2 desktop:p-20"
         >
-          <Typography as="h2" className=" text-left text-h1-desktop">
+          <h2 className="font-anton mb-28 text-left font-h2 text-[145px] leading-none desktop:mb-10">
             &ldquo;
-          </Typography>
+          </h2>
           <Typography
             as="p"
-            className="-mt-10 font-body-text text-pull-quote-desktop desktop:-mt-16"
+            className="-mt-20 font-body-text text-pull-quote-desktop desktop:-mt-16"
           >
             Our mission is to significantly reduce the disproportionate levels
             of air pollution that many communities face.

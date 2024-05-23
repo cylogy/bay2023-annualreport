@@ -46,10 +46,10 @@ export const InfoCardText = ({
 
   return (
     <article
-      className={`${variantSizeClass} flex px-6 py-15 desktop:bg-transparent ${variantSizeClass} ${directionPositonSelcted}`}
+      className={`${variantSizeClass} flex gap-y-14 px-6 py-15 desktop:bg-transparent ${variantSizeClass} ${directionPositonSelcted}`}
     >
       <div
-        className={`my-15 flex flex-col desktop:hidden desktop:min-h-fit desktop:justify-between`}
+        className={` flex flex-col desktop:hidden desktop:min-h-fit desktop:justify-between`}
       >
         <Typography as="h3" className="uppercase text-white">
           {secondTitle}

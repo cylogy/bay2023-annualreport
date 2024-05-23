@@ -207,17 +207,20 @@ const Document = (props: Props) => {
                   <InfoCard
                     backgroundColor="dark-blue"
                     cardTitle="22"
+                    small
                     cardBody="James Cary Smith Community Grant awardees continued on to a second year of capacity-building projects"
                   />
                   <InfoCard
                     backgroundColor="white"
                     cardTitle="594"
+                    small
                     cardBody="home air filtration units and replacement filters were distributed through the Home and School Air Filtration Program"
                   />
 
                   <InfoCard
                     backgroundColor="light-blue"
                     cardTitle="17"
+                    small
                     cardBody="community leaders serve on the Community Advisory Council, helping to direct our environmental justice policies"
                   />
                 </div>

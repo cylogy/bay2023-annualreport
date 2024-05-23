@@ -49,7 +49,7 @@ export const InfoCard = ({
       }}
       viewport={{ once: true }}
       className={`
-      ${small && 'min-h-[305px] max-h-[305px] desktop:max-h-[290px]'}
+      ${small && 'max-h-[305px] min-h-[305px] desktop:max-h-[290px]'}
       ${allwidth && 'w-full desktop:h-[370px]'} ${variantSizeClass} 
       flex min-h-[370px] flex-col justify-between rounded-[20px] p-10 desktop:min-h-fit`}
     >
@@ -58,7 +58,7 @@ export const InfoCard = ({
       </Typography>
       <Typography
         as="p"
-        className={` ${cardTitle == '“' ? 'text-pull-quote-desktop' : 'text-caption-desktop'}`}
+        className={` ${cardTitle === '“' ? 'text-caption-desktop desktop:text-pull-quote-desktop' : 'text-caption-desktop'}`}
       >
         {cardBody}
       </Typography>

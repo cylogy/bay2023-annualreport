@@ -432,7 +432,7 @@ const Document: FC = () => {
           backgroundColor="blue"
         />
       </section>
-      <section className="relative flex w-full flex-col justify-center space-y-9 place-self-end px-6  desktop:max-w-[75%] desktop:space-y-0 desktop:px-0 desktop:pr-15">
+      <section className="relative flex w-full flex-col justify-center place-self-end px-6  desktop:max-w-[75%] desktop:space-y-0 desktop:px-0 desktop:pr-15">
         <Typography as="h2" className="uppercase text-dark-blue">
           Clean Ports
         </Typography>
@@ -444,7 +444,7 @@ const Document: FC = () => {
         </Typography>
       </section>
       <section
-        className="relative mt-6 flex h-[350px]
+        className="relative flex h-[350px]
      w-full flex-col justify-center place-self-end py-25 desktop:mt-0 desktop:h-[610px] desktop:max-w-[75%] desktop:space-y-0 desktop:px-0 desktop:py-36 desktop:pr-15"
       >
         <Image
