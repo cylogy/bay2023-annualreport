@@ -69,7 +69,7 @@ const Document = (props: Props) => {
           </Typography>
           <AnimatedImage
             key={18}
-            className="relative mt-12 flex h-[350px] w-full desktop:h-[531px]"
+            className="relative mt-2 desktop:mt-12 flex h-[350px] w-full desktop:h-[531px]"
           >
             <Image
               fill

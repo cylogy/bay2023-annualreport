@@ -207,7 +207,7 @@ const Document: FC = () => {
   const genderBarData = [
     {
       name: '2023',
-      Female: 0.42,
+      Female: 0.44,
       Male: 0.56,
     },
     {
@@ -1085,7 +1085,7 @@ const Document: FC = () => {
         </SectionGraph>
       </section>
 
-      <section className="relative flex w-full flex-col justify-center bg-transparent px-6 py-25 desktop:space-x-0  desktop:px-20 desktop:pt-36">
+      <section className="relative flex w-full flex-col justify-center bg-transparent px-6 pt-10 desktop:py-25 desktop:space-x-0  desktop:px-20 desktop:pt-36">
         <div className="absolute bottom-0 left-0 right-0 top-0 -z-[4] block bg-green/20">
           &nbsp;
         </div>
@@ -1481,7 +1481,7 @@ const Document: FC = () => {
               </a>
             </Typography>
           </div>
-          <div className="mb-4 flex flex-col desktop:mb-6 desktop:w-full desktop:justify-between">
+          <div className="flex flex-col desktop:mb-6 desktop:w-full desktop:justify-between">
             <Typography as="h4" className="uppercase">
               Spare the Air
             </Typography>

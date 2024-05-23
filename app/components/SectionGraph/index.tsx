@@ -42,7 +42,7 @@ const index = ({
   return (
     <div
       className={`
-    mb-25 flex w-full flex-col  
+     mb-8  desktop:mb-25 flex w-full flex-col  
     desktop:flex-row desktop:justify-between desktop:space-x-9 
     ${!children ? 'mt-15' : 'mt-6'}
     `}
@@ -51,7 +51,7 @@ const index = ({
         headChildren
       ) : (
         <Typography
-          as="h3"
+          as="h2"
           className={`h-fit w-full border-b-2 border-dark-blue pb-2 text-h3-tablet uppercase text-dark-blue `}
         >
           {title}
