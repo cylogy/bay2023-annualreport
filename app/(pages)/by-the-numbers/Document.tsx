@@ -486,7 +486,7 @@ const Document: FC = () => {
       <section className="relative mt-12 hidden w-full flex-col bg-transparent pl-15 desktop:flex desktop:pl-6 desktop:pt-[160px]">
         <Typography
           as="h2"
-          className=" ml-18 mb-15 h-fit border-b-2 border-dark-blue pb-2 uppercase text-dark-blue"
+          className=" mb-15 ml-18 h-fit border-b-2 border-dark-blue pb-2 uppercase text-dark-blue"
         >
           PERMITTING ACTIVITY
         </Typography>
@@ -553,7 +553,7 @@ const Document: FC = () => {
           <div className="my-6 w-full border-b-2" />
 
           <div className="flex flex-col desktop:flex-row desktop:justify-between">
-            <Typography as="h5" className="mb-6 uppercase">
+            <Typography as="h5" className="mb-6 ">
               Total Source Tests
             </Typography>
             <Typography as="h5" className="mb-6 uppercase">
@@ -561,15 +561,15 @@ const Document: FC = () => {
             </Typography>
           </div>
           <div className="flex flex-col desktop:flex-row desktop:justify-between">
-            <Typography as="h5" className="mb-6 uppercase">
-              Total Source Test Related Violations
+            <Typography as="h5" className="mb-6 ">
+              Total Violations
             </Typography>
             <Typography as="h5" className="mb-6 uppercase">
               134
             </Typography>
           </div>
           <div className="flex flex-col desktop:flex-row desktop:justify-between">
-            <Typography as="h5" className="mb-6 uppercase">
+            <Typography as="h5" className="mb-6">
               Compliance Rate
             </Typography>
             <Typography as="h5" className="mb-6 uppercase">
