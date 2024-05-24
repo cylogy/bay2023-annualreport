@@ -445,6 +445,7 @@ const Document: FC = () => {
           title=""
           options={[]}
           background="white"
+          smallSpacing
           headChildren={<div></div>}
         >
           <div className="flex h-[310px] w-full flex-col relative">

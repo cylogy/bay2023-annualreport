@@ -425,7 +425,7 @@ const Document = (props: Props) => {
           </TextBlock>
           <Typography
             as="p"
-            className="mx-auto mb-6 mt-15 flex w-full max-w-[1241px] flex-1 flex-grow flex-col px-6 text-dark-blue tablet-portrait:mb-25 tablet-portrait:mt-22.5 tablet-portrait:px-12 desktop:my-40 desktop:px-0"
+            className="mx-auto mb-6 mt-4 desktop:mt-22.5 flex w-full max-w-[1241px] flex-1 flex-grow flex-col px-6 text-dark-blue tablet-portrait:mb-25  tablet-portrait:px-12 desktop:my-40 desktop:px-0"
           >
             <span>
               <sup>a</sup> The Air District’s latest greenhouse gas (GHG)

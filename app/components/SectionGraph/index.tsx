@@ -16,6 +16,7 @@ interface Props {
   children?: React.ReactNode;
   headChildren?: React.ReactNode;
   textColor?: 'dark-blue' | 'dark-gray';
+  smallSpacing?: boolean;
 }
 
 const index = ({
@@ -26,6 +27,7 @@ const index = ({
   children,
   headChildren,
   textColor = 'dark-blue',
+  smallSpacing
 }: Props) => {
   const cardColor = {
     white: 'bg-white text-dark-blue',
