@@ -328,7 +328,7 @@ const Document: FC = () => {
         alt="Incentives"
       />
       <TextBlock>
-        <div className="mx-5 flex w-full flex-col place-self-start pb-6 pt-20 tablet-portrait:mx-15 tablet-portrait:pb-20 tablet-portrait:pt-22.5 desktop:ml-25 desktop:max-w-[855px] desktop:pb-20 desktop:pt-40">
+        <div className="flex w-full flex-col place-self-start px-5 pb-6 pt-20 tablet-portrait:px-15 tablet-portrait:pb-20 tablet-portrait:pt-22.5 desktop:ml-25 desktop:max-w-[855px] desktop:px-0 desktop:pb-20 desktop:pt-40">
           <Typography as="h2" className=" uppercase text-dark-blue">
             Climate Tech Finance
           </Typography>
