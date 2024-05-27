@@ -303,7 +303,7 @@ const Document = (props: Props) => {
             </div>
           </section>
         </Scene>
-        <Scene pin triggerElement="#slide2">
+        <Scene pin triggerElement="#slide4">
           <section
             id="slide2"
             className="relative flex w-full items-start justify-center overflow-hidden fill-blue desktop:h-[1181px] desktop:justify-end"
@@ -348,7 +348,7 @@ const Document = (props: Props) => {
             </article>
           </section>
         </Scene>
-        <Scene pin triggerElement="#slide3">
+        <Scene pin triggerElement="#slide4">
           <>
             <section
               id="slide3"
@@ -431,6 +431,7 @@ const Document = (props: Props) => {
                     <InfoCard
                       backgroundColor="dark-blue"
                       cardTitle="&ldquo;"
+                      centered
                       cardBody="priority greenhouse gas (GHG) reduction measures that benefit frontline communities."
                     />
                   </div>

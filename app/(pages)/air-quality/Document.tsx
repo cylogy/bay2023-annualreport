@@ -140,6 +140,7 @@ const Document = (props: Props) => {
             cardTitle="&ldquo;"
             cardBody="Our air monitoring network measures ground-level pollutants"
             backgroundColor="dark-blue"
+            centered
           />
         </section>
         <TextBlock align="left">
@@ -196,7 +197,10 @@ const Document = (props: Props) => {
         </section>
         <TextBlock align="left">
           <div className="mt-22.5 flex w-full flex-col px-5 desktop:mx-15 desktop:mt-40 desktop:max-w-[855px]  desktop:px-10">
-            <Typography as="h3" className="mt-6 text-dark-blue desktop:p-0">
+            <Typography
+              as="h3"
+              className="mt-6 uppercase text-dark-blue desktop:p-0"
+            >
               Bay Air Center Launches Public Website
             </Typography>
             <Typography as="p" className="mt-6 text-dark-blue desktop:p-0">
@@ -234,7 +238,7 @@ const Document = (props: Props) => {
             <div className=" mt-22.5 flex w-full flex-col overflow-hidden px-5 desktop:mt-40 desktop:max-w-[1317px] desktop:self-start desktop:pr-10">
               <Typography
                 as="h3"
-                className="capitalize text-dark-blue desktop:p-0"
+                className="uppercase capitalize text-dark-blue desktop:p-0"
               >
                 Ad Hoc Committee on Incident Response Program Improvements
               </Typography>

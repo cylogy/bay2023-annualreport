@@ -328,14 +328,17 @@ const Document: FC = () => {
         alt="Incentives"
       />
       <TextBlock>
-        <div className="flex w-full flex-col place-self-start px-5 pb-6 pt-20 tablet-portrait:px-15 tablet-portrait:pb-20 tablet-portrait:pt-22.5 desktop:max-w-[855px] desktop:pb-20 desktop:pl-25 desktop:pt-40">
+        <div className="mx-5 flex w-full flex-col place-self-start pb-6 pt-20 tablet-portrait:mx-15 tablet-portrait:pb-20 tablet-portrait:pt-22.5 desktop:ml-25 desktop:max-w-[855px] desktop:pb-20 desktop:pt-40">
           <Typography as="h2" className=" uppercase text-dark-blue">
             Climate Tech Finance
           </Typography>
-          <Typography as="p" className=" mt-6 text-dark-blue">
+          <Typography
+            as="blockquote"
+            className="mt-6 text-dark-blue desktop:p-0"
+          >
             This year, in partnership with iBank, our Climate Tech Finance
             program took significant steps in
-            <span className="font-bold">
+            <span className="font-pull-quote-mobile-bold tablet-portrait:font-pull-quote-tablet-bold desktop:font-pull-quote-desktop-bold">
               {' '}
               endorsing sustainable technological advancements.
             </span>
@@ -372,7 +375,7 @@ const Document: FC = () => {
       <TextBlock>
         <div className="mt-10 flex w-full flex-col  items-start justify-start place-self-end px-6 tablet-portrait:px-15 desktop:max-w-[75%] desktop:pl-0">
           <Typography
-            as="h2"
+            as="h3"
             className=" break-all uppercase text-dark-blue desktop:pl-0"
           >
             Supporting Electric Vehicle Adoption

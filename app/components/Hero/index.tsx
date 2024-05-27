@@ -48,7 +48,7 @@ const Hero = ({
               src={imageTablet}
               fill
               alt={alt}
-              className={`${title.toLowerCase() === 'community' ? 'object-[0%_20%]' : 'object-[0%_45%]'} object-cover `}
+              className={`${title.toLowerCase() === 'community' ? 'object-[0%_20%]' : title.toLowerCase() === 'incentives' ? 'object-[0%_5%]' : title.toLowerCase() === 'introduction' ? 'object-[0%_5%]' : 'object-[0%_45%]'} object-cover `}
             />
           </div>
         </AnimatedImage>

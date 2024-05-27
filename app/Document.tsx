@@ -164,7 +164,7 @@ const Document = (props: Props) => {
               <Button
                 className="w-full self-start"
                 color="white"
-                downloadPdfClassName="button-instance"
+                downloadPdfClassName="button-instance tracking-widest"
                 icon
                 size="large"
                 text="BEGIN THE REPORT"

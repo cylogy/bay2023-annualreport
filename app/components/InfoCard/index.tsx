@@ -10,6 +10,7 @@ type Props = {
   backgroundColor: 'white' | 'dark-blue' | 'blue' | 'green' | 'light-blue';
   allwidth?: boolean;
   small?: boolean;
+  centered?: boolean;
 };
 
 export const InfoCard = ({
@@ -18,6 +19,7 @@ export const InfoCard = ({
   backgroundColor = 'blue',
   allwidth,
   small,
+  centered = false,
 }: Props) => {
   const styles = {
     white: 'bg-white border border-dark-blue text-dark-blue',
@@ -51,10 +53,10 @@ export const InfoCard = ({
       className={`
       ${small && 'max-h-[305px] min-h-[305px] desktop:max-h-[290px]'}
       ${allwidth && 'w-full desktop:h-[370px]'} ${variantSizeClass} 
-      flex min-h-[370px] flex-col justify-between rounded-[20px] p-10 desktop:min-h-fit`}
+      flex min-h-[370px] flex-col ${centered ? 'justify-center' : 'justify-between'} rounded-[20px] p-10 desktop:min-h-fit`}
     >
       <h2
-        className={`font-h1  ${cardTitle === '“' ? 'text-[145px] leading-none' : 'text-h2-desktop'}`}
+        className={`font-h1  ${cardTitle === '“' ? '-mb-20 text-[145px] leading-none' : 'text-h2-desktop'}`}
       >
         {cardTitle}
       </h2>
