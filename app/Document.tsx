@@ -35,7 +35,7 @@ const Document = (props: Props) => {
           >
             <Animated
               as="h1"
-              className="flex w-full flex-nowrap items-center justify-center overflow-hidden whitespace-nowrap font-h1 text-h1-mobile font-h6-desktop uppercase text-white tablet-portrait:text-h1-tablet"
+              className="ml-5 flex w-full flex-nowrap items-center justify-center whitespace-nowrap font-h1 text-h1-mobile font-h6-desktop uppercase text-white tablet-portrait:text-h1-tablet"
               text="Our Air,"
               oneLine
               centered
