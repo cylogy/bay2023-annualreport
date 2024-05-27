@@ -94,8 +94,8 @@ const Document = (props: Props) => {
           id={10}
           className="flex h-full w-full flex-col items-start justify-center bg-blue px-6 py-10 text-white tablet-portrait:px-15 desktop:w-1/2 desktop:p-20"
         >
-          <h2 className="font-anton mb-28 text-left font-h2 text-[145px] leading-none desktop:mb-10">
-            &rdquo;
+          <h2 className="font-anton -mb-2 text-left font-h2 text-[145px] leading-none">
+            &ldquo;
           </h2>
           <Typography
             as="p"
