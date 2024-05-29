@@ -6,7 +6,6 @@ import { Button } from './components/Button';
 import Animated from './components/Typography/animated';
 import AnimatedTile from './components/AnimatedTile';
 import AnimatedImage from './components/AnimatedImage';
-import LightboxComponent from './components/Lightbox';
 import Link from 'next/link';
 
 type Props = {};
@@ -14,7 +13,6 @@ type Props = {};
 const Document = (props: Props) => {
   return (
     <main className="flex min-h-screen flex-col items-center justify-between">
-      <LightboxComponent />
       <section className="flex w-full flex-col overflow-hidden desktop:flex-row">
         <div className="z-30 flex w-full flex-1 bg-white desktop:order-1 desktop:flex-[0.3]">
           <AnimatedTile
@@ -158,7 +156,7 @@ const Document = (props: Props) => {
               In 2023, we continued to strengthen our partnerships with Bay Area
               communities most impacted by air pollution. Our innovative
               emission reduction and climate protection programs supported
-              cutting-edge projects to reduce greenhouse gases. 
+              cutting-edge projects to reduce greenhouse gases.
             </Typography>
             <Link href={'/introduction'}>
               <Button
