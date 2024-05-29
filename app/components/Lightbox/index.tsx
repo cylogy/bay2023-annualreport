@@ -18,15 +18,18 @@ declare module 'yet-another-react-lightbox' {
   }
 }
 
-type Props = {};
+type Props = {
+  open: boolean;
+  setOpen: React.Dispatch<React.SetStateAction<boolean>>
+};
 
-const LightboxComponent = (props: Props) => {
-  const [open, setOpen] = useState(true);
+const LightboxComponent = ({ open, setOpen }: Props) => {
 
   return (
     <Lightbox
       plugins={[Video]}
       open={open}
+      styles={{ container: { backgroundColor: "rgba(0, 0, 0, .4)" } }}
       close={() => setOpen(false)}
       slides={[
         {

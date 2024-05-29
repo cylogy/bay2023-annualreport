@@ -344,3 +344,104 @@ button.yarl__button.yarl__navigation_prev,
 button.yarl__button.yarl__navigation_next {
   display: none
 }
+
+:root {
+  /* Stack height = edit number of cards */
+  --stack__cards: calc(4 * 100vh);
+  /* Sibling overlay opacity */
+  --overlay__opacity: .7;
+  /* Colors */
+  --color__dark: black;
+  --color__light: white;
+}
+
+.card__reveal,
+.card__conceal {
+  /* Visual styles */
+  position: sticky;
+  width: 100%;
+  height: auto;
+  background-color: var(--color__light);
+}
+
+/* Card reveal: scroll effect */
+.card__reveal {
+  bottom: 0;
+}
+
+/* Card conceal: scroll effect */
+.card__conceal {
+  top: 0;
+}
+
+/* Stacking order: reveal */
+.card__reveal:nth-child(1) {
+  z-index: 4;
+}
+
+.card__reveal:nth-child(2) {
+  z-index: 3;
+}
+
+.card__reveal:nth-child(3) {
+  z-index: 2;
+}
+
+.card__reveal:nth-child(4) {
+  z-index: 1;
+}
+
+/* Stacking order: conceal */
+.card__conceal:nth-child(1) {
+  z-index: 5;
+}
+
+.card__conceal:nth-child(2) {
+  z-index: 6;
+}
+
+.card__conceal:nth-child(3) {
+  z-index: 7;
+}
+
+.card__conceal:nth-child(4) {
+  z-index: 8;
+}
+
+/* Overlay reveal & conceal effects
+---------------------------------------- */
+
+/* Sibling overlay: invisible on load */
+.overlay__reveal::after,
+.overlay__reveal--visible::after,
+.overlay__conceal::before,
+.overlay__conceal--visible::before {
+  left: 0;
+  width: 100%;
+  height: 120vh;
+  opacity: 0;
+  content: "";
+  display: inline-block;
+  position: absolute;
+  background: var(--color__dark);
+  transition: all 2s cubic-bezier(0.165, 0.84, 0.44, 1);
+  pointer-events: none;
+}
+
+/* Reveal effect: after card */
+.overlay__reveal::after,
+.overlay__reveal--visible::after {
+  top: 100%;
+}
+
+/* Conceal effect: before card */
+.overlay__conceal::before,
+.overlay__conceal--visible::before {
+  bottom: 100%;
+}
+
+/* Sibling overlay: visibile when JS executes */
+.overlay__reveal--visible::after,
+.overlay__conceal--visible::before {
+  opacity: var(--overlay__opacity);
+}

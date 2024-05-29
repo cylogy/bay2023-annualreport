@@ -7,9 +7,14 @@ import Image from 'next/image';
 import { AnimatePresence, motion } from 'framer-motion';
 import MobileMenu from './mobileMenu';
 import './style.css';
+import LightboxComponent from '../Lightbox';
+import { usePathname } from 'next/navigation';
 
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
+  const [open, setOpen] = useState(true);
+
+  const path = usePathname()
 
   return (
     <nav className="header sticky top-0 z-50 bg-white" role="navigation">
@@ -95,6 +100,9 @@ const Navbar = () => {
       <AnimatePresence mode="popLayout">
         {isOpen && <MobileMenu setIsOpen={setIsOpen} />}
       </AnimatePresence>
+      {path === '/' && (
+        <LightboxComponent open={open} setOpen={setOpen} />
+      )}
     </nav>
   );
 };

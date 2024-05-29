@@ -19,14 +19,12 @@ const AnimatedTile = ({ id, className, children }: Props) => {
         opacity: 1,
         transition: {
           staggerChildren: 2,
-          stiffness: 10,
-          mass: 0.1,
+          stiffness: 120,
+          damping: 20,
           delayChildren: 20,
+          type: 'spring',
+          duration: 0.2,
         },
-      }}
-      transition={{
-        ease: 'easeInOut',
-        duration: 0.5,
       }}
       viewport={{ once: true }}
       className={className}

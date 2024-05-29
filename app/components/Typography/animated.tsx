@@ -22,10 +22,12 @@ const defaultAnimations = {
   visible: {
     y: 0,
     transition: {
-      ease: [0, 0.2, 0.7, 0.8],
-      duration: 0.2,
-      stiffnes: 100,
-      mass: 0.2,
+      type: "spring",
+      damping: 7,
+      stiffness: 30,
+      velocity: 50,
+      mass: 0.5,
+      times: [0, 0.1, 0.9, 1],
     },
   },
 };
@@ -44,7 +46,7 @@ const Animated = ({
         initial="hidden"
         animate="visible"
         variants={{
-          visible: { transition: { staggerChildren: 0.05 } },
+          visible: { transition: { staggerChildren: 0.02, delay: 0.5 } },
           hidden: {},
         }}
         aria-hidden
