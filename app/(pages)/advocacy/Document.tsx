@@ -100,7 +100,7 @@ const Document: FC = () => {
           <Typography as="h3" className=" uppercase text-dark-blue">
             AB 617 statewide funding
           </Typography>
-          <div className="flex flex-col space-y-9 min-h-[370px]  desktop:max-h-[290px] desktop:flex-row desktop:space-x-9 desktop:space-y-0 desktop:pt-6">
+          <div className="flex flex-col space-y-9 min-h-[315px]  desktop:max-h-[290px] desktop:flex-row desktop:space-x-9 desktop:space-y-0 desktop:pt-6">
             <InfoCard
               cardTitle="$60M"
               cardBody="for implementation"
@@ -126,7 +126,7 @@ const Document: FC = () => {
           <Typography as="p" className="pt-9 desktop:py-9 text-dark-gray">
             From this funding, we are expecting to receive:
           </Typography>
-          <div className="flex flex-col space-y-9 min-h-[315px]  desktop:max-h-[290px] desktop:flex-row desktop:space-x-9 desktop:space-y-0 desktop:pt-6">
+          <div className="flex flex-col space-y-9 min-h-[315px]  desktop:max-h-[290px] desktop:flex-row desktop:space-x-9 desktop:space-y-0">
             <InfoCard
               cardTitle="$11M"
               cardBody="For implementation"
