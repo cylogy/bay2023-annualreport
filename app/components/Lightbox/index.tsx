@@ -27,8 +27,7 @@ type Props = {
 
 const LightboxComponent = ({ open, setOpen }: Props) => {
   useEffect(() => {
-
-    const handleBackgroundClick = (event: MouseEvent) => {
+    const handleBackgroundClick = (event: MouseEvent): void => {
       const target = event.target as HTMLElement;
       if (target.classList.contains('yarl__slide')) {
         setOpen(false);
