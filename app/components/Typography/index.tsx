@@ -16,6 +16,7 @@ type TypographyProps = {
   className?: string;
   children: React.ReactNode;
   mixBlend?: boolean;
+  priorityClass?: string;
 };
 
 const variantSizes = {
@@ -38,13 +39,14 @@ const Typography: React.FC<TypographyProps> = ({
   className = '',
   children,
   mixBlend = false,
+  priorityClass = '',
 }) => {
   const variantSizeClass = variantSizes[Tag] || ''; // handle case where Tag not found
   const variantClass = `${variantSizeClass}`;
 
   return (
     <Tag
-      className={`${className} ${variantClass}`}
+      className={`${priorityClass} ${variantClass} ${className}`}
       style={{ mixBlendMode: mixBlend ? 'normal' : 'normal' }}
     >
       {children}

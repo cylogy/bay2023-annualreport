@@ -916,59 +916,59 @@ const Document: FC = () => {
           background="white"
         >
           <div className="mb-4 flex flex-col desktop:mb-6 desktop:w-full desktop:justify-between">
-            <Typography as="h5" className="capitalize">
+            <Typography as="h5" priorityClass="capitalize">
               Revenue
             </Typography>
             <div className="mt- mt-6 flex flex-col desktop:flex-row desktop:justify-between">
               <Typography as="span" className="text-start text-dark-gray-letter">
                 Permit-Related Revenue
               </Typography>
-              <Typography as="h5" className="text-start text-dark-gray-letter">
+              <Typography as="h5" priorityClass="text-start text-dark-gray-letter">
                 $65,252,023
               </Typography>
             </div>
             <div className="mt-6 flex flex-col desktop:flex-row desktop:justify-between">
-              <Typography as="span" className="text-start text-dark-gray-letter">
+              <Typography as="span" priorityClass="text-start text-dark-gray-letter">
                 County Property Tax
               </Typography>
-              <Typography as="h5" className="text-start text-dark-gray-letter">
+              <Typography as="h5" priorityClass="text-start text-dark-gray-letter">
                 $45,219,314 
               </Typography>
             </div>
             <div className="mt-6 flex flex-col desktop:flex-row desktop:justify-between">
-              <Typography as="span" className="text-start text-dark-gray-letter">
+              <Typography as="span" priorityClass="text-start text-dark-gray-letter">
                 Federal Grants
               </Typography>
-              <Typography as="h5" className="text-start text-dark-gray-letter">
+              <Typography as="h5" priorityClass="text-start text-dark-gray-letter">
                 $5,071,978 
               </Typography>
             </div>
             <div className="mt-6 flex flex-col desktop:flex-row desktop:justify-between">
-              <Typography as="span" className="text-start text-dark-gray-letter">
+              <Typography as="span" priorityClass="text-start text-dark-gray-letter">
                 State and Other Grants
               </Typography>
-              <Typography as="h5" className="text-start text-dark-gray-letter">
+              <Typography as="h5" priorityClass="text-start text-dark-gray-letter">
                 $76,623,547 
               </Typography>
             </div>
             <div className="mt-6 flex flex-col desktop:flex-row desktop:justify-between">
-              <Typography as="span" className="text-start text-dark-gray-letter">
+              <Typography as="span" priorityClass="text-start text-dark-gray-letter">
                 Other Revenue
               </Typography>
-              <Typography as="h5" className="text-start text-dark-gray-letter">
+              <Typography as="h5" priorityClass="text-start text-dark-gray-letter">
                 $2,412,989 
               </Typography>
             </div>
             <div className="mt-6 flex w-full flex-col justify-between border-dark-blue pt-4 desktop:flex-row desktop:border-t-2">
               <Typography
                 as="h5"
-                className="capitalize border-b-2 border-t-2 pb-2 pt-4 text-start text-dark-gray-letter desktop:border-0 desktop:pb-0 desktop:pt-0"
+                priorityClass="capitalize border-b-2 border-t-2 pb-2 pt-4 text-start text-dark-gray-letter desktop:border-0 desktop:pb-0 desktop:pt-0"
               >
                 Total
               </Typography>
               <Typography
                 as="h5"
-                className=" mt-2 text-start uppercase text-dark-gray-letter desktop:mt-0"
+                priorityClass=" mt-2 text-start uppercase text-dark-gray-letter desktop:mt-0"
               >
                 $194,579,851 
               </Typography>
@@ -981,47 +981,47 @@ const Document: FC = () => {
               Expenditures
             </Typography>
             <div className="mt-6 flex flex-col desktop:flex-row desktop:justify-between">
-              <Typography as="span" className="text-start text-dark-gray-letter">
+              <Typography as="span" priorityClass="text-start text-dark-gray-letter">
                 Personnel
               </Typography>
-              <Typography as="h5" className="text-start text-dark-gray-letter">
+              <Typography as="h5" priorityClass="text-start text-dark-gray-letter">
                 $95,579,663 
               </Typography>
             </div>
             <div className="mt-6 flex flex-col desktop:flex-row desktop:justify-between">
-              <Typography as="span" className="text-start text-dark-gray-letter">
+              <Typography as="span" priorityClass="text-start text-dark-gray-letter">
                 Program Distribution
               </Typography>
-              <Typography as="h5" className="text-start text-dark-gray-letter">
+              <Typography as="h5" priorityClass="text-start text-dark-gray-letter">
                 $55,942,481 
               </Typography>
             </div>
             <div className="mt-6 flex flex-col desktop:flex-row desktop:justify-between">
-              <Typography as="span" className="text-start text-dark-gray-letter">
+              <Typography as="span" priorityClass="text-start text-dark-gray-letter">
                 Services and Supplies
               </Typography>
-              <Typography as="h5" className="text-start text-dark-gray-letter">
+              <Typography as="h5" priorityClass="text-start text-dark-gray-letter">
                 $28,895,623 
               </Typography>
             </div>
             <div className="mt-6 flex flex-col desktop:flex-row desktop:justify-between">
-              <Typography as="span" className="text-start text-dark-gray-letter">
+              <Typography as="span" priorityClass="text-start text-dark-gray-letter">
                 Capital Outlay
               </Typography>
-              <Typography as="h5" className="text-start text-dark-gray-letter">
+              <Typography as="h5" priorityClass="text-start text-dark-gray-letter">
                 $3,635,922 
               </Typography>
             </div>
             <div className="mt-6 flex w-full flex-col justify-between border-dark-blue pt-4 desktop:flex-row desktop:border-t-2">
               <Typography
                 as="h5"
-                className="capitalize border-b-2 border-t-2 pb-2 pt-4 text-start text-dark-gray-letter desktop:border-0 desktop:pb-0 desktop:pt-0"
+                priorityClass="capitalize border-b-2 border-t-2 pb-2 pt-4 text-start text-dark-gray-letter desktop:border-0 desktop:pb-0 desktop:pt-0"
               >
                 Total
               </Typography>
               <Typography
                 as="h5"
-                className=" mt-2 text-start uppercase text-dark-gray-letter desktop:mt-0"
+                priorityClass=" mt-2 text-start uppercase text-dark-gray-letter desktop:mt-0"
               >
                 $184,053,689 
               </Typography>
@@ -1036,7 +1036,7 @@ const Document: FC = () => {
       space-y-9 px-6 py-25 desktop:space-x-0 desktop:space-y-[100px] desktop:px-20 desktop:py-36"
       >
         <div className="mb-6 w-full border-b-2 border-dark-blue pb-1 desktop:mb-0">
-          <Typography as="h2" className=" uppercase text-dark-blue desktop:text-[44px] text-[30px] sm:text-[36px]">
+          <Typography as="h2" priorityClass="text-dark-blue uppercase  text-h3-mobile tablet-portrait:text-h3-tablet desktop:text-h3-desktop font-h3 tracking-h3-mobile tablet-portrait:tracking-h3-tablet desktop:tracking-h3-desktop ">
             Our Leadership
           </Typography>
         </div>
