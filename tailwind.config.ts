@@ -16,6 +16,7 @@ const config: Config = {
         brick: 'rgba(232, 117, 81, 1)',
         'dark-blue': 'rgba(10, 33, 91, 1)',
         'dark-gray': 'rgba(75, 72, 72, 1)',
+        'dark-gray-letter': '#4B4848',
         gray: 'rgba(127, 122, 127, 1)',
         green: 'rgba(0, 110, 110, 1)',
         'light-blue': 'rgba(148, 179, 239, 1)',

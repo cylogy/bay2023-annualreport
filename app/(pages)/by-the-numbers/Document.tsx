@@ -19,7 +19,7 @@ const slides = [
         <div className="flex w-full flex-col justify-between desktop:flex-row">
           <Typography
             as="h5"
-            className=" mb-4 border-b-2 pb-2 text-start text-dark-blue desktop:mb-0 desktop:border-b-0 desktop:pb-0"
+            className=" mb-4 pb-2 text-start text-dark-blue desktop:mb-0 desktop:border-b-0 desktop:pb-0"
           >
             Bay Area Permitted Facilities
           </Typography>
@@ -88,7 +88,7 @@ const slides = [
         <div className="flex w-full flex-col justify-between text-dark-gray desktop:flex-row">
           <Typography
             as="h5"
-            className=" mb-4 border-b-2 pb-2 text-start text-dark-blue desktop:mb-0 desktop:border-b-0 desktop:pb-0"
+            className=" mb-4 pb-2 text-start text-dark-blue desktop:mb-0 desktop:border-b-0 desktop:pb-0"
           >
             New Permit Applications
           </Typography>
@@ -141,7 +141,7 @@ const slides = [
         <div className="flex w-full flex-col justify-between desktop:flex-row">
           <Typography
             as="h5"
-            className=" mb-4 border-b-2 pb-2 text-start text-dark-blue desktop:mb-0 desktop:border-b-0 desktop:pb-0"
+            className=" mb-4 pb-2 text-start text-dark-blue desktop:mb-0 desktop:pb-0"
           >
             Application Health Risk Assessments
           </Typography>

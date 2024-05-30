@@ -16,7 +16,7 @@ const Document: FC = () => {
     () => (
       <InfoCardImage
         backgroundColor="bg-blue text-white flex-1 h-full"
-        imageSrc="/img/image-square-7.png"
+        imageSrc="/img/Image Square.png"
         alt="Wildfire Smoke Response"
         imageFirst
         title="Wildfire Smoke Response"
@@ -126,34 +126,38 @@ const Document: FC = () => {
           <Typography as="p" className="pt-9 desktop:py-9 text-dark-gray">
             From this funding, we are expecting to receive:
           </Typography>
-          <div className="flex w-full flex-col space-y-9 desktop:h-[249px] desktop:min-h-[370px] desktop:flex-row desktop:space-x-9 desktop:space-y-0">
+          <div className="flex flex-col space-y-9 min-h-[315px]  desktop:max-h-[290px] desktop:flex-row desktop:space-x-9 desktop:space-y-0 desktop:pt-6">
             <InfoCard
               cardTitle="$11M"
               cardBody="For implementation"
               backgroundColor="white"
               allwidth
+              small
             />
             <InfoCard
               cardTitle="~$33M"
               cardBody="For our incentive programs"
               backgroundColor="light-blue"
               allwidth
+              small
             />
           </div>
         </div>
       </section>
-      <section className="flex w-full flex-col space-y-9 place-self-end px-6 py-9 desktop:min-h-[370px] desktop:max-w-[1200px] desktop:flex-row desktop:space-x-9 desktop:space-y-0 desktop:py-15 desktop:pl-0 desktop:pr-9 desktop:pt-6">
+      <section className="flex w-full mb-[30px] desktop:mb-[160px] flex-col space-y-9 place-self-end px-6 py-9 desktop:max-h-[290px] desktop:max-w-[1200px] desktop:flex-row desktop:space-x-9 desktop:space-y-0 desktop:py-15 desktop:pl-0 desktop:pr-9 desktop:pt-6">
         <InfoCard
           cardTitle="$80M"
           cardBody="for a suite of statewide equity transportation programs, including, but not limited to, the Clean Cars For All Program."
           backgroundColor="blue"
           allwidth
+          small
         />
         <InfoCard
           cardTitle="$310.5M"
           cardBody="for the Equitable Building Decarbonization Program."
           backgroundColor="white"
           allwidth
+          small
         />
       </section>
       <section className="flex w-full flex-col space-y-9 place-self-end px-6 py-9 desktop:max-w-[1200px]  desktop:space-y-0 desktop:py-15 desktop:pl-0 desktop:pr-9 desktop:pt-6">
@@ -162,12 +166,13 @@ const Document: FC = () => {
             Bills we sponsored that passed
           </Typography>
         </div>
-        <div className="desktop:min-h-[370px]">
+        <div className="desktop:min-h-[290px]">
           <InfoCard
             cardTitle="AB 536"
             cardBody="AB 536 (Wilson) – Repeals the compensation prohibition for the Air District’s Advisory Council and allows members to receive compensation for attending specified meetings."
             backgroundColor="green"
             allwidth
+            small
           />
         </div>
       </section>

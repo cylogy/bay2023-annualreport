@@ -100,13 +100,13 @@ const index = ({
               ))}
             </div>
             <div className="mt-6 flex w-full justify-between border-t-2 border-dark-blue py-4">
-              <Typography as="h5" className="capitalize">
+              <Typography as="h5" className="capitalize text-dark-gray-letter">
                 Total
               </Typography>
               <div
                 className={`hidden w-5/12 desktop:grid ${options[0].percents ? 'grid-cols-2 place-items-end ' : 'grid-cols-1 place-items-start desktop:place-items-end'} max-w-[170px] text-dark-blue  desktop:max-w-none`}
               >
-                <Typography as="h5" className="capitalize">
+                <Typography as="h5" className="capitalize text-dark-gray-letter">
                   {options.reduce(
                     (accumulator: number, currentValue) =>
                       accumulator + currentValue.value,
