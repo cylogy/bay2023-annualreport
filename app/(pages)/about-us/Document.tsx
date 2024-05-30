@@ -976,7 +976,7 @@ const Document: FC = () => {
 
             <Typography
               as="h5"
-              className="mt-[56px] uppercase desktop:mt-[60px]"
+              className="mt-[56px] capitalize desktop:mt-[60px]"
             >
               Expenditures
             </Typography>

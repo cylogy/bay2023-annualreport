@@ -44,7 +44,7 @@ const Typography: React.FC<TypographyProps> = ({
 
   return (
     <Tag
-      className={`${variantClass} ${className}`}
+      className={`${className} ${variantClass}`}
       style={{ mixBlendMode: mixBlend ? 'normal' : 'normal' }}
     >
       {children}
