@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useRef } from 'react';
 import Typography from '../Typography';
 
 type Props = {
@@ -18,6 +18,8 @@ export const InfoCardText = ({
   backgroundColor = 'blue',
   position,
 }: Props) => {
+  const bodySize: any = useRef( null)
+
   const styles = {
     white: 'bg-white',
     'dark-blue': 'bg-dark-blue',
@@ -44,10 +46,12 @@ export const InfoCardText = ({
   const directionPositonSelcted = directionPositon[position];
   const primaryRoundedPositonSelected = primaryRoundedPositon[position];
 
+    console.log(bodySize?.current?.clientHeight)
   return (
     <article
       className={`${variantSizeClass} flex gap-y-14 px-6 py-15 desktop:bg-transparent ${variantSizeClass} ${directionPositonSelcted}`}
     >
+      
       <div
         className={` flex flex-col desktop:hidden desktop:min-h-fit desktop:justify-between`}
       >
@@ -59,7 +63,8 @@ export const InfoCardText = ({
         </Typography>
       </div>
       <div
-        className={`hidden h-full min-h-[370px] p-10 desktop:flex desktop:min-h-[456px] desktop:flex-col ${variantSizeClass} ${cardPosition}`}
+        ref={bodySize}
+        className={`hidden h-full min-h-fit p-10 desktop:flex desktop:min-h-fit desktop:flex-col ${variantSizeClass} ${cardPosition}`}
       >
         <Typography as="h3" className="uppercase text-white">
           {secondTitle}
@@ -71,6 +76,7 @@ export const InfoCardText = ({
           {secondBody}
         </Typography>
       </div>
+
       <div
         className={`flex min-h-[370px] flex-col justify-between rounded-[20px] border border-dark-blue bg-white p-10 text-dark-blue desktop:hidden desktop:min-h-[456px]`}
       >
@@ -78,7 +84,7 @@ export const InfoCardText = ({
         <Typography as="p">{firstBody}</Typography>
       </div>
       <div
-        className={`hidden h-full min-h-[370px] flex-col justify-between border-dark-blue p-10  text-dark-blue desktop:flex desktop:min-h-[456px] ${primaryRoundedPositonSelected}`}
+        className={`hidden h-[${bodySize?.current?.clientHeight}] flex-col justify-between border-dark-blue p-10  text-dark-blue desktop:flex ${primaryRoundedPositonSelected}`}
       >
         <Typography as="h2">{firstTitle}</Typography>
         <Typography as="p">{firstBody}</Typography>
