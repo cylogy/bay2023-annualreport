@@ -1,4 +1,6 @@
-import React, { useState } from 'react';
+'use client'
+
+import React, { useEffect } from 'react';
 import Lightbox from 'yet-another-react-lightbox';
 import Video from 'yet-another-react-lightbox/plugins/video';
 import 'yet-another-react-lightbox/styles.css';
@@ -24,6 +26,25 @@ type Props = {
 };
 
 const LightboxComponent = ({ open, setOpen }: Props) => {
+  useEffect(() => {
+
+    const handleBackgroundClick = (event: MouseEvent) => {
+      const target = event.target as HTMLElement;
+      if (target.classList.contains('yarl__slide')) {
+        setOpen(false);
+      }
+    };
+
+    if (open) {
+      document.addEventListener('click', handleBackgroundClick);
+    } else {
+      document.removeEventListener('click', handleBackgroundClick);
+    }
+
+    return () => {
+      document.removeEventListener('click', handleBackgroundClick);
+    };
+  }, []);
 
   return (
     <Lightbox
