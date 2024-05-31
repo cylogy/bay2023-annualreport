@@ -99,7 +99,7 @@ const index = ({
                 </div>
               ))}
             </div>
-            <div className="mt-6 flex w-full justify-between border-t-2 border-dark-blue py-4  border-b-2">
+            <div className="mt-6 flex w-full justify-between border-t-2 border-dark-blue py-4 desktop:border-b-0 border-b-2">
               <Typography as="h5" className="capitalize text-dark-gray-letter">
                 Total
               </Typography>
