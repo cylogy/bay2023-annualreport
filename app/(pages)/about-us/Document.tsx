@@ -304,12 +304,12 @@ const Document: FC = () => {
       />
       <div className="inline-block">
         <TextBlock align="left">
-          <div className="flex w-full flex-col place-self-start px-5 pb-6 pt-20 tablet-portrait:px-6 tablet-portrait:pb-20 tablet-portrait:pt-22.5 desktop:max-w-[855px] desktop:pb-20 desktop:pl-25 desktop:pt-40">
-            <Typography as="h3" className=" uppercase text-dark-blue text-[55px] desktop:text-[66px]">
+          <div className="flex w-full px-6 desktop:px-0 flex-col place-self-start pb-6 pt-20 desktop:mb-20 tablet-portrait:mx-6 tablet-portrait:pb-20 tablet-portrait:pt-22.5 desktop:max-w-[855px] desktop:pb-20 desktop:ml-25 desktop:pt-40">
+            <Typography as="h2" className=" uppercase text-dark-blue text-[55px]  desktop:text-[66px]">
               Strengthening Diversity, Equity and Inclusion Within the Air
               District
             </Typography>
-            <Typography as="p" className=" mt-6 text-dark-blue">
+            <Typography as="p" className=" mt-6 text-dark-blue text-pull-quote-mobile tablet-portrait:text-pull-quote-tablet desktop:text-pull-quote-desktop">
               Staff participated in a variety of internal events, activities,
               and trainings to strengthen DEI principles throughout our work,
               including events featuring labor leader and civil rights activist

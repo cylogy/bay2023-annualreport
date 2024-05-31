@@ -99,7 +99,7 @@ const index = ({
                 </div>
               ))}
             </div>
-            <div className="mt-6 flex w-full justify-between border-t-2 border-dark-blue py-4">
+            <div className="mt-6 flex w-full justify-between border-t-2 border-dark-blue py-4  border-b-2">
               <Typography as="h5" className="capitalize text-dark-gray-letter">
                 Total
               </Typography>
@@ -114,7 +114,7 @@ const index = ({
                   )}
                 </Typography>
                 {options[0].percents && (
-                  <Typography as="h5" className="capitalize">
+                  <Typography as="h5" className="capitalize text-dark-gray-letter">
                     {Math.floor(
                       options.reduce(
                         (accumulator: number, currentValue) =>
@@ -128,7 +128,7 @@ const index = ({
               </div>
             </div>
             <div
-              className={`grid desktop:hidden ${options[0].percents ? 'grid-cols-2 ' : 'grid-cols-1 place-items-start desktop:place-items-end'} max-w-[170px] text-dark-blue  desktop:max-w-none`}
+              className={`grid desktop:hidden ${options[0].percents ? 'grid-cols-2 ' : 'grid-cols-1 place-items-start desktop:place-items-end'}  mt-4 max-w-[170px] text-dark-gray  desktop:max-w-none`}
             >
               <Typography as="h5" className="capitalize">
                 {options.reduce(

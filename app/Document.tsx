@@ -116,8 +116,8 @@ const Document = (props: Props) => {
                   text="And Communities"
                 />
                 <Animated
-                  as="h2"
-                  className="mt-2 overflow-hidden whitespace-nowrap font-h6 font-h6-desktop uppercase leading-none text-white desktop:text-h6-tablet"
+                  as="h6"
+                  className="mt-2 overflow-hidden whitespace-nowrap font-h6 font-h6-desktop uppercase leading-none text-white text-h6-tablet"
                   text="2023 Annual Report"
                   oneLine
                 />

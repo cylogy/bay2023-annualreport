@@ -440,7 +440,7 @@ const Document: FC = () => {
           />
         </section>
         <section className="relative flex w-full flex-col justify-center place-self-end px-6  desktop:max-w-[75%] desktop:space-y-0 desktop:px-0 desktop:pr-15">
-          <Typography as="h2" className="uppercase text-dark-blue">
+          <Typography as="h3" className="uppercase text-dark-blue">
             Clean Ports
           </Typography>
           <Typography as="p" className="pt-6 text-dark-gray">

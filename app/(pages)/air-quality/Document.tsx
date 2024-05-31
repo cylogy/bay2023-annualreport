@@ -65,7 +65,7 @@ const Document = (props: Props) => {
         <TextBlock align="left">
           <div className="mt-22.5 flex w-full flex-col desktop:mx-25 desktop:mt-40 desktop:max-w-[855px]">
             <Typography
-              as="h3"
+              as="h2"
               className=" px-4 capitalize text-dark-blue tablet-landscape:px-15 desktop:p-0"
             >
               AIR DISTRICT MONITORING SITES
