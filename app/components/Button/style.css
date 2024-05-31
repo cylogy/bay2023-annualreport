@@ -6,6 +6,7 @@
     gap: 16px;
     justify-content: center;
     cursor: pointer;
+    transition: all ease-in-out 0.3s;
 }
 
 .button .download-pdf {
@@ -46,6 +47,11 @@
 
 .button.outlined.color-1-white {
     background-color: var(--white);
+}
+
+.button.outlined.color-1-white:hover {
+    background-color: var(--brick);
+    color: var(--white);
 }
 
 .button.outlined .download-pdf {

@@ -273,7 +273,7 @@ const Document = (props: Props) => {
                 </AnimatedImage>
               </div>
             </div>
-            <div className=" flex w-full justify-center desktop:mb-40 desktop:bg-lighter-green desktop:pb-40 desktop:pt-40">
+            <div className=" flex w-full justify-center desktop:bg-lighter-green desktop:pb-40 desktop:pt-40">
               <InfoCardImage
                 title="HOME AND SCHOOL AIR FILTRATION PROGRAM"
                 body={() => (

@@ -35,14 +35,16 @@ export const Button: React.FC<ButtonProps> = ({
     >
       <div className={`${downloadPdfClassName} font-proxima`}>{text}</div>
       {icon && (
-        <Image
-          width={12}
-          height={12}
-          className={`group-20 ${groupClassName}`}
-          alt="Group"
-          src={type === 'outlined' ? group : '/img/group-3.png'}
-        />
+        <Arrow />
       )}
     </button>
   );
 };
+
+const Arrow = () => {
+  return (
+    <svg width="14" height="14" viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+      <path d="M7.0339 1L13 6.99016M12.9128 7.06885H1H12.9128ZM7.0339 13L13 6.99016L7.0339 13Z" stroke='currentColor' stroke-width="1.36701" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round" />
+    </svg>
+  )
+}
