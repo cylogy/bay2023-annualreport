@@ -81,7 +81,7 @@ const Document: FC = () => {
         description="How Are We Championing Legislation to Protect Air Quality?"
         image="/img/frame-19722-2.png"
         imageTablet="/img/frame-19722-2.png"
-        background="bg-light-blue text-white"
+        background="bg-light-blue"
         alt="Advocacy"
       />
       <TextBlock align="left">
@@ -89,7 +89,7 @@ const Document: FC = () => {
           <Typography as="h2" className=" uppercase text-dark-blue">
             From the State Capitol
           </Typography>
-          <Typography as="p" className=" mt-6 text-dark-blue">
+          <Typography as="p" className=" mt-6 text-dark-blue xs:text-[21px] md:text-[23px] lg:text-[26px]">
             Statewide 2023 funding that will cover several of our programs:
           </Typography>
         </div>

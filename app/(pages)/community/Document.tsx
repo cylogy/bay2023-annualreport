@@ -385,7 +385,7 @@ const Document = (props: Props) => {
 
             <section
               id="slide4"
-              className="z-10 flex w-full justify-center bg-lighter-blue py-10 "
+              className="z-10 flex w-full justify-center bg-lighter-blue py-10 desktop:pb-40 "
             >
               <div className="hidden flex-[0.33] desktop:flex">&nbsp;</div>
               <div className=" flex w-full flex-grow flex-col items-center justify-center px-6 desktop:flex-[0.67] desktop:justify-start desktop:pr-15 ">
