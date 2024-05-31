@@ -55,6 +55,7 @@ const MobileMenu = ({ setIsOpen }: Props) => {
         </button>
       </div>
       <div className="mt-12 flex w-full flex-col items-center justify-start">
+      <Link href={'/'} onClick={() => setIsOpen(false)}>
         <Image
           className="logo-img"
           alt="Baaqmd Header Logo"
@@ -62,6 +63,7 @@ const MobileMenu = ({ setIsOpen }: Props) => {
           width={186.15}
           height={44.07}
         />
+      </Link>
 
         <ul className="mt-6 flex w-full flex-col space-y-6">
           {links.map((link, index) => (
