@@ -81,7 +81,7 @@ const Document: FC = () => {
         description="How Are We Championing Legislation to Protect Air Quality?"
         image="/img/frame-19722-2.png"
         imageTablet="/img/frame-19722-2.png"
-        background="bg-light-blue"
+        background="bg-light-blue text-dark-blue"
         alt="Advocacy"
       />
       <TextBlock align="left">
