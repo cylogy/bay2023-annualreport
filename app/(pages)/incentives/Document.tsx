@@ -480,7 +480,7 @@ const Document: FC = () => {
           />
         </section>
       </section>
-      <section className='card__reveal'>
+      <section>
         <div className="relative mt-12 hidden w-full flex-col bg-transparent pb-10 pl-15 desktop:flex desktop:pl-6 desktop:pt-[160px]">
           <Image
             src="/img/Frame 19849.png"
