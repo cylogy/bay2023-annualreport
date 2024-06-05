@@ -80,15 +80,15 @@ const index = ({
                 >
                   <Typography
                     as="span"
-                    className="capitalize desktop:text-[21px]"
+                    className="desktop:text-[21px]"
                   >
-                    {item.title}
+                    {item?.title?.charAt?.(0)?.toUpperCase() + item?.title?.slice?.(1)?.toLocaleLowerCase()}
                   </Typography>
                   <div
                     className={`grid desktop:w-5/12 ${options[0].percents ? 'grid-cols-2 desktop:place-items-end ' : 'grid-cols-1 place-items-start desktop:place-items-end'} max-w-[170px] desktop:max-w-none  ${textColorObject[textColor]}`}
                   >
                     <Typography as="h5" className="uppercase ">
-                      {item.value}
+                      {item.value?.toLocaleString('en-US')}
                     </Typography>
                     {item.percents && (
                       <Typography as="h5" className="uppercase">
@@ -152,8 +152,8 @@ const index = ({
             </div>
             {footerTitles && (
               <div className="mt-6">
-                <Typography as="span" className="capitalize">
-                  {footerTitles}
+                <Typography as="span">
+                  *{footerTitles.charAt(1).toUpperCase() + footerTitles.slice(2)}
                 </Typography>
               </div>
             )}

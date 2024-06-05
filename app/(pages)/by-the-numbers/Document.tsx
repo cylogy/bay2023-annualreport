@@ -445,7 +445,7 @@ const Document: FC = () => {
       </Head>
       <Hero
         title="By the Numbers"
-        description="How do we track and improve air quality protections?"
+        description="How do we enforce and improve air quality protections?"
         image="/img/number-page-small.png"
         imageTablet="/img/number-page-tablet.png"
         background="bg-dark-blue text-white"
@@ -537,9 +537,9 @@ const Document: FC = () => {
                   >
                     <Typography
                       as="span"
-                      className="capitalize desktop:mt-1 desktop:text-[21px]"
+                      className="desktop:mt-1 desktop:text-[21px]"
                     >
-                      {item.label}
+                      {item?.label?.charAt?.(0)?.toUpperCase() + item?.label?.slice?.(1)?.toLocaleLowerCase()}
                     </Typography>
                     <Typography as="h5" className="uppercase">
                       {item.value}
@@ -594,7 +594,7 @@ const Document: FC = () => {
           background="white"
         >
           <div className="mb-4 flex flex-col desktop:mb-6 desktop:w-full desktop:justify-between">
-            <Typography as="h5" className=" capitalize">
+            <Typography as="h5" className="">
               Rules Adopted or Amended
             </Typography>
             <Typography as="h5" className="mt-6 capitalize">
@@ -602,7 +602,7 @@ const Document: FC = () => {
             </Typography>
             <Typography
               as="span"
-              className="mt-2 pb-1 capitalize text-dark-gray  desktop:text-[21px]"
+              className="mt-2 pb-1 text-dark-gray  desktop:text-[21px]"
             >
               Regulation 9: Inorganic Gaseous Pollutants, Rule 4: Nitrogen
               Oxides from Fan Type Central Furnaces, and Rule 6: Nitrogen Oxides
@@ -624,7 +624,7 @@ const Document: FC = () => {
             </Typography>
             <Typography
               as="span"
-              className="mt-2 pb-1 capitalize text-dark-gray  desktop:text-[21px]"
+              className="mt-2 pb-1 text-dark-gray  desktop:text-[21px]"
             >
               Regulation 8: Organic Compounds, Rule 8: Wastewater Collection and
               Separation Systems
