@@ -88,6 +88,7 @@ const Document = (props: Props) => {
                 modeling, and research on the health effects of air pollution.
               </span>{' '}
               <br />
+              <br />
               Pollutants measured by the monitoring network include ozone,
               carbon monoxide, nitrogen oxides, sulfur dioxide, particulate
               matter, ultrafine particulate matter, lead, black carbon, hydrogen
@@ -362,7 +363,7 @@ const Document = (props: Props) => {
                 <Typography as="h5">PARTICULATE MATTER</Typography>
                 <div className="flex w-full flex-col items-start justify-between gap-y-2 tablet-portrait:flex-row tablet-portrait:items-center tablet-portrait:gap-y-0">
                   <Typography as="p">
-                    Days over National 24-Hour PM10 Standard
+                    Days over National 24-Hour PM<sub>10</sub> Standard
                   </Typography>
                   <Typography as="h5" className="relative">
                     0<sup className="font-bold">*</sup>
@@ -370,7 +371,7 @@ const Document = (props: Props) => {
                 </div>
                 <div className="flex w-full flex-col items-start justify-between gap-y-2 tablet-portrait:flex-row tablet-portrait:items-center tablet-portrait:gap-y-0">
                   <Typography as="p">
-                    Days over California 24-Hour PM10 Standard
+                    Days over California 24-Hour PM<sub>10</sub> Standard
                   </Typography>
                   <Typography as="h5" className="relative">
                     0<sup className=" font-bold">*</sup>
@@ -378,7 +379,7 @@ const Document = (props: Props) => {
                 </div>
                 <div className="flex w-full flex-col items-start justify-between gap-y-2 tablet-portrait:flex-row tablet-portrait:items-center tablet-portrait:gap-y-0">
                   <Typography as="p">
-                    Days over National 24-Hour PM2.5 Standard
+                    Days over National 24-Hour PM<sub>2.5</sub> Standard
                   </Typography>
                   <Typography as="h5">
                     3<sup className="text-white">*</sup>
@@ -433,7 +434,7 @@ const Document = (props: Props) => {
           >
             <span>
               <sup>a</sup> The Air District’s latest greenhouse gas (GHG)
-              emissions estimates can be found here: baaqmd.gov/capghg. These
+              emissions estimates can be found here: <a href='https://www.baaqmd.gov/capghg' target="_blank" rel="noopener noreferrer">baaqmd.gov/capghg</a>. These
               estimates do not reflect specific emissions changes in 2023 due to
               the impact of COVID-19 pandemic or wildfires.
             </span>

@@ -134,7 +134,7 @@ const Document = (props: Props) => {
               process.
             </Typography>
           )}
-          imageSrc="/img/EJ Guidance.jpeg"
+          imageSrc="/img/highway.png"
           alt="Aerial view of intersecting highways"
         />
         <InfoCardImage
@@ -147,17 +147,17 @@ const Document = (props: Props) => {
                 methodology and modeling tools for assessing air quality and
                 health impacts
               </span>{' '}
-              from exposure to toxic air contaminants and PM2.5 from individual
+              from exposure to toxic air contaminants and PM<sub>2.5</sub> from individual
               projects. The step-by-step methodology and innovative modeling
               tools support lead agencies and practitioners in conducting
               cumulative impact analysis during the CEQA environmental review
               process, with visualization maps of screening-level cancer risks,
-              chronic hazards, and PM2.5 concentrations from the Bay Area
+              chronic hazards, and PM<sub>2.5</sub> concentrations from the Bay Area
               highways and surface streets, freight and passenger rail services,
               selected railyards, and permitted stationary sources.
             </Typography>
           )}
-          imageSrc="/img/highway.png"
+          imageSrc="/img/sanjose highway.jpeg"
           imageFirst
           alt="Heavy traffic on the highway"
         />

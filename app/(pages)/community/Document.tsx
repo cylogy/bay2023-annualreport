@@ -22,7 +22,7 @@ const Document = (props: Props) => {
     () => (
       <InfoCardImage
         backgroundColor="bg-green text-white flex-1 h-full"
-        imageSrc="/img/image-square-15.png"
+        imageSrc="/img/cranes.jpeg"
         alt="Aerial views of West Oakland"
         imageFirst
         title="WEST OAKLAND"
@@ -128,7 +128,7 @@ const Document = (props: Props) => {
         title="Community"
         description="What Community Partnerships Have We Built?"
         background="bg-blue text-white"
-        image="/img/frame-19722-2-2.jpg"
+        image="/img/community Large.jpeg"
         imageTablet="/img/frame-19722-2-2.jpg"
         alt="Woman smiling while engaging with a whiteboard"
       />
@@ -341,7 +341,7 @@ const Document = (props: Props) => {
                 <Image
                   src="/img/rectangle-255-3-2.jpg"
                   fill
-                  className="object-cover object-center"
+                  className="object-cover object-[50%_10%]"
                   alt="Women speaking into microphone"
                 />
               </AnimatedImage>
@@ -424,7 +424,7 @@ const Document = (props: Props) => {
                     />
                     <InfoCard
                       backgroundColor="light-blue"
-                      cardTitle="67"
+                      cardTitle="71"
                       cardBody="residents enrolled in the Bay Area Healthy Homes Initiative"
                     />
 

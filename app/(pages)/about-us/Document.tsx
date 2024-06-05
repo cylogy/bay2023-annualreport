@@ -376,9 +376,6 @@ const Document: FC = () => {
               <Typography as="span" className="w-full text-start mt-9">
                 *American Community Survey (ACS) Census Bureau
               </Typography>
-              <Typography as="span" className="w-full text-start">
-                ** Total percentages may vary by 1% due to rounding
-              </Typography>
             </div>
           }
         >
@@ -826,7 +823,7 @@ const Document: FC = () => {
                   barSize={25}
                 >
                   <LabelList
-                    dx={20}
+                    dx={10}
                     dataKey="Other/Unknown"
                     position="insideBottomLeft"
                     offset={-20}
@@ -847,7 +844,7 @@ const Document: FC = () => {
                   barSize={25}
                 >
                   <LabelList
-                    dx={35}
+                    dx={25}
                     dataKey="American Indian/ Alaskan Native"
                     position="insideBottomLeft"
                     offset={-20}
@@ -1055,7 +1052,7 @@ const Document: FC = () => {
               </Typography>
               <Typography
                 as="span"
-                className={`capitalize text-dark-gray-letter desktop:mt-1 desktop:text-[21px] ${executiveManagementData?.length > index + 1 && 'border-b-2 border-dark-blue pb-4'} `}
+                className={`text-dark-gray-letter desktop:mt-1 desktop:text-[21px] ${executiveManagementData?.length > index + 1 && 'border-b-2 border-dark-blue pb-4'} `}
               >
                 {person.position}
               </Typography>
@@ -1078,7 +1075,7 @@ const Document: FC = () => {
               </Typography>
               <Typography
                 as="span"
-                className={`capitalize desktop:mt-1 desktop:text-[21px] ${divisionDirectorsAndOfficersData?.length > index + 1 && 'border-b-2 border-white pb-4'} `}
+                className={`desktop:mt-1 desktop:text-[21px] ${divisionDirectorsAndOfficersData?.length > index + 1 && 'border-b-2 border-white pb-4'} `}
               >
                 {person.position}
               </Typography>
@@ -1468,7 +1465,7 @@ const Document: FC = () => {
             </a>
             <Typography
               as="span"
-              className="mt-1 border-b-2 border-dark-blue pb-4 capitalize desktop:pb-15 desktop:pt-6 desktop:text-[21px]"
+              className="mt-1 border-b-2 border-dark-blue pb-4 desktop:pb-15 desktop:pt-6 desktop:text-[21px]"
             >
               Find us on{' '}
               <a
@@ -1487,7 +1484,7 @@ const Document: FC = () => {
             </Typography>
           </div>
           <div className="flex flex-col desktop:mb-6 desktop:w-full desktop:justify-between">
-            <Typography as="h5" className="mb-4 capitalize">
+            <Typography as="h5" className="mb-4">
               Spare the Air
             </Typography>
             <a role="link" href="https://www.sparetheair.org/">

@@ -53,7 +53,7 @@ const InfoCardImage = ({
         <Image
           src={imageSrc}
           fill
-          className="object-cover object-bottom"
+          className="object-cover object-[0%_5%]"
           alt={alt}
         />
       </AnimatedImage>

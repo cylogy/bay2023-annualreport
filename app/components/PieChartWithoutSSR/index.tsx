@@ -20,14 +20,14 @@ const PieChartWithoutSSR = ({ data }: Props) => {
   const RADIAN = Math.PI / 180;
 
   let fontSize = '28px';
-  let factor = 1.2;
+  let factor = 1.1;
   let radius = 153;
   let offset = 8;
   let size = 300;
 
   if (screenWidth <= 480) {
     fontSize = '16px';
-    factor = 1.15; // Adjust font size for the breakpoint
+    factor = 1.15;
     radius = 74;
     offset = 5;
     size = 150;
@@ -35,7 +35,7 @@ const PieChartWithoutSSR = ({ data }: Props) => {
 
   if (screenWidth >= 481 && screenWidth <= 1025) {
     fontSize = '20px';
-    factor = 1.2; // Adjust font size for the breakpoint
+    factor = 1.2;
     radius = 85;
     offset = 5;
     size = 170;
@@ -53,8 +53,9 @@ const PieChartWithoutSSR = ({ data }: Props) => {
     [key: string]: number;
   }) => {
     const radius = innerRadius + (outerRadius - innerRadius) * factor;
-    const x = cx + radius * Math.cos(-midAngle * RADIAN) + offset;
-    const y = cy + radius * Math.sin(-midAngle * RADIAN) - offset;
+    const x = cx + radius * Math.cos(-midAngle * RADIAN);
+    const y = cy + radius * Math.sin(-midAngle * RADIAN);
+
     if (percent >= 0.03)
       return (
         <text

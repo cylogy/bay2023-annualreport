@@ -110,14 +110,14 @@ const Document: FC = () => {
             />
             <InfoCard
               cardTitle="$234M"
-              cardBody="For incentives"
+              cardBody="for incentives"
               backgroundColor="green"
               allwidth
               small
             />
             <InfoCard
               cardTitle="$6M"
-              cardBody="Community grants"
+              cardBody="community grants"
               backgroundColor="dark-blue"
               allwidth
               small
@@ -129,14 +129,14 @@ const Document: FC = () => {
           <div className="flex flex-col space-y-9 min-h-[315px]  desktop:max-h-[290px] desktop:flex-row desktop:space-x-9 desktop:space-y-0">
             <InfoCard
               cardTitle="$11M"
-              cardBody="For implementation"
+              cardBody="for implementation"
               backgroundColor="white"
               allwidth
               small
             />
             <InfoCard
               cardTitle="~$33M"
-              cardBody="For our incentive programs"
+              cardBody="for our incentive programs"
               backgroundColor="light-blue"
               allwidth
               small
