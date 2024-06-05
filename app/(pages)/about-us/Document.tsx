@@ -147,8 +147,8 @@ const Document: FC = () => {
   ];
 
   const genderData = [
-    { name: 'Male', value: 0.5, color: '#7F7A7F' },
-    { name: 'Female', value: 0.5, color: '#3368B2' },
+    { name: 'Male', value: 0.5, color: '#3368B2' },
+    { name: 'Female', value: 0.5, color: '#7F7A7F' },
   ];
 
   const raceListData = [
@@ -207,28 +207,28 @@ const Document: FC = () => {
   const genderBarData = [
     {
       name: '2023',
-      Female: 0.44,
-      Male: 0.56,
+      Male: 0.44,
+      Female: 0.56,
     },
     {
       name: '2022',
-      Female: 0.44,
-      Male: 0.56,
+      Male: 0.44,
+      Female: 0.56,
     },
     {
       name: '2021',
-      Female: 0.42,
-      Male: 0.58,
+      Male: 0.42,
+      Female: 0.58,
     },
     {
       name: '2020',
-      Female: 0.43,
-      Male: 0.57,
+      Male: 0.43,
+      Female: 0.57,
     },
     {
       name: '2019',
-      Female: 0.42,
-      Male: 0.58,
+      Male: 0.42,
+      Female: 0.58,
     },
   ];
 
@@ -249,13 +249,13 @@ const Document: FC = () => {
   const genderSecondBarData = [
     {
       name: '2023',
-      Female: 0.38,
-      Male: 0.63,
+      Male: 0.38,
+      Female: 0.63,
     },
     {
       name: '2019',
-      Female: 0.65,
-      Male: 0.35,
+      Male: 0.65,
+      Female: 0.35,
     },
   ];
 
@@ -404,10 +404,10 @@ const Document: FC = () => {
                   formatter={(value: number) => `${(value * 100).toFixed(0)}%`}
                   itemStyle={{ color: 'black' }}
                 />
-                <Bar dataKey="Female" stackId="a" fill="#3368B2" barSize={30}>
+                <Bar dataKey="Male" stackId="a" fill="#3368B2" barSize={30}>
                   <LabelList
                     dx={20}
-                    dataKey="Female"
+                    dataKey="Male"
                     position="insideBottomLeft"
                     offset={-20}
                     fontSize={12}
@@ -420,10 +420,10 @@ const Document: FC = () => {
                     }
                   />
                 </Bar>
-                <Bar dataKey="Male" stackId="a" fill="#7F7A7F" barSize={30}>
+                <Bar dataKey="Female" stackId="a" fill="#7F7A7F" barSize={30}>
                   <LabelList
                     dx={20}
-                    dataKey="Male"
+                    dataKey="Female"
                     position="insideBottomLeft"
                     offset={-20}
                     fontSize={12}
@@ -470,7 +470,7 @@ const Document: FC = () => {
                     dataKey="value"
                     startAngle={-270}
                   >
-                    {genderData.reverse().map((entry, index) => (
+                    {genderData.map((entry, index) => (
                       <Cell
                         stroke="#000000"
                         key={`cell-${index}`}
@@ -646,10 +646,10 @@ const Document: FC = () => {
                   itemStyle={{ color: 'black' }}
                   formatter={(value: number) => `${(value * 100).toFixed(0)}%`}
                 />
-                <Bar dataKey="Female" stackId="a" fill="#3368B2" barSize={30}>
+                <Bar dataKey="Male" stackId="a" fill="#3368B2" barSize={30}>
                   <LabelList
                     dx={20}
-                    dataKey="Female"
+                    dataKey="Male"
                     position="insideBottomLeft"
                     offset={-20}
                     fontSize={12}
@@ -662,10 +662,10 @@ const Document: FC = () => {
                     }
                   />
                 </Bar>
-                <Bar dataKey="Male" stackId="a" fill="#7F7A7F" barSize={30}>
+                <Bar dataKey="Female" stackId="a" fill="#7F7A7F" barSize={30}>
                   <LabelList
                     dx={20}
-                    dataKey="Male"
+                    dataKey="Female"
                     position="insideBottomLeft"
                     offset={-20}
                     fontSize={12}
@@ -1542,7 +1542,7 @@ const Document: FC = () => {
           </div>
         </SectionGraph>
       </section>
-      <Navigation nextLink="/about-us" prevLink="/advocacy" />
+      <Navigation nextLink="/" prevLink="/advocacy" />
     </div>
   );
 };
