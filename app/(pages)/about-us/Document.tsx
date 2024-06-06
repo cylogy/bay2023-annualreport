@@ -147,8 +147,8 @@ const Document: FC = () => {
   ];
 
   const genderData = [
-    { name: 'Male', value: 0.5, color: '#3368B2' },
-    { name: 'Female', value: 0.5, color: '#7F7A7F' },
+    { name: 'Female', value: 0.5, color: '#3368B2'},
+    { name: 'Male', value: 0.5, color: '#7F7A7F' },
   ];
 
   const raceListData = [
@@ -249,13 +249,13 @@ const Document: FC = () => {
   const genderSecondBarData = [
     {
       name: '2023',
+      Female:  0.63,
       Male: 0.38,
-      Female: 0.63,
     },
     {
       name: '2019',
-      Male: 0.65,
       Female: 0.35,
+      Male: 0.65,
     },
   ];
 
@@ -643,10 +643,10 @@ const Document: FC = () => {
                   itemStyle={{ color: 'black' }}
                   formatter={(value: number) => `${(value * 100).toFixed(0)}%`}
                 />
-                <Bar dataKey="Male" stackId="a" fill="#3368B2" barSize={30}>
+                <Bar dataKey="Female" stackId="a" fill="#3368B2" barSize={30}>
                   <LabelList
                     dx={20}
-                    dataKey="Male"
+                    dataKey="Female"
                     position="insideBottomLeft"
                     offset={-20}
                     fontSize={12}
@@ -659,10 +659,10 @@ const Document: FC = () => {
                     }
                   />
                 </Bar>
-                <Bar dataKey="Female" stackId="a" fill="#7F7A7F" barSize={30}>
+                <Bar dataKey="Male" stackId="a" fill="#7F7A7F" barSize={30}>
                   <LabelList
                     dx={20}
-                    dataKey="Female"
+                    dataKey="Male"
                     position="insideBottomLeft"
                     offset={-20}
                     fontSize={12}
