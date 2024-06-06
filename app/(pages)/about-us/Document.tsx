@@ -147,8 +147,13 @@ const Document: FC = () => {
   ];
 
   const genderData = [
-    { name: 'Female', value: 0.5, color: '#3368B2'},
     { name: 'Male', value: 0.5, color: '#7F7A7F' },
+    { name: 'Female', value: 0.5, color: '#3368B2'},
+  ];
+
+  const genderData2 = [
+    { name: 'Female', color: ' #7F7A7F'},
+    { name: 'Male', color: '#3368B2' },
   ];
 
   const raceListData = [
@@ -357,7 +362,7 @@ const Document: FC = () => {
           background="white"
           headChildren={
             <div className="flex w-full flex-col">
-              {genderData.map((item, index) => (
+              {genderData2.map((item, index) => (
                 <div
                   key={`${item.name}-${index}`}
                   className="mb-2 flex w-full items-center border-b-2 pb-2"
@@ -602,7 +607,7 @@ const Document: FC = () => {
           background="white"
           headChildren={
             <div className="flex w-full flex-col">
-              {genderData.map((item, index) => (
+              {genderData.reverse().map((item, index) => (
                 <div
                   key={`${item.name}-${index}`}
                   className="mb-2 flex w-full items-center border-b-2 pb-2"
