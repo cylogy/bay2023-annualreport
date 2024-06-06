@@ -1317,7 +1317,7 @@ const Document: FC = () => {
             </Typography>
             <Typography
               as="span"
-              className="mt-1 pb-1 capitalize text-dark-gray-letter desktop:text-[21px]"
+              className="mt-1 pb-1 text-dark-gray-letter desktop:text-[21px]"
             >
               Spare the Air Alerts,
             </Typography>
