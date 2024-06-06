@@ -23,7 +23,7 @@ const Document = (props: Props) => {
         alt="Dr. Philip Fine"
       />
       <TextBlock align="left">
-        <div className="flex w-full flex-col place-self-start px-5 pb-6 pt-20 tablet-portrait:px-15 tablet-portrait:pb-20 tablet-portrait:pt-22.5 desktop:max-w-[45%] desktop:min-w-[855px] desktop:pb-20 desktop:pl-25 desktop:pt-40">
+        <div className="flex w-full flex-col place-self-start px-5 pb-6 pt-20 tablet-portrait:px-15 tablet-portrait:pb-20 tablet-portrait:pt-22.5 desktop:max-w-[60%] desktop:min-w-[855px] desktop:pb-20 desktop:pl-25 desktop:pt-40">
           <Typography as="h2" className=" capitalize text-dark-blue">
             EXECUTIVE SUMMARY 2023
           </Typography>
