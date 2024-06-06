@@ -467,10 +467,10 @@ const Document: FC = () => {
                     labelLine={false}
                     label={renderCustomizedLabel}
                     outerRadius={100}
-                    rotate={'45deg'}
+                    rotate={'180deg'}
                     fill="#000000"
                     dataKey="value"
-                    startAngle={-270}
+                    startAngle={-90}
                   >
                     {genderData.map((entry, index) => (
                       <Cell
