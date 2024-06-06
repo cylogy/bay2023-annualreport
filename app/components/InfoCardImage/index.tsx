@@ -41,7 +41,7 @@ const InfoCardImage = ({
         <Image
           src={imageTablet ? imageTablet : imageSrc}
           fill
-          className="object-cover object-[0%_55%]"
+          className={`object-cover ${title === 'Bayview Hunters Point/Southeast San Francisco' ? 'object-[0%_5%]' : 'object-[0%_15%]'}`}
           alt={alt}
           priority
         />

@@ -85,6 +85,7 @@ const Document = (props: Props) => {
       <InfoCardImage
         backgroundColor="bg-dark-blue text-white"
         imageSrc="/img/image-square-18.png"
+        imageTablet='/img/image-square-18.png'
         alt="Female members of the Community Steering Committee"
         imageFirst
         title="Bayview Hunters Point/Southeast San Francisco"
