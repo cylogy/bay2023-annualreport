@@ -10,9 +10,9 @@ export const links = [
 ];
 
 export const footerLinks = [
-  { id: 'accessibility', title: 'Accessibility', to: '#' },
-  { id: 'tos', title: 'Terms of Use', to: '#' },
-  { id: 'privacy', title: 'Privacy Policy', to: '#' },
+  { id: 'accessibility', title: 'Accessibility', to: 'https://www.baaqmd.gov/about-the-air-district/accessibility' },
+  { id: 'tos', title: 'Terms of Use', to: 'https://www.baaqmd.gov/online-services/terms-of-use' },
+  { id: 'privacy', title: 'Privacy Policy', to: 'https://www.baaqmd.gov/online-services/privacy-policy' },
 ];
 
 export const contactPhones = [
