@@ -42,7 +42,7 @@ const Document = (props: Props) => {
     () => (
       <InfoCardImage
         backgroundColor="bg-blue text-white"
-        imageSrc="/img/image-square-16.png"
+        imageSrc="/img/tanks.jpeg"
         alt="Aerial views of Richmond-North Richmond-San Pablo"
         imageFirst
         title="Richmond-North Richmond-San Pablo"
@@ -207,20 +207,17 @@ const Document = (props: Props) => {
                   <InfoCard
                     backgroundColor="dark-blue"
                     cardTitle="22"
-                    
                     cardBody="James Cary Smith Community Grant awardees continued on to a second year of capacity-building projects"
                   />
                   <InfoCard
                     backgroundColor="white"
                     cardTitle="594"
-                    
                     cardBody="home air filtration units and replacement filters were distributed through the Home and School Air Filtration Program"
                   />
 
                   <InfoCard
                     backgroundColor="light-blue"
                     cardTitle="17"
-                    
                     cardBody="community leaders serve on the Community Advisory Council, helping to direct our environmental justice policies"
                   />
                 </div>

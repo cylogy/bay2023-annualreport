@@ -88,7 +88,7 @@ const index = ({
                     className={`grid desktop:w-5/12 ${options[0].percents ? 'grid-cols-2 desktop:place-items-end ' : 'grid-cols-1 place-items-start desktop:place-items-end'} max-w-[170px] desktop:max-w-none  ${textColorObject[textColor]}`}
                   >
                     <Typography as="h5" className="uppercase ">
-                      {item.value?.toLocaleString('en-US')}
+                      {item.value?.toLocaleString('en-US', { maximumFractionDigits: 2 })}
                     </Typography>
                     {item.percents && (
                       <Typography as="h5" className="uppercase">
@@ -111,7 +111,7 @@ const index = ({
                     (accumulator: number, currentValue) =>
                       accumulator + currentValue.value,
                     0,
-                  )}
+                  ).toLocaleString('en-US', { maximumFractionDigits: 2 })}
                 </Typography>
                 {options[0].percents && (
                   <Typography as="h5" className="capitalize text-dark-gray-letter">
