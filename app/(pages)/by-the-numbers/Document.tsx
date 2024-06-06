@@ -539,7 +539,7 @@ const Document: FC = () => {
                       as="span"
                       className="desktop:mt-1 desktop:text-[21px]"
                     >
-                      {item?.label?.charAt?.(0)?.toUpperCase() + item?.label?.slice?.(1)?.toLocaleLowerCase()}
+                      {item?.label?.charAt?.(0)?.toUpperCase() + item?.label?.slice?.(1)}
                     </Typography>
                     <Typography as="h5" className="uppercase">
                       {item.value}
