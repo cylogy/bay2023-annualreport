@@ -362,7 +362,7 @@ const Document: FC = () => {
           background="white"
           headChildren={
             <div className="flex w-full flex-col">
-              {genderData2.map((item, index) => (
+              {genderData2.reverse().map((item, index) => (
                 <div
                   key={`${item.name}-${index}`}
                   className="mb-2 flex w-full items-center border-b-2 pb-2"
