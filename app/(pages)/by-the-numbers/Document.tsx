@@ -221,7 +221,7 @@ const airPolutionComplaintsData = [
     percents: 2.8,
   },
   {
-    title: 'Asbestos ',
+    title: 'Asbestos',
     value: 96,
     percents: 2.5,
   },

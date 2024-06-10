@@ -49,7 +49,7 @@ const Navigation = ({ prevLink, nextLink }: Props) => {
           />
         </motion.button>
       </Link>
-      <Link href="/">
+      <Link href="/" aria-label="Home">
         <motion.button
           key={`2`}
           initial={{ opacity: 0, x: -100 }}

@@ -43,8 +43,8 @@ const Document = (props: Props) => {
           </Typography>
         </div>
       </TextBlock>
-      <TextBlock align="right">
-        <div className="flex w-full flex-col items-start justify-start place-self-end desktop:max-w-[1200px]">
+      <TextBlock align="center">
+        <div className="flex w-full flex-col items-start justify-start mx-auto desktop:max-w-[1200px]">
           <Typography
             as="p"
             className="mb-6 px-5 text-body-text-tablet text-dark-gray tablet-portrait:px-15 tablet-portrait:pb-15 desktop:mt-10"
@@ -106,8 +106,9 @@ const Document = (props: Props) => {
           </Typography>
         </AnimatedTile>
       </section>
-      <TextBlock align="right">
-        <div className="flex w-full flex-col items-start justify-start place-self-end px-5 text-body-text-tablet tablet-portrait:px-15 desktop:max-w-[1200px]">
+      <TextBlock align="center">
+        <div className="flex w-full flex-col items-start justify-start mx-auto px-5 text-body-text-tablet tablet-portrait:px-15 desktop:max-w-[1200px]">
+          <br />
           <Typography
             as="p"
             className="mt-10 text-dark-gray tablet-portrait:pb-15 "

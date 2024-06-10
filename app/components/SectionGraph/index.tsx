@@ -44,8 +44,8 @@ const index = ({
   return (
     <div
       className={`
-     mb-8  flex w-full flex-col desktop:mb-25  
-    desktop:flex-row desktop:justify-between desktop:space-x-9 
+     mb-8  flex w-full flex-col desktop:mb-25
+    desktop:flex-row desktop:justify-between desktop:space-x-9
     ${!children ? 'mt-15' : 'mt-6'}
     `}
     >
@@ -62,9 +62,9 @@ const index = ({
 
       <AnimatedTable
         className={`
-        my-9 w-full rounded-[20px] border-2  
-        p-6 desktop:my-0 desktop:min-w-[50%] desktop:px-20 desktop:py-15   
-        ${children ? 'desktop:m-0 desktop:max-w-[50%] ' : ' desktop:max-w-[50%] '}  
+        my-9 w-full rounded-[20px] border-2
+        p-6 desktop:my-0 desktop:min-w-[50%] desktop:px-20 desktop:py-15
+        ${children ? 'desktop:m-0 desktop:max-w-[50%] ' : ' desktop:max-w-[50%] '}
         ${selectedCardColor}
         `}
       >
@@ -82,7 +82,7 @@ const index = ({
                     as="span"
                     className="desktop:text-[21px]"
                   >
-                    {item?.title?.charAt?.(0)?.toUpperCase() + item?.title?.slice?.(1)?.toLocaleLowerCase()}
+                    {item?.title?.charAt?.(0)?.toUpperCase() + item?.title?.slice?.(1)}
                   </Typography>
                   <div
                     className={`grid desktop:w-5/12 ${options[0].percents ? 'grid-cols-2 desktop:place-items-end ' : 'grid-cols-1 place-items-start desktop:place-items-end'} max-w-[170px] desktop:max-w-none  ${textColorObject[textColor]}`}
