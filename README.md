@@ -20,20 +20,28 @@ You can start editing the page by modifying `app/page.tsx`. The page auto-update
 
 This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
 
-## Learn More
+## File Structure
 
-To learn more about Next.js, take a look at the following resources:
+All page routes are located within the `/app` directory inside the `(pages)` group. Every page contains a server-rendered `page.tsx` file and a client-rendered component `Document.tsx` called out in the server page. This is to take advantage of NextJS's metadata API to populate all SEO related fields. 
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+Individual components are all located in the `/components` directory. All information rendered is static and is contained within this repository, no external calls to headless CMS is made.
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
+## Packages
 
-## Deploy on Vercel
+# framer-motion
+This package is used to handle all animations in the page. These animations can be found inside the `/animations` directory inside the `/app` directory.
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+# recharts
+This package ius used to handle all data visualization in piecharts and barcharts.
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+# swiper
+This package is used in the carousel contained within certain pages like `/air-quality`.
+
+# yet-another-react-lightbox
+Used for creating the lightbox when the page loads for the first time in the index.
+
+# sharp
+Used for image optimization
 
 ## To Build and Export the project
 
