@@ -147,13 +147,8 @@ const Document: FC = () => {
   ];
 
   const genderData = [
-    { name: 'Male', value: 0.5, color: '#7F7A7F' },
     { name: 'Female', value: 0.5, color: '#3368B2'},
-  ];
-
-  const genderData2 = [
-    { name: 'Female', color:'#3368B2' },
-    { name: 'Male', color: ' #7F7A7F' },
+    { name: 'Male', value: 0.5, color: '#7F7A7F' },
   ];
 
   const raceListData = [
@@ -362,7 +357,7 @@ const Document: FC = () => {
           background="white"
           headChildren={
             <div className="flex w-full flex-col">
-              {genderData2.map((item, index) => (
+              {genderData.map((item, index) => (
                 <div
                   key={`${item.name}-${index}`}
                   className="mb-2 flex w-full items-center border-b-2 pb-2"
@@ -459,9 +454,9 @@ const Document: FC = () => {
             </Typography>
 
               <ResponsiveContainer>
-                <PieChart>
+                <PieChart data={genderData}>
                   <Pie
-                    data={genderData.reverse()}
+                    data={genderData}
                     cx="50%"
                     cy="50%"
                     labelLine={false}
@@ -607,7 +602,7 @@ const Document: FC = () => {
           background="white"
           headChildren={
             <div className="flex w-full flex-col">
-              {genderData.reverse().map((item, index) => (
+              {genderData.map((item, index) => (
                 <div
                   key={`${item.name}-${index}`}
                   className="mb-2 flex w-full items-center border-b-2 pb-2"
