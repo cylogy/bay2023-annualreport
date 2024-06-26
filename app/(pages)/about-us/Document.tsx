@@ -152,8 +152,8 @@ const Document: FC = () => {
   ];
 
   const genderData2 = [
-    { name: 'Female', color: ' #7F7A7F'},
-    { name: 'Male', color: '#3368B2' },
+    { name: 'Female', color:'#3368B2' },
+    { name: 'Male', color: ' #7F7A7F' },
   ];
 
   const raceListData = [
@@ -164,50 +164,50 @@ const Document: FC = () => {
 
   const data = [
     {
-      name: '2023',
-      Asian: 0.4,
-      White: 0.4,
-      Hispanic: 0.1,
-      Black: 0.07,
-      'Other/Unknown': 0.03,
-      'American Indian/ Alaskan Native': 0.01,
+        name: '2023',
+        Asian: 0.4,
+        White: 0.395,
+        Hispanic: 0.1,
+        Black: 0.07,
+        'Other/Unknown': 0.03,
+        'American Indian/ Alaskan Native': 0.005,
     },
     {
-      name: '2022',
-      Asian: 0.42,
-      White: 0.4,
-      Hispanic: 0.09,
-      Black: 0.08,
-      'Other/Unknown': 0.02,
-      'American Indian/ Alaskan Native': 0.01,
+        name: '2022',
+        Asian: 0.415,
+        White: 0.395,
+        Hispanic: 0.085,
+        Black: 0.08,
+        'Other/Unknown': 0.02,
+        'American Indian/ Alaskan Native': 0.005,
     },
     {
-      name: '2021',
-      Asian: 0.4,
-      White: 0.41,
-      Hispanic: 0.09,
-      Black: 0.08,
-      'Other/Unknown': 0.02,
-      'American Indian/ Alaskan Native': 0.01,
+        name: '2021',
+        Asian: 0.4,
+        White: 0.40,
+        Hispanic: 0.09,
+        Black: 0.08,
+        'Other/Unknown': 0.02,
+        'American Indian/ Alaskan Native': 0.01,
     },
     {
-      name: '2020',
-      Asian: 0.4,
-      White: 0.42,
-      Hispanic: 0.08,
-      Black: 0.08,
-      'Other/Unknown': 0.01,
-      'American Indian/ Alaskan Native': 0.01,
+        name: '2020',
+        Asian: 0.4,
+        White: 0.42,
+        Hispanic: 0.08,
+        Black: 0.08,
+        'Other/Unknown': 0.01,
+        'American Indian/ Alaskan Native': 0.01,
     },
     {
-      name: '2019',
-      Asian: 0.39,
-      White: 0.44,
-      Hispanic: 0.08,
-      Black: 0.08,
-      'American Indian/ Alaskan Native': 0.01,
+        name: '2019',
+        Asian: 0.39,
+        White: 0.44,
+        Hispanic: 0.08,
+        Black: 0.08,
+        'American Indian/ Alaskan Native': 0.01,
     },
-  ];
+];
 
   const genderBarData = [
     {
@@ -362,7 +362,7 @@ const Document: FC = () => {
           background="white"
           headChildren={
             <div className="flex w-full flex-col">
-              {genderData2.reverse().map((item, index) => (
+              {genderData2.map((item, index) => (
                 <div
                   key={`${item.name}-${index}`}
                   className="mb-2 flex w-full items-center border-b-2 pb-2"
@@ -406,7 +406,7 @@ const Document: FC = () => {
                   formatter={(value: number) => `${(value * 100).toFixed(0)}%`}
                   itemStyle={{ color: 'black' }}
                 />
-                <Bar dataKey="Male" stackId="a" fill="#3368B2" barSize={30}>
+                <Bar dataKey="Male" stackId="a" fill="#7F7A7F" barSize={30}>
                   <LabelList
                     dx={20}
                     dataKey="Male"
@@ -422,7 +422,7 @@ const Document: FC = () => {
                     }
                   />
                 </Bar>
-                <Bar dataKey="Female" stackId="a" fill="#7F7A7F" barSize={30}>
+                <Bar dataKey="Female" stackId="a" fill="#3368B2" barSize={30}>
                   <LabelList
                     dx={20}
                     dataKey="Female"
@@ -461,7 +461,7 @@ const Document: FC = () => {
               <ResponsiveContainer>
                 <PieChart>
                   <Pie
-                    data={genderData}
+                    data={genderData.reverse()}
                     cx="50%"
                     cy="50%"
                     labelLine={false}
@@ -738,12 +738,12 @@ const Document: FC = () => {
             <Typography as="h5" className=" mb-4 border-b-2 pb-2 text-start">
               Air District Staff
             </Typography>
-            <ResponsiveContainer width="100%" height="100%">
+            <ResponsiveContainer width="100%" height="100%" >
               <BarChart
                 height={300}
                 data={data}
                 layout="vertical"
-                margin={{ top: 5, bottom: 5 }}
+                margin={{ top: 5, bottom: 5, right: 20 }}
                 barCategoryGap={50}
               >
                 <XAxis hide type="number" />

@@ -134,7 +134,7 @@ const Document = (props: Props) => {
               process.
             </Typography>
           )}
-          imageSrc="/img/highway.png"
+          imageSrc="/img/EJ Guidance.jpeg"
           alt="Aerial view of intersecting highways"
         />
         <InfoCardImage
